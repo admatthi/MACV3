@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests : NSObject
+@end
+@implementation PodsDummy_Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests
+@end

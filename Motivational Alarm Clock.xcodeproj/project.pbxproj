@@ -1,0 +1,899 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E245DE125ADE7D000C8E57B /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E245DE025ADE7D000C8E57B /* Scheduler.swift */; };
+		4E245DF425ADEABE00C8E57B /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E245DF325ADEABE00C8E57B /* MediaViewController.swift */; };
+		4E60EC5C25AF7AAF0049D4ED /* SelectSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */; };
+		4E60EC6125AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */; };
+		4E77484F25AD2D140041674E /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77484D25AD2D140041674E /* UIWindow+Extension.swift */; };
+		4E77485025AD2D140041674E /* NotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77484E25AD2D140041674E /* NotificationName+Extension.swift */; };
+		4E9724FA25AFA09B0070FF50 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */; };
+		4E9724FF25AFD3250070FF50 /* SoundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9724FE25AFD3250070FF50 /* SoundData.swift */; };
+		4E97250525AFDEC70070FF50 /* Time To Wake Up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E97250325AFDEC70070FF50 /* Time To Wake Up.mp3 */; };
+		4E97250625AFDEC70070FF50 /* Rise & Grind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E97250425AFDEC70070FF50 /* Rise & Grind.mp3 */; };
+		4EBD221325AF5A96008530A2 /* HomeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */; };
+		4EDA8E7D25AE69C7005DAE2C /* newtrack2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA8E7C25AE69C7005DAE2C /* newtrack2.mp3 */; };
+		4EDA8EB325AE714D005DAE2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA8EB225AE714D005DAE2C /* GoogleService-Info.plist */; };
+		4EE5F19225AD23D800B9C2EE /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F19125AD23D800B9C2EE /* AlarmModel.swift */; };
+		4EE5F19725AD23F700B9C2EE /* SegueInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F19625AD23F700B9C2EE /* SegueInfo.swift */; };
+		4EE5F1D225AD246100B9C2EE /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1D125AD246100B9C2EE /* Persistable.swift */; };
+		4EE5F1D725AD246900B9C2EE /* PropertyReflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1D625AD246900B9C2EE /* PropertyReflectable.swift */; };
+		4EE5F1DC25AD247200B9C2EE /* AlarmApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1DB25AD247200B9C2EE /* AlarmApplicationDelegate.swift */; };
+		4EE5F1E125AD247A00B9C2EE /* AlarmSchedulerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1E025AD247A00B9C2EE /* AlarmSchedulerDelegate.swift */; };
+		4EE5F1EB25AD24D300B9C2EE /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1EA25AD24D300B9C2EE /* Identifier.swift */; };
+		4EE5F1F525AD256900B9C2EE /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EE5F1F325AD256900B9C2EE /* bell.mp3 */; };
+		4EE5F1F625AD256900B9C2EE /* tickle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EE5F1F425AD256900B9C2EE /* tickle.mp3 */; };
+		4EE5F1FB25AD25F800B9C2EE /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1FA25AD25F800B9C2EE /* HomeTableViewController.swift */; };
+		4EE5F20025AD271900B9C2EE /* AlarmEditAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1FF25AD271900B9C2EE /* AlarmEditAddViewController.swift */; };
+		4EE5F20525AD27D200B9C2EE /* WeekdaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F20425AD27D200B9C2EE /* WeekdaysViewController.swift */; };
+		4EE5F20A25AD285A00B9C2EE /* TitleEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F20925AD285A00B9C2EE /* TitleEditViewController.swift */; };
+		5B0A65A99C1BF3F94F245E80 /* Pods_Motivational_Alarm_Clock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ADE3E5DB74EB9D2232576B /* Pods_Motivational_Alarm_Clock.framework */; };
+		9D8D248425ABABEB00B4E69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248325ABABEB00B4E69D /* AppDelegate.swift */; };
+		9D8D248825ABABEB00B4E69D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248725ABABEB00B4E69D /* ViewController.swift */; };
+		9D8D248B25ABABEB00B4E69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D248925ABABEB00B4E69D /* Main.storyboard */; };
+		9D8D248D25ABABF000B4E69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D248C25ABABF000B4E69D /* Assets.xcassets */; };
+		9D8D249025ABABF000B4E69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D248E25ABABF000B4E69D /* LaunchScreen.storyboard */; };
+		9D8D249B25ABABF000B4E69D /* Motivational_Alarm_ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D249A25ABABF000B4E69D /* Motivational_Alarm_ClockTests.swift */; };
+		9D8D24A625ABABF000B4E69D /* Motivational_Alarm_ClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D24A525ABABF000B4E69D /* Motivational_Alarm_ClockUITests.swift */; };
+		9DA82A2925AE607500289E84 /* Paywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82A2825AE607500289E84 /* Paywall.swift */; };
+		9DA82A2E25AE609A00289E84 /* PaywallViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82A2D25AE609A00289E84 /* PaywallViewViewController.swift */; };
+		A195E4FDCEE911D07FC88DC4 /* Pods_Motivational_Alarm_ClockTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBCB738D0DC8EB71211838E /* Pods_Motivational_Alarm_ClockTests.framework */; };
+		FC9E4ED7D069E46898487BA3 /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4A2148F301084685A5354D /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9D8D249725ABABF000B4E69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D8D247825ABABEB00B4E69D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D8D247F25ABABEB00B4E69D;
+			remoteInfo = "Motivational Alarm Clock";
+		};
+		9D8D24A225ABABF000B4E69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D8D247825ABABEB00B4E69D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D8D247F25ABABEB00B4E69D;
+			remoteInfo = "Motivational Alarm Clock";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03ADE3E5DB74EB9D2232576B /* Pods_Motivational_Alarm_Clock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motivational_Alarm_Clock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F20A4CC19DB8C5AEF27E1DE /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E245DE025ADE7D000C8E57B /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
+		4E245DF325ADEABE00C8E57B /* MediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
+		4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSoundViewController.swift; sourceTree = "<group>"; };
+		4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPickCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E77484D25AD2D140041674E /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		4E77484E25AD2D140041674E /* NotificationName+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extension.swift"; sourceTree = "<group>"; };
+		4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E9724FE25AFD3250070FF50 /* SoundData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundData.swift; sourceTree = "<group>"; };
+		4E97250325AFDEC70070FF50 /* Time To Wake Up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Time To Wake Up.mp3"; sourceTree = "<group>"; };
+		4E97250425AFDEC70070FF50 /* Rise & Grind.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rise & Grind.mp3"; sourceTree = "<group>"; };
+		4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCell.swift; sourceTree = "<group>"; };
+		4EDA8E7C25AE69C7005DAE2C /* newtrack2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = newtrack2.mp3; sourceTree = "<group>"; };
+		4EDA8EB225AE714D005DAE2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4EE5F19125AD23D800B9C2EE /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
+		4EE5F19625AD23F700B9C2EE /* SegueInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueInfo.swift; sourceTree = "<group>"; };
+		4EE5F1D125AD246100B9C2EE /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
+		4EE5F1D625AD246900B9C2EE /* PropertyReflectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyReflectable.swift; sourceTree = "<group>"; };
+		4EE5F1DB25AD247200B9C2EE /* AlarmApplicationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmApplicationDelegate.swift; sourceTree = "<group>"; };
+		4EE5F1E025AD247A00B9C2EE /* AlarmSchedulerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSchedulerDelegate.swift; sourceTree = "<group>"; };
+		4EE5F1EA25AD24D300B9C2EE /* Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		4EE5F1F325AD256900B9C2EE /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
+		4EE5F1F425AD256900B9C2EE /* tickle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tickle.mp3; sourceTree = "<group>"; };
+		4EE5F1FA25AD25F800B9C2EE /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		4EE5F1FF25AD271900B9C2EE /* AlarmEditAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEditAddViewController.swift; sourceTree = "<group>"; };
+		4EE5F20425AD27D200B9C2EE /* WeekdaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysViewController.swift; sourceTree = "<group>"; };
+		4EE5F20925AD285A00B9C2EE /* TitleEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleEditViewController.swift; sourceTree = "<group>"; };
+		58C0782FD54C4AA3193C7037 /* Pods-Motivational Alarm ClockTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm ClockTests.debug.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm ClockTests/Pods-Motivational Alarm ClockTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5BBCB738D0DC8EB71211838E /* Pods_Motivational_Alarm_ClockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motivational_Alarm_ClockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71CC806F4EF1508ECFA51837 /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8D493DA693E50DEE2B7370A9 /* Pods-Motivational Alarm ClockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm ClockTests.release.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm ClockTests/Pods-Motivational Alarm ClockTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D8D248025ABABEB00B4E69D /* Motivational Alarm Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Motivational Alarm Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D8D248325ABABEB00B4E69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9D8D248725ABABEB00B4E69D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D8D248A25ABABEB00B4E69D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D8D248C25ABABF000B4E69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D8D248F25ABABF000B4E69D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D8D249125ABABF000B4E69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D8D249625ABABF000B4E69D /* Motivational Alarm ClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Motivational Alarm ClockTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D8D249A25ABABF000B4E69D /* Motivational_Alarm_ClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motivational_Alarm_ClockTests.swift; sourceTree = "<group>"; };
+		9D8D249C25ABABF000B4E69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D8D24A125ABABF000B4E69D /* Motivational Alarm ClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Motivational Alarm ClockUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D8D24A525ABABF000B4E69D /* Motivational_Alarm_ClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motivational_Alarm_ClockUITests.swift; sourceTree = "<group>"; };
+		9D8D24A725ABABF000B4E69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DA82A2825AE607500289E84 /* Paywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paywall.swift; sourceTree = "<group>"; };
+		9DA82A2D25AE609A00289E84 /* PaywallViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewViewController.swift; sourceTree = "<group>"; };
+		AD4A2148F301084685A5354D /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCBC92D3F5F3916F1819E89C /* Pods-Motivational Alarm Clock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock.release.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock/Pods-Motivational Alarm Clock.release.xcconfig"; sourceTree = "<group>"; };
+		DF873A9C66FDFD5CFE9B3B9F /* Pods-Motivational Alarm Clock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock.debug.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock/Pods-Motivational Alarm Clock.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D8D247D25ABABEB00B4E69D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B0A65A99C1BF3F94F245E80 /* Pods_Motivational_Alarm_Clock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D8D249325ABABF000B4E69D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A195E4FDCEE911D07FC88DC4 /* Pods_Motivational_Alarm_ClockTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D8D249E25ABABF000B4E69D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC9E4ED7D069E46898487BA3 /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EE5F18425AD234600B9C2EE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */,
+				4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */,
+				4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		4EE5F18525AD235500B9C2EE /* models */ = {
+			isa = PBXGroup;
+			children = (
+				4EE5F19125AD23D800B9C2EE /* AlarmModel.swift */,
+				4EE5F19625AD23F700B9C2EE /* SegueInfo.swift */,
+				4E9724FE25AFD3250070FF50 /* SoundData.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		4EE5F18625AD236300B9C2EE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EE5F1FA25AD25F800B9C2EE /* HomeTableViewController.swift */,
+				4EE5F1FF25AD271900B9C2EE /* AlarmEditAddViewController.swift */,
+				4E245DF325ADEABE00C8E57B /* MediaViewController.swift */,
+				4EE5F20425AD27D200B9C2EE /* WeekdaysViewController.swift */,
+				4EE5F20925AD285A00B9C2EE /* TitleEditViewController.swift */,
+				4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4EE5F18725AD237B00B9C2EE /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4EE5F1EA25AD24D300B9C2EE /* Identifier.swift */,
+				4E245DE025ADE7D000C8E57B /* Scheduler.swift */,
+				4E77484D25AD2D140041674E /* UIWindow+Extension.swift */,
+				4E77484E25AD2D140041674E /* NotificationName+Extension.swift */,
+				4EE5F1D125AD246100B9C2EE /* Persistable.swift */,
+				4EE5F1E025AD247A00B9C2EE /* AlarmSchedulerDelegate.swift */,
+				4EE5F1D625AD246900B9C2EE /* PropertyReflectable.swift */,
+				4EE5F1DB25AD247200B9C2EE /* AlarmApplicationDelegate.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		4EE5F1F225AD255B00B9C2EE /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				4E97250425AFDEC70070FF50 /* Rise & Grind.mp3 */,
+				4E97250325AFDEC70070FF50 /* Time To Wake Up.mp3 */,
+				4EDA8E7C25AE69C7005DAE2C /* newtrack2.mp3 */,
+				4EE5F1F325AD256900B9C2EE /* bell.mp3 */,
+				4EE5F1F425AD256900B9C2EE /* tickle.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		9D8D247725ABABEB00B4E69D = {
+			isa = PBXGroup;
+			children = (
+				9D8D248225ABABEB00B4E69D /* Motivational Alarm Clock */,
+				9D8D249925ABABF000B4E69D /* Motivational Alarm ClockTests */,
+				9D8D24A425ABABF000B4E69D /* Motivational Alarm ClockUITests */,
+				9D8D248125ABABEB00B4E69D /* Products */,
+				D08408E5F9A14DBD40B55A43 /* Pods */,
+				F4895243C023E6DD2E1F6173 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9D8D248125ABABEB00B4E69D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D8D248025ABABEB00B4E69D /* Motivational Alarm Clock.app */,
+				9D8D249625ABABF000B4E69D /* Motivational Alarm ClockTests.xctest */,
+				9D8D24A125ABABF000B4E69D /* Motivational Alarm ClockUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D8D248225ABABEB00B4E69D /* Motivational Alarm Clock */ = {
+			isa = PBXGroup;
+			children = (
+				4EE5F1F225AD255B00B9C2EE /* sounds */,
+				4EE5F18725AD237B00B9C2EE /* helpers */,
+				4EE5F18625AD236300B9C2EE /* Controllers */,
+				4EE5F18525AD235500B9C2EE /* models */,
+				4EE5F18425AD234600B9C2EE /* views */,
+				9D8D248325ABABEB00B4E69D /* AppDelegate.swift */,
+				9D8D248725ABABEB00B4E69D /* ViewController.swift */,
+				9D8D248925ABABEB00B4E69D /* Main.storyboard */,
+				9DA82A2825AE607500289E84 /* Paywall.swift */,
+				9DA82A2D25AE609A00289E84 /* PaywallViewViewController.swift */,
+				9D8D248C25ABABF000B4E69D /* Assets.xcassets */,
+				4EDA8EB225AE714D005DAE2C /* GoogleService-Info.plist */,
+				9D8D248E25ABABF000B4E69D /* LaunchScreen.storyboard */,
+				9D8D249125ABABF000B4E69D /* Info.plist */,
+			);
+			path = "Motivational Alarm Clock";
+			sourceTree = "<group>";
+		};
+		9D8D249925ABABF000B4E69D /* Motivational Alarm ClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				9D8D249A25ABABF000B4E69D /* Motivational_Alarm_ClockTests.swift */,
+				9D8D249C25ABABF000B4E69D /* Info.plist */,
+			);
+			path = "Motivational Alarm ClockTests";
+			sourceTree = "<group>";
+		};
+		9D8D24A425ABABF000B4E69D /* Motivational Alarm ClockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9D8D24A525ABABF000B4E69D /* Motivational_Alarm_ClockUITests.swift */,
+				9D8D24A725ABABF000B4E69D /* Info.plist */,
+			);
+			path = "Motivational Alarm ClockUITests";
+			sourceTree = "<group>";
+		};
+		D08408E5F9A14DBD40B55A43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF873A9C66FDFD5CFE9B3B9F /* Pods-Motivational Alarm Clock.debug.xcconfig */,
+				BCBC92D3F5F3916F1819E89C /* Pods-Motivational Alarm Clock.release.xcconfig */,
+				3F20A4CC19DB8C5AEF27E1DE /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig */,
+				71CC806F4EF1508ECFA51837 /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig */,
+				58C0782FD54C4AA3193C7037 /* Pods-Motivational Alarm ClockTests.debug.xcconfig */,
+				8D493DA693E50DEE2B7370A9 /* Pods-Motivational Alarm ClockTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F4895243C023E6DD2E1F6173 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03ADE3E5DB74EB9D2232576B /* Pods_Motivational_Alarm_Clock.framework */,
+				AD4A2148F301084685A5354D /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework */,
+				5BBCB738D0DC8EB71211838E /* Pods_Motivational_Alarm_ClockTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D8D247F25ABABEB00B4E69D /* Motivational Alarm Clock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D8D24AA25ABABF000B4E69D /* Build configuration list for PBXNativeTarget "Motivational Alarm Clock" */;
+			buildPhases = (
+				B4B0CEF59795BA45B2FDC2FA /* [CP] Check Pods Manifest.lock */,
+				9D8D247C25ABABEB00B4E69D /* Sources */,
+				9D8D247D25ABABEB00B4E69D /* Frameworks */,
+				9D8D247E25ABABEB00B4E69D /* Resources */,
+				A86C55DA184B26D99C45B628 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Motivational Alarm Clock";
+			productName = "Motivational Alarm Clock";
+			productReference = 9D8D248025ABABEB00B4E69D /* Motivational Alarm Clock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9D8D249525ABABF000B4E69D /* Motivational Alarm ClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D8D24AD25ABABF000B4E69D /* Build configuration list for PBXNativeTarget "Motivational Alarm ClockTests" */;
+			buildPhases = (
+				EF937D2F9677BB6615FD6989 /* [CP] Check Pods Manifest.lock */,
+				9D8D249225ABABF000B4E69D /* Sources */,
+				9D8D249325ABABF000B4E69D /* Frameworks */,
+				9D8D249425ABABF000B4E69D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D8D249825ABABF000B4E69D /* PBXTargetDependency */,
+			);
+			name = "Motivational Alarm ClockTests";
+			productName = "Motivational Alarm ClockTests";
+			productReference = 9D8D249625ABABF000B4E69D /* Motivational Alarm ClockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9D8D24A025ABABF000B4E69D /* Motivational Alarm ClockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D8D24B025ABABF000B4E69D /* Build configuration list for PBXNativeTarget "Motivational Alarm ClockUITests" */;
+			buildPhases = (
+				9C9CD21C55AEA2824CB904D8 /* [CP] Check Pods Manifest.lock */,
+				9D8D249D25ABABF000B4E69D /* Sources */,
+				9D8D249E25ABABF000B4E69D /* Frameworks */,
+				9D8D249F25ABABF000B4E69D /* Resources */,
+				10C4FCF6D8B117EDDB4CA9D0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D8D24A325ABABF000B4E69D /* PBXTargetDependency */,
+			);
+			name = "Motivational Alarm ClockUITests";
+			productName = "Motivational Alarm ClockUITests";
+			productReference = 9D8D24A125ABABF000B4E69D /* Motivational Alarm ClockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D8D247825ABABEB00B4E69D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Alek Matthiessen";
+				TargetAttributes = {
+					9D8D247F25ABABEB00B4E69D = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					9D8D249525ABABF000B4E69D = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 9D8D247F25ABABEB00B4E69D;
+					};
+					9D8D24A025ABABF000B4E69D = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 9D8D247F25ABABEB00B4E69D;
+					};
+				};
+			};
+			buildConfigurationList = 9D8D247B25ABABEB00B4E69D /* Build configuration list for PBXProject "Motivational Alarm Clock" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D8D247725ABABEB00B4E69D;
+			productRefGroup = 9D8D248125ABABEB00B4E69D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D8D247F25ABABEB00B4E69D /* Motivational Alarm Clock */,
+				9D8D249525ABABF000B4E69D /* Motivational Alarm ClockTests */,
+				9D8D24A025ABABF000B4E69D /* Motivational Alarm ClockUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D8D247E25ABABEB00B4E69D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E97250525AFDEC70070FF50 /* Time To Wake Up.mp3 in Resources */,
+				9D8D249025ABABF000B4E69D /* LaunchScreen.storyboard in Resources */,
+				4EE5F1F525AD256900B9C2EE /* bell.mp3 in Resources */,
+				4EDA8E7D25AE69C7005DAE2C /* newtrack2.mp3 in Resources */,
+				9D8D248D25ABABF000B4E69D /* Assets.xcassets in Resources */,
+				9D8D248B25ABABEB00B4E69D /* Main.storyboard in Resources */,
+				4EE5F1F625AD256900B9C2EE /* tickle.mp3 in Resources */,
+				4E97250625AFDEC70070FF50 /* Rise & Grind.mp3 in Resources */,
+				4EDA8EB325AE714D005DAE2C /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D8D249425ABABF000B4E69D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D8D249F25ABABF000B4E69D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10C4FCF6D8B117EDDB4CA9D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C9CD21C55AEA2824CB904D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A86C55DA184B26D99C45B628 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Motivational Alarm Clock/Pods-Motivational Alarm Clock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Motivational Alarm Clock/Pods-Motivational Alarm Clock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Motivational Alarm Clock/Pods-Motivational Alarm Clock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4B0CEF59795BA45B2FDC2FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Motivational Alarm Clock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF937D2F9677BB6615FD6989 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Motivational Alarm ClockTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D8D247C25ABABEB00B4E69D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EE5F1FB25AD25F800B9C2EE /* HomeTableViewController.swift in Sources */,
+				4E77485025AD2D140041674E /* NotificationName+Extension.swift in Sources */,
+				4E77484F25AD2D140041674E /* UIWindow+Extension.swift in Sources */,
+				4EE5F20025AD271900B9C2EE /* AlarmEditAddViewController.swift in Sources */,
+				4EE5F1DC25AD247200B9C2EE /* AlarmApplicationDelegate.swift in Sources */,
+				4E60EC6125AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift in Sources */,
+				4EBD221325AF5A96008530A2 /* HomeItemTableViewCell.swift in Sources */,
+				4EE5F19225AD23D800B9C2EE /* AlarmModel.swift in Sources */,
+				9DA82A2E25AE609A00289E84 /* PaywallViewViewController.swift in Sources */,
+				4EE5F1E125AD247A00B9C2EE /* AlarmSchedulerDelegate.swift in Sources */,
+				4EE5F19725AD23F700B9C2EE /* SegueInfo.swift in Sources */,
+				4E245DE125ADE7D000C8E57B /* Scheduler.swift in Sources */,
+				4E60EC5C25AF7AAF0049D4ED /* SelectSoundViewController.swift in Sources */,
+				4E245DF425ADEABE00C8E57B /* MediaViewController.swift in Sources */,
+				9DA82A2925AE607500289E84 /* Paywall.swift in Sources */,
+				4EE5F1D725AD246900B9C2EE /* PropertyReflectable.swift in Sources */,
+				4E9724FA25AFA09B0070FF50 /* CategoryCollectionViewCell.swift in Sources */,
+				4EE5F1D225AD246100B9C2EE /* Persistable.swift in Sources */,
+				4EE5F20525AD27D200B9C2EE /* WeekdaysViewController.swift in Sources */,
+				9D8D248825ABABEB00B4E69D /* ViewController.swift in Sources */,
+				9D8D248425ABABEB00B4E69D /* AppDelegate.swift in Sources */,
+				4E9724FF25AFD3250070FF50 /* SoundData.swift in Sources */,
+				4EE5F1EB25AD24D300B9C2EE /* Identifier.swift in Sources */,
+				4EE5F20A25AD285A00B9C2EE /* TitleEditViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D8D249225ABABF000B4E69D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D8D249B25ABABF000B4E69D /* Motivational_Alarm_ClockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D8D249D25ABABF000B4E69D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D8D24A625ABABF000B4E69D /* Motivational_Alarm_ClockUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D8D249825ABABF000B4E69D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D8D247F25ABABEB00B4E69D /* Motivational Alarm Clock */;
+			targetProxy = 9D8D249725ABABF000B4E69D /* PBXContainerItemProxy */;
+		};
+		9D8D24A325ABABF000B4E69D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D8D247F25ABABEB00B4E69D /* Motivational Alarm Clock */;
+			targetProxy = 9D8D24A225ABABF000B4E69D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9D8D248925ABABEB00B4E69D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D8D248A25ABABEB00B4E69D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9D8D248E25ABABF000B4E69D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D8D248F25ABABF000B4E69D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D8D24A825ABABF000B4E69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9D8D24A925ABABF000B4E69D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D8D24AB25ABABF000B4E69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF873A9C66FDFD5CFE9B3B9F /* Pods-Motivational Alarm Clock.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZNJ7N6ACK;
+				INFOPLIST_FILE = "Motivational Alarm Clock/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aatech.mac.Motivational-Alarm-Clock1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D8D24AC25ABABF000B4E69D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCBC92D3F5F3916F1819E89C /* Pods-Motivational Alarm Clock.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZNJ7N6ACK;
+				INFOPLIST_FILE = "Motivational Alarm Clock/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aatech.mac.Motivational-Alarm-Clock1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9D8D24AE25ABABF000B4E69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58C0782FD54C4AA3193C7037 /* Pods-Motivational Alarm ClockTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZNJ7N6ACK;
+				INFOPLIST_FILE = "Motivational Alarm ClockTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aatech.mac.Motivational-Alarm-ClockTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Motivational Alarm Clock.app/Motivational Alarm Clock";
+			};
+			name = Debug;
+		};
+		9D8D24AF25ABABF000B4E69D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D493DA693E50DEE2B7370A9 /* Pods-Motivational Alarm ClockTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZNJ7N6ACK;
+				INFOPLIST_FILE = "Motivational Alarm ClockTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aatech.mac.Motivational-Alarm-ClockTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Motivational Alarm Clock.app/Motivational Alarm Clock";
+			};
+			name = Release;
+		};
+		9D8D24B125ABABF000B4E69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F20A4CC19DB8C5AEF27E1DE /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZNJ7N6ACK;
+				INFOPLIST_FILE = "Motivational Alarm ClockUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aatech.mac.Motivational-Alarm-ClockUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Motivational Alarm Clock";
+			};
+			name = Debug;
+		};
+		9D8D24B225ABABF000B4E69D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71CC806F4EF1508ECFA51837 /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZNJ7N6ACK;
+				INFOPLIST_FILE = "Motivational Alarm ClockUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aatech.mac.Motivational-Alarm-ClockUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Motivational Alarm Clock";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D8D247B25ABABEB00B4E69D /* Build configuration list for PBXProject "Motivational Alarm Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D8D24A825ABABF000B4E69D /* Debug */,
+				9D8D24A925ABABF000B4E69D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D8D24AA25ABABF000B4E69D /* Build configuration list for PBXNativeTarget "Motivational Alarm Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D8D24AB25ABABF000B4E69D /* Debug */,
+				9D8D24AC25ABABF000B4E69D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D8D24AD25ABABF000B4E69D /* Build configuration list for PBXNativeTarget "Motivational Alarm ClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D8D24AE25ABABF000B4E69D /* Debug */,
+				9D8D24AF25ABABF000B4E69D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D8D24B025ABABF000B4E69D /* Build configuration list for PBXNativeTarget "Motivational Alarm ClockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D8D24B125ABABF000B4E69D /* Debug */,
+				9D8D24B225ABABF000B4E69D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D8D247825ABABEB00B4E69D /* Project object */;
+}
