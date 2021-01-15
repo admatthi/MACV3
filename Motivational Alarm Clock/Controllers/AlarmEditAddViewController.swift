@@ -25,7 +25,6 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = .clear
-        
         datePicker.becomeFirstResponder()
         datePicker.tintColor = UIColor.white
         if #available(iOS 14.0, *) {
@@ -33,7 +32,13 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         } else {
             datePicker.preferredDatePickerStyle = .compact // Replace .inline with .compact
         }
-        
+        if segueInfo.isEditMode {
+            let index = segueInfo.curCellIndex
+            datePicker.date = alarmModel.alarms[index].date
+        }
+        else {
+            
+        }
 
     }
     
@@ -48,7 +53,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         self.navigationController?.navigationBar.backgroundColor = .clear
         if #available(iOS 13.0, *) {
             let statusbarView = UIView()
-            statusbarView.backgroundColor = #colorLiteral(red: 0.007841204293, green: 0.007844249718, blue: 0.007841013372, alpha: 1)
+            statusbarView.backgroundColor = self.view.backgroundColor
             
             navigationController?.navigationBar.addSubview(statusbarView)
             
@@ -60,7 +65,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         }
         else {
             let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView
-            statusBar?.backgroundColor = #colorLiteral(red: 0.007841204293, green: 0.007844249718, blue: 0.007841013372, alpha: 1)
+            statusBar?.backgroundColor = self.view.backgroundColor
         }
         self.navigationController?.navigationBar.barStyle = UIBarStyle.blackOpaque
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
