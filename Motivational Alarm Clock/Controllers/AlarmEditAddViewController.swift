@@ -88,7 +88,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 4
+            return 2
         }
         else {
             return 1
@@ -122,34 +122,34 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
                 cell!.detailTextLabel!.text = WeekdaysViewController.repeatText(weekdays: segueInfo.repeatWeekdays)
                 cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
             }
+//            else if indexPath.row == 1 {
+//                cell!.textLabel?.textColor = .white
+//                cell!.detailTextLabel?.textColor = .gray
+//                cell!.textLabel!.text = "Label"
+//                cell!.detailTextLabel!.text = segueInfo.label
+//                cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+//            }
             else if indexPath.row == 1 {
-                cell!.textLabel?.textColor = .white
-                cell!.detailTextLabel?.textColor = .gray
-                cell!.textLabel!.text = "Label"
-                cell!.detailTextLabel!.text = segueInfo.label
-                cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-            }
-            else if indexPath.row == 2 {
                 cell!.textLabel?.textColor = .white
                 cell!.detailTextLabel?.textColor = .gray
                 cell!.textLabel!.text = "Sound"
                 cell!.detailTextLabel!.text = segueInfo.mediaLabel
                 cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
             }
-            else if indexPath.row == 3 {
-                cell!.textLabel?.textColor = .white
-                cell!.detailTextLabel?.textColor = .gray
-                
-                cell!.textLabel!.text = "Snooze"
-                let sw = UISwitch(frame: CGRect())
-                sw.addTarget(self, action: #selector(AlarmEditAddViewController.snoozeSwitchTapped(_:)), for: UIControl.Event.touchUpInside)
-                
-                if snoozeEnabled {
-                   sw.setOn(true, animated: false)
-                }
-                
-                cell!.accessoryView = sw
-            }
+//            else if indexPath.row == 3 {
+//                cell!.textLabel?.textColor = .white
+//                cell!.detailTextLabel?.textColor = .gray
+//
+//                cell!.textLabel!.text = "Snooze"
+//                let sw = UISwitch(frame: CGRect())
+//                sw.addTarget(self, action: #selector(AlarmEditAddViewController.snoozeSwitchTapped(_:)), for: UIControl.Event.touchUpInside)
+//
+//                if snoozeEnabled {
+//                   sw.setOn(true, animated: false)
+//                }
+//
+//                cell!.accessoryView = sw
+//            }
         }
         else if indexPath.section == 1 {
             cell = UITableViewCell(
@@ -174,13 +174,13 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
                 cell?.setSelected(true, animated: false)
                 cell?.setSelected(false, animated: false)
             case 1:
-//                performSegue(withIdentifier: Id.labelSegueIdentifier, sender: self)
-                cell?.setSelected(true, animated: false)
-                cell?.setSelected(false, animated: false)
-            case 2:
                 performSegue(withIdentifier: Id.selectSoundSegueIdentifier, sender: self)
                 cell?.setSelected(true, animated: false)
                 cell?.setSelected(false, animated: false)
+//            case 2:
+//                performSegue(withIdentifier: Id.selectSoundSegueIdentifier, sender: self)
+//                cell?.setSelected(true, animated: false)
+//                cell?.setSelected(false, animated: false)
             default:
                 break
             }
