@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -352,9 +352,12 @@ subscribing. This value will always default to the plan's subscription term leng
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-ct-6du">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LLd-Sx-lGY">
                                 <rect key="frame" x="0.0" y="113.5" width="414" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0Xf-vG-egG"/>
@@ -365,12 +368,15 @@ subscribing. This value will always default to the plan's subscription term leng
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </datePicker>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-yc-Uyt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-yc-Uyt">
                                 <rect key="frame" x="0.0" y="189" width="414" height="673"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <sections/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectionStyle" value=".none"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="38A-Vr-ugb" id="hw5-Lp-iCP"/>
                                     <outlet property="delegate" destination="38A-Vr-ugb" id="9gm-lW-YoK"/>
@@ -384,14 +390,18 @@ subscribing. This value will always default to the plan's subscription term leng
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ukS-rH-71c"/>
-                        <color key="backgroundColor" red="0.1097619608" green="0.10966285319999999" blue="0.11793991180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7Zf-ct-6du" firstAttribute="trailing" secondItem="ukS-rH-71c" secondAttribute="trailing" id="3L0-vP-njW"/>
+                            <constraint firstItem="7Zf-ct-6du" firstAttribute="leading" secondItem="ukS-rH-71c" secondAttribute="leading" id="3TM-k3-lN1"/>
                             <constraint firstItem="6FL-Ew-Gah" firstAttribute="centerY" secondItem="LLd-Sx-lGY" secondAttribute="centerY" id="4ao-rR-MvA"/>
+                            <constraint firstItem="7Zf-ct-6du" firstAttribute="top" secondItem="3BR-aW-k85" secondAttribute="top" id="B1f-6I-kqC"/>
                             <constraint firstItem="6FL-Ew-Gah" firstAttribute="top" secondItem="ukS-rH-71c" secondAttribute="top" constant="40" id="H34-R6-n6y"/>
                             <constraint firstItem="6FL-Ew-Gah" firstAttribute="leading" secondItem="ukS-rH-71c" secondAttribute="leading" constant="10" id="KZt-ur-NLr"/>
                             <constraint firstItem="LLd-Sx-lGY" firstAttribute="leading" secondItem="bnW-yc-Uyt" secondAttribute="leading" id="LLb-oO-3f9"/>
                             <constraint firstItem="rnM-Sa-yXG" firstAttribute="top" secondItem="bnW-yc-Uyt" secondAttribute="bottom" id="U5y-Hu-VCz"/>
+                            <constraint firstAttribute="bottom" secondItem="7Zf-ct-6du" secondAttribute="bottom" id="eTz-Yy-sL8"/>
                             <constraint firstAttribute="trailing" secondItem="bnW-yc-Uyt" secondAttribute="trailing" id="kDB-eN-ZoP"/>
                             <constraint firstItem="bnW-yc-Uyt" firstAttribute="leading" secondItem="3BR-aW-k85" secondAttribute="leading" id="kbM-Zc-rLr"/>
                             <constraint firstItem="bnW-yc-Uyt" firstAttribute="top" secondItem="6FL-Ew-Gah" secondAttribute="bottom" constant="40" id="s9l-ij-1VM"/>
@@ -427,7 +437,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5g-Mx-Z1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Q0G-tO-MeZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3462" y="-248"/>
+            <point key="canvasLocation" x="3460.8695652173915" y="-248.4375"/>
         </scene>
         <!--Repeat-->
         <scene sceneID="NVe-XH-SbN">
@@ -879,6 +889,7 @@ subscribing. This value will always default to the plan's subscription term leng
         <segue reference="Xty-Sz-rq8"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Rectangle-1" width="673" height="939"/>
         <image name="Rise &amp; Grind" width="658" height="807"/>
         <image name="checkMark" width="66" height="66"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>

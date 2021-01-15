@@ -26,6 +26,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         
         tableView.backgroundColor = .clear
+
         datePicker.becomeFirstResponder()
         datePicker.tintColor = UIColor.white
         
