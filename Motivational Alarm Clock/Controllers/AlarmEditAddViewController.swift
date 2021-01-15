@@ -143,7 +143,8 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         accessory.image = image
 
         // set the color here
-        accessory.tintColor = UIColor.gray
+        accessory.tintColor = UIColor.white
+        cell?.selectionStyle = .none
         cell!.accessoryView = accessory
         if indexPath.section == 0 {
             
@@ -151,7 +152,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
                 cell?.tintColor = .white
                 cell!.textLabel!.text = "Repeat"
                 cell!.textLabel?.textColor = .white
-                cell!.detailTextLabel?.textColor = .gray
+                cell!.detailTextLabel?.textColor = .white
                 cell!.detailTextLabel!.text = WeekdaysViewController.repeatText(weekdays: segueInfo.repeatWeekdays)
                 cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
             }
@@ -164,7 +165,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
 //            }
             else if indexPath.row == 1 {
                 cell!.textLabel?.textColor = .white
-                cell!.detailTextLabel?.textColor = .gray
+                cell!.detailTextLabel?.textColor = .white
                 cell!.textLabel!.text = "Sound"
                 cell!.detailTextLabel!.text = segueInfo.mediaLabel
                 cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator

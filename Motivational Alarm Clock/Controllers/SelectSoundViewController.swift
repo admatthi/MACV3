@@ -25,6 +25,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     var audioPlayer: AVAudioPlayer?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if let category = selectedSound?.category{
             selectedCategory = category
         }
@@ -179,17 +180,20 @@ extension SelectSoundViewController:UICollectionViewDataSource,UICollectionViewD
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SoundPickCollectionViewCell", for: indexPath) as! SoundPickCollectionViewCell
             let sound = filteredSounds[indexPath.row]
-            cell.playPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
-            cell.playPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .selected)
+            cell.playPauseButton.setImage(UIImage(named: "Bitmap"), for: .normal)
             cell.coverImageView.image = UIImage(named: sound.image)
             if let selected = selectedSound {
                 if sound == selected{
                     cell.playPauseButton.isHidden = false
+                    cell.topMainView.layer.borderColor = UIColor.white.cgColor
+                    cell.topMainView.layer.borderWidth = 5.0
                     cell.selectCheckMarkButton.isHidden = false
                     playSound(sound.soundName)
                 }else{
                     cell.playPauseButton.isHidden = true
                     cell.selectCheckMarkButton.isHidden = true
+                    cell.topMainView.layer.borderColor = UIColor.white.cgColor
+                    cell.topMainView.layer.borderWidth = 0.0
                 }
             }
             cell.playPauseButton.tag = indexPath.row
