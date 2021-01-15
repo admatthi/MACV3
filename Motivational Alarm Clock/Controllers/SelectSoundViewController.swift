@@ -62,7 +62,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         self.navigationController?.navigationBar.backgroundColor = .clear
         if #available(iOS 13.0, *) {
             let statusbarView = UIView()
-            statusbarView.backgroundColor = #colorLiteral(red: 0.007841204293, green: 0.007844249718, blue: 0.007841013372, alpha: 1)
+            statusbarView.backgroundColor = .clear
             
             navigationController?.navigationBar.addSubview(statusbarView)
             
@@ -74,7 +74,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         }
         else {
             let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView
-            statusBar?.backgroundColor = #colorLiteral(red: 0.007841204293, green: 0.007844249718, blue: 0.007841013372, alpha: 1)
+            statusBar?.backgroundColor = .clear
         }
         self.navigationController?.navigationBar.barStyle = UIBarStyle.blackOpaque
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -170,7 +170,8 @@ extension SelectSoundViewController:UICollectionViewDataSource,UICollectionViewD
             let tag = soundsCategories[indexPath.row]
             cell.titleButton.setTitle(tag, for: .normal)
             cell.titleButton.setTitle(tag, for: .selected)
-            cell.titleButton.layer.cornerRadius = 10
+            cell.titleButton.layer.cornerRadius = 15.0
+            cell.titleButton.clipsToBounds = true
             if selectedCategory == tag {
                 cell.titleButton.alpha = 1.0
             }else{
