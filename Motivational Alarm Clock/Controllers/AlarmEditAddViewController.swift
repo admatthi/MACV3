@@ -24,14 +24,17 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.backgroundColor = .clear
         datePicker.becomeFirstResponder()
         datePicker.tintColor = UIColor.white
+        
         if #available(iOS 14.0, *) {
             datePicker.preferredDatePickerStyle = .inline
         } else {
             datePicker.preferredDatePickerStyle = .compact // Replace .inline with .compact
         }
+        datePicker.overrideUserInterfaceStyle = .dark
         if segueInfo.isEditMode {
             let index = segueInfo.curCellIndex
             datePicker.date = alarmModel.alarms[index].date

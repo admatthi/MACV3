@@ -242,3 +242,23 @@ extension Notification.Name {
     static let didCompleteTask = Notification.Name("didCompleteTask")
     static let completedLengthyDownload = Notification.Name("completedLengthyDownload")
 }
+extension UIDatePicker {
+
+     var textColor: UIColor? {
+         set {
+              setValue(newValue, forKeyPath: "textColor")
+             }
+         get {
+              return value(forKeyPath: "textColor") as? UIColor
+             }
+     }
+
+     var highlightsToday : Bool? {
+         set {
+              setValue(newValue, forKeyPath: "highlightsToday")
+             }
+         get {
+              return value(forKey: "highlightsToday") as? Bool
+             }
+     }
+ }
