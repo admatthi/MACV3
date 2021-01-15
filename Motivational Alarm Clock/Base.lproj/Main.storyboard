@@ -697,28 +697,9 @@ subscribing. This value will always default to the plan's subscription term leng
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nq5-Nd-XWI">
                                                     <rect key="frame" x="10" y="10" width="167" height="204"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 8" translatesAutoresizingMaskIntoConstraints="NO" id="HAt-jw-03F">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rise &amp; Grind" translatesAutoresizingMaskIntoConstraints="NO" id="HAt-jw-03F">
                                                             <rect key="frame" x="0.0" y="0.0" width="167" height="204"/>
                                                         </imageView>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZ7-qW-eWb">
-                                                            <rect key="frame" x="0.0" y="124" width="167" height="80"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Heart Less heavy " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug3-NM-D53">
-                                                                    <rect key="frame" x="15" y="15" width="137" height="50"/>
-                                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstItem="ug3-NM-D53" firstAttribute="leading" secondItem="sZ7-qW-eWb" secondAttribute="leading" constant="15" id="Acd-l4-5wA"/>
-                                                                <constraint firstAttribute="bottom" secondItem="ug3-NM-D53" secondAttribute="bottom" constant="15" id="K14-a7-7jM"/>
-                                                                <constraint firstAttribute="trailing" secondItem="ug3-NM-D53" secondAttribute="trailing" constant="15" id="Lfq-mc-FsQ"/>
-                                                                <constraint firstAttribute="height" constant="80" id="b6F-4K-zG4"/>
-                                                                <constraint firstItem="ug3-NM-D53" firstAttribute="top" secondItem="sZ7-qW-eWb" secondAttribute="top" constant="15" id="wt5-Up-BFF"/>
-                                                            </constraints>
-                                                        </view>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBe-yP-c8f">
                                                             <rect key="frame" x="132" y="10" width="25" height="25"/>
                                                             <constraints>
@@ -738,20 +719,45 @@ subscribing. This value will always default to the plan's subscription term leng
                                                                 <imageReference key="image" image="pause.fill" catalog="system" symbolScale="large"/>
                                                             </state>
                                                         </button>
+                                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0R4-qF-9Va">
+                                                            <rect key="frame" x="0.0" y="124" width="167" height="80"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FNe-zG-kSL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167" height="80"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Heart Less heavy" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug3-NM-D53">
+                                                                        <rect key="frame" x="15" y="15" width="137" height="50"/>
+                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="ug3-NM-D53" firstAttribute="top" secondItem="FNe-zG-kSL" secondAttribute="top" constant="15" id="ASy-Tk-phB"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="ug3-NM-D53" secondAttribute="trailing" constant="15" id="Ggu-JO-7iH"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="ug3-NM-D53" secondAttribute="bottom" constant="15" id="V5R-gH-r5P"/>
+                                                                    <constraint firstItem="ug3-NM-D53" firstAttribute="leading" secondItem="FNe-zG-kSL" secondAttribute="leading" constant="15" id="nzG-4D-Tzd"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="80" id="VTZ-nx-bhx"/>
+                                                            </constraints>
+                                                            <blurEffect style="regular"/>
+                                                        </visualEffectView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="sZ7-qW-eWb" firstAttribute="leading" secondItem="nq5-Nd-XWI" secondAttribute="leading" id="3b9-PK-zdv"/>
-                                                        <constraint firstAttribute="bottom" secondItem="sZ7-qW-eWb" secondAttribute="bottom" id="BLj-LZ-jej"/>
-                                                        <constraint firstAttribute="trailing" secondItem="sZ7-qW-eWb" secondAttribute="trailing" id="Dx6-fi-j3d"/>
                                                         <constraint firstItem="HAt-jw-03F" firstAttribute="top" secondItem="nq5-Nd-XWI" secondAttribute="top" id="GHL-Qb-W9p"/>
                                                         <constraint firstItem="dEF-nP-OdO" firstAttribute="centerY" secondItem="HAt-jw-03F" secondAttribute="centerY" constant="-30" id="H8O-DE-9L9"/>
                                                         <constraint firstAttribute="trailing" secondItem="HAt-jw-03F" secondAttribute="trailing" id="KfJ-kU-Qfo"/>
+                                                        <constraint firstItem="0R4-qF-9Va" firstAttribute="leading" secondItem="nq5-Nd-XWI" secondAttribute="leading" id="Q1a-wZ-NCo"/>
+                                                        <constraint firstAttribute="trailing" secondItem="0R4-qF-9Va" secondAttribute="trailing" id="SCt-kn-I3d"/>
                                                         <constraint firstAttribute="trailing" secondItem="JBe-yP-c8f" secondAttribute="trailing" constant="10" id="e7H-CL-NPu"/>
                                                         <constraint firstItem="JBe-yP-c8f" firstAttribute="top" secondItem="nq5-Nd-XWI" secondAttribute="top" constant="10" id="hZd-7X-eBL"/>
                                                         <constraint firstItem="HAt-jw-03F" firstAttribute="leading" secondItem="nq5-Nd-XWI" secondAttribute="leading" id="j8P-61-qUK"/>
                                                         <constraint firstAttribute="bottom" secondItem="HAt-jw-03F" secondAttribute="bottom" id="tZW-Si-YA4"/>
                                                         <constraint firstItem="dEF-nP-OdO" firstAttribute="centerX" secondItem="HAt-jw-03F" secondAttribute="centerX" id="uKB-aU-Dxb"/>
+                                                        <constraint firstAttribute="bottom" secondItem="0R4-qF-9Va" secondAttribute="bottom" id="zCx-U3-ajR"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -765,7 +771,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                         <size key="customSize" width="187" height="224"/>
                                         <connections>
                                             <outlet property="coverImageView" destination="HAt-jw-03F" id="W19-fb-xFK"/>
-                                            <outlet property="mainView" destination="sZ7-qW-eWb" id="fXH-jx-BWg"/>
+                                            <outlet property="mainView" destination="0R4-qF-9Va" id="Sk5-BR-bsw"/>
                                             <outlet property="playPauseButton" destination="dEF-nP-OdO" id="Lah-ud-Wt9"/>
                                             <outlet property="selectCheckMarkButton" destination="JBe-yP-c8f" id="yd4-pD-xZm"/>
                                             <outlet property="titleLabel" destination="ug3-NM-D53" id="GWt-gh-U4p"/>
@@ -872,6 +878,7 @@ subscribing. This value will always default to the plan's subscription term leng
         <segue reference="Xty-Sz-rq8"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Rise &amp; Grind" width="658" height="807"/>
         <image name="checkMark" width="66" height="66"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="iPhone 8" width="1125" height="2001"/>

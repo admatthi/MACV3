@@ -172,9 +172,12 @@ extension SelectSoundViewController:UICollectionViewDataSource,UICollectionViewD
                                            action: #selector(self.playPauseAction(sender:)),
                     for: .touchUpInside)
 
+            cell.titleLabel.text = sound.title
             cell.topMainView.layer.cornerRadius = 10
             cell.coverImageView.layer.cornerRadius = 10
             cell.mainView.layer.cornerRadius = 10
+            cell.mainView.clipsToBounds = true
+
             return cell
         }
 

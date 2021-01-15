@@ -32,6 +32,28 @@ class HomeTableViewController: UITableViewController{
         else {
             self.navigationItem.leftBarButtonItem = nil
         }
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        self.navigationController?.navigationBar.backgroundColor = .clear
+        if #available(iOS 13.0, *) {
+            let statusbarView = UIView()
+            statusbarView.backgroundColor = #colorLiteral(red: 0.007841204293, green: 0.007844249718, blue: 0.007841013372, alpha: 1)
+            
+            navigationController?.navigationBar.addSubview(statusbarView)
+            
+            statusbarView.translatesAutoresizingMaskIntoConstraints = false
+            statusbarView.heightAnchor.constraint(equalToConstant: UIApplication.shared.statusBarFrame.size.height).isActive = true
+            statusbarView.widthAnchor.constraint(equalTo: navigationController!.navigationBar.widthAnchor).isActive = true
+            statusbarView.bottomAnchor.constraint(equalTo: navigationController!.navigationBar.topAnchor).isActive = true
+            statusbarView.centerXAnchor.constraint(equalTo: navigationController!.navigationBar.centerXAnchor).isActive = true
+        }
+        else {
+            let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView
+            statusBar?.backgroundColor = #colorLiteral(red: 0.007841204293, green: 0.007844249718, blue: 0.007841013372, alpha: 1)
+        }
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.blackOpaque
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        self.navigationController!.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.shadowImage = UIColor.clear.as1ptImage()
     }
     @objc func onDidReceiveData(_ notification: Notification)
     {
@@ -173,7 +195,8 @@ class HomeTableViewController: UITableViewController{
         if segue.identifier == Id.addSegueIdentifier {
             addEditController.navigationItem.title = "Add Alarm"
             addEditController.modalPresentationStyle = .fullScreen
-            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "A Heart Less heavy", mediaLabel: "newtrack2", mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: "giveup", category: "Motivation")
+            let defaultSound = allSounds[0]
+            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: defaultSound.title, mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
         }
         else if segue.identifier == Id.editSegueIdentifier {
             addEditController.navigationItem.title = "Edit Alarm"

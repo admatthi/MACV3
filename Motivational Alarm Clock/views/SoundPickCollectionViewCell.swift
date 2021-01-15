@@ -14,6 +14,6 @@ class SoundPickCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var selectCheckMarkButton: UIButton!
     
+    @IBOutlet weak var mainView: UIVisualEffectView!
     @IBOutlet weak var playPauseButton: UIButton!
-    @IBOutlet weak var mainView: UIView!
 }
