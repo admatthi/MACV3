@@ -51,7 +51,7 @@ class HomeTableViewController: UITableViewController{
             statusBar?.backgroundColor = #colorLiteral(red: 0.007841204293, green: 0.007844249718, blue: 0.007841013372, alpha: 1)
         }
         self.navigationController?.navigationBar.barStyle = UIBarStyle.blackOpaque
-        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController!.navigationBar.setBackgroundImage(UIColor.black.as1ptImage(), for: .default)
 //        self.navigationController!.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.shadowImage = UIColor.clear.as1ptImage()
     }
