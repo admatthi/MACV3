@@ -128,6 +128,7 @@ class HomeTableViewController: UITableViewController{
 //
 //        //tag is used to indicate which row had been touched
 //        sw.tag = indexPath.row
+        cell.itemSwitch.tag = indexPath.row
         cell.itemSwitch.addTarget(self, action: #selector(self.switchTapped(_:)), for: UIControl.Event.valueChanged)
         if alarm.enabled {
             cell.mainView.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 0.8)
@@ -138,6 +139,7 @@ class HomeTableViewController: UITableViewController{
             cell.mainView.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 0.8)
             cell.titleLable.alpha = 1
             cell.timeLabel.alpha = 1
+            cell.itemSwitch.setOn(false, animated: false)
         }
         
         //delete empty seperator line
