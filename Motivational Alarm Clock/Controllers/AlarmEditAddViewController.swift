@@ -103,6 +103,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         }
         self.performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
         NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
+        
 
     }
     

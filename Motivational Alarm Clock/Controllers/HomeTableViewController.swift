@@ -66,6 +66,7 @@ class HomeTableViewController: UITableViewController{
         else {
             self.navigationItem.leftBarButtonItem = nil
         }
+        alarmScheduler.reSchedule()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
