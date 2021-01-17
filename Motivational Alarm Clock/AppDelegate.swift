@@ -245,33 +245,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         
         //negative number means loop infinity
         audioPlayer!.numberOfLoops = 0
-//        audioPlayer!.play()
+        audioPlayer!.play()
     }
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         //         print("Firebase registration token: \(fcmToken)")
-        if let token = fcmToken {
-            db.collection("PushNotification").whereField("uid", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents{
-                        let updateReference = db.collection("PushNotification").document(document.documentID)
-                        updateReference.getDocument { (document, err) in
-                            if let err = err {
-                                print(err.localizedDescription)
-                            }
-                            else {
-                                document?.reference.updateData([
-                                    "token": token
-                                ])
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
+//        if let token = fcmToken {
+//            db.collection("PushNotification").whereField("uid", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
+//                if let err = err {
+//                    print("Error getting documents: \(err)")
+//                } else {
+//                    for document in querySnapshot!.documents{
+//                        let updateReference = db.collection("PushNotification").document(document.documentID)
+//                        updateReference.getDocument { (document, err) in
+//                            if let err = err {
+//                                print(err.localizedDescription)
+//                            }
+//                            else {
+//                                document?.reference.updateData([
+//                                    "token": token
+//                                ])
+//                            }
+//                        }
+//                    }
+//
+//                }
+//            }
+//        }
     }
          // TODO: If necessary send token to application server.
          // Note: This callback is fired at each app startup and whenever a new token is generated.
@@ -342,6 +342,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
+        audioPlayer!.stop()
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
