@@ -20,9 +20,9 @@ import AVKit
 import AVFoundation
 import Kingfisher
 import FirebaseDatabase
-
+var db : Firestore!
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, AlarmApplicationDelegate,UNUserNotificationCenterDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, AlarmApplicationDelegate,UNUserNotificationCenterDelegate,MessagingDelegate{
 
     var window: UIWindow?
     var audioPlayer: AVAudioPlayer?
@@ -35,13 +35,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
-        
         FirebaseApp.configure()
+        ref = Database.database().reference()
+        db = Firestore.firestore()
+       
 
-        
+        uid = UIDevice.current.identifierForVendor?.uuidString ?? "x"
         var error: NSError?
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
         } catch let error1 as NSError{
             error = error1
             print("could not set session. err:\(error!.localizedDescription)")
@@ -58,24 +60,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         Purchases.debugLogsEnabled = true
         Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyjJtFpYzjCj", appUserID: "")
 
-         if #available(iOS 10.0, *) {
-        // For iOS 10 display notification (sent via APNS)
-            UNUserNotificationCenter.current().delegate = self
-            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-            UNUserNotificationCenter.current().requestAuthorization(
-                options: authOptions,
-                completionHandler: {_, _ in })
-         } else {
-            let settings: UIUserNotificationSettings =
-                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-            application.registerUserNotificationSettings(settings)
-         }
-        
-        application.registerForRemoteNotifications()
+        if #available(iOS 10.0, *) {
+          // For iOS 10 display notification (sent via APNS)
+          UNUserNotificationCenter.current().delegate = self
 
+          let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+          UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions,
+            completionHandler: {_, _ in })
+        } else {
+          let settings: UIUserNotificationSettings =
+          UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+          application.registerUserNotificationSettings(settings)
+        }
+
+        application.registerForRemoteNotifications()
+        Messaging.messaging().delegate = self
         return true
     }
-   
+    func getPrefrences(){
+        db.collection("PushNotification").whereField("uid", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
+           
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    if let userName = data["userName"] as? String
+                    {
+
+                        
+                    }
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
+    }
     //receive local notification when app in foreground
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
@@ -117,7 +137,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         storageController.addAction(stopOption)
         window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
     }
-    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        
+    }
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+            let alarmmodel = Alarms()
+            var alarms = alarmmodel.alarms
+            alarms.sort(by: { $0.date.compare($1.date) == .orderedDescending })
+            if alarms.count > 0 {
+                playSound(fileName: "Rise & Grind.mp3")
+            }
+        let storageController = UIAlertController(title: "Alarm", message: nil, preferredStyle: .alert)
+        let stopOption = UIAlertAction(title: "OK", style: .default)
+        storageController.addAction(stopOption)
+        window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
+//        completionHandler(UIBackgroundFetchResult.newData)
+
+    }
+    // Play the specified audio file with extension
+    func playSound(fileName: String) {
+        let session = AVAudioSession.sharedInstance()
+
+        var setCategoryError: Error? = nil
+        do {
+            try session.setCategory(
+                .playback,
+                options: .mixWithOthers)
+        } catch let setCategoryError {
+            // handle error
+        }
+        var sound: SystemSoundID = 0
+        if let soundURL = Bundle.main.url(forAuxiliaryExecutable: "Rise & Grind.mp3") {
+            AudioServicesCreateSystemSoundID(soundURL as CFURL, &sound)
+            AudioServicesPlaySystemSoundWithCompletion(sound, nil)
+            //vibrate phone first
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            //set vibrate callback
+            AudioServicesAddSystemSoundCompletion(SystemSoundID(kSystemSoundID_Vibrate),nil,
+                nil,
+                { (_:SystemSoundID, _:UnsafeMutableRawPointer?) -> Void in
+                    AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+                },
+                nil)
+        }
+    }
     //snooze notification handler when app in background
     func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Void) {
         var index: Int = -1
@@ -173,15 +236,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         }
         
         //negative number means loop infinity
-        audioPlayer!.numberOfLoops = -1
+        audioPlayer!.numberOfLoops = 0
         audioPlayer!.play()
     }
     
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        //         print("Firebase registration token: \(fcmToken)")
+        if let token = fcmToken {
+            db.collection("PushNotification").whereField("uid", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents{
+                        let updateReference = db.collection("PushNotification").document(document.documentID)
+                        updateReference.getDocument { (document, err) in
+                            if let err = err {
+                                print(err.localizedDescription)
+                            }
+                            else {
+                                document?.reference.updateData([
+                                    "token": token
+                                ])
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+         // TODO: If necessary send token to application server.
+         // Note: This callback is fired at each app startup and whenever a new token is generated.
     //AVAudioPlayerDelegate protocol
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         
     }
-    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+
+        }
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Messaging.messaging().apnsToken = deviceToken
+    }
     func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
         
     }
@@ -217,3 +312,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
 
 }
 
+class BackgroundExecutable {
+    var identifier: UIBackgroundTaskIdentifier
+    let function: (() -> Void) -> Void
+ 
+    init(function: @escaping (_ completion: () -> Void) -> Void) {
+        self.function = function
+        self.identifier = UIBackgroundTaskIdentifier.invalid
+    }
+ 
+    func execute() {
+        let application = UIApplication.shared
+        identifier = application.beginBackgroundTask {
+            application.endBackgroundTask(self.identifier)
+        }
+        function(endBackgroundTask)
+    }
+ 
+    func endBackgroundTask() {
+        UIApplication.shared.endBackgroundTask(identifier)
+    }
+}
