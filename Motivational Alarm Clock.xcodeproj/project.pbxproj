@@ -18,6 +18,7 @@
 		4E9724FF25AFD3250070FF50 /* SoundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9724FE25AFD3250070FF50 /* SoundData.swift */; };
 		4E97250525AFDEC70070FF50 /* Time To Wake Up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E97250325AFDEC70070FF50 /* Time To Wake Up.mp3 */; };
 		4E97250625AFDEC70070FF50 /* Rise & Grind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E97250425AFDEC70070FF50 /* Rise & Grind.mp3 */; };
+		4EB7A2DF25B4061800A5C42F /* Adhan-makkah.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7A2B325B3FE3C00A5C42F /* Adhan-makkah.caf */; };
 		4EBD221325AF5A96008530A2 /* HomeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */; };
 		4EDA8E7D25AE69C7005DAE2C /* newtrack2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA8E7C25AE69C7005DAE2C /* newtrack2.mp3 */; };
 		4EE5F19225AD23D800B9C2EE /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F19125AD23D800B9C2EE /* AlarmModel.swift */; };
@@ -402,6 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB7A2DF25B4061800A5C42F /* Adhan-makkah.caf in Resources */,
 				4E97250525AFDEC70070FF50 /* Time To Wake Up.mp3 in Resources */,
 				9D8D249025ABABF000B4E69D /* LaunchScreen.storyboard in Resources */,
 				4E21DACE25B33DDE0025C8A3 /* GoogleService-Info.plist in Resources */,

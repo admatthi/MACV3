@@ -20,7 +20,7 @@ pod 'IQKeyboardManagerSwift'
 pod 'ReadabilityKit'
 pod 'DropDown'
 pod 'ActionSheetPicker-3.0'
-
+pod 'SwiftySound'
   target 'Motivational Alarm ClockTests' do
     inherit! :search_paths
     # Pods for testing

@@ -27,12 +27,11 @@ exports.scheduledFunction = functions.pubsub.schedule('every 1 minutes').onRun((
             body:  "wake up"
 
         },
-        "token": "d-9D0Wl39EXyiy08zc_NIW:APA91bEdGsIfzcEcGt71rH4sdQVT82HVcq9KKvAEqWQwsziAwpxhDQpagM8FRUM0DbmtSGSKfGrYlmJ0O0GRuqdiC3Chm3bQothDGfmQZCGY8vf0NNsvTRoxcV9mZt-BuJ_3K9KGPR6G"
+        "token": "cQuZ_waHbEM7lhD8ur2g8L:APA91bF4UfbYE6rqR1y7k37PoK1oQN2aiIrgZjoqK7zdZDm1URl81BdhE668ymu1Oh9kq31QC_HutGSFn3HnMEDNHGnUZy7wqCufFbFQRQteRgYXf-VmOr6LEj2MFOz1qKDe-Ek7Wp41"
     };
     const options = {
         content_available: true,
         priority: "high",
-
     }
     let response= admin.messaging().sendToDevice(message.token,payload,options)
 

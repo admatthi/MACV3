@@ -73,6 +73,8 @@ NSString *const kFIRGlobalAppDataCollectionEnabledDefaultsKeyFormat =
 NSString *const kFIRGlobalAppDataCollectionEnabledPlistKey =
     @"FirebaseDataCollectionDefaultEnabled";
 
+NSString *const kFIRAppDiagnosticsNotification = @"FIRAppDiagnosticsNotification";
+
 NSString *const kFIRAppDiagnosticsConfigurationTypeKey = @"ConfigType";
 NSString *const kFIRAppDiagnosticsErrorKey = @"Error";
 NSString *const kFIRAppDiagnosticsFIRAppKey = @"FIRApp";
@@ -345,6 +347,8 @@ static FIRApp *sDefaultApp;
   if (![self isAppIDValid]) {
     return NO;
   }
+
+  [self logCoreTelemetryIfEnabled];
 
 #if TARGET_OS_IOS
   // Initialize the Analytics once there is a valid options under default app. Analytics should
@@ -849,9 +853,7 @@ static FIRApp *sDefaultApp;
 
 - (void)logCoreTelemetryIfEnabled {
   if ([self isDataCollectionDefaultEnabled]) {
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), ^{
-      [FIRCoreDiagnosticsConnector logCoreTelemetryWithOptions:[self options]];
-    });
+    [FIRCoreDiagnosticsConnector logCoreTelemetryWithOptions:_options];
   }
 }
 

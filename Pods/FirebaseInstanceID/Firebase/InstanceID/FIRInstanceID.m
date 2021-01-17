@@ -1127,22 +1127,9 @@ static FIRInstanceID *gInstanceID;
 - (void)messagingTokenDidChangeNotificationReceived:(NSNotification *)notification {
   NSString *tokenUpdatedFromMessaging = notification.object;
   if (!tokenUpdatedFromMessaging || [tokenUpdatedFromMessaging isKindOfClass:[NSString class]]) {
-    // Check the token from storage along with local value.
-    FIRInstanceIDTokenInfo *cachedTokenInfo =
-        [self.tokenManager cachedTokenInfoWithAuthorizedEntity:self.fcmSenderID
-                                                         scope:kFIRInstanceIDDefaultTokenScope];
-    NSString *cachedToken = cachedTokenInfo.token;
-
-    if (self.defaultFCMToken.length != tokenUpdatedFromMessaging.length ||
-        cachedToken.length != tokenUpdatedFromMessaging.length ||
-        (self.defaultFCMToken.length && tokenUpdatedFromMessaging.length &&
-         ![self.defaultFCMToken isEqualToString:tokenUpdatedFromMessaging]) ||
-        (cachedToken.length && tokenUpdatedFromMessaging.length &&
-         ![cachedToken isEqualToString:tokenUpdatedFromMessaging])) {
-      self.defaultFCMToken = tokenUpdatedFromMessaging;
-      [self.tokenManager saveDefaultToken:tokenUpdatedFromMessaging
-                              withOptions:[self defaultTokenOptions]];
-    }
+    self.defaultFCMToken = tokenUpdatedFromMessaging;
+    [self.tokenManager saveDefaultToken:tokenUpdatedFromMessaging
+                            withOptions:[self defaultTokenOptions]];
   }
 }
 

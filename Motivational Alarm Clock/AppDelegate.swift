@@ -20,12 +20,14 @@ import AVKit
 import AVFoundation
 import Kingfisher
 import FirebaseDatabase
+import SwiftySound
+
 var db : Firestore!
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, AlarmApplicationDelegate,UNUserNotificationCenterDelegate,MessagingDelegate{
-
+    var soundId: SystemSoundID = 1
     var window: UIWindow?
-    var audioPlayer: AVAudioPlayer?
+    var audioPlayer: AVAudioPlayer!
     let alarmScheduler: AlarmSchedulerDelegate = Scheduler()
     var alarmModel: Alarms = Alarms()
 
@@ -64,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
           // For iOS 10 display notification (sent via APNS)
           UNUserNotificationCenter.current().delegate = self
 
-          let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound,.criticalAlert]
           UNUserNotificationCenter.current().requestAuthorization(
             options: authOptions,
             completionHandler: {_, _ in })
@@ -145,6 +147,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
             var alarms = alarmmodel.alarms
             alarms.sort(by: { $0.date.compare($1.date) == .orderedDescending })
             if alarms.count > 0 {
+                audioPlayer!.play()
                 playSound(fileName: "Rise & Grind.mp3")
             }
         let storageController = UIAlertController(title: "Alarm", message: nil, preferredStyle: .alert)
@@ -156,13 +159,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     }
     // Play the specified audio file with extension
     func playSound(fileName: String) {
+        
+        
+        var setTo0 = 0
+        AudioServicesSetProperty( kAudioServicesPropertyIsUISound,0,nil,
+                                 4,&setTo0 )
         let session = AVAudioSession.sharedInstance()
 
         var setCategoryError: Error? = nil
         do {
             try session.setCategory(
                 .playback,
-                options: .mixWithOthers)
+                options: .defaultToSpeaker)
         } catch let setCategoryError {
             // handle error
         }
@@ -237,7 +245,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         
         //negative number means loop infinity
         audioPlayer!.numberOfLoops = 0
-        audioPlayer!.play()
+//        audioPlayer!.play()
     }
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
@@ -291,6 +299,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        let session = AVAudioSession.sharedInstance()
+
+        var setCategoryError: Error? = nil
+        do {
+            try session.setCategory(
+                .playback,
+                options: .defaultToSpeaker)
+        } catch let setCategoryError {
+            // handle error
+        }
+        let url = URL(fileURLWithPath: Bundle.main.path(forResource: "Rise & Grind", ofType: "mp3")!)
+        
+        var error: NSError?
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+        } catch let error1 as NSError {
+            error = error1
+            audioPlayer = nil
+        }
+        
+        if let err = error {
+            print("audioPlayer error \(err.localizedDescription)")
+            return
+        } else {
+            audioPlayer!.delegate = self
+            audioPlayer!.prepareToPlay()
+        }
+        
+        //negative number means loop infinity
+        audioPlayer!.numberOfLoops = 0
+        let currentAudioTime = audioPlayer!.deviceCurrentTime
+        let alarmmodel = Alarms()
+        var alarms = alarmmodel.alarms
+        alarms.sort(by: { $0.date.compare($1.date) == .orderedDescending })
+        if alarms.count > 0 {
+            let delayTime: TimeInterval = alarms[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
+            audioPlayer!.play(atTime: currentAudioTime + delayTime)
+        }
+
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
