@@ -103,7 +103,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         
         //show an alert window
-        let storageController = UIAlertController(title: "Alarm", message: nil, preferredStyle: .alert)
         var isSnooze: Bool = false
         var soundName: String = ""
         var index: Int = -1
@@ -112,48 +111,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
             soundName = userInfo["soundName"] as! String
             index = userInfo["index"] as! Int
         }
-
-        playSound(soundName)
+        self.alarmModel = Alarms()
+        self.alarmModel.alarms[index].onSnooze = false
+        //change UI
+        var mainVC = self.window?.visibleViewController as? HomeViewController
+        if mainVC == nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            mainVC = storyboard.instantiateViewController(withIdentifier: "Alarm") as? HomeViewController
+        }
+        mainVC!.changeSwitchButtonState(index: index)
+//        playSound(soundName)
         //schedule notification for snooze
-        if isSnooze {
-            let snoozeOption = UIAlertAction(title: "Snooze", style: .default) {
-                (action:UIAlertAction)->Void in self.audioPlayer?.stop()
-                self.alarmScheduler.setNotificationForSnooze(snoozeMinute: 9, soundName: soundName, index: index)
-            }
-            storageController.addAction(snoozeOption)
-        }
-        let stopOption = UIAlertAction(title: "OK", style: .default) {
-            (action:UIAlertAction)->Void in self.audioPlayer?.stop()
-            AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate)
-            self.alarmModel = Alarms()
-            self.alarmModel.alarms[index].onSnooze = false
-            //change UI
-            var mainVC = self.window?.visibleViewController as? HomeViewController
-            if mainVC == nil {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                mainVC = storyboard.instantiateViewController(withIdentifier: "Alarm") as? HomeViewController
-            }
-            mainVC!.changeSwitchButtonState(index: index)
-        }
-
-        storageController.addAction(stopOption)
-        window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
+//        if isSnooze {
+//            let snoozeOption = UIAlertAction(title: "Snooze", style: .default) {
+//                (action:UIAlertAction)->Void in self.audioPlayer?.stop()
+//                self.alarmScheduler.setNotificationForSnooze(snoozeMinute: 9, soundName: soundName, index: index)
+//            }
+//            storageController.addAction(snoozeOption)
+//        }
+//        let stopOption = UIAlertAction(title: "OK", style: .default) {
+//            (action:UIAlertAction)->Void in self.audioPlayer?.stop()
+//            AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate)
+//
+//        }
+//
+//        storageController.addAction(stopOption)
+//        window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
     }
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
         
     }
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-            let alarmmodel = Alarms()
-            var alarms = alarmmodel.alarms
-            alarms.sort(by: { $0.date.compare($1.date) == .orderedDescending })
-            if alarms.count > 0 {
-                audioPlayer!.play()
-                playSound(fileName: "Rise & Grind.mp3")
-            }
-        let storageController = UIAlertController(title: "Alarm", message: nil, preferredStyle: .alert)
-        let stopOption = UIAlertAction(title: "OK", style: .default)
-        storageController.addAction(stopOption)
-        window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
+//            let alarmmodel = Alarms()
+//            var alarms = alarmmodel.alarms
+//            alarms.sort(by: { $0.date.compare($1.date) == .orderedDescending })
+//            if alarms.count > 0 {
+//                audioPlayer!.play()
+//                playSound(fileName: "Rise & Grind.mp3")
+//            }
+//        let storageController = UIAlertController(title: "Alarm", message: nil, preferredStyle: .alert)
+//        let stopOption = UIAlertAction(title: "OK", style: .default)
+//        storageController.addAction(stopOption)
+//        window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
 //        completionHandler(UIBackgroundFetchResult.newData)
 
     }
@@ -335,10 +334,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         var alarms = alarmmodel.alarms
         alarms.sort(by: { $0.date.compare($1.date) == .orderedDescending })
         if alarms.count > 0 {
-            let delayTime: TimeInterval = alarms[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
-            audioPlayer!.play(atTime: currentAudioTime + delayTime)
-        }
+            let frstDateObject = alarms[0].date
+            let currentDate = Date()
+            if frstDateObject > Date() {
+                //
+                let delayTime: TimeInterval = alarms[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
+                    audioPlayer!.play(atTime: currentAudioTime + delayTime)
+            }else{
 
+            }
+        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
