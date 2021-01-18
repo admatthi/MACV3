@@ -46,9 +46,14 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
 
     }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         alarmModel=Alarms()
+        self.navigationController?.navigationBar.isHidden = true
         tableView.reloadData()
         snoozeEnabled = segueInfo.snoozeEnabled
         
@@ -79,6 +84,10 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func cancelButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveEditAlarm(_ sender: AnyObject) {

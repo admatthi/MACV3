@@ -353,13 +353,57 @@ subscribing. This value will always default to the plan's subscription term leng
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-ct-6du">
-                                <rect key="frame" x="0.0" y="146" width="414" height="750"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="g9w-cG-8eg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEQ-V4-R9r">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add alarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3j-Tn-hJL">
+                                        <rect key="frame" x="163" y="14.5" width="88" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vi9-KD-1aN">
+                                        <rect key="frame" x="364" y="5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="KAO-Ir-dny"/>
+                                            <constraint firstAttribute="width" constant="40" id="bIc-rl-oNb"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveEditAlarm:" destination="38A-Vr-ugb" eventType="touchUpInside" id="1RS-Cj-mEb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlZ-Mz-Ju7">
+                                        <rect key="frame" x="10" y="5" width="52" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="myy-ys-f2O"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonAction:" destination="38A-Vr-ugb" eventType="touchUpInside" id="Dlf-ml-XMC"/>
+                                            <action selector="editDoneButtonAction:" destination="sKI-hj-4KZ" eventType="touchUpInside" id="GqG-lf-LmE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Vi9-KD-1aN" firstAttribute="centerY" secondItem="kEQ-V4-R9r" secondAttribute="centerY" id="BFo-ht-1gk"/>
+                                    <constraint firstItem="MlZ-Mz-Ju7" firstAttribute="leading" secondItem="kEQ-V4-R9r" secondAttribute="leading" constant="10" id="C3X-bG-4K6"/>
+                                    <constraint firstItem="MlZ-Mz-Ju7" firstAttribute="centerY" secondItem="kEQ-V4-R9r" secondAttribute="centerY" id="TOF-oj-ncc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vi9-KD-1aN" secondAttribute="trailing" constant="10" id="byS-2y-1Iv"/>
+                                    <constraint firstItem="Q3j-Tn-hJL" firstAttribute="centerY" secondItem="kEQ-V4-R9r" secondAttribute="centerY" id="byd-Jp-BCY"/>
+                                    <constraint firstAttribute="height" constant="50" id="qXx-eY-xrS"/>
+                                    <constraint firstItem="Q3j-Tn-hJL" firstAttribute="centerX" secondItem="kEQ-V4-R9r" secondAttribute="centerX" id="yjA-Ub-rpH"/>
+                                </constraints>
+                            </view>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LLd-Sx-lGY">
-                                <rect key="frame" x="0.0" y="217.5" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="173.5" width="414" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -372,7 +416,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </userDefinedRuntimeAttributes>
                             </datePicker>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-yc-Uyt">
-                                <rect key="frame" x="0.0" y="267" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="223" width="414" height="717"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -386,7 +430,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FL-Ew-Gah">
-                                <rect key="frame" x="20" y="232" width="39" height="21"/>
+                                <rect key="frame" x="20" y="188" width="39" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -396,21 +440,20 @@ subscribing. This value will always default to the plan's subscription term leng
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="kEQ-V4-R9r" firstAttribute="top" secondItem="ukS-rH-71c" secondAttribute="top" id="2yy-RO-whd"/>
                             <constraint firstItem="7Zf-ct-6du" firstAttribute="trailing" secondItem="ukS-rH-71c" secondAttribute="trailing" id="3L0-vP-njW"/>
                             <constraint firstItem="7Zf-ct-6du" firstAttribute="leading" secondItem="ukS-rH-71c" secondAttribute="leading" id="3TM-k3-lN1"/>
                             <constraint firstItem="6FL-Ew-Gah" firstAttribute="centerY" secondItem="LLd-Sx-lGY" secondAttribute="centerY" id="4ao-rR-MvA"/>
-                            <constraint firstItem="7Zf-ct-6du" firstAttribute="top" secondItem="g9w-cG-8eg" secondAttribute="bottom" constant="-4" id="5ub-9I-xKJ"/>
-                            <constraint firstItem="7Zf-ct-6du" firstAttribute="top" secondItem="3BR-aW-k85" secondAttribute="top" constant="146" id="B1f-6I-kqC"/>
+                            <constraint firstItem="7Zf-ct-6du" firstAttribute="top" secondItem="3BR-aW-k85" secondAttribute="top" id="B1f-6I-kqC"/>
                             <constraint firstItem="6FL-Ew-Gah" firstAttribute="top" secondItem="ukS-rH-71c" secondAttribute="top" constant="144" id="H34-R6-n6y"/>
                             <constraint firstItem="6FL-Ew-Gah" firstAttribute="leading" secondItem="ukS-rH-71c" secondAttribute="leading" constant="20" id="KZt-ur-NLr"/>
                             <constraint firstItem="LLd-Sx-lGY" firstAttribute="leading" secondItem="bnW-yc-Uyt" secondAttribute="leading" id="LLb-oO-3f9"/>
-                            <constraint firstItem="g9w-cG-8eg" firstAttribute="top" secondItem="3BR-aW-k85" secondAttribute="top" id="Ldi-2b-Kgm"/>
-                            <constraint firstItem="g9w-cG-8eg" firstAttribute="leading" secondItem="ukS-rH-71c" secondAttribute="leading" id="NEs-GQ-5no"/>
+                            <constraint firstItem="kEQ-V4-R9r" firstAttribute="leading" secondItem="ukS-rH-71c" secondAttribute="leading" id="RRP-cO-Sh4"/>
                             <constraint firstItem="rnM-Sa-yXG" firstAttribute="top" secondItem="bnW-yc-Uyt" secondAttribute="bottom" constant="-78" id="U5y-Hu-VCz"/>
                             <constraint firstAttribute="bottom" secondItem="7Zf-ct-6du" secondAttribute="bottom" id="eTz-Yy-sL8"/>
+                            <constraint firstAttribute="trailing" secondItem="kEQ-V4-R9r" secondAttribute="trailing" id="gxg-ik-09z"/>
                             <constraint firstAttribute="trailing" secondItem="bnW-yc-Uyt" secondAttribute="trailing" id="kDB-eN-ZoP"/>
                             <constraint firstItem="bnW-yc-Uyt" firstAttribute="leading" secondItem="3BR-aW-k85" secondAttribute="leading" id="kbM-Zc-rLr"/>
-                            <constraint firstItem="g9w-cG-8eg" firstAttribute="trailing" secondItem="ukS-rH-71c" secondAttribute="trailing" id="r90-Ze-k2U"/>
                             <constraint firstItem="bnW-yc-Uyt" firstAttribute="top" secondItem="6FL-Ew-Gah" secondAttribute="bottom" constant="14" id="s9l-ij-1VM"/>
                             <constraint firstItem="bnW-yc-Uyt" firstAttribute="centerX" secondItem="3BR-aW-k85" secondAttribute="centerX" id="yis-Ej-cPR"/>
                             <constraint firstItem="LLd-Sx-lGY" firstAttribute="trailing" secondItem="bnW-yc-Uyt" secondAttribute="trailing" id="zSA-bQ-w73"/>
@@ -439,6 +482,7 @@ subscribing. This value will always default to the plan's subscription term leng
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="datePicker" destination="LLd-Sx-lGY" id="IhO-Rf-PU6"/>
                         <outlet property="tableView" destination="bnW-yc-Uyt" id="pFI-WS-fVM"/>
@@ -495,8 +539,9 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <constraint firstAttribute="height" constant="40" id="6Tq-2k-Eco"/>
                                             <constraint firstAttribute="width" constant="40" id="z80-Wq-ADv"/>
                                         </constraints>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
                                         </state>
                                         <connections>
@@ -511,7 +556,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                         <state key="normal" title="Edit">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="editDoneButtonAction:" destination="sKI-hj-4KZ" eventType="touchUpInside" id="Lpk-Ui-njL"/>
@@ -839,7 +884,7 @@ subscribing. This value will always default to the plan's subscription term leng
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M49-lP-5N1">
-                                <rect key="frame" x="0.0" y="252" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="208" width="414" height="40"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="9eO-xw-FSh"/>
@@ -893,14 +938,43 @@ subscribing. This value will always default to the plan's subscription term leng
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="GuO-Ws-xuF">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="TyP-oy-uiz">
-                                <rect key="frame" x="0.0" y="138" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPd-TC-SOW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwF-Mf-TAq">
+                                        <rect key="frame" x="152" y="14.5" width="110.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3z-5o-wcM">
+                                        <rect key="frame" x="10" y="5" width="57.5" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3aX-fl-9GI"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title=" Back" image="chevron.backward" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="MFr-DP-aWZ" eventType="touchUpInside" id="55C-Qf-8Yf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="VwF-Mf-TAq" firstAttribute="centerX" secondItem="sPd-TC-SOW" secondAttribute="centerX" id="4Wg-63-EN7"/>
+                                    <constraint firstItem="VwF-Mf-TAq" firstAttribute="centerY" secondItem="sPd-TC-SOW" secondAttribute="centerY" id="6Gm-Oz-QO1"/>
+                                    <constraint firstAttribute="height" constant="50" id="LJU-hZ-cov"/>
+                                    <constraint firstItem="F3z-5o-wcM" firstAttribute="centerY" secondItem="sPd-TC-SOW" secondAttribute="centerY" id="cK8-15-tcG"/>
+                                    <constraint firstItem="F3z-5o-wcM" firstAttribute="leading" secondItem="sPd-TC-SOW" secondAttribute="leading" constant="10" id="y5w-on-HbJ"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Oy-vp-0PY">
-                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="vpV-ar-Wgv"/>
@@ -953,7 +1027,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="waH-aA-bAT">
-                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4hM-7R-UOF">
                                     <size key="itemSize" width="187" height="224"/>
@@ -1060,20 +1134,19 @@ subscribing. This value will always default to the plan's subscription term leng
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TyP-oy-uiz" firstAttribute="trailing" secondItem="qfZ-e1-pbI" secondAttribute="trailing" id="1jZ-d1-pGV"/>
+                            <constraint firstItem="9Oy-vp-0PY" firstAttribute="top" secondItem="sPd-TC-SOW" secondAttribute="bottom" id="26M-Xg-Opr"/>
                             <constraint firstItem="9Oy-vp-0PY" firstAttribute="leading" secondItem="qfZ-e1-pbI" secondAttribute="leading" id="54C-hA-5A8"/>
-                            <constraint firstItem="TyP-oy-uiz" firstAttribute="top" secondItem="pX7-hw-eJo" secondAttribute="top" constant="138" id="AJ7-8d-f3E"/>
+                            <constraint firstItem="TyP-oy-uiz" firstAttribute="top" secondItem="pX7-hw-eJo" secondAttribute="top" id="AJ7-8d-f3E"/>
                             <constraint firstItem="waH-aA-bAT" firstAttribute="leading" secondItem="qfZ-e1-pbI" secondAttribute="leading" id="CQ4-oF-Mrd"/>
-                            <constraint firstItem="waH-aA-bAT" firstAttribute="top" secondItem="GuO-Ws-xuF" secondAttribute="bottom" id="J8V-gp-TXs"/>
                             <constraint firstItem="qfZ-e1-pbI" firstAttribute="trailing" secondItem="waH-aA-bAT" secondAttribute="trailing" id="Lkb-FX-4PE"/>
-                            <constraint firstItem="GuO-Ws-xuF" firstAttribute="top" secondItem="pX7-hw-eJo" secondAttribute="top" id="LpA-GA-KWb"/>
-                            <constraint firstItem="GuO-Ws-xuF" firstAttribute="trailing" secondItem="qfZ-e1-pbI" secondAttribute="trailing" id="aNM-9v-vDc"/>
+                            <constraint firstItem="sPd-TC-SOW" firstAttribute="top" secondItem="qfZ-e1-pbI" secondAttribute="top" id="R0h-YR-q4G"/>
+                            <constraint firstItem="sPd-TC-SOW" firstAttribute="leading" secondItem="qfZ-e1-pbI" secondAttribute="leading" id="a6z-Es-JB9"/>
                             <constraint firstItem="qfZ-e1-pbI" firstAttribute="trailing" secondItem="9Oy-vp-0PY" secondAttribute="trailing" id="nJI-zp-URR"/>
                             <constraint firstAttribute="bottom" secondItem="TyP-oy-uiz" secondAttribute="bottom" id="pO1-K8-s0U"/>
                             <constraint firstItem="qfZ-e1-pbI" firstAttribute="bottom" secondItem="waH-aA-bAT" secondAttribute="bottom" id="qDY-eb-taC"/>
-                            <constraint firstItem="GuO-Ws-xuF" firstAttribute="leading" secondItem="qfZ-e1-pbI" secondAttribute="leading" id="r7x-EH-9lc"/>
                             <constraint firstItem="TyP-oy-uiz" firstAttribute="leading" secondItem="qfZ-e1-pbI" secondAttribute="leading" id="t1d-nj-0UQ"/>
-                            <constraint firstItem="9Oy-vp-0PY" firstAttribute="top" secondItem="qfZ-e1-pbI" secondAttribute="top" id="tZg-me-dJF"/>
                             <constraint firstItem="waH-aA-bAT" firstAttribute="top" secondItem="9Oy-vp-0PY" secondAttribute="bottom" id="umO-80-i16"/>
+                            <constraint firstItem="sPd-TC-SOW" firstAttribute="trailing" secondItem="qfZ-e1-pbI" secondAttribute="trailing" id="vWk-9z-AYc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pick A Sound" id="tDk-Mp-CrD"/>
@@ -1137,6 +1210,7 @@ subscribing. This value will always default to the plan's subscription term leng
         <image name="Rise &amp; Grind" width="658" height="807"/>
         <image name="checkMark" width="66" height="66"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="iPhone 8" width="1125" height="2001"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
