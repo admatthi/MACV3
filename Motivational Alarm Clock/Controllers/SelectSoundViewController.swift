@@ -23,9 +23,13 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     var image:String!
     var soundtitle:String!
     var audioPlayer: AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        let notificationCenter = NotificationCenter.default
+            notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+
         if let category = selectedSound?.category{
             selectedCategory = category
         }
@@ -57,6 +61,10 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         tagSelection(tag: selectedCategory, isFirst: false)
         
     }
+    @objc func appMovedToBackground() {
+            // do whatever event you want
+        audioPlayer?.stop()
+        }
     @IBAction func backButtonAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
