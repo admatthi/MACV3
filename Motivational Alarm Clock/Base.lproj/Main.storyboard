@@ -743,13 +743,13 @@ subscribing. This value will always default to the plan's subscription term leng
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:30 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvi-AU-PBj">
-                                                            <rect key="frame" x="105" y="15" width="129.5" height="49.5"/>
+                                                            <rect key="frame" x="105" y="19" width="129.5" height="49.5"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="36"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Only Live Once" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2S-PW-eYe">
-                                                            <rect key="frame" x="105" y="63" width="141" height="22"/>
+                                                            <rect key="frame" x="105" y="72" width="141" height="22"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -761,11 +761,11 @@ subscribing. This value will always default to the plan's subscription term leng
                                                     <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="A84-bN-jA0" firstAttribute="centerY" secondItem="h0l-ju-jKO" secondAttribute="centerY" id="64T-Yi-UsY"/>
-                                                        <constraint firstItem="Mvi-AU-PBj" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" constant="15" id="9fX-tG-cVK"/>
+                                                        <constraint firstItem="Mvi-AU-PBj" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" constant="19" id="9fX-tG-cVK"/>
                                                         <constraint firstItem="Mvi-AU-PBj" firstAttribute="leading" secondItem="wRn-km-zoJ" secondAttribute="trailing" constant="15" id="Ard-OE-Bby"/>
                                                         <constraint firstAttribute="bottom" secondItem="wRn-km-zoJ" secondAttribute="bottom" id="Hpp-ax-tZa"/>
                                                         <constraint firstAttribute="trailing" secondItem="A84-bN-jA0" secondAttribute="trailing" constant="20" id="OAe-g0-DAr"/>
-                                                        <constraint firstAttribute="bottom" secondItem="K2S-PW-eYe" secondAttribute="bottom" constant="15" id="XQK-1y-3wI"/>
+                                                        <constraint firstAttribute="bottom" secondItem="K2S-PW-eYe" secondAttribute="bottom" constant="6" id="XQK-1y-3wI"/>
                                                         <constraint firstItem="wRn-km-zoJ" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" id="gJS-KK-tn4"/>
                                                         <constraint firstItem="wRn-km-zoJ" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" id="giR-b7-Lfd"/>
                                                         <constraint firstItem="K2S-PW-eYe" firstAttribute="leading" secondItem="wRn-km-zoJ" secondAttribute="trailing" constant="15" id="oyl-QB-j7I"/>

@@ -204,6 +204,7 @@ extension SelectSoundViewController:UICollectionViewDataSource,UICollectionViewD
             let sound = filteredSounds[indexPath.row]
             cell.playPauseButton.setImage(UIImage(named: "Bitmap"), for: .normal)
             cell.coverImageView.image = UIImage(named: sound.image)
+            
             if let selected = selectedSound {
                 if sound == selected{
                     cell.playPauseButton.isHidden = false
