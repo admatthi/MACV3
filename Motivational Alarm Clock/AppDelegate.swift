@@ -128,10 +128,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
             self.alarmModel = Alarms()
             self.alarmModel.alarms[index].onSnooze = false
             //change UI
-            var mainVC = self.window?.visibleViewController as? HomeTableViewController
+            var mainVC = self.window?.visibleViewController as? HomeViewController
             if mainVC == nil {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                mainVC = storyboard.instantiateViewController(withIdentifier: "Alarm") as? HomeTableViewController
+                mainVC = storyboard.instantiateViewController(withIdentifier: "Alarm") as? HomeViewController
             }
             mainVC!.changeSwitchButtonState(index: index)
         }

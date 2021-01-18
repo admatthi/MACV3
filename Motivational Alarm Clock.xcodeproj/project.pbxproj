@@ -18,6 +18,7 @@
 		4E9724FF25AFD3250070FF50 /* SoundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9724FE25AFD3250070FF50 /* SoundData.swift */; };
 		4E97250525AFDEC70070FF50 /* Time To Wake Up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E97250325AFDEC70070FF50 /* Time To Wake Up.mp3 */; };
 		4E97250625AFDEC70070FF50 /* Rise & Grind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E97250425AFDEC70070FF50 /* Rise & Grind.mp3 */; };
+		4EA0A4E425B5021600D970A0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0A4E325B5021600D970A0 /* HomeViewController.swift */; };
 		4EB7A2DF25B4061800A5C42F /* Adhan-makkah.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7A2B325B3FE3C00A5C42F /* Adhan-makkah.caf */; };
 		4EBD221325AF5A96008530A2 /* HomeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */; };
 		4EDA8E7D25AE69C7005DAE2C /* newtrack2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA8E7C25AE69C7005DAE2C /* newtrack2.mp3 */; };
@@ -80,6 +81,7 @@
 		4E9724FE25AFD3250070FF50 /* SoundData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundData.swift; sourceTree = "<group>"; };
 		4E97250325AFDEC70070FF50 /* Time To Wake Up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Time To Wake Up.mp3"; sourceTree = "<group>"; };
 		4E97250425AFDEC70070FF50 /* Rise & Grind.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rise & Grind.mp3"; sourceTree = "<group>"; };
+		4EA0A4E325B5021600D970A0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4EB7A2B325B3FE3C00A5C42F /* Adhan-makkah.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adhan-makkah.caf"; sourceTree = "<group>"; };
 		4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCell.swift; sourceTree = "<group>"; };
 		4EDA8E7C25AE69C7005DAE2C /* newtrack2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = newtrack2.mp3; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				4EE5F20425AD27D200B9C2EE /* WeekdaysViewController.swift */,
 				4EE5F20925AD285A00B9C2EE /* TitleEditViewController.swift */,
 				4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */,
+				4EA0A4E325B5021600D970A0 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA0A4E425B5021600D970A0 /* HomeViewController.swift in Sources */,
 				4EE5F1FB25AD25F800B9C2EE /* HomeTableViewController.swift in Sources */,
 				4E77485025AD2D140041674E /* NotificationName+Extension.swift in Sources */,
 				4E77484F25AD2D140041674E /* UIWindow+Extension.swift in Sources */,

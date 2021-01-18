@@ -240,7 +240,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == Id.saveSegueIdentifier {
-            let dist = segue.destination as! HomeTableViewController
+            let dist = segue.destination as! HomeViewController
             let cells = dist.tableView.visibleCells
             for cell in cells {
                 if let cell = cell as? HomeItemTableViewCell {
