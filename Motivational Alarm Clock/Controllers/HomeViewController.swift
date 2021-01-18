@@ -17,6 +17,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        editButton.isHidden = true
         self.navigationController?.navigationBar.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
@@ -29,11 +30,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if alarmModel.alarms.count > 0 {
-            editButton.isHidden = false
-        }else{
-            editButton.isHidden = true
-        }
+//        if alarmModel.alarms.count > 0 {
+//            editButton.isHidden = false
+//        }else{
+//            editButton.isHidden = true
+//        }
         self.navigationController?.navigationBar.isHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -41,17 +42,17 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 //        self.navigationController?.navigationBar.isHidden = false
     }
     @IBAction func editDoneButtonAction(_ sender: UIButton) {
-        if self.tableView.isEditing{
-            editButton.setTitle("Edit", for: .normal)
-            editButton.setTitle("Edit", for: .selected)
-            isEditing = false
-            self.tableView.setEditing(false, animated: true)
-        }else{
-            editButton.setTitle("Done", for: .normal)
-            editButton.setTitle("Done", for: .selected)
-            isEditing = true
-            self.tableView.setEditing(true, animated: true)
-        }
+//        if self.tableView.isEditing{
+//            editButton.setTitle("Edit", for: .normal)
+//            editButton.setTitle("Edit", for: .selected)
+//            isEditing = false
+//            self.tableView.setEditing(false, animated: true)
+//        }else{
+//            editButton.setTitle("Done", for: .normal)
+//            editButton.setTitle("Done", for: .selected)
+//            isEditing = true
+//            self.tableView.setEditing(true, animated: true)
+//        }
         
     }
     @objc func onDidReceiveData(_ notification: Notification)
@@ -90,10 +91,8 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     
     
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if isEditing {
 
             performSegue(withIdentifier: Id.editSegueIdentifier, sender: SegueInfo(curCellIndex: indexPath.row, isEditMode: true, label: alarmModel.alarms[indexPath.row].label, mediaLabel: alarmModel.alarms[indexPath.row].mediaLabel, mediaID: alarmModel.alarms[indexPath.row].mediaID, repeatWeekdays: alarmModel.alarms[indexPath.row].repeatWeekdays, enabled: alarmModel.alarms[indexPath.row].enabled, snoozeEnabled: alarmModel.alarms[indexPath.row].snoozeEnabled, imageName: alarmModel.alarms[indexPath.row].imageName, category: alarmModel.alarms[indexPath.row].category))
-        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -180,11 +179,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
-            if alarmModel.alarms.count > 0 {
-                editButton.isHidden = false
-            }else{
-                editButton.isHidden = true
-            }
+//            if alarmModel.alarms.count > 0 {
+//                editButton.isHidden = false
+//            }else{
+//                editButton.isHidden = true
+//            }
             alarmScheduler.reSchedule()
         }
     }
@@ -210,8 +209,8 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     @IBAction func unwindFromAddEditAlarmView(_ segue: UIStoryboardSegue) {
         isEditing = false
         self.tableView.setEditing(false, animated: true)
-        editButton.setTitle("Edit", for: .normal)
-        editButton.setTitle("Edit", for: .selected)
+//        editButton.setTitle("Edit", for: .normal)
+//        editButton.setTitle("Edit", for: .selected)
     }
     
     public func changeSwitchButtonState(index: Int) {
