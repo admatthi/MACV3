@@ -40,16 +40,52 @@ class PaywallViewViewController: UIViewController {
     private var offering : Purchases.Offering?
     
     private var offeringId : String?
+    
+    @IBAction func tapRestore(_ sender: Any) {
+        
+        ref?.child("Users").child(uid).updateChildValues(["Purchased" : "True"])
+             
+             didpurchase = true
+             
+             
+             Purchases.shared.restoreTransactions { (purchaserInfo, error) in
+                 //... check purchaserInfo to see if entitlement is now active
+                 
+                 if let error = error {
+                     
+                     
+                 } else {
+                     
+                     //
+                     ref?.child("Users").child(uid).updateChildValues(["Purchased" : "True"])
+                     
+                     didpurchase = true
+                     
+                     
+                     self.dismiss(animated: true, completion: nil)
+                     
+                     
+                 }
+                 
+             }
+    }
+    @IBAction func tapTerms(_ sender: Any) {
+          
+          if let url = NSURL(string: "https://www.aktechnology.info/terms.html"
+              ) {
+              UIApplication.shared.openURL(url as URL)
+          }
+          
+      }
 
     @IBAction func tapPay(_ sender: Any) {
         
         guard let package = offering?.availablePackages[0] else {
-            print("No available package")
-            MBProgressHUD.hide(for: view, animated: true)
-            
-            return
-        }
-        
+                    print("No available package")
+                    MBProgressHUD.hide(for: view, animated: true)
+                    
+                    return
+                }
         
         Purchases.shared.purchasePackage(package) { (trans, info, error, cancelled) in
             
@@ -122,20 +158,21 @@ class PaywallViewViewController: UIViewController {
         super.viewDidLoad()
         dismissButton.layer.cornerRadius = 12.5
         payButton.layer.cornerRadius = 20
+        
         ref = Database.database().reference()
 
         Purchases.shared.offerings { (offerings, error) in
-            
-            if error != nil {
-            }
-            if let offeringId = self.offeringId {
-                
-                self.offering = offerings?.offering(identifier: "Yearly")
-            } else {
-                self.offering = offerings?.current
-            }
-            
-        }
+                  
+                  if error != nil {
+                  }
+                  if let offeringId = self.offeringId {
+                      
+                      self.offering = offerings?.offering(identifier: "weekly")
+                  } else {
+                      self.offering = offerings?.current
+                  }
+                  
+              }
 
         // Do any additional setup after loading the view.
     }

@@ -25,6 +25,11 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        
+        tapsave.layer.borderWidth = 1.0
+        tapsave.layer.borderColor = UIColor.white.cgColor
+        tapsave.layer.cornerRadius = 10.0
+        tapsave.clipsToBounds = true
         tableView.backgroundColor = .clear
 
         datePicker.becomeFirstResponder()
@@ -162,6 +167,8 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
                 cell!.textLabel!.text = "Repeat"
                 cell!.textLabel?.textColor = .white
                 cell!.detailTextLabel?.textColor = .white
+                cell!.textLabel!.font = UIFont(name: "Avenir-Next", size: CGFloat(22))
+
                 cell!.detailTextLabel!.text = WeekdaysViewController.repeatText(weekdays: segueInfo.repeatWeekdays)
                 cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
             }
@@ -177,6 +184,8 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
                 cell!.detailTextLabel?.textColor = .white
                 cell!.textLabel!.text = "Sound"
                 cell!.detailTextLabel!.text = segueInfo.mediaLabel
+                cell!.textLabel!.font = UIFont(name: "Avenir-Next", size: CGFloat(22))
+
                 cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
             }
 //            else if indexPath.row == 3 {
@@ -236,7 +245,9 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         }
             
     }
-   
+    @IBOutlet weak var tapsave: UIButton!
+    
+    @IBOutlet weak var mainview: UIVisualEffectView!
     @IBAction func snoozeSwitchTapped (_ sender: UISwitch) {
         snoozeEnabled = sender.isOn
     }

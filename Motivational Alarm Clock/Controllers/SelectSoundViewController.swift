@@ -168,6 +168,12 @@ extension SelectSoundViewController:UICollectionViewDataSource,UICollectionViewD
         
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        stopSound()
+
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         collectionView.alpha = 1.0
         if collectionView == self.tagsCollectionView{

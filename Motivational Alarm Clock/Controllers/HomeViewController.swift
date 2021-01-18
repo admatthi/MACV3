@@ -20,6 +20,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         self.navigationController?.navigationBar.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         alarmScheduler.checkNotification()
         tableView.allowsSelectionDuringEditing = true
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
@@ -102,8 +103,8 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         cell.tag = indexPath.row
         cell.mainView.layer.cornerRadius = 10
         cell.soundImageView.layer.cornerRadius = 10
-        cell.soundImageView.layer.borderWidth = 1
-        cell.soundImageView.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+//        cell.soundImageView.layer.borderWidth = 1
+//        cell.soundImageView.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         let alarm: Alarm = alarmModel.alarms[indexPath.row]
         cell.soundImageView.image = UIImage(named: alarm.imageName)
@@ -137,6 +138,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         }
         
         //delete empty seperator line
+        
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         return cell
     }

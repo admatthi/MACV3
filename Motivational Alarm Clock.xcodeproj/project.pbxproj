@@ -740,7 +740,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF873A9C66FDFD5CFE9B3B9F /* Pods-Motivational Alarm Clock.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
 				CODE_SIGN_ENTITLEMENTS = "Motivational Alarm Clock/Motivational Alarm Clock.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZNJ7N6ACK;
@@ -761,7 +761,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCBC92D3F5F3916F1819E89C /* Pods-Motivational Alarm Clock.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
 				CODE_SIGN_ENTITLEMENTS = "Motivational Alarm Clock/Motivational Alarm Clock.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZNJ7N6ACK;
