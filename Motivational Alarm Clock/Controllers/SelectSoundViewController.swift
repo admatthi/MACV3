@@ -14,7 +14,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
 
     var filteredSounds:[Sounds] = []
     var selectedSound:Sounds?
-    var soundsCategories = ["Motivation","Self Help","Fitness","faith"]
+    var soundsCategories = ["Motivation","Self Help","Fitness","Faith", "Social", "Business", "Philosophy", "Spirituality" ]
     var selectedCategory = "Motivation"
     @IBOutlet weak var tagsCollectionView: UICollectionView!
     @IBOutlet weak var collectionView: UICollectionView!

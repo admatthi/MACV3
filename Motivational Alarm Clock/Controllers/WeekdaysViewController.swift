@@ -41,6 +41,8 @@ class WeekdaysViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)!
         
+        cell.selectionStyle = .none
+        
         if let index = weekdays.firstIndex(of: (indexPath.row + 1)){
             weekdays.remove(at: index)
             cell.setSelected(true, animated: true)
@@ -53,6 +55,7 @@ class WeekdaysViewController: UITableViewController {
             cell.setSelected(true, animated: true)
             cell.setSelected(false, animated: true)
             cell.accessoryType = UITableViewCell.AccessoryType.checkmark
+            cell.accessoryView?.tintColor = .white
             
         }
     }
