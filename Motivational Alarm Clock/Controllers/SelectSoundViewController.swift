@@ -25,7 +25,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     var audioPlayer: AVAudioPlayer?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = true
         if let category = selectedSound?.category{
             selectedCategory = category
         }
@@ -89,7 +89,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     performSegue(withIdentifier: Id.soundUnwindIdentifier, sender: self)
-        self.navigationController?.navigationBar.isHidden = false
+//        self.navigationController?.navigationBar.isHidden = false
 
         
     }

@@ -23,6 +23,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         alarmScheduler.checkNotification()
         tableView.allowsSelectionDuringEditing = true
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
+        self.navigationController?.navigationBar.isHidden = true
 
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +37,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.isHidden = false
+//        self.navigationController?.navigationBar.isHidden = false
     }
     @IBAction func editDoneButtonAction(_ sender: UIButton) {
         if self.tableView.isEditing{

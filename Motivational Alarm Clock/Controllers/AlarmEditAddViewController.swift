@@ -24,7 +24,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = true
         tableView.backgroundColor = .clear
 
         datePicker.becomeFirstResponder()
@@ -48,7 +48,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.isHidden = false
+//        self.navigationController?.navigationBar.isHidden = false
     }
 
     override func viewWillAppear(_ animated: Bool) {
