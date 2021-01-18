@@ -169,7 +169,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
                 cell!.detailTextLabel?.textColor = .white
                 cell!.textLabel!.font = UIFont(name: "Avenir-Next", size: CGFloat(22))
 
-                cell!.detailTextLabel!.text = WeekdaysViewController.repeatText(weekdays: segueInfo.repeatWeekdays)
+                cell!.detailTextLabel!.text = SelectWeekdaysViewController.repeatText(weekdays: segueInfo.repeatWeekdays)
                 cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
             }
 //            else if indexPath.row == 1 {
@@ -285,7 +285,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
             dist.label = segueInfo.label
         }
         else if segue.identifier == Id.weekdaysSegueIdentifier {
-            let dist = segue.destination as! WeekdaysViewController
+            let dist = segue.destination as! SelectWeekdaysViewController
             dist.weekdays = segueInfo.repeatWeekdays
         }
     }
@@ -296,7 +296,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @IBAction func unwindFromWeekdaysView(_ segue: UIStoryboardSegue) {
-        let src = segue.source as! WeekdaysViewController
+        let src = segue.source as! SelectWeekdaysViewController
         segueInfo.repeatWeekdays = src.weekdays
     }
     
