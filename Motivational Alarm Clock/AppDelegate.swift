@@ -355,7 +355,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        audioPlayer!.stop()
+        if audioPlayer != nil {
+            audioPlayer!.stop()
+        }
+        
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
