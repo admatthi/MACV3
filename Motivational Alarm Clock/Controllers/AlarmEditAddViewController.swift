@@ -96,28 +96,38 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @IBAction func saveEditAlarm(_ sender: AnyObject) {
-        let date = Scheduler.correctSecondComponent(date: datePicker.date)
-        let index = segueInfo.curCellIndex
-        var tempAlarm = Alarm()
-        tempAlarm.date = date
-        tempAlarm.label = segueInfo.label
-        tempAlarm.enabled = true
-        tempAlarm.mediaLabel = segueInfo.mediaLabel
-        tempAlarm.mediaID = segueInfo.mediaID
-        tempAlarm.snoozeEnabled = snoozeEnabled
-        tempAlarm.imageName = segueInfo.imageName
-        tempAlarm.category = segueInfo.category
-        tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
-        tempAlarm.uuid = UUID().uuidString
-        tempAlarm.onSnooze = false
-        if segueInfo.isEditMode {
-            alarmModel.alarms[index] = tempAlarm
+       
+        
+        if didpurchase {
+            
+            let date = Scheduler.correctSecondComponent(date: datePicker.date)
+            let index = segueInfo.curCellIndex
+            var tempAlarm = Alarm()
+            tempAlarm.date = date
+            tempAlarm.label = segueInfo.label
+            tempAlarm.enabled = true
+            tempAlarm.mediaLabel = segueInfo.mediaLabel
+            tempAlarm.mediaID = segueInfo.mediaID
+            tempAlarm.snoozeEnabled = snoozeEnabled
+            tempAlarm.imageName = segueInfo.imageName
+            tempAlarm.category = segueInfo.category
+            tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
+            tempAlarm.uuid = UUID().uuidString
+            tempAlarm.onSnooze = false
+            if segueInfo.isEditMode {
+                alarmModel.alarms[index] = tempAlarm
+            }
+            else {
+                alarmModel.alarms.append(tempAlarm)
+            }
+            self.performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
+            NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
+            
+        
+        } else {
+            
+            self.performSegue(withIdentifier: "AlarmToPayWall", sender: self)
         }
-        else {
-            alarmModel.alarms.append(tempAlarm)
-        }
-        self.performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
-        NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
         
 
     }

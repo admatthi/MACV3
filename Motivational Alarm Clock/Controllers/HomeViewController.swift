@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate{
     
@@ -16,6 +17,9 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
+        
+        ref = Database.database().reference()
+
         super.viewDidLoad()
         editButton.isHidden = true
         self.navigationController?.navigationBar.isHidden = true
@@ -26,8 +30,44 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         tableView.allowsSelectionDuringEditing = true
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
         self.navigationController?.navigationBar.isHidden = true
+        
+        queryforinfo()
+//        if didpurchase {
+//
+//
+//        } else {
+//
+//            self.performSegue(withIdentifier: "HomeToPaywall", sender: self)
+//        }
 
     }
+    
+    func queryforinfo() {
+            
+            ref?.child("Users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                let value = snapshot.value as? NSDictionary
+                
+                if let purchased = value?["Purchased"] as? String {
+                    
+                    if purchased == "True" {
+                        
+                        didpurchase = true
+                        
+                    } else {
+                        
+                        didpurchase = false
+                        
+                    }
+                    
+                } else {
+                    
+                    didpurchase = false
+                }
+                
+            })
+            
+        }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        if alarmModel.alarms.count > 0 {

@@ -94,6 +94,14 @@
 		9DDF069925B64A0A00D37C91 /* You're The Main Character.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DDF066B25B64A0A00D37C91 /* You're The Main Character.mp3 */; };
 		9DDF069A25B64A0A00D37C91 /* You're The Main Character.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DDF066B25B64A0A00D37C91 /* You're The Main Character.mp3 */; };
 		9DDF069B25B64A0A00D37C91 /* You're The Main Character.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DDF066B25B64A0A00D37C91 /* You're The Main Character.mp3 */; };
+		9DDF06AA25B66AD300D37C91 /* Dear, Lord.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DDF06A225B66AD200D37C91 /* Dear, Lord.mp3 */; };
+		9DDF06AB25B66AD300D37C91 /* Good Morning, Lord.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DDF06A325B66AD200D37C91 /* Good Morning, Lord.mp3 */; };
+		9DDF06AC25B66AD300D37C91 /* Don't Hang Out With Losers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DDF06A425B66AD200D37C91 /* Don't Hang Out With Losers.mp3 */; };
+		9DDF06AD25B66AD300D37C91 /* Put God First.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DDF06A525B66AD200D37C91 /* Put God First.mp3 */; };
+		9DDF06AE25B66AD300D37C91 /* Lord, Thank You For This Day.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DDF06A625B66AD200D37C91 /* Lord, Thank You For This Day.mp3 */; };
+		9DDF06AF25B66AD300D37C91 /* Good Morning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DDF06A725B66AD200D37C91 /* Good Morning.mp3 */; };
+		9DDF06B025B66AD300D37C91 /* God Is Testing Your Faith.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DDF06A825B66AD200D37C91 /* God Is Testing Your Faith.mp3 */; };
+		9DDF06B125B66AD300D37C91 /* Forgive Me, God.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DDF06A925B66AD200D37C91 /* Forgive Me, God.mp3 */; };
 		A195E4FDCEE911D07FC88DC4 /* Pods_Motivational_Alarm_ClockTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBCB738D0DC8EB71211838E /* Pods_Motivational_Alarm_ClockTests.framework */; };
 		FC9E4ED7D069E46898487BA3 /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4A2148F301084685A5354D /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework */; };
 /* End PBXBuildFile section */
@@ -183,6 +191,14 @@
 		9DDF066925B64A0A00D37C91 /* Remind Yourself Why.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Remind Yourself Why.mp3"; path = "../../../Remind Yourself Why.mp3"; sourceTree = "<group>"; };
 		9DDF066A25B64A0A00D37C91 /* There's Gonna Be Some Good.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "There's Gonna Be Some Good.mp3"; path = "../../../There's Gonna Be Some Good.mp3"; sourceTree = "<group>"; };
 		9DDF066B25B64A0A00D37C91 /* You're The Main Character.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "You're The Main Character.mp3"; path = "../../../You're The Main Character.mp3"; sourceTree = "<group>"; };
+		9DDF06A225B66AD200D37C91 /* Dear, Lord.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Dear, Lord.mp3"; path = "../../../Dear, Lord.mp3"; sourceTree = "<group>"; };
+		9DDF06A325B66AD200D37C91 /* Good Morning, Lord.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Good Morning, Lord.mp3"; path = "../../../Good Morning, Lord.mp3"; sourceTree = "<group>"; };
+		9DDF06A425B66AD200D37C91 /* Don't Hang Out With Losers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Don't Hang Out With Losers.mp3"; path = "../../../Don't Hang Out With Losers.mp3"; sourceTree = "<group>"; };
+		9DDF06A525B66AD200D37C91 /* Put God First.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Put God First.mp3"; path = "../../../Put God First.mp3"; sourceTree = "<group>"; };
+		9DDF06A625B66AD200D37C91 /* Lord, Thank You For This Day.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Lord, Thank You For This Day.mp3"; path = "../../../Lord, Thank You For This Day.mp3"; sourceTree = "<group>"; };
+		9DDF06A725B66AD200D37C91 /* Good Morning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Good Morning.mp3"; path = "../../../Good Morning.mp3"; sourceTree = "<group>"; };
+		9DDF06A825B66AD200D37C91 /* God Is Testing Your Faith.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "God Is Testing Your Faith.mp3"; path = "../../../God Is Testing Your Faith.mp3"; sourceTree = "<group>"; };
+		9DDF06A925B66AD200D37C91 /* Forgive Me, God.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Forgive Me, God.mp3"; path = "../../../Forgive Me, God.mp3"; sourceTree = "<group>"; };
 		AD4A2148F301084685A5354D /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBC92D3F5F3916F1819E89C /* Pods-Motivational Alarm Clock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock.release.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock/Pods-Motivational Alarm Clock.release.xcconfig"; sourceTree = "<group>"; };
 		DF873A9C66FDFD5CFE9B3B9F /* Pods-Motivational Alarm Clock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock.debug.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock/Pods-Motivational Alarm Clock.debug.xcconfig"; sourceTree = "<group>"; };
@@ -291,6 +307,14 @@
 				9DDF065D25B64A0900D37C91 /* You're Not A Hostage.mp3 */,
 				9DDF066B25B64A0A00D37C91 /* You're The Main Character.mp3 */,
 				9DDF065E25B64A0900D37C91 /* Your Time Has Come.mp3 */,
+				9DDF06A225B66AD200D37C91 /* Dear, Lord.mp3 */,
+				9DDF06A425B66AD200D37C91 /* Don't Hang Out With Losers.mp3 */,
+				9DDF06A925B66AD200D37C91 /* Forgive Me, God.mp3 */,
+				9DDF06A825B66AD200D37C91 /* God Is Testing Your Faith.mp3 */,
+				9DDF06A325B66AD200D37C91 /* Good Morning, Lord.mp3 */,
+				9DDF06A725B66AD200D37C91 /* Good Morning.mp3 */,
+				9DDF06A625B66AD200D37C91 /* Lord, Thank You For This Day.mp3 */,
+				9DDF06A525B66AD200D37C91 /* Put God First.mp3 */,
 			);
 			path = sounds;
 			sourceTree = "<group>";
@@ -329,9 +353,9 @@
 				9D8D248325ABABEB00B4E69D /* AppDelegate.swift */,
 				9D8D248725ABABEB00B4E69D /* ViewController.swift */,
 				9D8D248925ABABEB00B4E69D /* Main.storyboard */,
+				9DA82A2D25AE609A00289E84 /* PaywallViewViewController.swift */,
 				9DA82A2825AE607500289E84 /* Paywall.swift */,
 				4E21DACD25B33DDE0025C8A3 /* GoogleService-Info.plist */,
-				9DA82A2D25AE609A00289E84 /* PaywallViewViewController.swift */,
 				9D8D248C25ABABF000B4E69D /* Assets.xcassets */,
 				9D8D248E25ABABF000B4E69D /* LaunchScreen.storyboard */,
 				9D8D249125ABABF000B4E69D /* Info.plist */,
@@ -492,7 +516,10 @@
 				4EB7A2DF25B4061800A5C42F /* Adhan-makkah.caf in Resources */,
 				4E97250525AFDEC70070FF50 /* Time To Wake Up.mp3 in Resources */,
 				9DDF068725B64A0A00D37C91 /* Nobody Believes In You.mp3 in Resources */,
+				9DDF06AC25B66AD300D37C91 /* Don't Hang Out With Losers.mp3 in Resources */,
+				9DDF06B025B66AD300D37C91 /* God Is Testing Your Faith.mp3 in Resources */,
 				9DDF068125B64A0A00D37C91 /* Every Day Is A New Day.mp3 in Resources */,
+				9DDF06AB25B66AD300D37C91 /* Good Morning, Lord.mp3 in Resources */,
 				9DDF067E25B64A0A00D37C91 /* This Is Your Job.mp3 in Resources */,
 				9DDF066F25B64A0A00D37C91 /* You're Not A Hostage.mp3 in Resources */,
 				9D8D249025ABABF000B4E69D /* LaunchScreen.storyboard in Resources */,
@@ -504,10 +531,15 @@
 				4EE5F1F525AD256900B9C2EE /* bell.mp3 in Resources */,
 				9DDF069325B64A0A00D37C91 /* Remind Yourself Why.mp3 in Resources */,
 				9DDF069625B64A0A00D37C91 /* There's Gonna Be Some Good.mp3 in Resources */,
+				9DDF06AF25B66AD300D37C91 /* Good Morning.mp3 in Resources */,
+				9DDF06AE25B66AD300D37C91 /* Lord, Thank You For This Day.mp3 in Resources */,
 				9DDF068425B64A0A00D37C91 /* Every Man Has Two Lives.mp3 in Resources */,
 				9DDF067825B64A0A00D37C91 /* Tomorrow Is Not An Option.mp3 in Resources */,
 				4EDA8E7D25AE69C7005DAE2C /* newtrack2.mp3 in Resources */,
+				9DDF06AA25B66AD300D37C91 /* Dear, Lord.mp3 in Resources */,
 				9DDF067525B64A0A00D37C91 /* Doubt.mp3 in Resources */,
+				9DDF06B125B66AD300D37C91 /* Forgive Me, God.mp3 in Resources */,
+				9DDF06AD25B66AD300D37C91 /* Put God First.mp3 in Resources */,
 				9DDF069925B64A0A00D37C91 /* You're The Main Character.mp3 in Resources */,
 				9D8D248D25ABABF000B4E69D /* Assets.xcassets in Resources */,
 				9DDF068A25B64A0A00D37C91 /* Learn To Be Okay Alone.mp3 in Resources */,

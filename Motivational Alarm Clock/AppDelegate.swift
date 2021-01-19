@@ -23,6 +23,8 @@ import FirebaseDatabase
 import SwiftySound
 
 var db : Firestore!
+var uid = String()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, AlarmApplicationDelegate,UNUserNotificationCenterDelegate,MessagingDelegate{
     var soundId: SystemSoundID = 1
@@ -32,6 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     var alarmModel: Alarms = Alarms()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        uid = UIDevice.current.identifierForVendor!.uuidString
+
+        Purchases.debugLogsEnabled = true
+        Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyjJtFpYzjCj", appUserID: uid)
+        
         let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc : UINavigationController = mainStoryboardIpad.instantiateViewController(withIdentifier: "UIRootNavigationController") as! UINavigationController
         self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -59,8 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         window?.tintColor = UIColor.red
         
     
-        Purchases.debugLogsEnabled = true
-        Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyjJtFpYzjCj", appUserID: "")
+     
 
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
