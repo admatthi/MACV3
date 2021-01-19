@@ -318,7 +318,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         do {
             try session.setCategory(
                 .playback,
-                options: .defaultToSpeaker)
+                options: .duckOthers)
         } catch let setCategoryError {
             // handle error
         }
