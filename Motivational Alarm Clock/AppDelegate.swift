@@ -305,17 +305,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        let alarmmodel = Alarms()
+        var alarms = alarmmodel.alarms
+        alarms.sort(by: { $0.date < $1.date })
+        
+        if alarms.count > 0 {
+            let greaterthencurretnTime  = alarms.filter({$0.date > Date()})
+            if greaterthencurretnTime.count > 0 {
         let session = AVAudioSession.sharedInstance()
 
         var setCategoryError: Error? = nil
         do {
             try session.setCategory(
                 .playback,
-                options: .duckOthers)
+                options: .defaultToSpeaker)
         } catch let setCategoryError {
             // handle error
         }
-        let url = URL(fileURLWithPath: Bundle.main.path(forResource: "Rise & Grind", ofType: "mp3")!)
+        let aurdioName = greaterthencurretnTime[0]
+        let url = URL(fileURLWithPath: Bundle.main.path(forResource: aurdioName.mediaLabel, ofType: "mp3")!)
         
         var error: NSError?
         
@@ -337,20 +345,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         //negative number means loop infinity
         audioPlayer!.numberOfLoops = 0
         let currentAudioTime = audioPlayer!.deviceCurrentTime
-        let alarmmodel = Alarms()
-        var alarms = alarmmodel.alarms
-        alarms.sort(by: { $0.date.compare($1.date) == .orderedDescending })
-        if alarms.count > 0 {
-            let frstDateObject = alarms[0].date
-            let currentDate = Date()
-            if frstDateObject > Date() {
-                //
-                let delayTime: TimeInterval = alarms[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
-                    audioPlayer!.play(atTime: currentAudioTime + delayTime)
-            }else{
 
+        let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
+                audioPlayer!.play(atTime: currentAudioTime + delayTime)
             }
+
         }
+
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
