@@ -163,10 +163,10 @@ Cancel anytime.</string>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-Ca-V4O">
-                                            <rect key="frame" x="122" y="134" width="79" height="41"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-Ca-V4O">
+                                            <rect key="frame" x="122" y="134" width="272" height="41"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="79" id="aOk-9N-8wO"/>
+                                                <constraint firstAttribute="width" constant="272" id="aOk-9N-8wO"/>
                                                 <constraint firstAttribute="height" constant="41" id="cBY-dQ-9qm"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
@@ -249,11 +249,11 @@ Cancel anytime.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8P-CK-Mcq">
-                                <rect key="frame" x="22" y="177" width="189" height="0.5"/>
+                                <rect key="frame" x="22" y="177" width="227" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="FKj-4C-cUF"/>
-                                    <constraint firstAttribute="width" constant="189" id="vnA-QT-qgZ"/>
+                                    <constraint firstAttribute="width" constant="227" id="vnA-QT-qgZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -306,7 +306,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5958" y="285"/>
+            <point key="canvasLocation" x="6002.898550724638" y="93.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WF2-s9-I8c">
@@ -1063,7 +1063,7 @@ subscribing. This value will always default to the plan's subscription term leng
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </objects>
-            <point key="canvasLocation" x="3461" y="445"/>
+            <point key="canvasLocation" x="3461" y="413"/>
         </scene>
         <!--Repeat-->
         <scene sceneID="NVe-XH-SbN">
@@ -1224,7 +1224,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIh-Oy-dzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nfu-1G-Zm7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4183" y="445"/>
+            <point key="canvasLocation" x="4183" y="413"/>
         </scene>
         <!--Media View Controller-->
         <scene sceneID="7VC-DU-Jb6">
@@ -1261,7 +1261,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WlI-fv-wei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5258" y="445"/>
+            <point key="canvasLocation" x="5258" y="413"/>
         </scene>
         <!--Label-->
         <scene sceneID="gBT-ty-hSM">
