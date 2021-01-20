@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -153,9 +153,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YO1-Fz-FH8">
-                                            <rect key="frame" x="20" y="520" width="341" height="54"/>
+                                            <rect key="frame" x="20" y="454" width="341" height="54"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="54" id="LvG-Pu-Zru"/>
+                                                <constraint firstAttribute="height" constant="54" id="f6f-FA-Guv"/>
                                             </constraints>
                                             <string key="text">Try 3 days free, then $19.99/year.
 Cancel anytime.</string>
@@ -169,7 +169,7 @@ Cancel anytime.</string>
                                                 <constraint firstAttribute="width" constant="272" id="aOk-9N-8wO"/>
                                                 <constraint firstAttribute="height" constant="41" id="cBY-dQ-9qm"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBoldItalic" family="Avenir Next" pointSize="30"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -203,23 +203,23 @@ Cancel anytime.</string>
                                         <constraint firstItem="kel-Nv-PzN" firstAttribute="top" secondItem="7nR-IK-2f4" secondAttribute="top" constant="-8" id="3ZW-mG-w1M"/>
                                         <constraint firstItem="hPO-9y-2ZE" firstAttribute="top" secondItem="7nR-IK-2f4" secondAttribute="bottom" constant="18" id="6uS-G3-SAt"/>
                                         <constraint firstItem="LUL-xo-AVr" firstAttribute="leading" secondItem="oAd-kU-dsw" secondAttribute="trailing" constant="12" id="6zw-e2-vDk"/>
-                                        <constraint firstAttribute="trailing" secondItem="YO1-Fz-FH8" secondAttribute="trailing" constant="53" id="7SA-EJ-uK1"/>
+                                        <constraint firstItem="YO1-Fz-FH8" firstAttribute="top" secondItem="LUL-xo-AVr" secondAttribute="bottom" constant="11" id="9e8-zv-fsK"/>
                                         <constraint firstItem="kfU-OP-phL" firstAttribute="centerY" secondItem="LGd-Q3-AHu" secondAttribute="centerY" id="AG1-iD-lzm"/>
                                         <constraint firstItem="kel-Nv-PzN" firstAttribute="leading" secondItem="7nR-IK-2f4" secondAttribute="trailing" constant="12" id="BCg-20-MXg"/>
                                         <constraint firstItem="LUL-xo-AVr" firstAttribute="top" secondItem="oAd-kU-dsw" secondAttribute="top" constant="-8" id="FeI-mT-hIL"/>
                                         <constraint firstAttribute="trailing" secondItem="kel-Nv-PzN" secondAttribute="trailing" constant="20" symbolic="YES" id="GEx-we-MJ4"/>
+                                        <constraint firstAttribute="trailing" secondItem="YO1-Fz-FH8" secondAttribute="trailing" constant="53" id="H05-W3-T3l"/>
                                         <constraint firstItem="iAp-Ch-9ds" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="20" symbolic="YES" id="LW6-nP-xBk"/>
                                         <constraint firstItem="PBV-jy-wsZ" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="16" id="N1n-Sj-Lbi"/>
                                         <constraint firstItem="AzD-Ca-V4O" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="122" id="Olb-jB-Lbv"/>
                                         <constraint firstAttribute="bottom" secondItem="BFX-He-8tg" secondAttribute="bottom" constant="182" id="Q9q-h5-gla"/>
                                         <constraint firstItem="hPO-9y-2ZE" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="16" id="SLZ-7Z-FtK"/>
                                         <constraint firstItem="hdD-Dl-12m" firstAttribute="top" secondItem="PBV-jy-wsZ" secondAttribute="top" id="Sva-tp-kvw"/>
-                                        <constraint firstItem="iAp-Ch-9ds" firstAttribute="top" secondItem="YO1-Fz-FH8" secondAttribute="bottom" constant="25" id="TCe-By-S9J"/>
                                         <constraint firstAttribute="trailing" secondItem="LGd-Q3-AHu" secondAttribute="trailing" constant="25" id="TYo-eA-gDY"/>
                                         <constraint firstAttribute="trailing" secondItem="hdD-Dl-12m" secondAttribute="trailing" constant="66" id="TiM-ci-BYq"/>
                                         <constraint firstAttribute="trailing" secondItem="7MH-4Y-gTU" secondAttribute="trailing" constant="25" id="WdE-BE-Np8"/>
-                                        <constraint firstItem="YO1-Fz-FH8" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="20" symbolic="YES" id="Z2j-n7-OTS"/>
                                         <constraint firstItem="7MH-4Y-gTU" firstAttribute="top" secondItem="hPO-9y-2ZE" secondAttribute="top" id="aMf-Me-IOj"/>
+                                        <constraint firstItem="YO1-Fz-FH8" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="20" symbolic="YES" id="agm-Vl-7Mi"/>
                                         <constraint firstItem="LGd-Q3-AHu" firstAttribute="top" secondItem="nXk-1J-nHO" secondAttribute="top" constant="61" id="bZ2-Bf-dWm"/>
                                         <constraint firstAttribute="bottom" secondItem="iAp-Ch-9ds" secondAttribute="bottom" constant="247" id="dU2-1D-3vp"/>
                                         <constraint firstItem="oAd-kU-dsw" firstAttribute="top" secondItem="h7t-OV-1bk" secondAttribute="bottom" constant="32" id="dlh-M7-zZq"/>
@@ -630,6 +630,7 @@ subscribing. This value will always default to the plan's subscription term leng
                         <outlet property="datePicker" destination="LLd-Sx-lGY" id="IhO-Rf-PU6"/>
                         <outlet property="mainview" destination="reW-L2-3tZ" id="c0O-Sa-8YB"/>
                         <outlet property="tableView" destination="bnW-yc-Uyt" id="pFI-WS-fVM"/>
+                        <outlet property="tapback" destination="MlZ-Mz-Ju7" id="Ymc-LZ-Cvo"/>
                         <outlet property="tapsave" destination="Vi9-KD-1aN" id="OYt-lb-Ujk"/>
                         <segue destination="Q0G-tO-MeZ" kind="unwind" identifier="saveEditSegue" unwindAction="unwindFromAddEditAlarmView:" id="G7x-8z-rza"/>
                         <segue destination="pqE-Dn-4wp" kind="show" identifier="labelEditSegue" id="nmh-Ui-wqh"/>
@@ -1436,9 +1437,9 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <action selector="backButtonAction:" destination="MFr-DP-aWZ" eventType="touchUpInside" id="55C-Qf-8Yf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwT-sy-NBi">
-                                        <rect key="frame" x="359" y="5" width="45" height="40"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwT-sy-NBi">
+                                        <rect key="frame" x="330" y="5" width="74" height="40"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -1648,6 +1649,7 @@ subscribing. This value will always default to the plan's subscription term leng
                     <connections>
                         <outlet property="collectionView" destination="waH-aA-bAT" id="2GW-uQ-xw5"/>
                         <outlet property="tagsCollectionView" destination="9Oy-vp-0PY" id="BSw-ky-qaz"/>
+                        <outlet property="tapback" destination="F3z-5o-wcM" id="cab-ne-86C"/>
                         <segue destination="qsU-xv-MIo" kind="unwind" identifier="soundUnwindSegue" unwindAction="unwindFromMediaView:" id="mtj-Cl-c9Z"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="SoundToPaywall" id="YON-42-if4"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="AlarmToPayWall" id="mZ4-tB-6Gq"/>
@@ -1656,7 +1658,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkg-sk-UXR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="qsU-xv-MIo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4923" y="-292"/>
+            <point key="canvasLocation" x="4921.739130434783" y="-292.63392857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cZN-Lf-Coq">

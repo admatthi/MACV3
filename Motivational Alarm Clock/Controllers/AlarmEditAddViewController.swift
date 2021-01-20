@@ -22,10 +22,23 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     var snoozeEnabled: Bool = false
     var enabled: Bool!
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if firstinstall {
+            tapback.alpha = 0
+            
+        } else {
+            
+            tapback.alpha = 1
+        }
+    }
+    
+    @IBOutlet weak var tapback: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         
+      
         tapsave.layer.borderWidth = 1.0
         tapsave.layer.borderColor = UIColor.white.cgColor
         tapsave.layer.cornerRadius = 10.0

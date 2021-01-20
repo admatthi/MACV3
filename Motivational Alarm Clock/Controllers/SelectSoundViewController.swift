@@ -29,12 +29,14 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     var soundtitle:String!
     var audioPlayer: AVAudioPlayer?
     
+    @IBOutlet weak var tapback: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         let notificationCenter = NotificationCenter.default
             notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
 
+      
         if let category = selectedSound?.category{
             selectedCategory = category
         }
@@ -66,10 +68,24 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         tagSelection(tag: selectedCategory, isFirst: false)
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if firstinstall {
+            tapback.alpha = 0
+            
+        } else {
+            
+            tapback.alpha = 1
+        }
+    }
     @IBAction func saveButtonAction(_ sender: Any) {
+        
+        firstinstall = false
         
                 if didpurchase {
         
+                    
                     let date = Scheduler.correctSecondComponent(date: self.date ?? Date())
                     let index = segueInfo.curCellIndex
                     var tempAlarm = Alarm()
