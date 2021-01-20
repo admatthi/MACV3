@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Bitmap.png",
+      "filename" : "Artboard Copy 23.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Artboard Copy 23@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Artboard Copy 23@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

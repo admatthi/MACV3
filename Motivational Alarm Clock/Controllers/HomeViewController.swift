@@ -18,6 +18,17 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var audioPlayer: AVAudioPlayer?
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if didpurchase {
+            
+            
+        } else {
+            
+            self.performSegue(withIdentifier: "HomeToPaywall", sender: self)
+        }
+    }
     override func viewDidLoad() {
         
         ref = Database.database().reference()

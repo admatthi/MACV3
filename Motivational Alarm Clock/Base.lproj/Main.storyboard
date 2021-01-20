@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -306,7 +306,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6002.898550724638" y="93.75"/>
+            <point key="canvasLocation" x="2746" y="1135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WF2-s9-I8c">
@@ -737,8 +737,8 @@ subscribing. This value will always default to the plan's subscription term leng
                                                                 <constraint firstAttribute="height" constant="100" id="K7C-hI-VNg"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:30 am" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvi-AU-PBj">
-                                                            <rect key="frame" x="105" y="20" width="164" height="47"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:30 am" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvi-AU-PBj">
+                                                            <rect key="frame" x="105" y="20" width="140.5" height="53.5"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="39"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -760,23 +760,19 @@ subscribing. This value will always default to the plan's subscription term leng
                                                             </constraints>
                                                         </switch>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXT-M3-RyW">
-                                                            <rect key="frame" x="30" y="35" width="30" height="30"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="30" id="4HP-st-tZI"/>
-                                                                <constraint firstAttribute="height" constant="30" id="ymU-Bf-Pob"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="99"/>
                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal">
-                                                                <imageReference key="image" image="Bitmap" symbolScale="large"/>
-                                                            </state>
+                                                            <state key="normal" image="Bitmap"/>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="Mvi-AU-PBj" firstAttribute="leading" secondItem="NXT-M3-RyW" secondAttribute="trailing" constant="15" id="28D-vI-sOf"/>
                                                         <constraint firstItem="l3o-ym-Vm6" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" id="29V-5f-rHA"/>
                                                         <constraint firstItem="K2S-PW-eYe" firstAttribute="leading" secondItem="wRn-km-zoJ" secondAttribute="trailing" constant="15" id="2Zo-UE-RQ8"/>
                                                         <constraint firstItem="A84-bN-jA0" firstAttribute="centerY" secondItem="h0l-ju-jKO" secondAttribute="centerY" id="64T-Yi-UsY"/>
                                                         <constraint firstItem="Mvi-AU-PBj" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" constant="20" id="9fX-tG-cVK"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NXT-M3-RyW" secondAttribute="bottom" constant="1" id="9xX-ty-Qqy"/>
                                                         <constraint firstAttribute="trailing" secondItem="X8A-qN-Bey" secondAttribute="trailing" id="ANJ-rp-fp5"/>
                                                         <constraint firstAttribute="trailing" secondItem="l3o-ym-Vm6" secondAttribute="trailing" id="Agu-G9-SYV"/>
                                                         <constraint firstItem="Mvi-AU-PBj" firstAttribute="leading" secondItem="wRn-km-zoJ" secondAttribute="trailing" constant="15" id="Ard-OE-Bby"/>
@@ -785,15 +781,15 @@ subscribing. This value will always default to the plan's subscription term leng
                                                         <constraint firstItem="l3o-ym-Vm6" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" id="LwD-pp-n6Q"/>
                                                         <constraint firstAttribute="trailing" secondItem="A84-bN-jA0" secondAttribute="trailing" constant="20" id="OAe-g0-DAr"/>
                                                         <constraint firstItem="A84-bN-jA0" firstAttribute="leading" secondItem="K2S-PW-eYe" secondAttribute="trailing" constant="-56" id="OwH-45-7Vz"/>
+                                                        <constraint firstItem="NXT-M3-RyW" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" id="USH-Sm-a28"/>
+                                                        <constraint firstItem="NXT-M3-RyW" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" id="WnN-6F-YKi"/>
                                                         <constraint firstAttribute="trailing" secondItem="A84-bN-jA0" secondAttribute="trailing" constant="20" symbolic="YES" id="bIf-QZ-dYW"/>
                                                         <constraint firstAttribute="bottom" secondItem="l3o-ym-Vm6" secondAttribute="bottom" id="g8t-X8-HCl"/>
                                                         <constraint firstItem="wRn-km-zoJ" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" id="gJS-KK-tn4"/>
                                                         <constraint firstItem="wRn-km-zoJ" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" id="giR-b7-Lfd"/>
                                                         <constraint firstAttribute="bottom" secondItem="X8A-qN-Bey" secondAttribute="bottom" id="kSC-Gc-NhM"/>
                                                         <constraint firstItem="K2S-PW-eYe" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" constant="66" id="nSg-3W-dYo"/>
-                                                        <constraint firstItem="NXT-M3-RyW" firstAttribute="centerY" secondItem="wRn-km-zoJ" secondAttribute="centerY" id="vg8-2n-n5f"/>
                                                         <constraint firstItem="X8A-qN-Bey" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" id="wbJ-2Z-bYs"/>
-                                                        <constraint firstItem="NXT-M3-RyW" firstAttribute="centerX" secondItem="wRn-km-zoJ" secondAttribute="centerX" id="y8I-M7-CzK"/>
                                                         <constraint firstAttribute="trailing" secondItem="A84-bN-jA0" secondAttribute="trailing" constant="20" symbolic="YES" id="zJU-NX-2Np"/>
                                                     </constraints>
                                                 </view>
@@ -1557,17 +1553,6 @@ subscribing. This value will always default to the plan's subscription term leng
                                                             </constraints>
                                                             <state key="normal" image="checkMark"/>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEF-nP-OdO">
-                                                            <rect key="frame" x="68.5" y="87" width="30" height="30"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="30" id="MmS-fT-fmv"/>
-                                                                <constraint firstAttribute="height" constant="30" id="fAx-xS-n90"/>
-                                                            </constraints>
-                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal">
-                                                                <imageReference key="image" image="Bitmap" symbolScale="large"/>
-                                                            </state>
-                                                        </button>
                                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0R4-qF-9Va">
                                                             <rect key="frame" x="0.0" y="145" width="167" height="59"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FNe-zG-kSL">
@@ -1593,6 +1578,17 @@ subscribing. This value will always default to the plan's subscription term leng
                                                             </constraints>
                                                             <blurEffect style="regular"/>
                                                         </visualEffectView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEF-nP-OdO">
+                                                            <rect key="frame" x="43" y="62" width="81" height="81"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="81" id="MmS-fT-fmv"/>
+                                                                <constraint firstAttribute="height" constant="81" id="fAx-xS-n90"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal">
+                                                                <imageReference key="image" image="Bitmap" symbolScale="large"/>
+                                                            </state>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
@@ -1715,12 +1711,13 @@ subscribing. This value will always default to the plan's subscription term leng
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XLH-e5-pll"/>
+        <segue reference="746-Gr-Cw3"/>
         <segue reference="YLc-sc-HuK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Artboard" width="100" height="100"/>
-        <image name="Bitmap" width="90" height="97"/>
+        <image name="Bitmap" width="100" height="100"/>
+        <image name="Bitmap" width="100" height="100"/>
         <image name="Rise &amp; Grind" width="658" height="807"/>
         <image name="by proceeding" width="542" height="74"/>
         <image name="checkMark" width="66" height="66"/>
