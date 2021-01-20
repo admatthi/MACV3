@@ -477,7 +477,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-yc-Uyt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-yc-Uyt">
                                 <rect key="frame" x="0.0" y="232" width="414" height="673"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -538,15 +538,15 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </userDefinedRuntimeAttributes>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vi9-KD-1aN">
-                                <rect key="frame" x="20" y="389" width="374" height="66"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="19" y="389" width="375" height="66"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="bAk-XG-zfL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="C O N T I N U E">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="saveEditAlarm:" destination="38A-Vr-ugb" eventType="touchUpInside" id="1RS-Cj-mEb"/>
@@ -579,7 +579,7 @@ subscribing. This value will always default to the plan's subscription term leng
                             <constraint firstItem="zXn-wl-EpU" firstAttribute="top" secondItem="kEQ-V4-R9r" secondAttribute="bottom" constant="11" id="Kdq-1B-D4p"/>
                             <constraint firstItem="LLd-Sx-lGY" firstAttribute="leading" secondItem="bnW-yc-Uyt" secondAttribute="leading" constant="-1" id="LLb-oO-3f9"/>
                             <constraint firstItem="kEQ-V4-R9r" firstAttribute="leading" secondItem="ukS-rH-71c" secondAttribute="leading" id="RRP-cO-Sh4"/>
-                            <constraint firstItem="Vi9-KD-1aN" firstAttribute="leading" secondItem="ukS-rH-71c" secondAttribute="leading" constant="20" id="Ruf-aD-kju"/>
+                            <constraint firstItem="Vi9-KD-1aN" firstAttribute="leading" secondItem="ukS-rH-71c" secondAttribute="leading" constant="19" id="Ruf-aD-kju"/>
                             <constraint firstItem="fKl-9o-HPM" firstAttribute="trailing" secondItem="ukS-rH-71c" secondAttribute="trailing" id="SU0-2P-Jcr"/>
                             <constraint firstItem="rnM-Sa-yXG" firstAttribute="top" secondItem="bnW-yc-Uyt" secondAttribute="bottom" constant="-43" id="U5y-Hu-VCz"/>
                             <constraint firstItem="reW-L2-3tZ" firstAttribute="leading" secondItem="ukS-rH-71c" secondAttribute="leading" id="UcV-kT-dhR"/>
@@ -704,7 +704,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8p0-QK-EXB">
-                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -805,7 +805,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39h-g3-Chi">
-                                <rect key="frame" x="174" y="767" width="66" height="66"/>
+                                <rect key="frame" x="174" y="796" width="66" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="fuR-Wz-ks5"/>
                                     <constraint firstAttribute="height" constant="66" id="nnf-eh-vF6"/>
@@ -824,14 +824,14 @@ subscribing. This value will always default to the plan's subscription term leng
                         <viewLayoutGuide key="safeArea" id="EOn-a5-aTi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EOn-a5-aTi" firstAttribute="bottom" secondItem="8p0-QK-EXB" secondAttribute="bottom" id="FgJ-MF-u8N"/>
+                            <constraint firstItem="EOn-a5-aTi" firstAttribute="bottom" secondItem="8p0-QK-EXB" secondAttribute="bottom" constant="-34" id="FgJ-MF-u8N"/>
                             <constraint firstItem="8p0-QK-EXB" firstAttribute="top" secondItem="usE-fl-Xgv" secondAttribute="bottom" id="QeL-4J-cBc"/>
                             <constraint firstItem="70d-Gd-iDn" firstAttribute="leading" secondItem="EOn-a5-aTi" secondAttribute="leading" id="TE1-cU-Iee"/>
                             <constraint firstItem="usE-fl-Xgv" firstAttribute="leading" secondItem="EOn-a5-aTi" secondAttribute="leading" id="Wi9-Wj-4xt"/>
                             <constraint firstItem="70d-Gd-iDn" firstAttribute="top" secondItem="ACq-X1-pjt" secondAttribute="top" id="YRs-6V-cTe"/>
                             <constraint firstItem="usE-fl-Xgv" firstAttribute="trailing" secondItem="EOn-a5-aTi" secondAttribute="trailing" id="ZVW-As-4qX"/>
                             <constraint firstItem="EOn-a5-aTi" firstAttribute="trailing" secondItem="8p0-QK-EXB" secondAttribute="trailing" id="b4i-Hf-EuA"/>
-                            <constraint firstItem="EOn-a5-aTi" firstAttribute="bottom" secondItem="39h-g3-Chi" secondAttribute="bottom" constant="29" id="b5y-EJ-4Nq"/>
+                            <constraint firstItem="EOn-a5-aTi" firstAttribute="bottom" secondItem="39h-g3-Chi" secondAttribute="bottom" id="b5y-EJ-4Nq"/>
                             <constraint firstItem="EOn-a5-aTi" firstAttribute="trailing" secondItem="70d-Gd-iDn" secondAttribute="trailing" id="c9G-p6-QuN"/>
                             <constraint firstItem="usE-fl-Xgv" firstAttribute="top" secondItem="EOn-a5-aTi" secondAttribute="top" id="pxX-8l-0IY"/>
                             <constraint firstItem="8p0-QK-EXB" firstAttribute="leading" secondItem="EOn-a5-aTi" secondAttribute="leading" id="uqk-iI-lcL"/>
@@ -1687,7 +1687,7 @@ subscribing. This value will always default to the plan's subscription term leng
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="XLH-e5-pll"/>
-        <segue reference="YON-42-if4"/>
+        <segue reference="YLc-sc-HuK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Artboard" width="100" height="100"/>

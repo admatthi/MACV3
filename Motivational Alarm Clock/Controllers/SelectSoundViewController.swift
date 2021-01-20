@@ -14,7 +14,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
 
     var filteredSounds:[Sounds] = []
     var selectedSound:Sounds?
-    var soundsCategories = ["Motivation","Faith"]
+    var soundsCategories = ["Motivation","Prayers", "Meditation", "Fitness", "Money" ]
 
 //    var soundsCategories = ["Motivation","Faith","Self Help","Fitness", "Social", "Business", "Philosophy", "Spirituality" ]
     var selectedCategory = "Motivation"
@@ -229,8 +229,8 @@ extension SelectSoundViewController:UICollectionViewDataSource,UICollectionViewD
             cell.titleLabel.text = sound.title
             cell.topMainView.layer.cornerRadius = 10
             cell.coverImageView.layer.cornerRadius = 10
-            cell.mainView.layer.cornerRadius = 10
-            cell.mainView.clipsToBounds = true
+            cell.topMainView.clipsToBounds = true
+
 
             return cell
         }
