@@ -312,6 +312,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
             let dist = segue.destination as! SelectSoundViewController
 //            dist.mediaID = segueInfo.mediaID
             dist.segueInfo = segueInfo
+            dist.date = datePicker.date
             dist.selectedSound = Sounds(soundName: segueInfo.mediaLabel, title: segueInfo.label, image: segueInfo.imageName, category: segueInfo.category)
         }
         else if segue.identifier == Id.labelSegueIdentifier {
