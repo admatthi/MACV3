@@ -18,6 +18,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var audioPlayer: AVAudioPlayer?
+    var ifAlreadyPresented = false
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -25,8 +26,16 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             
             
         } else {
+            if !ifAlreadyPresented{
+                ifAlreadyPresented = true
+                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc : PaywallViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "PaywallViewViewController") as! PaywallViewViewController
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+            }
+
             
-            self.performSegue(withIdentifier: "HomeToPaywall", sender: self)
+//            self.performSegue(withIdentifier: "HomeToPaywall", sender: self)
         }
     }
     override func viewDidLoad() {
