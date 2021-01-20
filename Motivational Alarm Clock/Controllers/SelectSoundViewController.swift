@@ -10,6 +10,8 @@ import UIKit
 import Foundation
 import AudioToolbox
 import AVFoundation
+import FBSDKCoreKit
+
 class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     var segueInfo: SegueInfo!
     var alarmScheduler: AlarmSchedulerDelegate = Scheduler()
@@ -19,8 +21,11 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     var selectedSound:Sounds?
 //    var soundsCategories = ["Motivation","Prayers", "Meditation", "Fitness", "Money" ]
     
-    var soundsCategories = ["Motivation"]
+    var soundsCategories = ["Motivation", "Prayers"]
 
+    func selectsound(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "selectsound"), parameters: ["referrer" : referrer])
+                                 }
 
 //    var soundsCategories = ["Motivation","Faith","Self Help","Fitness", "Social", "Business", "Philosophy", "Spirituality" ]
     var selectedCategory = "Motivation"
@@ -34,6 +39,8 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     
     @IBOutlet weak var tapback: UIButton!
     override func viewDidLoad() {
+        
+        selectsound(referrer: referrer)
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         let notificationCenter = NotificationCenter.default
@@ -85,9 +92,11 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     @IBAction func saveButtonAction(_ sender: Any) {
         
         firstinstall = false
-        
+        tapsave(referrer: referrer)
+
                 if didpurchase {
                     if let sound = selectedSound {
+                        
                         segueInfo.mediaLabel = sound.soundName
                         segueInfo.mediaID = sound.soundName
                         segueInfo.category = sound.category
@@ -312,6 +321,18 @@ extension SelectSoundViewController:UICollectionViewDataSource,UICollectionViewD
         }
 
     }
+    
+    func tapsave(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "tapsave"), parameters: ["referrer" : referrer])
+                                 }
+    
+    func logsoundselected(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "soundselected"), parameters: ["referrer" : referrer])
+                                 }
+    func logcategorycollected(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "categorycollected"), parameters: ["referrer" : referrer])
+                                 }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.alpha = 0.0
         if collectionView == tagsCollectionView {
@@ -319,11 +340,15 @@ extension SelectSoundViewController:UICollectionViewDataSource,UICollectionViewD
             generator.impactOccurred()
             selectedCategory = soundsCategories[indexPath.row]
             tagSelection(tag: selectedCategory, isFirst: true)
+            
+            logcategorycollected(referrer: selectedCategory)
             tagsCollectionView.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
             self.tagsCollectionView.reloadData()
         }else{
             let sound = filteredSounds[indexPath.row]
             selectedSound = sound
+            logcategorycollected(referrer: sound.soundName)
+
             segueInfo.mediaLabel = sound.soundName
             segueInfo.mediaID = sound.soundName
             segueInfo.category = sound.category

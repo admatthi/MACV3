@@ -164,9 +164,15 @@ var purchases =         Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyj
        @IBOutlet weak var headlinelabel: UILabel!
        @IBOutlet weak var tapcontinue: UIButton!
     
+    func paywallview(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "paywallview"), parameters: ["referrer" : referrer])
+                                 }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        paywallview(referrer: referrer)
         ref = Database.database().reference()
                   
                   tapcontinue.layer.cornerRadius = 25.0

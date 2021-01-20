@@ -58,5 +58,18 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb1045245882647832</string>
+      </array>
+      </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>1045245882647832</string>
+    <key>FacebookDisplayName</key>
+    <string>Motivational Alarm Clock</string>
 </dict>
 </plist>

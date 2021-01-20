@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 import MediaPlayer
-
+import FBSDKCoreKit
 
 class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
@@ -21,6 +21,11 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     var segueInfo: SegueInfo!
     var snoozeEnabled: Bool = false
     var enabled: Bool!
+    
+    
+    func selecttime(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "selecttime"), parameters: ["referrer" : referrer])
+                                 }
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -35,6 +40,8 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var tapback: UIButton!
     override func viewDidLoad() {
+        
+        selecttime(referrer: referrer)
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         
@@ -282,7 +289,11 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var tapsave: UIButton!
     
     @IBOutlet weak var mainview: UIVisualEffectView!
+    
+    
     @IBAction func snoozeSwitchTapped (_ sender: UISwitch) {
+        
+        
         snoozeEnabled = sender.isOn
     }
     
@@ -290,6 +301,12 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+
+    
+    func turnoff(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "turnoff"), parameters: ["referrer" : referrer])
+                                 }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -301,6 +318,8 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
                 let sw = cell.itemSwitch!
                 if sw.tag > segueInfo.curCellIndex
                 {
+                    
+                    turnoff(referrer: referrer)
                     sw.tag -= 1
                 }
             }

@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import AudioToolbox
 import AVFoundation
+import FBSDKCoreKit
+
 class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate,AVAudioPlayerDelegate{
     var selectedAlarm:Alarm?
      var alarmDelegate: AlarmApplicationDelegate = AppDelegate() as AlarmApplicationDelegate
@@ -91,10 +93,15 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             })
             
         }
+    
+    func homeview(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "homeview"), parameters: ["referrer" : referrer])
+                                 }
     override func viewDidLoad() {
         
         ref = Database.database().reference()
 
+        homeview(referrer: referrer)
         super.viewDidLoad()
         editButton.isHidden = true
         self.navigationController?.navigationBar.isHidden = true

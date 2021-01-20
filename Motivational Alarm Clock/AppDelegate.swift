@@ -39,6 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         
         uid = UIDevice.current.identifierForVendor!.uuidString
 
+        AppEvents.activateApp()
+        
         Purchases.debugLogsEnabled = true
         Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyjJtFpYzjCj", appUserID: uid)
         
@@ -251,7 +253,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
             self.alarmModel.alarms[index].onSnooze = true
         }
         completionHandler()
+        
+        alarmsounded(referrer: referrer)
     }
+    
+    func alarmsounded(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "alarmsounded"), parameters: ["referrer" : referrer])
+                                 }
+    
     
     //print out all registed NSNotification for debug
     func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
