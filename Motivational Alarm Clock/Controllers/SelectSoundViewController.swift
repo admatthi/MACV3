@@ -84,7 +84,14 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         firstinstall = false
         
                 if didpurchase {
-        
+                    if let sound = selectedSound {
+                        segueInfo.mediaLabel = sound.soundName
+                        segueInfo.mediaID = sound.soundName
+                        segueInfo.category = sound.category
+                        segueInfo.imageName = sound.image
+                        segueInfo.label = sound.title
+                    }
+
                     
                     let date = Scheduler.correctSecondComponent(date: self.date ?? Date())
                     let index = segueInfo.curCellIndex
@@ -166,7 +173,14 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         filteredSounds = allSounds.filter({$0.category == tag})
         if isFirst {
             if filteredSounds.count > 0 {
-                selectedSound = filteredSounds[0]
+                let sound = filteredSounds[0]
+                selectedSound = sound
+
+                segueInfo.mediaLabel = sound.soundName
+                segueInfo.mediaID = sound.soundName
+                segueInfo.category = sound.category
+                segueInfo.imageName = sound.image
+                segueInfo.label = sound.title
             }
         }
         self.tagsCollectionView.reloadData()

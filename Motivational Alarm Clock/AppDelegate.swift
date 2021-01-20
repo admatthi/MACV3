@@ -354,7 +354,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         }
         
         //negative number means loop infinity
-        audioPlayer!.numberOfLoops = 0
+        audioPlayer!.numberOfLoops = -1
         let currentAudioTime = audioPlayer!.deviceCurrentTime
 
         let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
