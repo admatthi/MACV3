@@ -68,7 +68,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     }
     @IBAction func saveButtonAction(_ sender: Any) {
         
-                if didpurchase {
+                if !didpurchase {
         
                     let date = Scheduler.correctSecondComponent(date: self.date ?? Date())
                     let index = segueInfo.curCellIndex
@@ -97,8 +97,11 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         
         
                 } else {
-        
-                    self.performSegue(withIdentifier: "AlarmToPayWall", sender: self)
+                    let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc : PaywallViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "PaywallViewViewController") as! PaywallViewViewController
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
+//                    self.performSegue(withIdentifier: "AlarmToPayWall", sender: self)
                 }
         
     }
