@@ -11,7 +11,10 @@ import Foundation
 import AudioToolbox
 import AVFoundation
 class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
-
+    var segueInfo: SegueInfo!
+    var alarmScheduler: AlarmSchedulerDelegate = Scheduler()
+    var alarmModel: Alarms = Alarms()
+    var date : Date?
     var filteredSounds:[Sounds] = []
     var selectedSound:Sounds?
     var soundsCategories = ["Motivation","Prayers", "Meditation", "Fitness", "Money" ]
@@ -63,6 +66,43 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         tagSelection(tag: selectedCategory, isFirst: false)
         
     }
+    @IBAction func saveButtonAction(_ sender: Any) {
+        
+                if didpurchase {
+        
+                    let date = Scheduler.correctSecondComponent(date: self.date ?? Date())
+                    let index = segueInfo.curCellIndex
+                    var tempAlarm = Alarm()
+                    tempAlarm.date = date
+                    tempAlarm.label = segueInfo.label
+                    tempAlarm.enabled = true
+                    tempAlarm.mediaLabel = segueInfo.mediaLabel
+                    tempAlarm.mediaID = segueInfo.mediaID
+                    tempAlarm.snoozeEnabled = false
+                    tempAlarm.imageName = segueInfo.imageName
+                    tempAlarm.category = segueInfo.category
+                    tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
+                    tempAlarm.uuid = UUID().uuidString
+                    tempAlarm.onSnooze = false
+                    if segueInfo.isEditMode {
+                        alarmModel.alarms[index] = tempAlarm
+                    }
+                    else {
+                        alarmModel.alarms.append(tempAlarm)
+                    }
+                    alarmScheduler.reSchedule()
+                    self.dismiss(animated: true, completion: nil)
+//                    self.performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
+                    NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
+        
+        
+                } else {
+        
+                    self.performSegue(withIdentifier: "AlarmToPayWall", sender: self)
+                }
+        
+    }
+
     @objc func appMovedToBackground() {
             // do whatever event you want
         audioPlayer?.stop()
@@ -98,7 +138,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-    performSegue(withIdentifier: Id.soundUnwindIdentifier, sender: self)
+//    performSegue(withIdentifier: Id.soundUnwindIdentifier, sender: self)
 //        self.navigationController?.navigationBar.isHidden = false
 
         
@@ -248,6 +288,11 @@ extension SelectSoundViewController:UICollectionViewDataSource,UICollectionViewD
         }else{
             let sound = filteredSounds[indexPath.row]
             selectedSound = sound
+            segueInfo.mediaLabel = sound.soundName
+            segueInfo.mediaID = sound.soundName
+            segueInfo.category = sound.category
+            segueInfo.imageName = sound.image
+            segueInfo.label = sound.title
             playSound(selectedSound!.soundName)
             self.collectionView.reloadData()
         }

@@ -96,38 +96,39 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @IBAction func saveEditAlarm(_ sender: AnyObject) {
-       
-        
-        if didpurchase {
-            
-            let date = Scheduler.correctSecondComponent(date: datePicker.date)
-            let index = segueInfo.curCellIndex
-            var tempAlarm = Alarm()
-            tempAlarm.date = date
-            tempAlarm.label = segueInfo.label
-            tempAlarm.enabled = true
-            tempAlarm.mediaLabel = segueInfo.mediaLabel
-            tempAlarm.mediaID = segueInfo.mediaID
-            tempAlarm.snoozeEnabled = snoozeEnabled
-            tempAlarm.imageName = segueInfo.imageName
-            tempAlarm.category = segueInfo.category
-            tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
-            tempAlarm.uuid = UUID().uuidString
-            tempAlarm.onSnooze = false
-            if segueInfo.isEditMode {
-                alarmModel.alarms[index] = tempAlarm
-            }
-            else {
-                alarmModel.alarms.append(tempAlarm)
-            }
-            self.performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
-            NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
-            
-        
-        } else {
-            
-            self.performSegue(withIdentifier: "AlarmToPayWall", sender: self)
-        }
+        performSegue(withIdentifier: Id.selectSoundSegueIdentifier, sender: self)
+
+//
+//        if !didpurchase {
+//
+//            let date = Scheduler.correctSecondComponent(date: datePicker.date)
+//            let index = segueInfo.curCellIndex
+//            var tempAlarm = Alarm()
+//            tempAlarm.date = date
+//            tempAlarm.label = segueInfo.label
+//            tempAlarm.enabled = true
+//            tempAlarm.mediaLabel = segueInfo.mediaLabel
+//            tempAlarm.mediaID = segueInfo.mediaID
+//            tempAlarm.snoozeEnabled = snoozeEnabled
+//            tempAlarm.imageName = segueInfo.imageName
+//            tempAlarm.category = segueInfo.category
+//            tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
+//            tempAlarm.uuid = UUID().uuidString
+//            tempAlarm.onSnooze = false
+//            if segueInfo.isEditMode {
+//                alarmModel.alarms[index] = tempAlarm
+//            }
+//            else {
+//                alarmModel.alarms.append(tempAlarm)
+//            }
+//            self.performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
+//            NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
+//
+//
+//        } else {
+//
+//            self.performSegue(withIdentifier: "AlarmToPayWall", sender: self)
+//        }
         
 
     }
@@ -136,19 +137,19 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         if segueInfo.isEditMode {
-            return 2
+            return 1
         }
         else {
-            return 1
+            return 0
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 2
+            return 1
         }
         else {
-            return 1
+            return 0
         }
     }
 
@@ -173,14 +174,21 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         if indexPath.section == 0 {
             
             if indexPath.row == 0 {
-                cell?.tintColor = .white
-                cell!.textLabel!.text = "Repeat"
-                cell!.textLabel?.textColor = .white
-                cell!.detailTextLabel?.textColor = .white
-                cell!.textLabel!.font = UIFont(name: "Avenir-Next", size: CGFloat(22))
-
-                cell!.detailTextLabel!.text = SelectWeekdaysViewController.repeatText(weekdays: segueInfo.repeatWeekdays)
-                cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+//                cell?.tintColor = .white
+//                cell!.textLabel!.text = "Repeat"
+//                cell!.textLabel?.textColor = .white
+//                cell!.detailTextLabel?.textColor = .white
+//                cell!.textLabel!.font = UIFont(name: "Avenir-Next", size: CGFloat(22))
+//
+//                cell!.detailTextLabel!.text = SelectWeekdaysViewController.repeatText(weekdays: segueInfo.repeatWeekdays)
+//                cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+                cell = UITableViewCell(
+                    style: UITableViewCell.CellStyle.default, reuseIdentifier: Id.settingIdentifier)
+                cell!.selectedBackgroundView?.backgroundColor = .clear
+                    cell!.backgroundColor = .clear
+                cell!.textLabel!.text = "Delete Alarm"
+                cell!.textLabel!.textAlignment = .center
+                cell!.textLabel!.textColor = UIColor.red
             }
 //            else if indexPath.row == 1 {
 //                cell!.textLabel?.textColor = .white
@@ -232,9 +240,12 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         if indexPath.section == 0 {
             switch indexPath.row{
             case 0:
-                performSegue(withIdentifier: Id.weekdaysSegueIdentifier, sender: self)
-                cell?.setSelected(true, animated: false)
-                cell?.setSelected(false, animated: false)
+                alarmModel.alarms.remove(at: segueInfo.curCellIndex)
+                performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
+                NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
+//                performSegue(withIdentifier: Id.weekdaysSegueIdentifier, sender: self)
+//                cell?.setSelected(true, animated: false)
+//                cell?.setSelected(false, animated: false)
             case 1:
                 performSegue(withIdentifier: Id.selectSoundSegueIdentifier, sender: self)
                 cell?.setSelected(true, animated: false)
@@ -249,9 +260,9 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         }
         else if indexPath.section == 1 {
             //delete alarm
-            alarmModel.alarms.remove(at: segueInfo.curCellIndex)
-            performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
-            NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
+//            alarmModel.alarms.remove(at: segueInfo.curCellIndex)
+//            performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
+//            NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
         }
             
     }
@@ -287,7 +298,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
             //TODO
             let dist = segue.destination as! SelectSoundViewController
 //            dist.mediaID = segueInfo.mediaID
-//            dist.mediaLabel = segueInfo.mediaLabel
+            dist.segueInfo = segueInfo
             dist.selectedSound = Sounds(soundName: segueInfo.mediaLabel, title: segueInfo.label, image: segueInfo.imageName, category: segueInfo.category)
         }
         else if segue.identifier == Id.labelSegueIdentifier {
