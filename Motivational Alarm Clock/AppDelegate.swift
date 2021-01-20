@@ -24,6 +24,8 @@ import SwiftySound
 
 var db : Firestore!
 var uid = String()
+var firstinstall = Bool()
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, AlarmApplicationDelegate,UNUserNotificationCenterDelegate,MessagingDelegate{
@@ -49,6 +51,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         ref = Database.database().reference()
         db = Firestore.firestore()
        
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchedBefore  {
+            print("Not first launch.")
+            firstinstall = false
+        } else {
+            print("First launch, setting UserDefault.")
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            firstinstall = true
+        }
 
         uid = UIDevice.current.identifierForVendor?.uuidString ?? "x"
         var error: NSError?

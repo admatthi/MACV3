@@ -477,7 +477,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-yc-Uyt">
+                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-yc-Uyt">
                                 <rect key="frame" x="0.0" y="232" width="414" height="673"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -630,6 +630,7 @@ subscribing. This value will always default to the plan's subscription term leng
                         <outlet property="datePicker" destination="LLd-Sx-lGY" id="IhO-Rf-PU6"/>
                         <outlet property="mainview" destination="reW-L2-3tZ" id="c0O-Sa-8YB"/>
                         <outlet property="tableView" destination="bnW-yc-Uyt" id="pFI-WS-fVM"/>
+                        <outlet property="tapback" destination="MlZ-Mz-Ju7" id="mMJ-Ib-Ar0"/>
                         <outlet property="tapsave" destination="Vi9-KD-1aN" id="OYt-lb-Ujk"/>
                         <segue destination="Q0G-tO-MeZ" kind="unwind" identifier="saveEditSegue" unwindAction="unwindFromAddEditAlarmView:" id="G7x-8z-rza"/>
                         <segue destination="pqE-Dn-4wp" kind="show" identifier="labelEditSegue" id="nmh-Ui-wqh"/>
@@ -1436,6 +1437,17 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <action selector="backButtonAction:" destination="MFr-DP-aWZ" eventType="touchUpInside" id="55C-Qf-8Yf"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jp-G6-nju">
+                                        <rect key="frame" x="330" y="-3" width="76" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="76" id="Feu-sn-32E"/>
+                                            <constraint firstAttribute="height" constant="56" id="jxc-tU-M4c"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1443,6 +1455,8 @@ subscribing. This value will always default to the plan's subscription term leng
                                     <constraint firstItem="F3z-5o-wcM" firstAttribute="leading" secondItem="sPd-TC-SOW" secondAttribute="leading" id="1uT-a3-fZZ"/>
                                     <constraint firstItem="VwF-Mf-TAq" firstAttribute="top" secondItem="sPd-TC-SOW" secondAttribute="top" constant="12" id="Jiz-Sn-SKv"/>
                                     <constraint firstAttribute="height" constant="50" id="LJU-hZ-cov"/>
+                                    <constraint firstItem="0jp-G6-nju" firstAttribute="centerY" secondItem="VwF-Mf-TAq" secondAttribute="centerY" id="Rrs-9I-Yl4"/>
+                                    <constraint firstAttribute="trailing" secondItem="0jp-G6-nju" secondAttribute="trailing" constant="8" id="Whh-TP-Cwg"/>
                                     <constraint firstItem="F3z-5o-wcM" firstAttribute="centerY" secondItem="sPd-TC-SOW" secondAttribute="centerY" id="bNC-yV-scm"/>
                                 </constraints>
                             </view>
@@ -1500,7 +1514,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="waH-aA-bAT">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4hM-7R-UOF">
                                     <size key="itemSize" width="187" height="224"/>
@@ -1625,7 +1639,7 @@ subscribing. This value will always default to the plan's subscription term leng
                             <constraint firstItem="3Y1-Q3-o2f" firstAttribute="trailing" secondItem="qfZ-e1-pbI" secondAttribute="trailing" id="iFp-I0-gPy"/>
                             <constraint firstItem="3Y1-Q3-o2f" firstAttribute="leading" secondItem="qfZ-e1-pbI" secondAttribute="leading" id="kIm-Ra-90F"/>
                             <constraint firstItem="qfZ-e1-pbI" firstAttribute="trailing" secondItem="9Oy-vp-0PY" secondAttribute="trailing" id="nJI-zp-URR"/>
-                            <constraint firstItem="qfZ-e1-pbI" firstAttribute="bottom" secondItem="waH-aA-bAT" secondAttribute="bottom" id="qDY-eb-taC"/>
+                            <constraint firstItem="qfZ-e1-pbI" firstAttribute="bottom" secondItem="waH-aA-bAT" secondAttribute="bottom" constant="-34" id="qDY-eb-taC"/>
                             <constraint firstItem="waH-aA-bAT" firstAttribute="top" secondItem="9Oy-vp-0PY" secondAttribute="bottom" id="umO-80-i16"/>
                             <constraint firstItem="sPd-TC-SOW" firstAttribute="trailing" secondItem="qfZ-e1-pbI" secondAttribute="trailing" id="vWk-9z-AYc"/>
                             <constraint firstItem="xut-R4-HaR" firstAttribute="trailing" secondItem="qfZ-e1-pbI" secondAttribute="trailing" id="wRo-5b-5hg"/>
@@ -1636,6 +1650,7 @@ subscribing. This value will always default to the plan's subscription term leng
                     <connections>
                         <outlet property="collectionView" destination="waH-aA-bAT" id="2GW-uQ-xw5"/>
                         <outlet property="tagsCollectionView" destination="9Oy-vp-0PY" id="BSw-ky-qaz"/>
+                        <outlet property="tapback" destination="F3z-5o-wcM" id="cVv-px-ept"/>
                         <segue destination="qsU-xv-MIo" kind="unwind" identifier="soundUnwindSegue" unwindAction="unwindFromMediaView:" id="mtj-Cl-c9Z"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="SoundToPaywall" id="YON-42-if4"/>
                     </connections>
@@ -1687,7 +1702,7 @@ subscribing. This value will always default to the plan's subscription term leng
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="XLH-e5-pll"/>
-        <segue reference="YLc-sc-HuK"/>
+        <segue reference="hPJ-gF-2Rs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Artboard" width="100" height="100"/>

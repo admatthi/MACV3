@@ -20,6 +20,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     var alarmModel: Alarms = Alarms()
     var segueInfo: SegueInfo!
     var snoozeEnabled: Bool = false
+    @IBOutlet weak var tapback: UIButton!
     var enabled: Bool!
     
     override func viewDidLoad() {
@@ -32,6 +33,13 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         tapsave.clipsToBounds = true
         tableView.backgroundColor = .clear
 
+        if firstinstall {
+            
+            tapback.alpha = 0
+        } else {
+            
+            tapback.alpha = 1
+        }
         datePicker.becomeFirstResponder()
         datePicker.tintColor = UIColor.white
         

@@ -25,6 +25,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     var image:String!
     var soundtitle:String!
     var audioPlayer: AVAudioPlayer?
+    @IBOutlet weak var tapback: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,15 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         let notificationCenter = NotificationCenter.default
             notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
 
+        if firstinstall {
+            
+            tapback.alpha = 0
+            
+        } else {
+            
+            tapback.alpha = 1
+        }
+        
         if let category = selectedSound?.category{
             selectedCategory = category
         }
