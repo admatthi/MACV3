@@ -163,7 +163,7 @@ Cancel anytime.</string>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-Ca-V4O">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-Ca-V4O">
                                             <rect key="frame" x="122" y="134" width="272" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="272" id="aOk-9N-8wO"/>
@@ -1579,7 +1579,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                                             <blurEffect style="regular"/>
                                                         </visualEffectView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEF-nP-OdO">
-                                                            <rect key="frame" x="43" y="62" width="81" height="81"/>
+                                                            <rect key="frame" x="43" y="61.5" width="81" height="81"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="81" id="MmS-fT-fmv"/>
                                                                 <constraint firstAttribute="height" constant="81" id="fAx-xS-n90"/>

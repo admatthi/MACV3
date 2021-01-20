@@ -51,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         ref = Database.database().reference()
         db = Firestore.firestore()
        
+        queryforinfo()
+        
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore  {
             print("Not first launch.")
@@ -98,6 +100,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         Messaging.messaging().delegate = self
         return true
     }
+    
+    func queryforinfo() {
+            
+            ref?.child("Users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                let value = snapshot.value as? NSDictionary
+                
+                if let purchased = value?["Purchased"] as? String {
+                    
+                    if purchased == "True" {
+                        
+                        didpurchase = true
+                        
+                    } else {
+                        
+                        didpurchase = false
+                        
+                    }
+                    
+                } else {
+                    
+                    didpurchase = false
+                }
+                
+            })
+            
+        }
+    
     func getPrefrences(){
         db.collection("PushNotification").whereField("uid", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
            
