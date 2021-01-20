@@ -52,7 +52,19 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         tableView.allowsSelectionDuringEditing = true
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
         self.navigationController?.navigationBar.isHidden = true
-        
+        var error: NSError?
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+        } catch let error1 as NSError{
+            error = error1
+            print("could not set session. err:\(error!.localizedDescription)")
+        }
+        do {
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch let error1 as NSError{
+            error = error1
+            print("could not active session. err:\(error!.localizedDescription)")
+        }
         queryforinfo()
 //        if didpurchase {
 //
