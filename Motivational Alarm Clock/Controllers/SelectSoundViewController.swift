@@ -68,7 +68,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     }
     @IBAction func saveButtonAction(_ sender: Any) {
         
-                if !didpurchase {
+                if didpurchase {
         
                     let date = Scheduler.correctSecondComponent(date: self.date ?? Date())
                     let index = segueInfo.curCellIndex
