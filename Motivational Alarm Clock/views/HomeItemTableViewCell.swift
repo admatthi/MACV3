@@ -10,6 +10,7 @@ import UIKit
 
 class HomeItemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var sound2: UIImageView!
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var soundImageView: UIImageView!

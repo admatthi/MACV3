@@ -141,12 +141,16 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         cell.selectionStyle = .none
         cell.tag = indexPath.row
         cell.mainView.layer.cornerRadius = 10
+        cell.mainView.clipsToBounds = true
         cell.soundImageView.layer.cornerRadius = 10
+        cell.sound2.layer.cornerRadius = 10
 //        cell.soundImageView.layer.borderWidth = 1
 //        cell.soundImageView.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         let alarm: Alarm = alarmModel.alarms[indexPath.row]
         cell.soundImageView.image = UIImage(named: alarm.imageName)
+        cell.sound2.image = UIImage(named: alarm.imageName)
+
 //        let amAttr: [NSAttributedString.Key : Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue) : UIFont.systemFont(ofSize: 20.0)]
 //        let str = NSMutableAttributedString(string: alarm.formattedTime, attributes: amAttr)
 //        let timeAttr: [NSAttributedString.Key : Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue) : UIFont.systemFont(ofSize: 45.0)]
@@ -165,12 +169,12 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         cell.itemSwitch.tag = indexPath.row
         cell.itemSwitch.addTarget(self, action: #selector(self.switchTapped(_:)), for: UIControl.Event.valueChanged)
         if alarm.enabled {
-            cell.mainView.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 0.8)
+//            cell.mainView.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 0.8)
             cell.titleLable?.alpha = 1.0
             cell.timeLabel.alpha = 1.0
             cell.itemSwitch.setOn(true, animated: false)
         } else {
-            cell.mainView.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 0.8)
+//            cell.mainView.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 0.8)
             cell.titleLable.alpha = 1
             cell.timeLabel.alpha = 1
             cell.itemSwitch.setOn(false, animated: false)
