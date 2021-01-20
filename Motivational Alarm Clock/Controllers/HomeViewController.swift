@@ -8,14 +8,16 @@
 
 import UIKit
 import Firebase
-
-class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate{
-    
+import AudioToolbox
+import AVFoundation
+class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate,AVAudioPlayerDelegate{
+    var selectedAlarm:Alarm?
      var alarmDelegate: AlarmApplicationDelegate = AppDelegate() as AlarmApplicationDelegate
      var alarmScheduler: AlarmSchedulerDelegate = Scheduler()
      var alarmModel: Alarms = Alarms()
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    var audioPlayer: AVAudioPlayer?
     override func viewDidLoad() {
         
         ref = Database.database().reference()
@@ -70,6 +72,8 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.selectedAlarm = nil
+        self.tableView.reloadData()
 //        if alarmModel.alarms.count > 0 {
 //            editButton.isHidden = false
 //        }else{
@@ -79,6 +83,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        stopSound()
 //        self.navigationController?.navigationBar.isHidden = false
     }
     @IBAction func editDoneButtonAction(_ sender: UIButton) {
@@ -134,7 +139,62 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 
             performSegue(withIdentifier: Id.editSegueIdentifier, sender: SegueInfo(curCellIndex: indexPath.row, isEditMode: true, label: alarmModel.alarms[indexPath.row].label, mediaLabel: alarmModel.alarms[indexPath.row].mediaLabel, mediaID: alarmModel.alarms[indexPath.row].mediaID, repeatWeekdays: alarmModel.alarms[indexPath.row].repeatWeekdays, enabled: alarmModel.alarms[indexPath.row].enabled, snoozeEnabled: alarmModel.alarms[indexPath.row].snoozeEnabled, imageName: alarmModel.alarms[indexPath.row].imageName, category: alarmModel.alarms[indexPath.row].category))
     }
-    
+    @objc func playPauseAction(sender : UIButton){
+
+        let alarm: Alarm = alarmModel.alarms[sender.tag]
+        if selectedAlarm?.uuid == alarm.uuid {
+            stopSound()
+            selectedAlarm = nil
+        }else{
+            playSound(alarm.mediaLabel)
+            selectedAlarm =  alarm
+        }
+        self.tableView.reloadData()
+        
+     }
+    func playSound(_ soundName: String) {
+        
+//        //vibrate phone first
+//        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+//        //set vibrate callback
+//        AudioServicesAddSystemSoundCompletion(SystemSoundID(kSystemSoundID_Vibrate),nil,
+//            nil,
+//            { (_:SystemSoundID, _:UnsafeMutableRawPointer?) -> Void in
+//                AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+//            },
+//            nil)
+        let url = URL(fileURLWithPath: Bundle.main.path(forResource: soundName, ofType: "mp3")!)
+        
+        var error: NSError?
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+        } catch let error1 as NSError {
+            error = error1
+            audioPlayer = nil
+        }
+        
+        if let err = error {
+            print("audioPlayer error \(err.localizedDescription)")
+            return
+        } else {
+            audioPlayer!.delegate = self
+            audioPlayer!.prepareToPlay()
+        }
+        
+        //negative number means loop infinity
+        audioPlayer!.numberOfLoops = -1
+        audioPlayer!.play()
+    }
+    func stopSound() {
+        if audioPlayer != nil {
+            if audioPlayer!.isPlaying {
+                audioPlayer!.stop()
+            }
+        }
+
+        
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeItemTableViewCell") as! HomeItemTableViewCell
         //cell text
@@ -159,6 +219,21 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 //        cell!.detailTextLabel?.textColor = .white
         cell.titleLable.text = alarm.label
         cell.timeLabel.text = alarm.formattedTime.lowercased()
+        cell.playPauseButton.setImage(nil, for: .normal)
+        cell.playPauseButton.setImage(nil, for: .selected)
+        cell.playPauseButton.tag = indexPath.row
+        cell.playPauseButton.addTarget(self,
+                                       action: #selector(self.playPauseAction(sender:)),
+                for: .touchUpInside)
+        if selectedAlarm?.uuid == alarmModel.alarms[indexPath.row].uuid {
+            cell.playPauseButton.setImage(UIImage(named: "Bitmap"), for: .normal)
+            cell.playPauseButton.setImage(UIImage(named: "Bitmap"), for: .selected)
+        }else{
+            cell.playPauseButton.setImage(UIImage(named: "playButton"), for: .normal)
+            cell.playPauseButton.setImage(UIImage(named: "playButton"), for: .selected)
+            
+        }
+
         //append switch button
 //        let sw = UISwitch(frame: CGRect())
 //        sw.transform = CGAffineTransform(scaleX: 0.9, y: 0.9);
