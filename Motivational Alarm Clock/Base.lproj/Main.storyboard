@@ -306,7 +306,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2746" y="1135"/>
+            <point key="canvasLocation" x="2745" y="1300"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WF2-s9-I8c">
@@ -1712,7 +1712,7 @@ subscribing. This value will always default to the plan's subscription term leng
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="746-Gr-Cw3"/>
-        <segue reference="YLc-sc-HuK"/>
+        <segue reference="hPJ-gF-2Rs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Artboard" width="100" height="100"/>

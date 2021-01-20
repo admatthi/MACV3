@@ -26,7 +26,9 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             
             
         } else {
+            
             if !ifAlreadyPresented{
+                
                 ifAlreadyPresented = true
                 let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc : PaywallViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "PaywallViewViewController") as! PaywallViewViewController
@@ -38,6 +40,57 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 //            self.performSegue(withIdentifier: "HomeToPaywall", sender: self)
         }
     }
+    
+    func queryforinfo() {
+            
+            ref?.child("Users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                let value = snapshot.value as? NSDictionary
+                
+                if let purchased = value?["Purchased"] as? String {
+                    
+                    if purchased == "True" {
+                        
+                        didpurchase = true
+                        
+                    } else {
+                        
+                        didpurchase = false
+                        
+                     
+                        if !self.ifAlreadyPresented{
+                                
+                                self.ifAlreadyPresented = true
+                                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                let vc : PaywallViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "PaywallViewViewController") as! PaywallViewViewController
+                                vc.modalPresentationStyle = .fullScreen
+                                self.present(vc, animated: true, completion: nil)
+                            }
+
+                            
+                //            self.performSegue(withIdentifier: "HomeToPaywall", sender: self)
+                    
+                        
+                    }
+                    
+                } else {
+                    
+                    didpurchase = false
+                    
+                    
+                    if !self.ifAlreadyPresented{
+                               
+                        self.ifAlreadyPresented = true
+                               let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                               let vc : PaywallViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "PaywallViewViewController") as! PaywallViewViewController
+                               vc.modalPresentationStyle = .fullScreen
+                               self.present(vc, animated: true, completion: nil)
+                           }
+                }
+                
+            })
+            
+        }
     override func viewDidLoad() {
         
         ref = Database.database().reference()
@@ -65,7 +118,9 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             error = error1
             print("could not active session. err:\(error!.localizedDescription)")
         }
+        
         queryforinfo()
+        
 //        if didpurchase {
 //
 //
@@ -75,33 +130,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 //        }
 
     }
-    
-    func queryforinfo() {
-            
-            ref?.child("Users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-                
-                let value = snapshot.value as? NSDictionary
-                
-                if let purchased = value?["Purchased"] as? String {
-                    
-                    if purchased == "True" {
-                        
-                        didpurchase = true
-                        
-                    } else {
-                        
-                        didpurchase = false
-                        
-                    }
-                    
-                } else {
-                    
-                    didpurchase = false
-                }
-                
-            })
-            
-        }
+ 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.selectedAlarm = nil
