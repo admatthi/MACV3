@@ -118,7 +118,7 @@ class Scheduler : AlarmSchedulerDelegate
     
     internal func setNotificationWithDate(_ date: Date, onWeekdaysForNotify weekdays:[Int], snoozeEnabled:Bool,  onSnooze: Bool, soundName: String, index: Int) {
         let AlarmNotification: UILocalNotification = UILocalNotification()
-        AlarmNotification.alertBody = "Wake Up!"
+        AlarmNotification.alertBody = "Good Morning"
         AlarmNotification.alertAction = "Open App"
         AlarmNotification.category = "myAlarmCategory"
         AlarmNotification.soundName = soundName + ".mp3"
