@@ -39,7 +39,12 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     
     @IBOutlet weak var tapback: UIButton!
     override func viewDidLoad() {
+        allSounds.shuffle()
         
+       let firstFilteredSounds = allSounds.filter({$0.category == selectedCategory})
+        if firstFilteredSounds.count > 0  && !segueInfo.isEditMode{
+            selectedSound = firstFilteredSounds[0]
+        }
         selectsound(referrer: referrer)
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -197,6 +202,13 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         }
         self.tagsCollectionView.reloadData()
         self.collectionView.reloadData()
+        let seconds = 0.3
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            if let index = self.filteredSounds.lastIndex(where: {$0.title == self.selectedSound?.title}){
+                self.collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .top, animated: true)
+            }
+        }
+
     }
     //AVAudioPlayerDelegate protocol
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
@@ -207,9 +219,12 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         
     }
     func stopSound() {
-        if audioPlayer!.isPlaying {
-            audioPlayer!.stop()
+        if audioPlayer != nil {
+            if audioPlayer!.isPlaying {
+                audioPlayer!.stop()
+            }
         }
+
         
     }
     func playSound(_ soundName: String) {
