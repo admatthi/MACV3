@@ -24,7 +24,7 @@
 		4EA4AED125B9E834009C2650 /* Good Morning You Baddie.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEB925B9E830009C2650 /* Good Morning You Baddie.mp3 */; };
 		4EA4AED225B9E834009C2650 /* Start Every Day Perfectly.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEBA25B9E830009C2650 /* Start Every Day Perfectly.mp3 */; };
 		4EA4AED325B9E834009C2650 /* Greatness Defined.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEBB25B9E831009C2650 /* Greatness Defined.mp3 */; };
-		4EA4AED425B9E834009C2650 /* Your Life Mean Something.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEBC25B9E831009C2650 /* Your Life Mean Something.mp3 */; };
+		4EA4AED425B9E834009C2650 /* Your Life Means Something.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEBC25B9E831009C2650 /* Your Life Means Something.mp3 */; };
 		4EA4AED525B9E834009C2650 /* Nature of The Universe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEBD25B9E831009C2650 /* Nature of The Universe.mp3 */; };
 		4EA4AED625B9E834009C2650 /* I Am Worthy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEBE25B9E831009C2650 /* I Am Worthy.mp3 */; };
 		4EA4AED725B9E834009C2650 /* The Lion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEBF25B9E831009C2650 /* The Lion.mp3 */; };
@@ -202,7 +202,7 @@
 		4EA4AEB925B9E830009C2650 /* Good Morning You Baddie.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Good Morning You Baddie.mp3"; sourceTree = "<group>"; };
 		4EA4AEBA25B9E830009C2650 /* Start Every Day Perfectly.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Start Every Day Perfectly.mp3"; sourceTree = "<group>"; };
 		4EA4AEBB25B9E831009C2650 /* Greatness Defined.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Greatness Defined.mp3"; sourceTree = "<group>"; };
-		4EA4AEBC25B9E831009C2650 /* Your Life Mean Something.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Your Life Mean Something.mp3"; sourceTree = "<group>"; };
+		4EA4AEBC25B9E831009C2650 /* Your Life Means Something.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Your Life Means Something.mp3"; sourceTree = "<group>"; };
 		4EA4AEBD25B9E831009C2650 /* Nature of The Universe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Nature of The Universe.mp3"; sourceTree = "<group>"; };
 		4EA4AEBE25B9E831009C2650 /* I Am Worthy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "I Am Worthy.mp3"; sourceTree = "<group>"; };
 		4EA4AEBF25B9E831009C2650 /* The Lion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Lion.mp3"; sourceTree = "<group>"; };
@@ -392,7 +392,7 @@
 				4EA4AEC825B9E833009C2650 /* Turn Wounds Into Wisdom.mp3 */,
 				4EA4AEC425B9E832009C2650 /* Wake Up!.mp3 */,
 				4EA4AEC625B9E833009C2650 /* You Can't Do Something.mp3 */,
-				4EA4AEBC25B9E831009C2650 /* Your Life Mean Something.mp3 */,
+				4EA4AEBC25B9E831009C2650 /* Your Life Means Something.mp3 */,
 				9D9BABDA25B8C2CF00084507 /* Adhan-makkah.caf */,
 				9D9BABDB25B8C2CF00084507 /* bell.mp3 */,
 				9D9BABD925B8C2CE00084507 /* Bitmap.png */,
@@ -638,7 +638,7 @@
 				9D9BAC3425B8C2D400084507 /* Rise & Grind.mp3 in Resources */,
 				4EA4AEDD25B9E834009C2650 /* Just Do It, Girl.mp3 in Resources */,
 				9D9BAC8225B8F80C00084507 /* Dear, Lord.mp3 in Resources */,
-				4EA4AED425B9E834009C2650 /* Your Life Mean Something.mp3 in Resources */,
+				4EA4AED425B9E834009C2650 /* Your Life Means Something.mp3 in Resources */,
 				9D9BABFB25B8C2D400084507 /* bell.mp3 in Resources */,
 				4EA4AECF25B9E834009C2650 /* It's Grind Season.mp3 in Resources */,
 				9D9BAC2B25B8C2D400084507 /* You're Not A Hostage.mp3 in Resources */,
