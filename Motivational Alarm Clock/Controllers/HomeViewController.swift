@@ -315,15 +315,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         cell.itemSwitch.addTarget(self, action: #selector(self.switchTapped(_:)), for: UIControl.Event.valueChanged)
         if alarm.enabled {
 //            cell.mainView.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 0.8)
-            cell.titleLable?.alpha = 1.0
             cell.timeLabel.alpha = 1.0
-            cell.playPauseButton.alpha = 1.0
             cell.itemSwitch.setOn(true, animated: false)
         } else {
 //            cell.mainView.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 0.8)
-            cell.titleLable.alpha = 0.5
             cell.timeLabel.alpha = 0.5
-            cell.playPauseButton.alpha = 0.5
             cell.itemSwitch.setOn(false, animated: false)
         }
         
@@ -419,9 +415,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
                     if alarmModel.alarms[index].repeatWeekdays.isEmpty {
                         sw?.setOn(false, animated: false)
 //                        homeCell.backgroundColor = UIColor.black
-                        homeCell.titleLable.alpha = 0.5
                         homeCell.timeLabel.alpha = 0.5
-                        homeCell.playPauseButton.alpha = 0.5
                     }
                 }
 
