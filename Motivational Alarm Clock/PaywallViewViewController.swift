@@ -88,9 +88,20 @@ var purchases =         Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyj
        
        
            @IBOutlet weak var backimage: UIImageView!
+    
+    
+    func logTapSubscribeEvent(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "tapsubscribe"), parameters: ["referrer" : referrer])
+                                 }
+    
+    func logPurchaseSuccessEvent(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "purchasefollowthrough"), parameters: ["referrer" : referrer])
+                                 }
+    
+    
            @IBAction func tapContinue(_ sender: Any) {
                
-//               logTapSubscribeEvent(referrer : referrer)
+               logTapSubscribeEvent(referrer : referrer)
                
                let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
 
@@ -119,7 +130,7 @@ var purchases =         Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyj
                              if let purchaseCompletedHandler = self.delegate?.purchaseCompleted {
                                  purchaseCompletedHandler(self, trans!, info!)
                                  
-//                                 self.logPurchaseSuccessEvent(referrer : referrer)
+                                 self.logPurchaseSuccessEvent(referrer : referrer)
                                  //
                                  ref?.child("Users").child(uid).updateChildValues(["Purchased" : "True"])
                                  
@@ -133,7 +144,7 @@ var purchases =         Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyj
                                  
                              } else {
                                  
-//                                 self.logPurchaseSuccessEvent(referrer : referrer)
+                                 self.logPurchaseSuccessEvent(referrer : referrer)
                                  //
                                  ref?.child("Users").child(uid).updateChildValues(["Purchased" : "True"])
                                  

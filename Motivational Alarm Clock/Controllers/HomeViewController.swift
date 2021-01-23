@@ -277,6 +277,9 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         let alarm: Alarm = alarmModel.alarms[indexPath.row]
         cell.soundImageView.image = UIImage(named: alarm.imageName)
         cell.sound2.image = UIImage(named: alarm.imageName)
+        
+        cell.soundImageView.layer.cornerRadius = cell.soundImageView.frame.width/2
+        cell.soundImageView.clipsToBounds = true
 
 //        let amAttr: [NSAttributedString.Key : Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue) : UIFont.systemFont(ofSize: 20.0)]
 //        let str = NSMutableAttributedString(string: alarm.formattedTime, attributes: amAttr)
@@ -286,7 +289,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 //        cell!.textLabel?.textColor = .white
 //        cell!.detailTextLabel?.textColor = .white
         cell.titleLable.text = alarm.label
-        cell.timeLabel.text = alarm.formattedTime.lowercased()
+        cell.timeLabel.text = alarm.formattedTime.lowercased().replacingOccurrences(of: " ", with: "", options: NSString.CompareOptions.literal, range: nil)
         cell.playPauseButton.setImage(nil, for: .normal)
         cell.playPauseButton.setImage(nil, for: .selected)
         cell.playPauseButton.tag = indexPath.row
