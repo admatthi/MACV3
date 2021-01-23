@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyjJtFpYzjCj", appUserID: uid)
         
         let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc : UINavigationController = mainStoryboardIpad.instantiateViewController(withIdentifier: "UIRootNavigationController") as! UINavigationController
+        let vc : UITabBarController = mainStoryboardIpad.instantiateViewController(withIdentifier: "mainTabbarController") as! UITabBarController
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
@@ -79,7 +79,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
             error = error1
             print("could not active session. err:\(error!.localizedDescription)")
         }
-        window?.tintColor = UIColor.red
         
     
      

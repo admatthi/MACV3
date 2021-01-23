@@ -12,10 +12,12 @@
 		4E245DF425ADEABE00C8E57B /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E245DF325ADEABE00C8E57B /* MediaViewController.swift */; };
 		4E60EC5C25AF7AAF0049D4ED /* SelectSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */; };
 		4E60EC6125AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */; };
+		4E72C91325BCD9D400DF3CF2 /* AddNewAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C91225BCD9D400DF3CF2 /* AddNewAlarmViewController.swift */; };
 		4E77484F25AD2D140041674E /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77484D25AD2D140041674E /* UIWindow+Extension.swift */; };
 		4E77485025AD2D140041674E /* NotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77484E25AD2D140041674E /* NotificationName+Extension.swift */; };
 		4E9724FA25AFA09B0070FF50 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */; };
 		4E9724FF25AFD3250070FF50 /* SoundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9724FE25AFD3250070FF50 /* SoundData.swift */; };
+		4E9D854925BCBC2900ED4767 /* SelectSoundForTabBarItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D854825BCBC2900ED4767 /* SelectSoundForTabBarItemVC.swift */; };
 		4EA0A4E425B5021600D970A0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0A4E325B5021600D970A0 /* HomeViewController.swift */; };
 		4EA4AECD25B9E834009C2650 /* Perfect People.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEB525B9E82F009C2650 /* Perfect People.mp3 */; };
 		4EA4AECE25B9E834009C2650 /* Money Comes To Me.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEB625B9E830009C2650 /* Money Comes To Me.mp3 */; };
@@ -190,10 +192,12 @@
 		4E245DF325ADEABE00C8E57B /* MediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 		4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSoundViewController.swift; sourceTree = "<group>"; };
 		4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPickCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E72C91225BCD9D400DF3CF2 /* AddNewAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAlarmViewController.swift; sourceTree = "<group>"; };
 		4E77484D25AD2D140041674E /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		4E77484E25AD2D140041674E /* NotificationName+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extension.swift"; sourceTree = "<group>"; };
 		4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E9724FE25AFD3250070FF50 /* SoundData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundData.swift; sourceTree = "<group>"; };
+		4E9D854825BCBC2900ED4767 /* SelectSoundForTabBarItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSoundForTabBarItemVC.swift; sourceTree = "<group>"; };
 		4EA0A4E325B5021600D970A0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4EA4AEB525B9E82F009C2650 /* Perfect People.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Perfect People.mp3"; sourceTree = "<group>"; };
 		4EA4AEB625B9E830009C2650 /* Money Comes To Me.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Money Comes To Me.mp3"; sourceTree = "<group>"; };
@@ -347,6 +351,8 @@
 				4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */,
 				4EA0A4E325B5021600D970A0 /* HomeViewController.swift */,
 				4EECEF0D25B5F2A600ADD863 /* SelectWeekdaysViewController.swift */,
+				4E9D854825BCBC2900ED4767 /* SelectSoundForTabBarItemVC.swift */,
+				4E72C91225BCD9D400DF3CF2 /* AddNewAlarmViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -876,6 +882,7 @@
 			files = (
 				4EA0A4E425B5021600D970A0 /* HomeViewController.swift in Sources */,
 				4EE5F1FB25AD25F800B9C2EE /* HomeTableViewController.swift in Sources */,
+				4E9D854925BCBC2900ED4767 /* SelectSoundForTabBarItemVC.swift in Sources */,
 				4E77485025AD2D140041674E /* NotificationName+Extension.swift in Sources */,
 				4E77484F25AD2D140041674E /* UIWindow+Extension.swift in Sources */,
 				4EE5F20025AD271900B9C2EE /* AlarmEditAddViewController.swift in Sources */,
@@ -890,6 +897,7 @@
 				4E60EC5C25AF7AAF0049D4ED /* SelectSoundViewController.swift in Sources */,
 				4E245DF425ADEABE00C8E57B /* MediaViewController.swift in Sources */,
 				9DA82A2925AE607500289E84 /* Paywall.swift in Sources */,
+				4E72C91325BCD9D400DF3CF2 /* AddNewAlarmViewController.swift in Sources */,
 				4EE5F1D725AD246900B9C2EE /* PropertyReflectable.swift in Sources */,
 				4E9724FA25AFA09B0070FF50 /* CategoryCollectionViewCell.swift in Sources */,
 				4EE5F1D225AD246100B9C2EE /* Persistable.swift in Sources */,
