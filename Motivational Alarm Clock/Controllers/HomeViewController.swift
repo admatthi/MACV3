@@ -196,13 +196,13 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        if alarmModel.count == 0 {
+        if alarmModel.alarms.count == 0 {
             tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         }
         else {
             tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
         }
-        return alarmModel.count
+        return alarmModel.alarms.count
     }
     
     
@@ -384,7 +384,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             }
             
             // Delete the row from the data source
+            tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+            self.tableView.reloadRows(at: [indexPath], with: .automatic)
+
 //            if alarmModel.alarms.count > 0 {
 //                editButton.isHidden = false
 //            }else{
