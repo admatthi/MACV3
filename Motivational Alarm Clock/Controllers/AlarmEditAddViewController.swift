@@ -29,6 +29,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidAppear(_ animated: Bool) {
         
+        referrer = "EditAlarm"
         if firstinstall {
             tapback.alpha = 0
             

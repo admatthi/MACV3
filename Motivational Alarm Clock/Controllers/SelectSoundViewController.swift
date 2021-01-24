@@ -86,6 +86,8 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     
     override func viewDidAppear(_ animated: Bool) {
         
+        referrer = "SelectSound"
+
         if firstinstall {
             tapback.alpha = 0
             

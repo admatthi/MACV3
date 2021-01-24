@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -163,7 +163,7 @@ Cancel anytime.</string>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gentle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-Ca-V4O">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Superalarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-Ca-V4O">
                                             <rect key="frame" x="122" y="134" width="272" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="272" id="aOk-9N-8wO"/>
@@ -249,11 +249,11 @@ Cancel anytime.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8P-CK-Mcq">
-                                <rect key="frame" x="22" y="177" width="195" height="0.5"/>
+                                <rect key="frame" x="22" y="177" width="262" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="FKj-4C-cUF"/>
-                                    <constraint firstAttribute="width" constant="195" id="vnA-QT-qgZ"/>
+                                    <constraint firstAttribute="width" constant="262" id="vnA-QT-qgZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -267,7 +267,7 @@ Cancel anytime.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mep-Cr-E6T">
-                                <rect key="frame" x="20" y="705" width="374" height="193"/>
+                                <rect key="frame" x="20" y="656" width="374" height="193"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="193" id="CQL-vU-NCx"/>
                                 </constraints>
@@ -647,14 +647,17 @@ subscribing. This value will always default to the plan's subscription term leng
             </objects>
             <point key="canvasLocation" x="3460.8695652173915" y="-248.4375"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="25Z-x1-Gfs">
             <objects>
-                <tabBarController storyboardIdentifier="mainTabbarController" id="ACZ-YS-ZgK" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabbarController" id="ACZ-YS-ZgK" customClass="TabBarViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y9A-cC-5JX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="teq-pc-U4c" kind="relationship" relationship="viewControllers" id="yct-qc-j6n"/>
@@ -678,7 +681,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7K-ac-yL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028" y="923"/>
+            <point key="canvasLocation" x="2606" y="1211"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="fk1-v4-QmK">
@@ -714,18 +717,35 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <action selector="editDoneButtonAction:" destination="sKI-hj-4KZ" eventType="touchUpInside" id="Lpk-Ui-njL"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39h-g3-Chi">
+                                        <rect key="frame" x="328" y="-17" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="OBh-A0-wYa"/>
+                                            <constraint firstAttribute="width" constant="84" id="cpt-VI-bWh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="42"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="34z-Qh-osK" kind="presentation" identifier="addSegue" id="746-Gr-Cw3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="39h-g3-Chi" firstAttribute="top" secondItem="usE-fl-Xgv" secondAttribute="top" constant="-17" id="ISA-vc-xk5"/>
                                     <constraint firstItem="0nU-PG-Z7L" firstAttribute="centerY" secondItem="usE-fl-Xgv" secondAttribute="centerY" id="R3Q-eq-9TF"/>
                                     <constraint firstItem="0nU-PG-Z7L" firstAttribute="leading" secondItem="usE-fl-Xgv" secondAttribute="leading" constant="10" id="YYr-Lq-Dbz"/>
                                     <constraint firstItem="gkq-0v-bQb" firstAttribute="centerX" secondItem="usE-fl-Xgv" secondAttribute="centerX" id="gsB-Fo-cZD"/>
                                     <constraint firstItem="gkq-0v-bQb" firstAttribute="centerY" secondItem="usE-fl-Xgv" secondAttribute="centerY" id="lZ4-t0-ACz"/>
+                                    <constraint firstAttribute="trailing" secondItem="39h-g3-Chi" secondAttribute="trailing" constant="2" id="mx4-xz-peb"/>
                                     <constraint firstAttribute="height" constant="50" id="u0i-UE-ZRc"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8p0-QK-EXB">
-                                <rect key="frame" x="0.0" y="55" width="414" height="792"/>
+                                <rect key="frame" x="0.0" y="102" width="414" height="745"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -756,7 +776,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                                                         </constraints>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXT-M3-RyW">
-                                                                        <rect key="frame" x="-27" y="5" width="108" height="108"/>
+                                                                        <rect key="frame" x="-13" y="5" width="108" height="108"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="108" id="eQM-q6-RLY"/>
                                                                             <constraint firstAttribute="height" constant="108" id="eia-hJ-gRE"/>
@@ -766,7 +786,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="NXT-M3-RyW" firstAttribute="centerX" secondItem="wRn-km-zoJ" secondAttribute="centerX" id="FE9-vF-cNp"/>
+                                                                    <constraint firstItem="NXT-M3-RyW" firstAttribute="centerX" secondItem="wRn-km-zoJ" secondAttribute="centerX" constant="14" id="FE9-vF-cNp"/>
                                                                     <constraint firstItem="wRn-km-zoJ" firstAttribute="leading" secondItem="YAW-D8-PdX" secondAttribute="leading" constant="9" id="kVr-8g-MZr"/>
                                                                     <constraint firstItem="NXT-M3-RyW" firstAttribute="centerY" secondItem="wRn-km-zoJ" secondAttribute="centerY" id="s9S-C1-3OK"/>
                                                                 </constraints>
@@ -774,13 +794,13 @@ subscribing. This value will always default to the plan's subscription term leng
                                                             <blurEffect style="light"/>
                                                         </visualEffectView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3:30 am" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvi-AU-PBj">
-                                                            <rect key="frame" x="57" y="19" width="235" height="74"/>
+                                                            <rect key="frame" x="78" y="19" width="235" height="74"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="54"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Only Live Once You Only Live Once" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2S-PW-eYe">
-                                                            <rect key="frame" x="62" y="84" width="250" height="19.5"/>
+                                                            <rect key="frame" x="83" y="84" width="250" height="19.5"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -798,9 +818,9 @@ subscribing. This value will always default to the plan's subscription term leng
                                                         <constraint firstItem="l3o-ym-Vm6" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" id="29V-5f-rHA"/>
                                                         <constraint firstItem="l3o-ym-Vm6" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" id="5o9-PH-aFf"/>
                                                         <constraint firstItem="A84-bN-jA0" firstAttribute="centerY" secondItem="h0l-ju-jKO" secondAttribute="centerY" id="64T-Yi-UsY"/>
-                                                        <constraint firstItem="K2S-PW-eYe" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" constant="62" id="AHW-8c-2ts"/>
+                                                        <constraint firstItem="K2S-PW-eYe" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" constant="83" id="AHW-8c-2ts"/>
                                                         <constraint firstAttribute="trailing" secondItem="X8A-qN-Bey" secondAttribute="trailing" constant="20" id="ANJ-rp-fp5"/>
-                                                        <constraint firstItem="Mvi-AU-PBj" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" constant="57" id="AOh-Oh-KmN"/>
+                                                        <constraint firstItem="Mvi-AU-PBj" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" constant="78" id="AOh-Oh-KmN"/>
                                                         <constraint firstAttribute="trailing" secondItem="l3o-ym-Vm6" secondAttribute="trailing" id="Agu-G9-SYV"/>
                                                         <constraint firstItem="Mvi-AU-PBj" firstAttribute="centerY" secondItem="A84-bN-jA0" secondAttribute="centerY" constant="-3" id="D8V-mE-Lsj"/>
                                                         <constraint firstItem="wRn-km-zoJ" firstAttribute="centerY" secondItem="Mvi-AU-PBj" secondAttribute="centerY" constant="3" id="Edf-Ib-1aw"/>
@@ -840,22 +860,6 @@ subscribing. This value will always default to the plan's subscription term leng
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39h-g3-Chi">
-                                <rect key="frame" x="174" y="747" width="66" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="66" id="fuR-Wz-ks5"/>
-                                    <constraint firstAttribute="height" constant="66" id="nnf-eh-vF6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="17"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <imageReference key="image" image="Artboard" symbolScale="large"/>
-                                </state>
-                                <connections>
-                                    <segue destination="34z-Qh-osK" kind="presentation" identifier="addSegue" id="746-Gr-Cw3"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EOn-a5-aTi"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -863,16 +867,14 @@ subscribing. This value will always default to the plan's subscription term leng
                             <constraint firstAttribute="bottom" secondItem="nfR-gX-jdp" secondAttribute="bottom" id="2rK-qq-Xfe"/>
                             <constraint firstItem="EOn-a5-aTi" firstAttribute="bottom" secondItem="8p0-QK-EXB" secondAttribute="bottom" constant="-34" id="FgJ-MF-u8N"/>
                             <constraint firstItem="nfR-gX-jdp" firstAttribute="top" secondItem="ACq-X1-pjt" secondAttribute="top" id="GF4-sY-Qef"/>
-                            <constraint firstItem="8p0-QK-EXB" firstAttribute="top" secondItem="usE-fl-Xgv" secondAttribute="bottom" constant="-39" id="QeL-4J-cBc"/>
+                            <constraint firstItem="8p0-QK-EXB" firstAttribute="top" secondItem="usE-fl-Xgv" secondAttribute="bottom" constant="8" id="QeL-4J-cBc"/>
                             <constraint firstItem="usE-fl-Xgv" firstAttribute="leading" secondItem="EOn-a5-aTi" secondAttribute="leading" id="Wi9-Wj-4xt"/>
                             <constraint firstItem="usE-fl-Xgv" firstAttribute="trailing" secondItem="EOn-a5-aTi" secondAttribute="trailing" id="ZVW-As-4qX"/>
                             <constraint firstItem="EOn-a5-aTi" firstAttribute="trailing" secondItem="8p0-QK-EXB" secondAttribute="trailing" id="b4i-Hf-EuA"/>
-                            <constraint firstItem="EOn-a5-aTi" firstAttribute="bottom" secondItem="39h-g3-Chi" secondAttribute="bottom" id="b5y-EJ-4Nq"/>
                             <constraint firstItem="nfR-gX-jdp" firstAttribute="trailing" secondItem="EOn-a5-aTi" secondAttribute="trailing" id="f69-6p-vgg"/>
                             <constraint firstItem="usE-fl-Xgv" firstAttribute="top" secondItem="EOn-a5-aTi" secondAttribute="top" id="pxX-8l-0IY"/>
                             <constraint firstItem="8p0-QK-EXB" firstAttribute="leading" secondItem="EOn-a5-aTi" secondAttribute="leading" id="uqk-iI-lcL"/>
                             <constraint firstItem="nfR-gX-jdp" firstAttribute="leading" secondItem="EOn-a5-aTi" secondAttribute="leading" id="zGh-as-gjS"/>
-                            <constraint firstItem="39h-g3-Chi" firstAttribute="centerX" secondItem="ACq-X1-pjt" secondAttribute="centerX" id="zYS-ow-IZq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QSy-Rb-CqE"/>
@@ -1716,11 +1718,11 @@ subscribing. This value will always default to the plan's subscription term leng
             </objects>
             <point key="canvasLocation" x="2746.875" y="-247.18309859154928"/>
         </scene>
-        <!--Home-->
+        <!--Alarms-->
         <scene sceneID="Wb9-AJ-YL3">
             <objects>
                 <navigationController storyboardIdentifier="UIRootNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="teq-pc-U4c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="Oap-uE-AVh"/>
+                    <tabBarItem key="tabBarItem" title="Alarms" image="alarm.fill" catalog="system" id="Oap-uE-AVh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vmC-Bn-7P3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1776,20 +1778,24 @@ subscribing. This value will always default to the plan's subscription term leng
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKU-6v-liI">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Sound" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KC1-3m-d9e">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guides" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KC1-3m-d9e">
                                         <rect key="frame" x="140" y="12" width="149" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="Xqy-cr-oNG"/>
                                             <constraint firstAttribute="width" constant="149" id="mwc-eV-j4A"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ay8-Zg-irJ">
-                                        <rect key="frame" x="366" y="6" width="38" height="38"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
-                                        <state key="normal" title="Add">
+                                        <rect key="frame" x="328" y="-17" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="WaJ-fL-L9X"/>
+                                            <constraint firstAttribute="width" constant="84" id="hHk-dU-aSn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="42"/>
+                                        <state key="normal" title="+">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -1799,11 +1805,11 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ay8-Zg-irJ" secondAttribute="trailing" constant="2" id="5Gw-ay-jQc"/>
                                     <constraint firstItem="KC1-3m-d9e" firstAttribute="centerX" secondItem="gKU-6v-liI" secondAttribute="centerX" constant="7.5" id="6i7-gV-FLP"/>
-                                    <constraint firstItem="ay8-Zg-irJ" firstAttribute="centerY" secondItem="KC1-3m-d9e" secondAttribute="centerY" id="9E7-TG-na8"/>
                                     <constraint firstItem="KC1-3m-d9e" firstAttribute="top" secondItem="gKU-6v-liI" secondAttribute="top" constant="12" id="blK-aq-jlK"/>
-                                    <constraint firstAttribute="trailing" secondItem="ay8-Zg-irJ" secondAttribute="trailing" constant="10" id="pMQ-hO-ZNz"/>
                                     <constraint firstAttribute="height" constant="50" id="wod-eC-2Ng"/>
+                                    <constraint firstItem="ay8-Zg-irJ" firstAttribute="top" secondItem="gKU-6v-liI" secondAttribute="top" constant="-17" id="zno-dt-fhf"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uX8-81-0bK">
@@ -2000,13 +2006,13 @@ subscribing. This value will always default to the plan's subscription term leng
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkY-xN-OuS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1235" y="771"/>
+            <point key="canvasLocation" x="-1236.231884057971" y="770.75892857142856"/>
         </scene>
-        <!--Sounds-->
+        <!--Guides-->
         <scene sceneID="gxx-PW-poH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="aP2-4e-lLS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sounds" id="kHR-BE-fey"/>
+                    <tabBarItem key="tabBarItem" title="Guides" image="circlebadge.2.fill" catalog="system" id="kHR-BE-fey"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FLN-Bu-5jZ">
@@ -2217,18 +2223,19 @@ subscribing. This value will always default to the plan's subscription term leng
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="746-Gr-Cw3"/>
-        <segue reference="hPJ-gF-2Rs"/>
+        <segue reference="YLc-sc-HuK"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Artboard" width="100" height="100"/>
         <image name="Bitmap" width="100" height="100"/>
         <image name="Bitmap" width="100" height="100"/>
         <image name="Rise &amp; Grind" width="658" height="807"/>
+        <image name="alarm.fill" catalog="system" width="124" height="128"/>
         <image name="by proceeding" width="542" height="74"/>
         <image name="checkMark" width="66" height="66"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="circlebadge.2.fill" catalog="system" width="128" height="91"/>
         <image name="iPhone 8" width="1125" height="2001"/>
         <image name="mountains" width="2700" height="1802"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>

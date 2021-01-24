@@ -13,6 +13,10 @@ class TitleEditViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var labelTextField: UITextField!
     var label: String!
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        referrer = "TitleEdit"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         labelTextField.becomeFirstResponder()

@@ -41,6 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
 
         AppEvents.activateApp()
         
+        referrer = "LaunchAppDelegate"
+
+        
         Purchases.debugLogsEnabled = true
         Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyjJtFpYzjCj", appUserID: uid)
         
@@ -81,7 +84,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         }
         
     
-     
+        func asknotifications(referrer : String) {
+                                         AppEvents.logEvent(AppEvents.Name(rawValue: "asknotifications"), parameters: ["referrer" : referrer])
+                                     }
+        
+        
+            func approvenotifications(referrer : String) {
+                                             AppEvents.logEvent(AppEvents.Name(rawValue: "approvenotifications"), parameters: ["referrer" : referrer])
+                                         }
+
 
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
@@ -91,10 +102,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
           UNUserNotificationCenter.current().requestAuthorization(
             options: authOptions,
             completionHandler: {_, _ in })
+            
+            asknotifications(referrer: referrer)
+            
         } else {
           let settings: UIUserNotificationSettings =
           UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
           application.registerUserNotificationSettings(settings)
+        }
+         
+        let isRegisteredForRemoteNotifications = UIApplication.shared.isRegisteredForRemoteNotifications
+        if isRegisteredForRemoteNotifications {
+            
+            approvenotifications(referrer: referrer)
+             // User is registered for notification
+        } else {
+             // Show alert user is not registered for notification
         }
 
         application.registerForRemoteNotifications()

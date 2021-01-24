@@ -57,6 +57,7 @@
 		4EE5F20A25AD285A00B9C2EE /* TitleEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F20925AD285A00B9C2EE /* TitleEditViewController.swift */; };
 		4EECEF0E25B5F2A600ADD863 /* SelectWeekdaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECEF0D25B5F2A600ADD863 /* SelectWeekdaysViewController.swift */; };
 		5B0A65A99C1BF3F94F245E80 /* Pods_Motivational_Alarm_Clock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ADE3E5DB74EB9D2232576B /* Pods_Motivational_Alarm_Clock.framework */; };
+		9D225C7425BDCFCB00232E01 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D225C7325BDCFCB00232E01 /* TabBarViewController.swift */; };
 		9D8D248425ABABEB00B4E69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248325ABABEB00B4E69D /* AppDelegate.swift */; };
 		9D8D248825ABABEB00B4E69D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248725ABABEB00B4E69D /* ViewController.swift */; };
 		9D8D248B25ABABEB00B4E69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D248925ABABEB00B4E69D /* Main.storyboard */; };
@@ -240,6 +241,7 @@
 		5BBCB738D0DC8EB71211838E /* Pods_Motivational_Alarm_ClockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motivational_Alarm_ClockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CC806F4EF1508ECFA51837 /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8D493DA693E50DEE2B7370A9 /* Pods-Motivational Alarm ClockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm ClockTests.release.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm ClockTests/Pods-Motivational Alarm ClockTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D225C7325BDCFCB00232E01 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = "Motivational Alarm Clock/TabBarViewController.swift"; sourceTree = SOURCE_ROOT; };
 		9D8D248025ABABEB00B4E69D /* Motivational Alarm Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Motivational Alarm Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8D248325ABABEB00B4E69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D8D248725ABABEB00B4E69D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 		4EE5F18625AD236300B9C2EE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9D225C7325BDCFCB00232E01 /* TabBarViewController.swift */,
 				4EE5F1FA25AD25F800B9C2EE /* HomeTableViewController.swift */,
 				4EE5F1FF25AD271900B9C2EE /* AlarmEditAddViewController.swift */,
 				4E245DF325ADEABE00C8E57B /* MediaViewController.swift */,
@@ -898,6 +901,7 @@
 				4E245DF425ADEABE00C8E57B /* MediaViewController.swift in Sources */,
 				9DA82A2925AE607500289E84 /* Paywall.swift in Sources */,
 				4E72C91325BCD9D400DF3CF2 /* AddNewAlarmViewController.swift in Sources */,
+				9D225C7425BDCFCB00232E01 /* TabBarViewController.swift in Sources */,
 				4EE5F1D725AD246900B9C2EE /* PropertyReflectable.swift in Sources */,
 				4E9724FA25AFA09B0070FF50 /* CategoryCollectionViewCell.swift in Sources */,
 				4EE5F1D225AD246100B9C2EE /* Persistable.swift in Sources */,
@@ -1080,7 +1084,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF873A9C66FDFD5CFE9B3B9F /* Pods-Motivational Alarm Clock.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-9";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-10";
 				CODE_SIGN_ENTITLEMENTS = "Motivational Alarm Clock/Motivational Alarm Clock.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZNJ7N6ACK;
@@ -1101,7 +1105,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCBC92D3F5F3916F1819E89C /* Pods-Motivational Alarm Clock.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-9";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-10";
 				CODE_SIGN_ENTITLEMENTS = "Motivational Alarm Clock/Motivational Alarm Clock.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZNJ7N6ACK;

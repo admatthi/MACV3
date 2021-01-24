@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class HomeTableViewController: UITableViewController{
    
@@ -153,15 +154,25 @@ class HomeTableViewController: UITableViewController{
         alarmModel.alarms[index].enabled = sender.isOn
         if sender.isOn {
             print("switch on")
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
             alarmScheduler.setNotificationWithDate(alarmModel.alarms[index].date, onWeekdaysForNotify: alarmModel.alarms[index].repeatWeekdays, snoozeEnabled: alarmModel.alarms[index].snoozeEnabled, onSnooze: false, soundName: alarmModel.alarms[index].mediaLabel, index: index)
             tableView.reloadData()
         }
         else {
             print("switch off")
+            
+            turnoff(referrer: referrer)
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
             alarmScheduler.reSchedule()
             tableView.reloadData()
         }
     }
+    
+    func turnoff(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "turnoff"), parameters: ["referrer" : referrer])
+                                 }
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

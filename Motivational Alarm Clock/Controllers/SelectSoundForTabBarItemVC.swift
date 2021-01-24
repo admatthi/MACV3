@@ -84,6 +84,8 @@ class SelectSoundForTabBarItemVC: UIViewController ,AVAudioPlayerDelegate{
     
     override func viewDidAppear(_ animated: Bool) {
 
+        referrer = "SelectSoundTab"
+
     }
     
     @objc func appMovedToBackground() {
@@ -271,6 +273,7 @@ extension SelectSoundForTabBarItemVC:UICollectionViewDataSource,UICollectionView
                                  }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         collectionView.alpha = 0.0
         if collectionView == tagsCollectionView {
             let generator = UIImpactFeedbackGenerator(style: .heavy)
@@ -282,6 +285,10 @@ extension SelectSoundForTabBarItemVC:UICollectionViewDataSource,UICollectionView
             tagsCollectionView.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
             self.tagsCollectionView.reloadData()
         }else{
+            
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
+            
             let sound = filteredSounds[indexPath.row]
             selectedSound = sound
             logcategorycollected(referrer: sound.soundName)

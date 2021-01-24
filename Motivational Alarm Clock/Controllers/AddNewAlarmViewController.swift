@@ -57,6 +57,8 @@ class AddNewAlarmViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         
+        referrer = "SelectTime"
+
         if firstinstall {
             tapback.alpha = 0
             
