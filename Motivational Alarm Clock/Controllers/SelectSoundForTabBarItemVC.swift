@@ -127,12 +127,12 @@ class SelectSoundForTabBarItemVC: UIViewController ,AVAudioPlayerDelegate{
     }
     
     @IBAction func addAlarmActionButton(_ sender: Any) {
-        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc : AddNewAlarmViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "AddNewAlarmViewController") as! AddNewAlarmViewController
-        vc.selectedSound = self.selectedSound
-        vc.segueInfo = self.segueInfo
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc : AddNewAlarmViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "AddNewAlarmViewController") as! AddNewAlarmViewController
+//        vc.selectedSound = self.selectedSound
+//        vc.segueInfo = self.segueInfo
+//        vc.hidesBottomBarWhenPushed = true
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     //AVAudioPlayerDelegate protocol
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
@@ -322,7 +322,23 @@ extension SelectSoundForTabBarItemVC:UICollectionViewDataSource,UICollectionView
         }
 
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        let dist = segue.destination as! UINavigationController
+        let addEditController = dist.topViewController as! AlarmEditAddViewController
+        if segue.identifier == Id.addSegueIdentifier {
+            addEditController.isFromSoundVc = true
+            addEditController.navigationItem.title = "Add Alarm"
+            addEditController.modalPresentationStyle = .fullScreen
+            let defaultSound = selectedSound!
+            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Good Morning", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
+        }
+        else if segue.identifier == Id.editSegueIdentifier {
+            addEditController.navigationItem.title = "Edit Alarm"
+            addEditController.segueInfo = sender as? SegueInfo
+        }
+    }
     
 }
 

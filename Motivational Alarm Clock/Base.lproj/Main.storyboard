@@ -888,7 +888,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUn-5I-MgF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2464" y="964"/>
+            <point key="canvasLocation" x="2368" y="876"/>
         </scene>
         <!--Select Weekdays View Controller-->
         <scene sceneID="LsK-b4-XY7">
@@ -1834,6 +1834,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                         </state>
                                         <connections>
                                             <action selector="addAlarmActionButton:" destination="lHd-aD-rs3" eventType="touchUpInside" id="Ecj-Yg-Zqt"/>
+                                            <segue destination="34z-Qh-osK" kind="presentation" identifier="addSegue" id="ZXS-aD-rLo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2252,7 +2253,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NfL-zQ-OLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fyO-EN-PNq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-526" y="771"/>
+            <point key="canvasLocation" x="117" y="788"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

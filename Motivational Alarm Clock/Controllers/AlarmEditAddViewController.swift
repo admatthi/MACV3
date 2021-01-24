@@ -12,7 +12,7 @@ import MediaPlayer
 import FBSDKCoreKit
 
 class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-
+var isFromSoundVc = false
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var tableView: UITableView!
     
@@ -143,6 +143,12 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
                     }
                     alarmScheduler.reSchedule()
                     self.dismiss(animated: true, completion: nil)
+                    if self.isFromSoundVc{
+                        if let viewController = UIApplication.shared.windows.first!.rootViewController as? TabBarViewController {
+                            viewController.selectedIndex = 0
+                        }
+                        
+                    }
 //                    self.performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
                     NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
         
