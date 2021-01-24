@@ -39,12 +39,12 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     
     @IBOutlet weak var tapback: UIButton!
     override func viewDidLoad() {
-        allSounds.shuffle()
+//        allSounds.shuffle()
         
-       let firstFilteredSounds = allSounds.filter({$0.category == selectedCategory})
-        if firstFilteredSounds.count > 0  && !segueInfo.isEditMode{
-            selectedSound = firstFilteredSounds[0]
-        }
+//       let firstFilteredSounds = allSounds.filter({$0.category == selectedCategory})
+//        if firstFilteredSounds.count > 0  && !segueInfo.isEditMode{
+//            selectedSound = firstFilteredSounds[0]
+//        }
         selectsound(referrer: referrer)
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -183,7 +183,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//    performSegue(withIdentifier: Id.soundUnwindIdentifier, sender: self)
+    performSegue(withIdentifier: Id.soundUnwindIdentifier, sender: self)
 //        self.navigationController?.navigationBar.isHidden = false
 
         

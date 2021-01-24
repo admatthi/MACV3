@@ -9,7 +9,7 @@
 import UIKit
 
 class TitleEditViewController: UIViewController, UITextFieldDelegate {
-
+    @IBOutlet weak var tapback: UIButton!
     @IBOutlet weak var labelTextField: UITextField!
     var label: String!
     
@@ -43,5 +43,9 @@ class TitleEditViewController: UIViewController, UITextFieldDelegate {
         return false
     }
 
+    @IBAction func tapbackButtonAction(_ sender: Any) {
+        label = labelTextField.text
+        performSegue(withIdentifier: Id.labelUnwindIdentifier, sender: self)
+    }
 }
 
