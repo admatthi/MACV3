@@ -25,7 +25,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     override func viewDidAppear(_ animated: Bool) {
         
         referrer = "HomeAlarm"
-
+        
         if didpurchase {
             
             

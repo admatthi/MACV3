@@ -1084,7 +1084,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF873A9C66FDFD5CFE9B3B9F /* Pods-Motivational Alarm Clock.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-10";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-11";
 				CODE_SIGN_ENTITLEMENTS = "Motivational Alarm Clock/Motivational Alarm Clock.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZNJ7N6ACK;
@@ -1093,7 +1093,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aatech.mac.Motivational-Alarm-Clock";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1105,7 +1105,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCBC92D3F5F3916F1819E89C /* Pods-Motivational Alarm Clock.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-10";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-11";
 				CODE_SIGN_ENTITLEMENTS = "Motivational Alarm Clock/Motivational Alarm Clock.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZNJ7N6ACK;
@@ -1114,7 +1114,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aatech.mac.Motivational-Alarm-Clock";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

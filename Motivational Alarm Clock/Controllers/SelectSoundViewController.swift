@@ -21,7 +21,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     var selectedSound:Sounds?
 //    var soundsCategories = ["Motivation","Prayers", "Meditation", "Fitness", "Money" ]
     
-    var soundsCategories = ["Prayers", "Meditation", "Affirmations", "Motivation",]
+    var soundsCategories = ["Motivation", "Prayers", "Meditation", "Affirmations"]
 
     func selectsound(referrer : String) {
                                      AppEvents.logEvent(AppEvents.Name(rawValue: "selectsound"), parameters: ["referrer" : referrer])
