@@ -189,7 +189,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         var mainVC = self.window?.visibleViewController as? HomeViewController
         if mainVC == nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            mainVC = storyboard.instantiateViewController(withIdentifier: "Alarm") as? HomeViewController
+            mainVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
         }
         mainVC!.changeSwitchButtonState(index: index)
 //        playSound(soundName)
