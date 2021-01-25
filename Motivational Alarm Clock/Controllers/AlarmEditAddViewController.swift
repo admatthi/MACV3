@@ -120,8 +120,13 @@ var isFromSoundVc = false
         
         firstinstall = false
                 if didpurchase {
-                    
-                    let date = Scheduler.correctSecondComponent(date: self.datePicker.date)
+                    let interval = Date() - self.datePicker.date
+                    print(interval.day)
+                    print(interval.month)
+                    print(interval.hour)
+                    let modifiedDate = Calendar.current.date(byAdding: .day, value: interval.day ?? 0, to: self.datePicker.date)!
+                    print(modifiedDate)
+                    let date = Scheduler.correctSecondComponent(date: modifiedDate)
                     let index = segueInfo.curCellIndex
                     var tempAlarm = Alarm()
                     tempAlarm.date = date
@@ -145,7 +150,7 @@ var isFromSoundVc = false
                     self.dismiss(animated: true, completion: nil)
                     if self.isFromSoundVc{
                         if let viewController = UIApplication.shared.windows.first!.rootViewController as? TabBarViewController {
-                            viewController.selectedIndex = 0
+                            viewController.selectedIndex = 1
                         }
                         
                     }
