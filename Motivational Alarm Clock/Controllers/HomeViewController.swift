@@ -387,7 +387,10 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
-            self.tableView.reloadRows(at: [indexPath], with: .automatic)
+            if alarmModel.alarms.count > 0 {
+                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+
+            }
 
 //            if alarmModel.alarms.count > 0 {
 //                editButton.isHidden = false
