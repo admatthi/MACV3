@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     var alarmModel: Alarms = Alarms()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
         uid = UIDevice.current.identifierForVendor!.uuidString
 
         AppEvents.activateApp()
@@ -124,7 +124,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         Messaging.messaging().delegate = self
         return true
     }
-    
+    func application(_ application: UIApplication,
+                     performFetchWithCompletionHandler completionHandler:
+                     @escaping (UIBackgroundFetchResult) -> Void) {
+       // Check for new data.
+        let state = UIApplication.shared.applicationState
+        
+        if state == .background {
+            audioPlayer.stop()
+            let alarmmodel = Alarms()
+            var alarms = alarmmodel.alarms
+            alarms.sort(by: { $0.date < $1.date })
+            
+            if alarms.count > 0 {
+                let greaterthencurretnTime  = alarms.filter({$0.date > Date()})
+                if greaterthencurretnTime.count > 0 {
+            let session = AVAudioSession.sharedInstance()
+
+            var setCategoryError: Error? = nil
+            do {
+                try session.setCategory(
+                    .playback,
+                    options: .duckOthers)
+            } catch let setCategoryError {
+                // handle error
+            }
+            let aurdioName = greaterthencurretnTime[0]
+            let url = URL(fileURLWithPath: Bundle.main.path(forResource: aurdioName.mediaLabel, ofType: "mp3")!)
+            
+            var error: NSError?
+            
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+            } catch let error1 as NSError {
+                error = error1
+                audioPlayer = nil
+            }
+            
+            if let err = error {
+                print("audioPlayer error \(err.localizedDescription)")
+                return
+            } else {
+                audioPlayer!.delegate = self
+                audioPlayer!.prepareToPlay()
+            }
+            
+            //negative number means loop infinity
+            audioPlayer!.numberOfLoops = -1
+            let currentAudioTime = audioPlayer!.deviceCurrentTime
+
+            let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
+                    audioPlayer!.play(atTime: currentAudioTime + delayTime)
+                }
+
+            }
+            completionHandler(.newData)
+        }
+    }
     func queryforinfo() {
             
             ref?.child("Users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
