@@ -249,7 +249,7 @@ Cancel anytime.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8P-CK-Mcq">
-                                <rect key="frame" x="22" y="177" width="223" height="1"/>
+                                <rect key="frame" x="22" y="177" width="223" height="0.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="FKj-4C-cUF"/>
@@ -691,6 +691,17 @@ subscribing. This value will always default to the plan's subscription term leng
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="MVf-xH-sfz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMy-3s-HJT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gRq-qO-0fX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usE-fl-Xgv">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <subviews>
@@ -862,12 +873,20 @@ subscribing. This value will always default to the plan's subscription term leng
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EOn-a5-aTi" firstAttribute="bottom" secondItem="8p0-QK-EXB" secondAttribute="bottom" constant="-34" id="FgJ-MF-u8N"/>
+                            <constraint firstAttribute="bottom" secondItem="TMy-3s-HJT" secondAttribute="bottom" id="JiJ-dN-IT7"/>
+                            <constraint firstItem="TMy-3s-HJT" firstAttribute="trailing" secondItem="EOn-a5-aTi" secondAttribute="trailing" id="NhZ-fX-bwa"/>
                             <constraint firstItem="8p0-QK-EXB" firstAttribute="top" secondItem="usE-fl-Xgv" secondAttribute="bottom" constant="8" id="QeL-4J-cBc"/>
                             <constraint firstItem="usE-fl-Xgv" firstAttribute="leading" secondItem="EOn-a5-aTi" secondAttribute="leading" id="Wi9-Wj-4xt"/>
                             <constraint firstItem="usE-fl-Xgv" firstAttribute="trailing" secondItem="EOn-a5-aTi" secondAttribute="trailing" id="ZVW-As-4qX"/>
                             <constraint firstItem="EOn-a5-aTi" firstAttribute="trailing" secondItem="8p0-QK-EXB" secondAttribute="trailing" id="b4i-Hf-EuA"/>
+                            <constraint firstItem="MVf-xH-sfz" firstAttribute="top" secondItem="ACq-X1-pjt" secondAttribute="top" id="bgb-74-tx6"/>
+                            <constraint firstItem="TMy-3s-HJT" firstAttribute="top" secondItem="ACq-X1-pjt" secondAttribute="top" id="d78-tx-LYD"/>
+                            <constraint firstItem="MVf-xH-sfz" firstAttribute="leading" secondItem="EOn-a5-aTi" secondAttribute="leading" id="msQ-5Q-fBN"/>
                             <constraint firstItem="usE-fl-Xgv" firstAttribute="top" secondItem="EOn-a5-aTi" secondAttribute="top" id="pxX-8l-0IY"/>
+                            <constraint firstAttribute="bottom" secondItem="MVf-xH-sfz" secondAttribute="bottom" id="tFZ-ja-bd7"/>
+                            <constraint firstItem="MVf-xH-sfz" firstAttribute="trailing" secondItem="EOn-a5-aTi" secondAttribute="trailing" id="uqT-Mn-pXB"/>
                             <constraint firstItem="8p0-QK-EXB" firstAttribute="leading" secondItem="EOn-a5-aTi" secondAttribute="leading" id="uqk-iI-lcL"/>
+                            <constraint firstItem="TMy-3s-HJT" firstAttribute="leading" secondItem="EOn-a5-aTi" secondAttribute="leading" id="z5d-QH-2tN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QSy-Rb-CqE"/>
@@ -881,7 +900,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUn-5I-MgF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2368" y="876"/>
+            <point key="canvasLocation" x="2366.666666666667" y="875.89285714285711"/>
         </scene>
         <!--Select Weekdays View Controller-->
         <scene sceneID="LsK-b4-XY7">
