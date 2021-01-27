@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     var alarmModel: Alarms = Alarms()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
+//        UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
         uid = UIDevice.current.identifierForVendor!.uuidString
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.aatech.mac.Motivational-Alarm-Clock.backgroundFetch", using: nil) { task in
             self.scheduleTaskForAudioPlaying()
@@ -102,7 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
           // For iOS 10 display notification (sent via APNS)
           UNUserNotificationCenter.current().delegate = self
 
-            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound,.criticalAlert]
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound,]
           UNUserNotificationCenter.current().requestAuthorization(
             options: authOptions,
             completionHandler: {_, _ in })
@@ -128,12 +128,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         Messaging.messaging().delegate = self
         return true
     }
-    func scheduleTaskForAudioPlaying(){
+    func scheduleTaskForAudioPlaying(isFromNotification:Bool = false){
         
          let state = UIApplication.shared.applicationState
          
          if state == .background {
-             audioPlayer.stop()
+            if audioPlayer != nil {
+                audioPlayer.stop()
+            }
              let alarmmodel = Alarms()
              var alarms = alarmmodel.alarms
              alarms.sort(by: { $0.date < $1.date })
@@ -176,7 +178,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
              let currentAudioTime = audioPlayer!.deviceCurrentTime
 
              let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
-                     audioPlayer!.play(atTime: currentAudioTime + delayTime)
+                    if isFromNotification {
+                        audioPlayer!.play(atTime: currentAudioTime + delayTime)
+                    }else{
+                        audioPlayer!.play(atTime: currentAudioTime + delayTime)
+                    }
+                     
                  }
 
              }
@@ -185,7 +192,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func scheduleAppRefresh() {
          let request = BGAppRefreshTaskRequest(identifier: "com.aatech.mac.Motivational-Alarm-Clock.backgroundFetch")
 
-         request.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60) // Refresh after 5 minutes.
+         request.earliestBeginDate = Date(timeIntervalSinceNow: 60 * 60) // Refresh after 60 minutes.
 
          do {
              try BGTaskScheduler.shared.submit(request)
@@ -193,63 +200,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
              print("Could not schedule app refresh task \(error.localizedDescription)")
          }
      }
-    func application(_ application: UIApplication,
-                     performFetchWithCompletionHandler completionHandler:
-                     @escaping (UIBackgroundFetchResult) -> Void) {
-       // Check for new data.
-        let state = UIApplication.shared.applicationState
-        
-        if state == .background {
-            audioPlayer.stop()
-            let alarmmodel = Alarms()
-            var alarms = alarmmodel.alarms
-            alarms.sort(by: { $0.date < $1.date })
-            
-            if alarms.count > 0 {
-                let greaterthencurretnTime  = alarms.filter({$0.date > Date()})
-                if greaterthencurretnTime.count > 0 {
-            let session = AVAudioSession.sharedInstance()
-
-            var setCategoryError: Error? = nil
-            do {
-                try session.setCategory(
-                    .playback,
-                    options: .duckOthers)
-            } catch let setCategoryError {
-                // handle error
-            }
-            let aurdioName = greaterthencurretnTime[0]
-            let url = URL(fileURLWithPath: Bundle.main.path(forResource: aurdioName.mediaLabel, ofType: "mp3")!)
-            
-            var error: NSError?
-            
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-            } catch let error1 as NSError {
-                error = error1
-                audioPlayer = nil
-            }
-            
-            if let err = error {
-                print("audioPlayer error \(err.localizedDescription)")
-                return
-            } else {
-                audioPlayer!.delegate = self
-                audioPlayer!.prepareToPlay()
-            }
-            
-            //negative number means loop infinity
-            audioPlayer!.numberOfLoops = -1
-            let currentAudioTime = audioPlayer!.deviceCurrentTime
-
-            let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
-                    audioPlayer!.play(atTime: currentAudioTime + delayTime)
-                }
-
-            }
-            completionHandler(.newData)
-        }
-    }
+//    func application(_ application: UIApplication,
+//                     performFetchWithCompletionHandler completionHandler:
+//                     @escaping (UIBackgroundFetchResult) -> Void) {
+//       // Check for new data.
+//        let state = UIApplication.shared.applicationState
+//
+//        if state == .background {
+//            audioPlayer.stop()
+//            let alarmmodel = Alarms()
+//            var alarms = alarmmodel.alarms
+//            alarms.sort(by: { $0.date < $1.date })
+//
+//            if alarms.count > 0 {
+//                let greaterthencurretnTime  = alarms.filter({$0.date > Date()})
+//                if greaterthencurretnTime.count > 0 {
+//            let session = AVAudioSession.sharedInstance()
+//
+//            var setCategoryError: Error? = nil
+//            do {
+//                try session.setCategory(
+//                    .playback,
+//                    options: .duckOthers)
+//            } catch let setCategoryError {
+//                // handle error
+//            }
+//            let aurdioName = greaterthencurretnTime[0]
+//            let url = URL(fileURLWithPath: Bundle.main.path(forResource: aurdioName.mediaLabel, ofType: "mp3")!)
+//
+//            var error: NSError?
+//
+//            do {
+//                audioPlayer = try AVAudioPlayer(contentsOf: url)
+//            } catch let error1 as NSError {
+//                error = error1
+//                audioPlayer = nil
+//            }
+//
+//            if let err = error {
+//                print("audioPlayer error \(err.localizedDescription)")
+//                return
+//            } else {
+//                audioPlayer!.delegate = self
+//                audioPlayer!.prepareToPlay()
+//            }
+//
+//            //negative number means loop infinity
+//            audioPlayer!.numberOfLoops = -1
+//            let currentAudioTime = audioPlayer!.deviceCurrentTime
+//
+//            let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
+//                    audioPlayer!.play(atTime: currentAudioTime + delayTime)
+//                }
+//
+//            }
+//            completionHandler(.newData)
+//        }
+//    }
     func queryforinfo() {
             
             ref?.child("Users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -278,7 +285,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         }
     
     func getPrefrences(){
-        db.collection("PushNotification").whereField("uid", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
+        db.collection("profile").whereField("uid", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
            
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -350,7 +357,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
 //        let stopOption = UIAlertAction(title: "OK", style: .default)
 //        storageController.addAction(stopOption)
 //        window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
-//        completionHandler(UIBackgroundFetchResult.newData)
+        print("silent notification\(userInfo)")
+        self.scheduleTaskForAudioPlaying(isFromNotification: true)
+        completionHandler(UIBackgroundFetchResult.newData)
 
     }
     // Play the specified audio file with extension
@@ -452,29 +461,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     }
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-        //         print("Firebase registration token: \(fcmToken)")
-//        if let token = fcmToken {
-//            db.collection("PushNotification").whereField("uid", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
-//                if let err = err {
-//                    print("Error getting documents: \(err)")
-//                } else {
-//                    for document in querySnapshot!.documents{
-//                        let updateReference = db.collection("PushNotification").document(document.documentID)
-//                        updateReference.getDocument { (document, err) in
-//                            if let err = err {
-//                                print(err.localizedDescription)
-//                            }
-//                            else {
-//                                document?.reference.updateData([
-//                                    "token": token
-//                                ])
-//                            }
-//                        }
-//                    }
-//
-//                }
-//            }
-//        }
+                 print("Firebase registration token: \(fcmToken)")
+        if let token = fcmToken {
+            db.collection("profile").whereField("uid", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    if querySnapshot!.documents.count == 0{
+                        var ref: DocumentReference? = nil
+                        ref = db.collection("profile").addDocument(data: [
+                            "token": fcmToken,
+                            "uid":uid,
+                        ]) { err in
+                            if let err = err {
+                                print("Error adding document: \(err)")
+                            } else {
+                                self.getPrefrences()
+                                print("Document added with ID: \(ref!.documentID)")
+                            }
+                        }
+                    }else{
+                        let updateReference = db.collection("profile").document(querySnapshot!.documents.first?.documentID ?? "")
+                        updateReference.getDocument { (document, err) in
+                            if let err = err {
+                                print(err.localizedDescription)
+                            }
+                            else {
+                                document?.reference.updateData([
+                                    "token": fcmToken
+                                    ])
+                            }
+                        }
+
+                    }
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                    }
+                }
+            }
+        }
     }
          // TODO: If necessary send token to application server.
          // Note: This callback is fired at each app startup and whenever a new token is generated.
