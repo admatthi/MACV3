@@ -26,7 +26,7 @@ var db : Firestore!
 var uid = String()
 var firstinstall = Bool()
 
-
+import BackgroundTasks
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, AlarmApplicationDelegate,UNUserNotificationCenterDelegate,MessagingDelegate{
     var soundId: SystemSoundID = 1
@@ -38,7 +38,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
         uid = UIDevice.current.identifierForVendor!.uuidString
-
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.aatech.mac.Motivational-Alarm-Clock.backgroundFetch", using: nil) { task in
+            self.scheduleTaskForAudioPlaying()
+            task.setTaskCompleted(success: true)
+            self.scheduleAppRefresh()
+        }
         AppEvents.activateApp()
         UIApplication.shared.isIdleTimerDisabled = true
         referrer = "LaunchAppDelegate"
@@ -124,6 +128,71 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         Messaging.messaging().delegate = self
         return true
     }
+    func scheduleTaskForAudioPlaying(){
+        
+         let state = UIApplication.shared.applicationState
+         
+         if state == .background {
+             audioPlayer.stop()
+             let alarmmodel = Alarms()
+             var alarms = alarmmodel.alarms
+             alarms.sort(by: { $0.date < $1.date })
+             
+             if alarms.count > 0 {
+                 let greaterthencurretnTime  = alarms.filter({$0.date > Date()})
+                 if greaterthencurretnTime.count > 0 {
+             let session = AVAudioSession.sharedInstance()
+
+             var setCategoryError: Error? = nil
+             do {
+                 try session.setCategory(
+                     .playback,
+                     options: .duckOthers)
+             } catch let setCategoryError {
+                 // handle error
+             }
+             let aurdioName = greaterthencurretnTime[0]
+             let url = URL(fileURLWithPath: Bundle.main.path(forResource: aurdioName.mediaLabel, ofType: "mp3")!)
+             
+             var error: NSError?
+             
+             do {
+                 audioPlayer = try AVAudioPlayer(contentsOf: url)
+             } catch let error1 as NSError {
+                 error = error1
+                 audioPlayer = nil
+             }
+             
+             if let err = error {
+                 print("audioPlayer error \(err.localizedDescription)")
+                 return
+             } else {
+                 audioPlayer!.delegate = self
+                 audioPlayer!.prepareToPlay()
+             }
+             
+             //negative number means loop infinity
+             audioPlayer!.numberOfLoops = -1
+             let currentAudioTime = audioPlayer!.deviceCurrentTime
+
+             let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
+                     audioPlayer!.play(atTime: currentAudioTime + delayTime)
+                 }
+
+             }
+         }
+    }
+    func scheduleAppRefresh() {
+         let request = BGAppRefreshTaskRequest(identifier: "com.aatech.mac.Motivational-Alarm-Clock.backgroundFetch")
+
+         request.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60) // Refresh after 5 minutes.
+
+         do {
+             try BGTaskScheduler.shared.submit(request)
+         } catch {
+             print("Could not schedule app refresh task \(error.localizedDescription)")
+         }
+     }
     func application(_ application: UIApplication,
                      performFetchWithCompletionHandler completionHandler:
                      @escaping (UIBackgroundFetchResult) -> Void) {
@@ -433,6 +502,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        self.scheduleAppRefresh()
+
         let alarmmodel = Alarms()
         var alarms = alarmmodel.alarms
         alarms.sort(by: { $0.date < $1.date })
