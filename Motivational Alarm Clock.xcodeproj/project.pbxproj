@@ -43,6 +43,15 @@
 		4EA4AEE225B9E834009C2650 /* Be Water.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AECA25B9E834009C2650 /* Be Water.mp3 */; };
 		4EA4AEE325B9E834009C2650 /* Excuses Don't Count.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AECB25B9E834009C2650 /* Excuses Don't Count.mp3 */; };
 		4EA4AEE425B9E834009C2650 /* I'm Not A Hostage.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AECC25B9E834009C2650 /* I'm Not A Hostage.mp3 */; };
+		4EBBB5E425C0E5DA006D5B61 /* Rise & Shine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5D825C0E5D5006D5B61 /* Rise & Shine.mp3 */; };
+		4EBBB5E525C0E5DA006D5B61 /* Beat The Alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5D925C0E5D6006D5B61 /* Beat The Alarm.mp3 */; };
+		4EBBB5E625C0E5DA006D5B61 /* Can't Hurt Me.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5DA25C0E5D6006D5B61 /* Can't Hurt Me.mp3 */; };
+		4EBBB5E725C0E5DA006D5B61 /* Get Out of Bed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5DB25C0E5D6006D5B61 /* Get Out of Bed.mp3 */; };
+		4EBBB5E825C0E5DA006D5B61 /* Wake Up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5DC25C0E5D7006D5B61 /* Wake Up.mp3 */; };
+		4EBBB5E925C0E5DA006D5B61 /* Soft Morning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5DD25C0E5D7006D5B61 /* Soft Morning.mp3 */; };
+		4EBBB5EA25C0E5DA006D5B61 /* Get To Work.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5E125C0E5D8006D5B61 /* Get To Work.mp3 */; };
+		4EBBB5EB25C0E5DA006D5B61 /* Master The Morning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5E225C0E5D8006D5B61 /* Master The Morning.mp3 */; };
+		4EBBB5EC25C0E5DA006D5B61 /* 4-00 AM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5E325C0E5DA006D5B61 /* 4-00 AM.mp3 */; };
 		4EBD221325AF5A96008530A2 /* HomeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */; };
 		4EE5F19225AD23D800B9C2EE /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F19125AD23D800B9C2EE /* AlarmModel.swift */; };
 		4EE5F19725AD23F700B9C2EE /* SegueInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F19625AD23F700B9C2EE /* SegueInfo.swift */; };
@@ -224,6 +233,15 @@
 		4EA4AECA25B9E834009C2650 /* Be Water.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Be Water.mp3"; sourceTree = "<group>"; };
 		4EA4AECB25B9E834009C2650 /* Excuses Don't Count.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Excuses Don't Count.mp3"; sourceTree = "<group>"; };
 		4EA4AECC25B9E834009C2650 /* I'm Not A Hostage.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "I'm Not A Hostage.mp3"; sourceTree = "<group>"; };
+		4EBBB5D825C0E5D5006D5B61 /* Rise & Shine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rise & Shine.mp3"; sourceTree = "<group>"; };
+		4EBBB5D925C0E5D6006D5B61 /* Beat The Alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beat The Alarm.mp3"; sourceTree = "<group>"; };
+		4EBBB5DA25C0E5D6006D5B61 /* Can't Hurt Me.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Can't Hurt Me.mp3"; sourceTree = "<group>"; };
+		4EBBB5DB25C0E5D6006D5B61 /* Get Out of Bed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Get Out of Bed.mp3"; sourceTree = "<group>"; };
+		4EBBB5DC25C0E5D7006D5B61 /* Wake Up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Wake Up.mp3"; sourceTree = "<group>"; };
+		4EBBB5DD25C0E5D7006D5B61 /* Soft Morning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Soft Morning.mp3"; sourceTree = "<group>"; };
+		4EBBB5E125C0E5D8006D5B61 /* Get To Work.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Get To Work.mp3"; sourceTree = "<group>"; };
+		4EBBB5E225C0E5D8006D5B61 /* Master The Morning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Master The Morning.mp3"; sourceTree = "<group>"; };
+		4EBBB5E325C0E5DA006D5B61 /* 4-00 AM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "4-00 AM.mp3"; sourceTree = "<group>"; };
 		4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCell.swift; sourceTree = "<group>"; };
 		4EE5F19125AD23D800B9C2EE /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
 		4EE5F19625AD23F700B9C2EE /* SegueInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueInfo.swift; sourceTree = "<group>"; };
@@ -382,6 +400,15 @@
 				4EA4AECA25B9E834009C2650 /* Be Water.mp3 */,
 				4EA4AECB25B9E834009C2650 /* Excuses Don't Count.mp3 */,
 				4EA4AEC925B9E834009C2650 /* Get Your Money Up.mp3 */,
+				4EBBB5E325C0E5DA006D5B61 /* 4-00 AM.mp3 */,
+				4EBBB5D925C0E5D6006D5B61 /* Beat The Alarm.mp3 */,
+				4EBBB5DA25C0E5D6006D5B61 /* Can't Hurt Me.mp3 */,
+				4EBBB5DB25C0E5D6006D5B61 /* Get Out of Bed.mp3 */,
+				4EBBB5E125C0E5D8006D5B61 /* Get To Work.mp3 */,
+				4EBBB5E225C0E5D8006D5B61 /* Master The Morning.mp3 */,
+				4EBBB5D825C0E5D5006D5B61 /* Rise & Shine.mp3 */,
+				4EBBB5DD25C0E5D7006D5B61 /* Soft Morning.mp3 */,
+				4EBBB5DC25C0E5D7006D5B61 /* Wake Up.mp3 */,
 				4EA4AEB925B9E830009C2650 /* Good Morning You Baddie.mp3 */,
 				4EA4AEBB25B9E831009C2650 /* Greatness Defined.mp3 */,
 				4EA4AEC125B9E832009C2650 /* I Am Grateful for My Blessings.mp3 */,
@@ -634,12 +661,14 @@
 			files = (
 				9D9BAC1C25B8C2D400084507 /* This Is Your Job.mp3 in Resources */,
 				4EA4AED025B9E834009C2650 /* Something Wonderful.mp3 in Resources */,
+				4EBBB5E525C0E5DA006D5B61 /* Beat The Alarm.mp3 in Resources */,
 				9D9BABEF25B8C2D400084507 /* Every Man Has Two Lives.mp3 in Resources */,
 				9D9BAC0725B8C2D400084507 /* You Are The One.mp3 in Resources */,
 				4EA4AED225B9E834009C2650 /* Start Every Day Perfectly.mp3 in Resources */,
 				4EA4AEE425B9E834009C2650 /* I'm Not A Hostage.mp3 in Resources */,
 				4EA4AED625B9E834009C2650 /* I Am Worthy.mp3 in Resources */,
 				9D9BAC1625B8C2D400084507 /* Your Time Has Come.mp3 in Resources */,
+				4EBBB5E625C0E5DA006D5B61 /* Can't Hurt Me.mp3 in Resources */,
 				9D9BAC7325B8F80C00084507 /* Put God First.mp3 in Resources */,
 				9D9BAC1925B8C2D400084507 /* Rectangle.png in Resources */,
 				9D9BABF225B8C2D400084507 /* Remind Yourself Why.mp3 in Resources */,
@@ -650,17 +679,21 @@
 				4EA4AED425B9E834009C2650 /* Your Life Means Something.mp3 in Resources */,
 				9D9BABFB25B8C2D400084507 /* bell.mp3 in Resources */,
 				4EA4AECF25B9E834009C2650 /* It's Grind Season.mp3 in Resources */,
+				4EBBB5EC25C0E5DA006D5B61 /* 4-00 AM.mp3 in Resources */,
 				9D9BAC2B25B8C2D400084507 /* You're Not A Hostage.mp3 in Resources */,
 				9D9BAC7F25B8F80C00084507 /* Good Morning, Lord.mp3 in Resources */,
 				9D9BAC1025B8C2D400084507 /* Doubt.mp3 in Resources */,
 				4EA4AEE125B9E834009C2650 /* Get Your Money Up.mp3 in Resources */,
+				4EBBB5E425C0E5DA006D5B61 /* Rise & Shine.mp3 in Resources */,
 				4EA4AED825B9E834009C2650 /* I Welcome Joy Into My Life.mp3 in Resources */,
 				9D9BAC2525B8C2D400084507 /* It's Okay To Not Be Okay.mp3 in Resources */,
+				4EBBB5EB25C0E5DA006D5B61 /* Master The Morning.mp3 in Resources */,
 				9D8D249025ABABF000B4E69D /* LaunchScreen.storyboard in Resources */,
 				4EA4AED725B9E834009C2650 /* The Lion.mp3 in Resources */,
 				9D9BAC3125B8C2D400084507 /* You're The Main Character.mp3 in Resources */,
 				9D9BAC0125B8C2D400084507 /* Wolf Is Always Scratching.mp3 in Resources */,
 				4E21DACE25B33DDE0025C8A3 /* GoogleService-Info.plist in Resources */,
+				4EBBB5E925C0E5DA006D5B61 /* Soft Morning.mp3 in Resources */,
 				4EA4AED325B9E834009C2650 /* Greatness Defined.mp3 in Resources */,
 				9D9BAC7625B8F80C00084507 /* Good Morning.mp3 in Resources */,
 				9D8D248D25ABABF000B4E69D /* Assets.xcassets in Resources */,
@@ -669,17 +702,20 @@
 				4EA4AECD25B9E834009C2650 /* Perfect People.mp3 in Resources */,
 				9D9BAC0A25B8C2D400084507 /* There's Gonna Be Some Good.mp3 in Resources */,
 				4EA4AECE25B9E834009C2650 /* Money Comes To Me.mp3 in Resources */,
+				4EBBB5E725C0E5DA006D5B61 /* Get Out of Bed.mp3 in Resources */,
 				4EA4AED525B9E834009C2650 /* Nature of The Universe.mp3 in Resources */,
 				9D9BAC6D25B8F80B00084507 /* Lord, Thank You For This Day.mp3 in Resources */,
 				9D9BAC0425B8C2D400084507 /* newtrack2.mp3 in Resources */,
 				4EA4AEDB25B9E834009C2650 /* Today I Look For The Good.mp3 in Resources */,
 				4EA4AEE025B9E834009C2650 /* Turn Wounds Into Wisdom.mp3 in Resources */,
+				4EBBB5E825C0E5DA006D5B61 /* Wake Up.mp3 in Resources */,
 				4EA4AED125B9E834009C2650 /* Good Morning You Baddie.mp3 in Resources */,
 				4EA4AEDF25B9E834009C2650 /* Awaken The Mind.mp3 in Resources */,
 				9D9BAC7025B8F80C00084507 /* God Is Testing Your Faith.mp3 in Resources */,
 				4EA4AEDC25B9E834009C2650 /* Wake Up!.mp3 in Resources */,
 				9D9BAC7C25B8F80C00084507 /* Forgive Me, God.mp3 in Resources */,
 				9D9BAC0D25B8C2D400084507 /* Time To Wake Up.mp3 in Resources */,
+				4EBBB5EA25C0E5DA006D5B61 /* Get To Work.mp3 in Resources */,
 				9D8D248B25ABABEB00B4E69D /* Main.storyboard in Resources */,
 				9D9BAC2825B8C2D400084507 /* tickle.mp3 in Resources */,
 				4EA4AEE325B9E834009C2650 /* Excuses Don't Count.mp3 in Resources */,
