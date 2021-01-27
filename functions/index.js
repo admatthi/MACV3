@@ -12,28 +12,32 @@ admin.initializeApp(functions.config().firebase);
 var schedule = require('node-schedule');
 const db = admin.firestore();
 
-exports.scheduledFunction = functions.pubsub.schedule('every 1 minutes').onRun((context) => {
-    console.log('This will be run every 1 minutes!');
+exports.scheduledFunction = functions.pubsub.schedule('every 30 minutes').onRun(async (context) => {
+    console.log('This will be run every 30 minutes!');
 
-    const payload = {
-        notification: {
-            title: "Alarm",
-            body: "wake up",
-        },
-    };
-    var message ={
-        notification: {
-            title: "Alarm",
-            body:  "wake up"
 
-        },
-        "token": "cQuZ_waHbEM7lhD8ur2g8L:APA91bF4UfbYE6rqR1y7k37PoK1oQN2aiIrgZjoqK7zdZDm1URl81BdhE668ymu1Oh9kq31QC_HutGSFn3HnMEDNHGnUZy7wqCufFbFQRQteRgYXf-VmOr6LEj2MFOz1qKDe-Ek7Wp41"
-    };
-    const options = {
-        content_available: true,
-        priority: "high",
-    }
-    let response= admin.messaging().sendToDevice(message.token,payload,options)
-
+    const querySnapshot = await db.collectionGroup('profile').get();
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, ' => ', doc.data());
+        var data = doc.data();
+        const payload = {
+            "data": {
+                "story_id": "story_12345"
+            }
+        };
+        var token = data.token;
+        var message ={
+            "token": "fu0hSGxbH0JQi9ylSSWGje:APA91bELIqHpQougtaVQQlRpgOo7AvLQ9w72Ph8ZfRz8rrUBWQP6sFCJCyBZN5nEt42uDbmbxY3_2MLkmg0v_Dg5oaItSzn31vhh8gnGCdjy1sLQYOsNRB6ZdE1jrhEWOxo8A9fQY0uh",
+            "data": {
+                "updateApi": "activity"
+            }
+        };
+        const options = {
+            content_available: true,
+            priority: "high"
+        }
+        let response= admin.messaging().sendToDevice(token,payload,options)
+        console.log(response);
+    });
     return null;
 });
