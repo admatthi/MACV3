@@ -144,12 +144,14 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         super.viewWillAppear(animated)
         self.selectedAlarm = nil
         allSounds.shuffle()
+        alarmModel = Alarms()
         self.tableView.reloadData()
 //        if alarmModel.alarms.count > 0 {
 //            editButton.isHidden = false
 //        }else{
 //            editButton.isHidden = true
 //        }
+        alarmScheduler.reSchedule()
         self.navigationController?.navigationBar.isHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
