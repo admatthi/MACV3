@@ -4,12 +4,12 @@
 <dict>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
-		<string>com.aatech.mac.Motivational-Alarm-Clock</string>
+		<string>com.aatech.mac.Motivational-Alarm-Clock.backgroundFetch</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Wake</string>
+	<string>Alarm</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -71,9 +71,5 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
-<key>BGTaskSchedulerPermittedIdentifiers</key>
-<array>
-    <string>com.aatech.mac.Motivational-Alarm-Clock.backgroundFetch</string>
-</array>
 </dict>
 </plist>
