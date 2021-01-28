@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1EDA1425C23F97003970FB /* Never Hit Snooze Again.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E1EDA1325C23F97003970FB /* Never Hit Snooze Again.mp3 */; };
 		4E21DACE25B33DDE0025C8A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E21DACD25B33DDE0025C8A3 /* GoogleService-Info.plist */; };
 		4E245DE125ADE7D000C8E57B /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E245DE025ADE7D000C8E57B /* Scheduler.swift */; };
 		4E245DF425ADEABE00C8E57B /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E245DF325ADEABE00C8E57B /* MediaViewController.swift */; };
@@ -205,6 +206,7 @@
 /* Begin PBXFileReference section */
 		03ADE3E5DB74EB9D2232576B /* Pods_Motivational_Alarm_Clock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motivational_Alarm_Clock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F20A4CC19DB8C5AEF27E1DE /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E1EDA1325C23F97003970FB /* Never Hit Snooze Again.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Never Hit Snooze Again.mp3"; sourceTree = "<group>"; };
 		4E21DACD25B33DDE0025C8A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4E21DAD225B33F560025C8A3 /* Motivational Alarm Clock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Motivational Alarm Clock.entitlements"; sourceTree = "<group>"; };
 		4E245DE025ADE7D000C8E57B /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
@@ -433,6 +435,7 @@
 				4EBBB5DB25C0E5D6006D5B61 /* Get Out of Bed.mp3 */,
 				4EBBB5E125C0E5D8006D5B61 /* Get To Work.mp3 */,
 				4EBBB5E225C0E5D8006D5B61 /* Master The Morning.mp3 */,
+				4E1EDA1325C23F97003970FB /* Never Hit Snooze Again.mp3 */,
 				4EBBB5D825C0E5D5006D5B61 /* Rise & Shine.mp3 */,
 				4EBBB5DD25C0E5D7006D5B61 /* Soft Morning.mp3 */,
 				4EBBB5DC25C0E5D7006D5B61 /* Wake Up.mp3 */,
@@ -720,6 +723,7 @@
 				4EA4AED825B9E834009C2650 /* I Welcome Joy Into My Life.mp3 in Resources */,
 				9D9BAC2525B8C2D400084507 /* It's Okay To Not Be Okay.mp3 in Resources */,
 				4EBBB5EB25C0E5DA006D5B61 /* Master The Morning.mp3 in Resources */,
+				4E1EDA1425C23F97003970FB /* Never Hit Snooze Again.mp3 in Resources */,
 				9D8D249025ABABF000B4E69D /* LaunchScreen.storyboard in Resources */,
 				4EBBB5FD25C0F365006D5B61 /* Fix Your Life.mp3 in Resources */,
 				4EA4AED725B9E834009C2650 /* The Lion.mp3 in Resources */,
