@@ -238,10 +238,14 @@ extension SelectSoundForTabBarItemVC:UICollectionViewDataSource,UICollectionView
                     cell.topMainView.layer.borderWidth = 5.0
                     cell.selectCheckMarkButton.isHidden = false
                     let state = UIApplication.shared.applicationState
+                    
                     if state == .background {
                         
-                    }else{
+                        // background
+                    }
+                    else if state == .active {
                         playSound(sound.soundName)
+                        // foreground
                     }
                 }else{
                     cell.playPauseButton.isHidden = true
