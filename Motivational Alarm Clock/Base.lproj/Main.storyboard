@@ -693,7 +693,7 @@ subscribing. This value will always default to the plan's subscription term leng
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="MVf-xH-sfz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="MVf-xH-sfz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMy-3s-HJT">
@@ -1840,7 +1840,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <constraint firstAttribute="height" constant="26" id="Xqy-cr-oNG"/>
                                             <constraint firstAttribute="width" constant="149" id="mwc-eV-j4A"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1850,7 +1850,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <constraint firstAttribute="height" constant="84" id="WaJ-fL-L9X"/>
                                             <constraint firstAttribute="width" constant="84" id="hHk-dU-aSn"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="37"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -1896,7 +1896,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                                         <constraint firstAttribute="width" constant="90" id="O6P-zs-hFb"/>
                                                         <constraint firstAttribute="height" constant="30" id="suw-bZ-RUl"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                     <state key="normal" title="Motivation">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -1923,7 +1923,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LOe-8u-EZa">
-                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <rect key="frame" x="0.0" y="147" width="414" height="666"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dLB-Sl-6Zi">
                                     <size key="itemSize" width="187" height="224"/>
@@ -2052,7 +2052,7 @@ subscribing. This value will always default to the plan's subscription term leng
                             <constraint firstItem="eyp-ni-8PN" firstAttribute="top" secondItem="X49-dD-HLN" secondAttribute="top" constant="1" id="rQa-XI-8XD"/>
                             <constraint firstItem="lbT-Aw-NbT" firstAttribute="top" secondItem="uX8-81-0bK" secondAttribute="bottom" constant="3" id="reO-YH-eFL"/>
                             <constraint firstItem="gKU-6v-liI" firstAttribute="leading" secondItem="ljc-Cc-xgN" secondAttribute="leading" id="uza-Fh-8Rr"/>
-                            <constraint firstItem="LOe-8u-EZa" firstAttribute="top" secondItem="uX8-81-0bK" secondAttribute="bottom" id="zyJ-Jp-fvr"/>
+                            <constraint firstItem="LOe-8u-EZa" firstAttribute="top" secondItem="uX8-81-0bK" secondAttribute="bottom" constant="3" id="zyJ-Jp-fvr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pick A Sound" id="2sO-sN-bnm"/>
@@ -2063,7 +2063,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkY-xN-OuS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1088" y="1264"/>
+            <point key="canvasLocation" x="-1088.4057971014493" y="1263.6160714285713"/>
         </scene>
         <!--Motivate-->
         <scene sceneID="gxx-PW-poH">
@@ -2304,7 +2304,20 @@ subscribing. This value will always default to the plan's subscription term leng
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="RRU-vx-pWa">
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mX-51-CP7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jxJ-bG-E8X">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="147" id="RM6-h2-ycN"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="147" id="Smy-iu-WL2"/>
+                                    <constraint firstAttribute="height" constant="147" id="wLh-Em-SU9"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soundscapes" translatesAutoresizingMaskIntoConstraints="NO" id="RRU-vx-pWa">
                                 <rect key="frame" x="0.0" y="146" width="414" height="750"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCU-nb-L4P">
@@ -2315,7 +2328,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="Tnm-Hx-iXg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soundscapes" translatesAutoresizingMaskIntoConstraints="NO" id="Tnm-Hx-iXg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="147" id="8hV-dl-nCZ"/>
@@ -2351,7 +2364,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                                         <constraint firstAttribute="height" constant="30" id="H94-uE-rGa"/>
                                                         <constraint firstAttribute="width" constant="90" id="zpm-du-hw6"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                     <state key="normal" title="Motivation">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -2480,25 +2493,12 @@ subscribing. This value will always default to the plan's subscription term leng
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mX-51-CP7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jxJ-bG-E8X">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="147" id="RM6-h2-ycN"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="147" id="Smy-iu-WL2"/>
-                                    <constraint firstAttribute="height" constant="147" id="wLh-Em-SU9"/>
-                                </constraints>
-                                <blurEffect style="dark"/>
-                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6c-ix-Hhl">
                                 <rect key="frame" x="0.0" y="43" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soundscapes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRk-oc-Mft">
-                                        <rect key="frame" x="140" y="12" width="134.5" height="30.5"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                        <rect key="frame" x="143" y="12" width="128.5" height="29"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2508,7 +2508,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <constraint firstAttribute="height" constant="84" id="VfX-zm-cQz"/>
                                             <constraint firstAttribute="width" constant="84" id="iTA-Jp-Oqe"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="37"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -2598,7 +2598,20 @@ subscribing. This value will always default to the plan's subscription term leng
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="SU6-6h-OKs">
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdJ-wl-3HJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RwM-Sd-BCB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="147" id="FwS-e2-87L"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="147" id="Jh9-vX-3FZ"/>
+                                    <constraint firstAttribute="height" constant="147" id="s1V-2I-3Gj"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lkasdf" translatesAutoresizingMaskIntoConstraints="NO" id="SU6-6h-OKs">
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaL-Uh-9kR">
@@ -2609,7 +2622,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="Ql8-m9-b5b">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lkasdf" translatesAutoresizingMaskIntoConstraints="NO" id="Ql8-m9-b5b">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="147" id="Xat-iw-YFi"/>
@@ -2617,11 +2630,12 @@ subscribing. This value will always default to the plan's subscription term leng
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="147" id="xcl-sE-Rzu"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="txo-ud-fSw">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="txo-ud-fSw">
                                 <rect key="frame" x="0.0" y="93" width="414" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WGu-Z0-pgJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="nPf-Um-0Wb"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Byi-HF-7NP">
                                     <size key="itemSize" width="104" height="43"/>
@@ -2644,7 +2658,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                                         <constraint firstAttribute="height" constant="30" id="a4C-fP-7eD"/>
                                                         <constraint firstAttribute="width" constant="90" id="pXE-yA-SZL"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                     <state key="normal" title="Motivation">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -2773,19 +2787,6 @@ subscribing. This value will always default to the plan's subscription term leng
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdJ-wl-3HJ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RwM-Sd-BCB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="147" id="FwS-e2-87L"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="147" id="Jh9-vX-3FZ"/>
-                                    <constraint firstAttribute="height" constant="147" id="s1V-2I-3Gj"/>
-                                </constraints>
-                                <blurEffect style="dark"/>
-                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xnu-qO-N70">
                                 <rect key="frame" x="0.0" y="43" width="414" height="50"/>
                                 <subviews>
@@ -2805,7 +2806,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <constraint firstAttribute="width" constant="84" id="sBG-bV-yPG"/>
                                             <constraint firstAttribute="height" constant="84" id="wy6-GS-DRS"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="37"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -2830,13 +2831,16 @@ subscribing. This value will always default to the plan's subscription term leng
                         <constraints>
                             <constraint firstItem="Xnu-qO-N70" firstAttribute="top" secondItem="2In-HE-V98" secondAttribute="top" constant="43" id="4ij-u1-jZE"/>
                             <constraint firstItem="SU6-6h-OKs" firstAttribute="top" secondItem="txo-ud-fSw" secondAttribute="bottom" constant="1" id="778-1G-VGh"/>
+                            <constraint firstItem="txo-ud-fSw" firstAttribute="trailing" secondItem="BZF-pM-7ep" secondAttribute="trailing" id="8me-Pa-xiW"/>
                             <constraint firstItem="bHu-PW-1vT" firstAttribute="leading" secondItem="BZF-pM-7ep" secondAttribute="leading" id="CBd-gk-lml"/>
+                            <constraint firstItem="txo-ud-fSw" firstAttribute="leading" secondItem="BZF-pM-7ep" secondAttribute="leading" id="FRM-eR-GTa"/>
                             <constraint firstItem="iaL-Uh-9kR" firstAttribute="top" secondItem="txo-ud-fSw" secondAttribute="bottom" constant="3" id="Kxg-Xc-AL4"/>
                             <constraint firstItem="SU6-6h-OKs" firstAttribute="leading" secondItem="BZF-pM-7ep" secondAttribute="leading" id="QYm-8t-VRE"/>
                             <constraint firstItem="QdJ-wl-3HJ" firstAttribute="leading" secondItem="BZF-pM-7ep" secondAttribute="leading" id="QhX-qW-1O8"/>
                             <constraint firstItem="bHu-PW-1vT" firstAttribute="top" secondItem="BZF-pM-7ep" secondAttribute="top" constant="99" id="TOU-UM-nCz"/>
                             <constraint firstItem="iaL-Uh-9kR" firstAttribute="leading" secondItem="BZF-pM-7ep" secondAttribute="leading" id="XxP-u2-jiN"/>
                             <constraint firstItem="BZF-pM-7ep" firstAttribute="bottom" secondItem="bHu-PW-1vT" secondAttribute="bottom" constant="1" id="aJV-2m-Ttz"/>
+                            <constraint firstItem="txo-ud-fSw" firstAttribute="top" secondItem="Xnu-qO-N70" secondAttribute="bottom" id="ads-fS-9B2"/>
                             <constraint firstItem="txo-ud-fSw" firstAttribute="top" secondItem="Xnu-qO-N70" secondAttribute="bottom" id="dTr-Jg-Pn9"/>
                             <constraint firstItem="bHu-PW-1vT" firstAttribute="top" secondItem="txo-ud-fSw" secondAttribute="bottom" id="ewg-TE-xuS"/>
                             <constraint firstItem="QdJ-wl-3HJ" firstAttribute="top" secondItem="2In-HE-V98" secondAttribute="top" id="ghh-D3-EgR"/>
@@ -2879,7 +2883,9 @@ subscribing. This value will always default to the plan's subscription term leng
         <image name="circle.circle" catalog="system" width="128" height="121"/>
         <image name="circle.lefthalf.fill" catalog="system" width="128" height="121"/>
         <image name="iPhone 8" width="1125" height="2001"/>
+        <image name="lkasdf" width="2689" height="1513"/>
         <image name="mountains" width="467" height="700.5"/>
+        <image name="soundscapes" width="934" height="1401"/>
         <image name="sunrise" width="467" height="700.5"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
