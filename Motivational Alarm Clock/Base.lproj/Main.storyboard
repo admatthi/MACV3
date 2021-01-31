@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="bEn-He-xdd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-2" translatesAutoresizingMaskIntoConstraints="NO" id="bEn-He-xdd">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sga-T3-Y4W">
@@ -29,32 +29,32 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGd-Q3-AHu">
-                                            <rect key="frame" x="364" y="61" width="25" height="25"/>
+                                            <rect key="frame" x="20" y="80" width="40" height="40"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="25" id="0Kw-fE-CYf"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="5na-fL-ole"/>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Z7U-1u-ab5"/>
-                                                <constraint firstAttribute="height" constant="25" id="ZgV-T8-DUd"/>
+                                                <constraint firstAttribute="width" constant="40" id="8m5-z8-8JS"/>
+                                                <constraint firstAttribute="height" constant="40" id="Byq-z0-Xfx"/>
                                             </constraints>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="xmark.circle" catalog="system"/>
+                                            <state key="normal" image="xmark" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                            </state>
                                             <connections>
                                                 <action selector="tapBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5u-3D-q9r"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBV-jy-wsZ">
-                                            <rect key="frame" x="16" y="199" width="25" height="25"/>
+                                            <rect key="frame" x="16" y="150" width="25" height="25"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="fgw-hm-nSi"/>
                                                 <constraint firstAttribute="height" constant="25" id="t8p-ZP-jij"/>
                                             </constraints>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" systemColor="systemGreenColor"/>
                                             <state key="normal" image="checkmark.circle.fill" catalog="system"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAp-Ch-9ds">
-                                            <rect key="frame" x="20" y="599" width="374" height="50"/>
+                                            <rect key="frame" x="20" y="654" width="374" height="50"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Q99-lx-uQQ"/>
@@ -68,7 +68,7 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000+ guided alarms for motivation, calm, faith, and more" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdD-Dl-12m">
-                                            <rect key="frame" x="53" y="199" width="295" height="41"/>
+                                            <rect key="frame" x="53" y="142" width="295" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="41" id="uNR-EX-eCD"/>
                                             </constraints>
@@ -77,17 +77,17 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nR-IK-2f4">
-                                            <rect key="frame" x="16" y="261" width="25" height="25"/>
+                                            <rect key="frame" x="16" y="195" width="25" height="25"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="3Qh-o5-cMb"/>
                                                 <constraint firstAttribute="width" constant="25" id="8Vp-yY-sNk"/>
                                             </constraints>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" systemColor="systemGreenColor"/>
                                             <state key="normal" image="checkmark.circle.fill" catalog="system"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create unlimited alarms personalized for you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kel-Nv-PzN">
-                                            <rect key="frame" x="53" y="253" width="341" height="41"/>
+                                            <rect key="frame" x="53" y="187" width="341" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="41" id="Wsa-mE-bbL"/>
                                             </constraints>
@@ -96,17 +96,17 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPO-9y-2ZE">
-                                            <rect key="frame" x="16" y="304" width="25" height="25"/>
+                                            <rect key="frame" x="16" y="238" width="25" height="25"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="fHV-fy-Lv3"/>
                                                 <constraint firstAttribute="width" constant="25" id="x87-1d-vLH"/>
                                             </constraints>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" systemColor="systemGreenColor"/>
                                             <state key="normal" image="checkmark.circle.fill" catalog="system"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exclusive alarms for self improvement and fitness" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MH-4Y-gTU">
-                                            <rect key="frame" x="53" y="304" width="336" height="41"/>
+                                            <rect key="frame" x="53" y="230" width="336" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="41" id="qbW-IA-Zr0"/>
                                             </constraints>
@@ -115,17 +115,17 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7t-OV-1bk">
-                                            <rect key="frame" x="16" y="353" width="25" height="25"/>
+                                            <rect key="frame" x="16" y="283" width="25" height="25"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="jcK-Y2-nGJ"/>
                                                 <constraint firstAttribute="width" constant="25" id="v5x-AA-4ZY"/>
                                             </constraints>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" systemColor="systemGreenColor"/>
                                             <state key="normal" image="checkmark.circle.fill" catalog="system"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life-changing spiritual and philosophy alarms created by world-class experts" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XG-fD-cmf">
-                                            <rect key="frame" x="53" y="353" width="341" height="41"/>
+                                            <rect key="frame" x="53" y="275" width="341" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="41" id="ERO-jf-bXr"/>
                                             </constraints>
@@ -134,17 +134,17 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAd-kU-dsw">
-                                            <rect key="frame" x="16" y="410" width="25" height="25"/>
+                                            <rect key="frame" x="16" y="328" width="25" height="25"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="5Nm-1h-Y1l"/>
                                                 <constraint firstAttribute="width" constant="25" id="9US-bY-9Yc"/>
                                             </constraints>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" systemColor="systemGreenColor"/>
                                             <state key="normal" image="checkmark.circle.fill" catalog="system"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trusted by 1M+ professionals every day" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUL-xo-AVr">
-                                            <rect key="frame" x="53" y="402" width="341" height="41"/>
+                                            <rect key="frame" x="53" y="320" width="341" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="41" id="aVl-NT-wJw"/>
                                             </constraints>
@@ -153,7 +153,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YO1-Fz-FH8">
-                                            <rect key="frame" x="20" y="454" width="341" height="54"/>
+                                            <rect key="frame" x="20" y="366" width="341" height="54"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="54" id="f6f-FA-Guv"/>
                                             </constraints>
@@ -163,18 +163,8 @@ Cancel anytime.</string>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-Ca-V4O">
-                                            <rect key="frame" x="122" y="134" width="272" height="41"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="272" id="aOk-9N-8wO"/>
-                                                <constraint firstAttribute="height" constant="41" id="cBY-dQ-9qm"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFX-He-8tg">
-                                            <rect key="frame" x="108.5" y="688" width="197" height="26"/>
+                                            <rect key="frame" x="108.5" y="724" width="197" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="26" id="E1p-eg-e3i"/>
                                                 <constraint firstAttribute="width" constant="197" id="TOf-x2-HT6"/>
@@ -185,94 +175,71 @@ Cancel anytime.</string>
                                                 <action selector="tapTerms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vk1-ph-Hdc"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfU-OP-phL">
-                                            <rect key="frame" x="15" y="55.5" width="66" height="36"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="66" id="gGq-PZ-g47"/>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="oWs-a4-Cu7"/>
-                                                <constraint firstAttribute="height" constant="36" id="ssB-lL-fxd"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <state key="normal" title="Restore"/>
-                                            <connections>
-                                                <action selector="tapRestore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NGy-MI-2ML"/>
-                                            </connections>
-                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hxU-rg-O9D">
+                                            <rect key="frame" x="116" y="79.5" width="182.5" height="41"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48g-IU-KiP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="95" height="41"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-Ca-V4O">
+                                                    <rect key="frame" x="105" y="0.0" width="77.5" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="41" id="cBY-dQ-9qm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="kel-Nv-PzN" firstAttribute="top" secondItem="7nR-IK-2f4" secondAttribute="top" constant="-8" id="3ZW-mG-w1M"/>
                                         <constraint firstItem="hPO-9y-2ZE" firstAttribute="top" secondItem="7nR-IK-2f4" secondAttribute="bottom" constant="18" id="6uS-G3-SAt"/>
                                         <constraint firstItem="LUL-xo-AVr" firstAttribute="leading" secondItem="oAd-kU-dsw" secondAttribute="trailing" constant="12" id="6zw-e2-vDk"/>
-                                        <constraint firstItem="YO1-Fz-FH8" firstAttribute="top" secondItem="LUL-xo-AVr" secondAttribute="bottom" constant="11" id="9e8-zv-fsK"/>
-                                        <constraint firstItem="kfU-OP-phL" firstAttribute="centerY" secondItem="LGd-Q3-AHu" secondAttribute="centerY" id="AG1-iD-lzm"/>
+                                        <constraint firstItem="YO1-Fz-FH8" firstAttribute="top" secondItem="LUL-xo-AVr" secondAttribute="bottom" constant="5" id="9e8-zv-fsK"/>
                                         <constraint firstItem="kel-Nv-PzN" firstAttribute="leading" secondItem="7nR-IK-2f4" secondAttribute="trailing" constant="12" id="BCg-20-MXg"/>
-                                        <constraint firstItem="LUL-xo-AVr" firstAttribute="top" secondItem="oAd-kU-dsw" secondAttribute="top" constant="-8" id="FeI-mT-hIL"/>
                                         <constraint firstAttribute="trailing" secondItem="kel-Nv-PzN" secondAttribute="trailing" constant="20" symbolic="YES" id="GEx-we-MJ4"/>
                                         <constraint firstAttribute="trailing" secondItem="YO1-Fz-FH8" secondAttribute="trailing" constant="53" id="H05-W3-T3l"/>
                                         <constraint firstItem="iAp-Ch-9ds" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="20" symbolic="YES" id="LW6-nP-xBk"/>
+                                        <constraint firstItem="LGd-Q3-AHu" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="20" id="Mja-J5-tv8"/>
                                         <constraint firstItem="PBV-jy-wsZ" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="16" id="N1n-Sj-Lbi"/>
-                                        <constraint firstItem="AzD-Ca-V4O" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="122" id="Olb-jB-Lbv"/>
-                                        <constraint firstAttribute="bottom" secondItem="BFX-He-8tg" secondAttribute="bottom" constant="182" id="Q9q-h5-gla"/>
+                                        <constraint firstItem="LGd-Q3-AHu" firstAttribute="top" secondItem="nXk-1J-nHO" secondAttribute="top" constant="80" id="RCe-Si-2uw"/>
+                                        <constraint firstItem="BFX-He-8tg" firstAttribute="top" secondItem="iAp-Ch-9ds" secondAttribute="bottom" constant="20" id="ReZ-He-41H"/>
                                         <constraint firstItem="hPO-9y-2ZE" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="16" id="SLZ-7Z-FtK"/>
-                                        <constraint firstItem="hdD-Dl-12m" firstAttribute="top" secondItem="PBV-jy-wsZ" secondAttribute="top" id="Sva-tp-kvw"/>
-                                        <constraint firstAttribute="trailing" secondItem="LGd-Q3-AHu" secondAttribute="trailing" constant="25" id="TYo-eA-gDY"/>
+                                        <constraint firstItem="hxU-rg-O9D" firstAttribute="centerX" secondItem="nXk-1J-nHO" secondAttribute="centerX" id="SgV-J6-dyE"/>
                                         <constraint firstAttribute="trailing" secondItem="hdD-Dl-12m" secondAttribute="trailing" constant="66" id="TiM-ci-BYq"/>
                                         <constraint firstAttribute="trailing" secondItem="7MH-4Y-gTU" secondAttribute="trailing" constant="25" id="WdE-BE-Np8"/>
-                                        <constraint firstItem="7MH-4Y-gTU" firstAttribute="top" secondItem="hPO-9y-2ZE" secondAttribute="top" id="aMf-Me-IOj"/>
+                                        <constraint firstItem="hdD-Dl-12m" firstAttribute="centerY" secondItem="PBV-jy-wsZ" secondAttribute="centerY" id="Wdl-o8-LOe"/>
+                                        <constraint firstItem="kel-Nv-PzN" firstAttribute="centerY" secondItem="7nR-IK-2f4" secondAttribute="centerY" id="YAC-lf-87c"/>
                                         <constraint firstItem="YO1-Fz-FH8" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="20" symbolic="YES" id="agm-Vl-7Mi"/>
-                                        <constraint firstItem="LGd-Q3-AHu" firstAttribute="top" secondItem="nXk-1J-nHO" secondAttribute="top" constant="61" id="bZ2-Bf-dWm"/>
-                                        <constraint firstAttribute="bottom" secondItem="iAp-Ch-9ds" secondAttribute="bottom" constant="247" id="dU2-1D-3vp"/>
-                                        <constraint firstItem="oAd-kU-dsw" firstAttribute="top" secondItem="h7t-OV-1bk" secondAttribute="bottom" constant="32" id="dlh-M7-zZq"/>
+                                        <constraint firstItem="oAd-kU-dsw" firstAttribute="top" secondItem="h7t-OV-1bk" secondAttribute="bottom" constant="20" id="dlh-M7-zZq"/>
                                         <constraint firstItem="7nR-IK-2f4" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="16" id="dsC-Pq-Qbw"/>
                                         <constraint firstAttribute="trailing" secondItem="9XG-fD-cmf" secondAttribute="trailing" constant="20" symbolic="YES" id="eHh-eL-n97"/>
                                         <constraint firstAttribute="trailing" secondItem="iAp-Ch-9ds" secondAttribute="trailing" constant="20" symbolic="YES" id="g0l-4o-hYT"/>
-                                        <constraint firstItem="kfU-OP-phL" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="15" id="gge-R5-mq0"/>
+                                        <constraint firstItem="9XG-fD-cmf" firstAttribute="centerY" secondItem="h7t-OV-1bk" secondAttribute="centerY" id="hzG-Wx-we5"/>
+                                        <constraint firstItem="hxU-rg-O9D" firstAttribute="centerY" secondItem="LGd-Q3-AHu" secondAttribute="centerY" id="mOH-Dc-XMC"/>
                                         <constraint firstItem="BFX-He-8tg" firstAttribute="centerX" secondItem="nXk-1J-nHO" secondAttribute="centerX" id="mvo-Bv-8oh"/>
                                         <constraint firstItem="oAd-kU-dsw" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="16" id="obM-Wo-Dgf"/>
                                         <constraint firstItem="9XG-fD-cmf" firstAttribute="leading" secondItem="h7t-OV-1bk" secondAttribute="trailing" constant="12" id="pRJ-l8-qH0"/>
-                                        <constraint firstItem="7nR-IK-2f4" firstAttribute="top" secondItem="PBV-jy-wsZ" secondAttribute="bottom" constant="37" id="plW-BU-y67"/>
+                                        <constraint firstItem="7nR-IK-2f4" firstAttribute="top" secondItem="PBV-jy-wsZ" secondAttribute="bottom" constant="20" id="plW-BU-y67"/>
                                         <constraint firstItem="7MH-4Y-gTU" firstAttribute="leading" secondItem="hPO-9y-2ZE" secondAttribute="trailing" constant="12" id="r1Q-JT-P3O"/>
-                                        <constraint firstItem="9XG-fD-cmf" firstAttribute="top" secondItem="h7t-OV-1bk" secondAttribute="top" id="rBo-1z-Vr5"/>
-                                        <constraint firstItem="PBV-jy-wsZ" firstAttribute="top" secondItem="nXk-1J-nHO" secondAttribute="top" constant="199" id="v6F-6h-Ykh"/>
+                                        <constraint firstItem="LUL-xo-AVr" firstAttribute="centerY" secondItem="oAd-kU-dsw" secondAttribute="centerY" id="tzw-xx-guN"/>
+                                        <constraint firstItem="PBV-jy-wsZ" firstAttribute="top" secondItem="nXk-1J-nHO" secondAttribute="top" constant="150" id="v6F-6h-Ykh"/>
                                         <constraint firstItem="hdD-Dl-12m" firstAttribute="leading" secondItem="PBV-jy-wsZ" secondAttribute="trailing" constant="12" id="vEp-jh-7S0"/>
-                                        <constraint firstItem="h7t-OV-1bk" firstAttribute="top" secondItem="hPO-9y-2ZE" secondAttribute="bottom" constant="24" id="vsV-pp-lQI"/>
+                                        <constraint firstItem="h7t-OV-1bk" firstAttribute="top" secondItem="hPO-9y-2ZE" secondAttribute="bottom" constant="20" id="vsV-pp-lQI"/>
                                         <constraint firstItem="h7t-OV-1bk" firstAttribute="leading" secondItem="nXk-1J-nHO" secondAttribute="leading" constant="16" id="wZ9-YV-PUS"/>
                                         <constraint firstAttribute="trailing" secondItem="LUL-xo-AVr" secondAttribute="trailing" constant="20" symbolic="YES" id="xVc-bg-aeU"/>
+                                        <constraint firstItem="7MH-4Y-gTU" firstAttribute="centerY" secondItem="hPO-9y-2ZE" secondAttribute="centerY" id="zoi-iZ-4rM"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="systemThinMaterialDark"/>
                             </visualEffectView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48g-IU-KiP">
-                                <rect key="frame" x="20" y="134" width="95" height="41"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8P-CK-Mcq">
-                                <rect key="frame" x="22" y="177" width="177" height="0.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="0.5" id="FKj-4C-cUF"/>
-                                    <constraint firstAttribute="width" constant="177" id="vnA-QT-qgZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuc-eV-ML0">
-                                <rect key="frame" x="30" y="144" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mep-Cr-E6T">
-                                <rect key="frame" x="20" y="656" width="374" height="193"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="CQL-vU-NCx"/>
-                                </constraints>
-                                <string key="text"> Subscription Term: This is the initial term a customer is committed to when subscribing. This value will always default to the plan's subscription term length, but can be customized. For example, a business may have a plan that has a default term of 12 monthly billing periods but they want to extend the customer's term for another year (e.g add 12 additional billing periods). This would lock the customer into a 24 billing period term, that they would be required to complete.
-subscribing. This value will always default to the plan's subscription term length, but can be customized. For example, a business may have a plan that has a default term of 12 monthly billing periods but they want to extend the customer's term for another year (e.g add 12 additional billing periods). This would lock the customer into a 24 billing period term, that they would be required to complete.</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mep-Cr-E6T">
+                                <rect key="frame" x="20" y="755" width="374" height="48"/>
+                                <string key="text">Subscription Term: Wake subscription automatically renews unless auto-renew is turned off at least 24h before current periods ends. Payment is charged to your iTunes Account. Manage subscription and turn off the auto renewal in account Setting</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -282,18 +249,14 @@ subscribing. This value will always default to the plan's subscription term leng
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="48g-IU-KiP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3EV-24-xmx"/>
+                            <constraint firstItem="BFX-He-8tg" firstAttribute="bottom" secondItem="mep-Cr-E6T" secondAttribute="top" constant="-5" id="0Vy-n2-Ch0"/>
                             <constraint firstAttribute="bottom" secondItem="bEn-He-xdd" secondAttribute="bottom" id="4Yg-pv-ebJ"/>
-                            <constraint firstItem="C8P-CK-Mcq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="2" id="EY5-DG-B5j"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mep-Cr-E6T" secondAttribute="bottom" constant="-36" id="G3b-kg-Jif"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mep-Cr-E6T" secondAttribute="bottom" constant="10" id="G3b-kg-Jif"/>
                             <constraint firstItem="mep-Cr-E6T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HYQ-gu-Vko"/>
                             <constraint firstItem="bEn-He-xdd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NfR-Nm-Hze"/>
                             <constraint firstItem="sga-T3-Y4W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="O7P-iz-kYu"/>
                             <constraint firstItem="bEn-He-xdd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QeN-em-BOB"/>
-                            <constraint firstItem="AzD-Ca-V4O" firstAttribute="centerY" secondItem="48g-IU-KiP" secondAttribute="centerY" id="UzH-vg-N0H"/>
                             <constraint firstItem="sga-T3-Y4W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X51-MN-Tkj"/>
-                            <constraint firstItem="48g-IU-KiP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="fai-VV-GEG"/>
-                            <constraint firstItem="C8P-CK-Mcq" firstAttribute="top" secondItem="48g-IU-KiP" secondAttribute="bottom" constant="2" id="gU6-yt-e0x"/>
                             <constraint firstAttribute="bottom" secondItem="sga-T3-Y4W" secondAttribute="bottom" id="iPp-h1-9Ud"/>
                             <constraint firstItem="sga-T3-Y4W" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jCs-AI-Kmx"/>
                             <constraint firstItem="bEn-He-xdd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pr4-A3-1no"/>
@@ -693,7 +656,7 @@ subscribing. This value will always default to the plan's subscription term leng
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maybewake" translatesAutoresizingMaskIntoConstraints="NO" id="MVf-xH-sfz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="MVf-xH-sfz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMy-3s-HJT">
@@ -1840,7 +1803,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <constraint firstAttribute="height" constant="26" id="Xqy-cr-oNG"/>
                                             <constraint firstAttribute="width" constant="149" id="mwc-eV-j4A"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1850,7 +1813,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <constraint firstAttribute="height" constant="84" id="WaJ-fL-L9X"/>
                                             <constraint firstAttribute="width" constant="84" id="hHk-dU-aSn"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="37"/>
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -1896,7 +1859,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                                         <constraint firstAttribute="width" constant="90" id="O6P-zs-hFb"/>
                                                         <constraint firstAttribute="height" constant="30" id="suw-bZ-RUl"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <state key="normal" title="Motivation">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -1923,7 +1886,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LOe-8u-EZa">
-                                <rect key="frame" x="0.0" y="147" width="414" height="666"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dLB-Sl-6Zi">
                                     <size key="itemSize" width="187" height="224"/>
@@ -2052,7 +2015,7 @@ subscribing. This value will always default to the plan's subscription term leng
                             <constraint firstItem="eyp-ni-8PN" firstAttribute="top" secondItem="X49-dD-HLN" secondAttribute="top" constant="1" id="rQa-XI-8XD"/>
                             <constraint firstItem="lbT-Aw-NbT" firstAttribute="top" secondItem="uX8-81-0bK" secondAttribute="bottom" constant="3" id="reO-YH-eFL"/>
                             <constraint firstItem="gKU-6v-liI" firstAttribute="leading" secondItem="ljc-Cc-xgN" secondAttribute="leading" id="uza-Fh-8Rr"/>
-                            <constraint firstItem="LOe-8u-EZa" firstAttribute="top" secondItem="uX8-81-0bK" secondAttribute="bottom" constant="3" id="zyJ-Jp-fvr"/>
+                            <constraint firstItem="LOe-8u-EZa" firstAttribute="top" secondItem="uX8-81-0bK" secondAttribute="bottom" id="zyJ-Jp-fvr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pick A Sound" id="2sO-sN-bnm"/>
@@ -2063,7 +2026,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkY-xN-OuS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1088.4057971014493" y="1263.6160714285713"/>
+            <point key="canvasLocation" x="-1088" y="1264"/>
         </scene>
         <!--Motivate-->
         <scene sceneID="gxx-PW-poH">
@@ -2275,7 +2238,7 @@ subscribing. This value will always default to the plan's subscription term leng
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NfL-zQ-OLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fyO-EN-PNq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="117" y="788"/>
+            <point key="canvasLocation" x="893" y="1053"/>
         </scene>
         <!--Soundscapes-->
         <scene sceneID="WKe-xU-okR">
@@ -2296,28 +2259,15 @@ subscribing. This value will always default to the plan's subscription term leng
             </objects>
             <point key="canvasLocation" x="-1952" y="-93"/>
         </scene>
-        <!--View Controller-->
+        <!--Soundscapes View Controller-->
         <scene sceneID="bj0-nN-poO">
             <objects>
-                <viewController id="g9U-KA-056" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SoundscapesViewController" id="g9U-KA-056" customClass="SoundscapesViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0W6-Ov-6Z2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mX-51-CP7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jxJ-bG-E8X">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="147" id="RM6-h2-ycN"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="147" id="Smy-iu-WL2"/>
-                                    <constraint firstAttribute="height" constant="147" id="wLh-Em-SU9"/>
-                                </constraints>
-                                <blurEffect style="dark"/>
-                            </visualEffectView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soundscapes" translatesAutoresizingMaskIntoConstraints="NO" id="RRU-vx-pWa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="RRU-vx-pWa">
                                 <rect key="frame" x="0.0" y="146" width="414" height="750"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCU-nb-L4P">
@@ -2328,7 +2278,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soundscapes" translatesAutoresizingMaskIntoConstraints="NO" id="Tnm-Hx-iXg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="Tnm-Hx-iXg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="147" id="8hV-dl-nCZ"/>
@@ -2364,7 +2314,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                                         <constraint firstAttribute="height" constant="30" id="H94-uE-rGa"/>
                                                         <constraint firstAttribute="width" constant="90" id="zpm-du-hw6"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <state key="normal" title="Motivation">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -2493,12 +2443,25 @@ subscribing. This value will always default to the plan's subscription term leng
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mX-51-CP7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jxJ-bG-E8X">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="147" id="RM6-h2-ycN"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="147" id="Smy-iu-WL2"/>
+                                    <constraint firstAttribute="height" constant="147" id="wLh-Em-SU9"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6c-ix-Hhl">
                                 <rect key="frame" x="0.0" y="43" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soundscapes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRk-oc-Mft">
-                                        <rect key="frame" x="143" y="12" width="128.5" height="29"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                        <rect key="frame" x="140" y="12" width="134.5" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2508,12 +2471,14 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <constraint firstAttribute="height" constant="84" id="VfX-zm-cQz"/>
                                             <constraint firstAttribute="width" constant="84" id="iTA-Jp-Oqe"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="37"/>
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="addAlarmActionButton:" destination="g9U-KA-056" eventType="touchUpInside" id="G66-eb-svh"/>
                                             <action selector="addAlarmActionButton:" destination="lHd-aD-rs3" eventType="touchUpInside" id="pNp-Qa-lGZ"/>
+                                            <segue destination="34z-Qh-osK" kind="presentation" identifier="addSegue" id="AMb-Jd-Qxo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2566,6 +2531,10 @@ subscribing. This value will always default to the plan's subscription term leng
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1SV-Xe-ToU"/>
+                    <connections>
+                        <outlet property="collectionView" destination="jFF-H3-k7C" id="tEW-pK-gkS"/>
+                        <outlet property="tagsCollectionView" destination="h9Q-H9-H9s" id="tqe-Gh-KLg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VB7-QB-wHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2590,29 +2559,16 @@ subscribing. This value will always default to the plan's subscription term leng
             </objects>
             <point key="canvasLocation" x="-1088" y="-784"/>
         </scene>
-        <!--View Controller-->
+        <!--Meditate View Controller-->
         <scene sceneID="55O-qE-JRd">
             <objects>
-                <viewController id="Q0F-rs-xNt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MeditateViewController" id="Q0F-rs-xNt" customClass="MeditateViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2In-HE-V98">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdJ-wl-3HJ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RwM-Sd-BCB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="147" id="FwS-e2-87L"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="147" id="Jh9-vX-3FZ"/>
-                                    <constraint firstAttribute="height" constant="147" id="s1V-2I-3Gj"/>
-                                </constraints>
-                                <blurEffect style="dark"/>
-                            </visualEffectView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lkasdf" translatesAutoresizingMaskIntoConstraints="NO" id="SU6-6h-OKs">
-                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="SU6-6h-OKs">
+                                <rect key="frame" x="0.0" y="112" width="414" height="784"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaL-Uh-9kR">
                                 <rect key="frame" x="0.0" y="146" width="414" height="750"/>
@@ -2622,7 +2578,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lkasdf" translatesAutoresizingMaskIntoConstraints="NO" id="Ql8-m9-b5b">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="Ql8-m9-b5b">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="147" id="Xat-iw-YFi"/>
@@ -2635,7 +2591,6 @@ subscribing. This value will always default to the plan's subscription term leng
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WGu-Z0-pgJ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="nPf-Um-0Wb"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Byi-HF-7NP">
                                     <size key="itemSize" width="104" height="43"/>
@@ -2658,7 +2613,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                                         <constraint firstAttribute="height" constant="30" id="a4C-fP-7eD"/>
                                                         <constraint firstAttribute="width" constant="90" id="pXE-yA-SZL"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <state key="normal" title="Motivation">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -2787,6 +2742,19 @@ subscribing. This value will always default to the plan's subscription term leng
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdJ-wl-3HJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RwM-Sd-BCB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="147" id="FwS-e2-87L"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="147" id="Jh9-vX-3FZ"/>
+                                    <constraint firstAttribute="height" constant="147" id="s1V-2I-3Gj"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xnu-qO-N70">
                                 <rect key="frame" x="0.0" y="43" width="414" height="50"/>
                                 <subviews>
@@ -2796,7 +2764,7 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <constraint firstAttribute="height" constant="26" id="M3d-8v-LO4"/>
                                             <constraint firstAttribute="width" constant="149" id="yPD-jL-XYa"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2806,12 +2774,14 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <constraint firstAttribute="width" constant="84" id="sBG-bV-yPG"/>
                                             <constraint firstAttribute="height" constant="84" id="wy6-GS-DRS"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="37"/>
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="addAlarmActionButton:" destination="lHd-aD-rs3" eventType="touchUpInside" id="lAY-9b-7xe"/>
+                                            <action selector="addAlarmActionButton:" destination="Q0F-rs-xNt" eventType="touchUpInside" id="w5w-io-I4f"/>
+                                            <segue destination="34z-Qh-osK" kind="presentation" identifier="addSegue" id="aal-4H-WkB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2830,18 +2800,16 @@ subscribing. This value will always default to the plan's subscription term leng
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Xnu-qO-N70" firstAttribute="top" secondItem="2In-HE-V98" secondAttribute="top" constant="43" id="4ij-u1-jZE"/>
-                            <constraint firstItem="SU6-6h-OKs" firstAttribute="top" secondItem="txo-ud-fSw" secondAttribute="bottom" constant="1" id="778-1G-VGh"/>
-                            <constraint firstItem="txo-ud-fSw" firstAttribute="trailing" secondItem="BZF-pM-7ep" secondAttribute="trailing" id="8me-Pa-xiW"/>
                             <constraint firstItem="bHu-PW-1vT" firstAttribute="leading" secondItem="BZF-pM-7ep" secondAttribute="leading" id="CBd-gk-lml"/>
-                            <constraint firstItem="txo-ud-fSw" firstAttribute="leading" secondItem="BZF-pM-7ep" secondAttribute="leading" id="FRM-eR-GTa"/>
                             <constraint firstItem="iaL-Uh-9kR" firstAttribute="top" secondItem="txo-ud-fSw" secondAttribute="bottom" constant="3" id="Kxg-Xc-AL4"/>
                             <constraint firstItem="SU6-6h-OKs" firstAttribute="leading" secondItem="BZF-pM-7ep" secondAttribute="leading" id="QYm-8t-VRE"/>
                             <constraint firstItem="QdJ-wl-3HJ" firstAttribute="leading" secondItem="BZF-pM-7ep" secondAttribute="leading" id="QhX-qW-1O8"/>
                             <constraint firstItem="bHu-PW-1vT" firstAttribute="top" secondItem="BZF-pM-7ep" secondAttribute="top" constant="99" id="TOU-UM-nCz"/>
                             <constraint firstItem="iaL-Uh-9kR" firstAttribute="leading" secondItem="BZF-pM-7ep" secondAttribute="leading" id="XxP-u2-jiN"/>
                             <constraint firstItem="BZF-pM-7ep" firstAttribute="bottom" secondItem="bHu-PW-1vT" secondAttribute="bottom" constant="1" id="aJV-2m-Ttz"/>
-                            <constraint firstItem="txo-ud-fSw" firstAttribute="top" secondItem="Xnu-qO-N70" secondAttribute="bottom" id="ads-fS-9B2"/>
                             <constraint firstItem="txo-ud-fSw" firstAttribute="top" secondItem="Xnu-qO-N70" secondAttribute="bottom" id="dTr-Jg-Pn9"/>
+                            <constraint firstItem="txo-ud-fSw" firstAttribute="trailing" secondItem="BZF-pM-7ep" secondAttribute="trailing" id="dVL-Ri-3P8"/>
+                            <constraint firstItem="txo-ud-fSw" firstAttribute="leading" secondItem="BZF-pM-7ep" secondAttribute="leading" id="ebZ-ll-chU"/>
                             <constraint firstItem="bHu-PW-1vT" firstAttribute="top" secondItem="txo-ud-fSw" secondAttribute="bottom" id="ewg-TE-xuS"/>
                             <constraint firstItem="QdJ-wl-3HJ" firstAttribute="top" secondItem="2In-HE-V98" secondAttribute="top" id="ghh-D3-EgR"/>
                             <constraint firstItem="iaL-Uh-9kR" firstAttribute="trailing" secondItem="BZF-pM-7ep" secondAttribute="trailing" id="jsc-at-uhF"/>
@@ -2854,11 +2822,14 @@ subscribing. This value will always default to the plan's subscription term leng
                             <constraint firstAttribute="bottom" secondItem="iaL-Uh-9kR" secondAttribute="bottom" id="vXT-3T-xbz"/>
                             <constraint firstItem="Xnu-qO-N70" firstAttribute="trailing" secondItem="BZF-pM-7ep" secondAttribute="trailing" id="wU7-z4-f8r"/>
                             <constraint firstItem="bHu-PW-1vT" firstAttribute="trailing" secondItem="BZF-pM-7ep" secondAttribute="trailing" id="y3h-3T-O8f"/>
-                            <constraint firstItem="SU6-6h-OKs" firstAttribute="top" secondItem="txo-ud-fSw" secondAttribute="bottom" constant="1" id="yw7-Yr-qHk"/>
                             <constraint firstItem="Ql8-m9-b5b" firstAttribute="leading" secondItem="BZF-pM-7ep" secondAttribute="leading" id="zL1-Mo-ATl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Wg-2x-1zH"/>
+                    <connections>
+                        <outlet property="collectionView" destination="bHu-PW-1vT" id="MPe-b8-26N"/>
+                        <outlet property="tagsCollectionView" destination="txo-ud-fSw" id="Bim-iJ-gkc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KN-KX-fG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2866,12 +2837,13 @@ subscribing. This value will always default to the plan's subscription term leng
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="746-Gr-Cw3"/>
+        <segue reference="aal-4H-WkB"/>
         <segue reference="YLc-sc-HuK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Bitmap" width="100" height="100"/>
         <image name="Bitmap" width="100" height="100"/>
+        <image name="Rectangle-2" width="673" height="939"/>
         <image name="Rise &amp; Grind" width="658" height="807"/>
         <image name="alarm.fill" catalog="system" width="124" height="128"/>
         <image name="by proceeding" width="542" height="74"/>
@@ -2883,14 +2855,14 @@ subscribing. This value will always default to the plan's subscription term leng
         <image name="circle.circle" catalog="system" width="128" height="121"/>
         <image name="circle.lefthalf.fill" catalog="system" width="128" height="121"/>
         <image name="iPhone 8" width="1125" height="2001"/>
-        <image name="lkasdf" width="2689" height="1513"/>
-        <image name="maybewake" width="882" height="1568"/>
-        <image name="mountains" width="467" height="700.5"/>
-        <image name="soundscapes" width="934" height="1401"/>
+        <image name="mountains" width="441" height="784"/>
         <image name="sunrise" width="467" height="700.5"/>
-        <image name="xmark.circle" catalog="system" width="128" height="121"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

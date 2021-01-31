@@ -14,6 +14,8 @@
 		4E60EC5C25AF7AAF0049D4ED /* SelectSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */; };
 		4E60EC6125AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */; };
 		4E72C91325BCD9D400DF3CF2 /* AddNewAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C91225BCD9D400DF3CF2 /* AddNewAlarmViewController.swift */; };
+		4E73FE4625C6F9860091AED4 /* SoundscapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E73FE4525C6F9860091AED4 /* SoundscapesViewController.swift */; };
+		4E73FE4B25C6FAED0091AED4 /* MeditateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E73FE4A25C6FAED0091AED4 /* MeditateViewController.swift */; };
 		4E77484F25AD2D140041674E /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77484D25AD2D140041674E /* UIWindow+Extension.swift */; };
 		4E77485025AD2D140041674E /* NotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77484E25AD2D140041674E /* NotificationName+Extension.swift */; };
 		4E9724FA25AFA09B0070FF50 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */; };
@@ -214,6 +216,8 @@
 		4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSoundViewController.swift; sourceTree = "<group>"; };
 		4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPickCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E72C91225BCD9D400DF3CF2 /* AddNewAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAlarmViewController.swift; sourceTree = "<group>"; };
+		4E73FE4525C6F9860091AED4 /* SoundscapesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundscapesViewController.swift; sourceTree = "<group>"; };
+		4E73FE4A25C6FAED0091AED4 /* MeditateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditateViewController.swift; sourceTree = "<group>"; };
 		4E77484D25AD2D140041674E /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		4E77484E25AD2D140041674E /* NotificationName+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extension.swift"; sourceTree = "<group>"; };
 		4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -394,6 +398,8 @@
 				4EECEF0D25B5F2A600ADD863 /* SelectWeekdaysViewController.swift */,
 				4E9D854825BCBC2900ED4767 /* SelectSoundForTabBarItemVC.swift */,
 				4E72C91225BCD9D400DF3CF2 /* AddNewAlarmViewController.swift */,
+				4E73FE4525C6F9860091AED4 /* SoundscapesViewController.swift */,
+				4E73FE4A25C6FAED0091AED4 /* MeditateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -986,6 +992,8 @@
 				4EECEF0E25B5F2A600ADD863 /* SelectWeekdaysViewController.swift in Sources */,
 				9D8D248425ABABEB00B4E69D /* AppDelegate.swift in Sources */,
 				4E9724FF25AFD3250070FF50 /* SoundData.swift in Sources */,
+				4E73FE4B25C6FAED0091AED4 /* MeditateViewController.swift in Sources */,
+				4E73FE4625C6F9860091AED4 /* SoundscapesViewController.swift in Sources */,
 				4EE5F1EB25AD24D300B9C2EE /* Identifier.swift in Sources */,
 				4EE5F20A25AD285A00B9C2EE /* TitleEditViewController.swift in Sources */,
 			);

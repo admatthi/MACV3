@@ -150,7 +150,7 @@ var isFromSoundVc = false
                     self.dismiss(animated: true, completion: nil)
                     if self.isFromSoundVc{
                         if let viewController = UIApplication.shared.windows.first!.rootViewController as? TabBarViewController {
-                            viewController.selectedIndex = 1
+                            viewController.selectedIndex = 0
                         }
                         
                     }
