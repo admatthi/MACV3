@@ -20,7 +20,7 @@ class SoundscapesViewController: UIViewController ,AVAudioPlayerDelegate{
     var selectedSound:Sounds?
 //    var soundsCategories = ["Motivation","Prayers", "Meditation", "Fitness", "Money" ]
     
-    var soundsCategories = ["Popular", "All"]
+    var soundsCategories = ["Popular", "Christain", "Jewish", "Muslim", "Sounds"]
 
     func selectsound(referrer : String) {
                                      AppEvents.logEvent(AppEvents.Name(rawValue: "selectsound"), parameters: ["referrer" : referrer])
