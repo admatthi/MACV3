@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
         uid = UIDevice.current.identifierForVendor!.uuidString
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.aatech.mac.Motivational-Alarm-Clock.backgroundFetch", using: nil) { task in
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.aatech.wake", using: nil) { task in
             self.scheduleTaskForAudioPlaying()
             task.setTaskCompleted(success: true)
             self.scheduleAppRefresh()
@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
 
         
         Purchases.debugLogsEnabled = true
-        Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyjJtFpYzjCj", appUserID: uid)
+        Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUeRRXjCEWsd", appUserID: uid)
         
         let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc : UITabBarController = mainStoryboardIpad.instantiateViewController(withIdentifier: "mainTabbarController") as! UITabBarController
@@ -190,7 +190,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
          }
     }
     func scheduleAppRefresh() {
-         let request = BGAppRefreshTaskRequest(identifier: "com.aatech.mac.Motivational-Alarm-Clock.backgroundFetch")
+         let request = BGAppRefreshTaskRequest(identifier: "com.aatech.wake")
 
          request.earliestBeginDate = Date(timeIntervalSinceNow: 60 * 60) // Refresh after 60 minutes.
 

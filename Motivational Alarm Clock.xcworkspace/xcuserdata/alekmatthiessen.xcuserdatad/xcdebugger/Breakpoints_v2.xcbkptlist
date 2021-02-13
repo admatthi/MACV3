@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "43C09643-F35E-41D0-BC57-575C9DE8D39F"
+            uuid = "922B1809-9837-4F9B-994C-C10237B71335"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Motivational Alarm Clock/AppDelegate.swift"
+            filePath = "Motivational Alarm Clock/Controllers/AlarmEditAddViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

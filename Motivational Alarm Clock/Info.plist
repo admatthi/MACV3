@@ -4,7 +4,7 @@
 <dict>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
-		<string>com.aatech.mac.Motivational-Alarm-Clock.backgroundFetch</string>
+		<string>com.aatech.wake</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

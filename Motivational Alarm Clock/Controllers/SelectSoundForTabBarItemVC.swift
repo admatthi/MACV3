@@ -20,7 +20,7 @@ class SelectSoundForTabBarItemVC: UIViewController ,AVAudioPlayerDelegate{
     var selectedSound:Sounds?
 //    var soundsCategories = ["Motivation","Prayers", "Meditation", "Fitness", "Money" ]
     
-    var soundsCategories = ["Popular", "Motivation", "Prayers", "Meditation", "Affirmations"]
+    var soundsCategories = ["Popular", "Inspiration", "Faith", "Self Help", "Career", "Dating"]
 
     func selectsound(referrer : String) {
                                      AppEvents.logEvent(AppEvents.Name(rawValue: "selectsound"), parameters: ["referrer" : referrer])

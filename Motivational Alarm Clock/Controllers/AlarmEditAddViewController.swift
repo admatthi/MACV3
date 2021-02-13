@@ -119,6 +119,8 @@ var isFromSoundVc = false
     @IBAction func saveEditAlarm(_ sender: AnyObject) {
         
         firstinstall = false
+        
+
                 if didpurchase {
                     let interval = Date() - self.datePicker.date
                     print(interval.day)

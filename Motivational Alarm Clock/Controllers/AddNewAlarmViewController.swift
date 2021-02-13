@@ -74,6 +74,7 @@ class AddNewAlarmViewController: UIViewController {
         
         firstinstall = false
 
+
                 if didpurchase {
                     if let sound = selectedSound {
                         

@@ -5,9 +5,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="UberMoveTextRegular.otf">
+            <string>UberMoveText-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -17,26 +21,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-3" translatesAutoresizingMaskIntoConstraints="NO" id="13R-1S-Gan">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-3" translatesAutoresizingMaskIntoConstraints="NO" id="13R-1S-Gan">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wake up refreshed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mil-Kl-ubJ">
-                                <rect key="frame" x="109" y="431.5" width="196.5" height="33"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
-                                <color key="textColor" red="0.94630424219999998" green="0.94630424219999998" blue="0.94630424219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wake up in a better mood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHA-Ll-HaF">
+                                <rect key="frame" x="79.5" y="435" width="255" height="26.5"/>
+                                <fontDescription key="fontDescription" name="UberMoveText-Regular" family="Uber Move Text" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="13R-1S-Gan" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EyY-rs-S6x"/>
                             <constraint firstItem="13R-1S-Gan" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="FDA-A1-jfY"/>
                             <constraint firstAttribute="bottom" secondItem="13R-1S-Gan" secondAttribute="bottom" id="Gtu-B9-28P"/>
-                            <constraint firstItem="Mil-Kl-ubJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bmX-0H-fEb"/>
+                            <constraint firstItem="lHA-Ll-HaF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SWO-UD-nIT"/>
                             <constraint firstItem="13R-1S-Gan" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ibz-FK-R26"/>
-                            <constraint firstItem="Mil-Kl-ubJ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vEt-fp-40n"/>
+                            <constraint firstItem="lHA-Ll-HaF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="oqq-z3-3HS"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,8 +51,5 @@
     </scenes>
     <resources>
         <image name="Rectangle-3" width="673" height="939"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

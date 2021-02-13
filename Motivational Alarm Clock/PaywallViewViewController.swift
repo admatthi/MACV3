@@ -41,7 +41,7 @@ class PaywallViewViewController: UIViewController {
            
            @IBOutlet weak var termstext: UILabel!
            @IBOutlet weak var disclaimertext: UIButton!
-var purchases =         Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyjJtFpYzjCj", appUserID: uid)
+var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUeRRXjCEWsd", appUserID: uid)
 
            
            @IBAction func tapRestore(_ sender: Any) {
@@ -163,6 +163,9 @@ var purchases =         Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyj
            
            @IBAction func tapTerms(_ sender: Any) {
                
+            
+            didpurchase = true
+            
                if let url = NSURL(string: "https://www.aktechnology.info/terms.html"
                    ) {
                    UIApplication.shared.openURL(url as URL)

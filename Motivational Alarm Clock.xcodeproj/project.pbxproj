@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4E1EDA1425C23F97003970FB /* Never Hit Snooze Again.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E1EDA1325C23F97003970FB /* Never Hit Snooze Again.mp3 */; };
-		4E21DACE25B33DDE0025C8A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E21DACD25B33DDE0025C8A3 /* GoogleService-Info.plist */; };
 		4E245DE125ADE7D000C8E57B /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E245DE025ADE7D000C8E57B /* Scheduler.swift */; };
 		4E245DF425ADEABE00C8E57B /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E245DF325ADEABE00C8E57B /* MediaViewController.swift */; };
 		4E60EC5C25AF7AAF0049D4ED /* SelectSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */; };
@@ -78,6 +77,18 @@
 		4EE5F20A25AD285A00B9C2EE /* TitleEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F20925AD285A00B9C2EE /* TitleEditViewController.swift */; };
 		4EECEF0E25B5F2A600ADD863 /* SelectWeekdaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECEF0D25B5F2A600ADD863 /* SelectWeekdaysViewController.swift */; };
 		5B0A65A99C1BF3F94F245E80 /* Pods_Motivational_Alarm_Clock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ADE3E5DB74EB9D2232576B /* Pods_Motivational_Alarm_Clock.framework */; };
+		9D1FF05F25D72EC700E26DDF /* UberMoveTextMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05B25D72EC500E26DDF /* UberMoveTextMedium.otf */; };
+		9D1FF06025D72EC700E26DDF /* UberMoveTextMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05B25D72EC500E26DDF /* UberMoveTextMedium.otf */; };
+		9D1FF06125D72EC700E26DDF /* UberMoveTextMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05B25D72EC500E26DDF /* UberMoveTextMedium.otf */; };
+		9D1FF06225D72EC700E26DDF /* UberMoveTextBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05C25D72EC600E26DDF /* UberMoveTextBold.otf */; };
+		9D1FF06325D72EC700E26DDF /* UberMoveTextBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05C25D72EC600E26DDF /* UberMoveTextBold.otf */; };
+		9D1FF06425D72EC700E26DDF /* UberMoveTextBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05C25D72EC600E26DDF /* UberMoveTextBold.otf */; };
+		9D1FF06525D72EC700E26DDF /* UberMoveTextLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05D25D72EC600E26DDF /* UberMoveTextLight.otf */; };
+		9D1FF06625D72EC700E26DDF /* UberMoveTextLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05D25D72EC600E26DDF /* UberMoveTextLight.otf */; };
+		9D1FF06725D72EC700E26DDF /* UberMoveTextLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05D25D72EC600E26DDF /* UberMoveTextLight.otf */; };
+		9D1FF06825D72EC700E26DDF /* UberMoveTextRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05E25D72EC700E26DDF /* UberMoveTextRegular.otf */; };
+		9D1FF06925D72EC700E26DDF /* UberMoveTextRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05E25D72EC700E26DDF /* UberMoveTextRegular.otf */; };
+		9D1FF06A25D72EC700E26DDF /* UberMoveTextRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05E25D72EC700E26DDF /* UberMoveTextRegular.otf */; };
 		9D225C7425BDCFCB00232E01 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D225C7325BDCFCB00232E01 /* TabBarViewController.swift */; };
 		9D8D248425ABABEB00B4E69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248325ABABEB00B4E69D /* AppDelegate.swift */; };
 		9D8D248825ABABEB00B4E69D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248725ABABEB00B4E69D /* ViewController.swift */; };
@@ -86,6 +97,7 @@
 		9D8D249025ABABF000B4E69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D248E25ABABF000B4E69D /* LaunchScreen.storyboard */; };
 		9D8D249B25ABABF000B4E69D /* Motivational_Alarm_ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D249A25ABABF000B4E69D /* Motivational_Alarm_ClockTests.swift */; };
 		9D8D24A625ABABF000B4E69D /* Motivational_Alarm_ClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D24A525ABABF000B4E69D /* Motivational_Alarm_ClockUITests.swift */; };
+		9D95568E25D4AABD002B3E2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D95568D25D4AABD002B3E2E /* GoogleService-Info.plist */; };
 		9D9BABEF25B8C2D400084507 /* Every Man Has Two Lives.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D9BABD725B8C2CE00084507 /* Every Man Has Two Lives.mp3 */; };
 		9D9BABF025B8C2D400084507 /* Every Man Has Two Lives.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D9BABD725B8C2CE00084507 /* Every Man Has Two Lives.mp3 */; };
 		9D9BABF125B8C2D400084507 /* Every Man Has Two Lives.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D9BABD725B8C2CE00084507 /* Every Man Has Two Lives.mp3 */; };
@@ -209,7 +221,6 @@
 		03ADE3E5DB74EB9D2232576B /* Pods_Motivational_Alarm_Clock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motivational_Alarm_Clock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F20A4CC19DB8C5AEF27E1DE /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E1EDA1325C23F97003970FB /* Never Hit Snooze Again.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Never Hit Snooze Again.mp3"; sourceTree = "<group>"; };
-		4E21DACD25B33DDE0025C8A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4E21DAD225B33F560025C8A3 /* Motivational Alarm Clock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Motivational Alarm Clock.entitlements"; sourceTree = "<group>"; };
 		4E245DE025ADE7D000C8E57B /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
 		4E245DF325ADEABE00C8E57B /* MediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
@@ -283,6 +294,10 @@
 		5BBCB738D0DC8EB71211838E /* Pods_Motivational_Alarm_ClockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motivational_Alarm_ClockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CC806F4EF1508ECFA51837 /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8D493DA693E50DEE2B7370A9 /* Pods-Motivational Alarm ClockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm ClockTests.release.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm ClockTests/Pods-Motivational Alarm ClockTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D1FF05B25D72EC500E26DDF /* UberMoveTextMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UberMoveTextMedium.otf; sourceTree = "<group>"; };
+		9D1FF05C25D72EC600E26DDF /* UberMoveTextBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UberMoveTextBold.otf; sourceTree = "<group>"; };
+		9D1FF05D25D72EC600E26DDF /* UberMoveTextLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UberMoveTextLight.otf; sourceTree = "<group>"; };
+		9D1FF05E25D72EC700E26DDF /* UberMoveTextRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UberMoveTextRegular.otf; sourceTree = "<group>"; };
 		9D225C7325BDCFCB00232E01 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = "Motivational Alarm Clock/TabBarViewController.swift"; sourceTree = SOURCE_ROOT; };
 		9D8D248025ABABEB00B4E69D /* Motivational Alarm Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Motivational Alarm Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8D248325ABABEB00B4E69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -297,6 +312,7 @@
 		9D8D24A125ABABF000B4E69D /* Motivational Alarm ClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Motivational Alarm ClockUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8D24A525ABABF000B4E69D /* Motivational_Alarm_ClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motivational_Alarm_ClockUITests.swift; sourceTree = "<group>"; };
 		9D8D24A725ABABF000B4E69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D95568D25D4AABD002B3E2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D9BABD725B8C2CE00084507 /* Every Man Has Two Lives.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Every Man Has Two Lives.mp3"; sourceTree = "<group>"; };
 		9D9BABD825B8C2CE00084507 /* Remind Yourself Why.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Remind Yourself Why.mp3"; sourceTree = "<group>"; };
 		9D9BABD925B8C2CE00084507 /* Bitmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bitmap.png; sourceTree = "<group>"; };
@@ -537,9 +553,13 @@
 				9D8D248925ABABEB00B4E69D /* Main.storyboard */,
 				9DA82A2D25AE609A00289E84 /* PaywallViewViewController.swift */,
 				9DA82A2825AE607500289E84 /* Paywall.swift */,
-				4E21DACD25B33DDE0025C8A3 /* GoogleService-Info.plist */,
 				9D8D248C25ABABF000B4E69D /* Assets.xcassets */,
+				9D95568D25D4AABD002B3E2E /* GoogleService-Info.plist */,
 				9D8D248E25ABABF000B4E69D /* LaunchScreen.storyboard */,
+				9D1FF05C25D72EC600E26DDF /* UberMoveTextBold.otf */,
+				9D1FF05D25D72EC600E26DDF /* UberMoveTextLight.otf */,
+				9D1FF05B25D72EC500E26DDF /* UberMoveTextMedium.otf */,
+				9D1FF05E25D72EC700E26DDF /* UberMoveTextRegular.otf */,
 				9D8D249125ABABF000B4E69D /* Info.plist */,
 			);
 			path = "Motivational Alarm Clock";
@@ -705,6 +725,8 @@
 				4EA4AED625B9E834009C2650 /* I Am Worthy.mp3 in Resources */,
 				9D9BAC1625B8C2D400084507 /* Your Time Has Come.mp3 in Resources */,
 				4EBBB5E625C0E5DA006D5B61 /* Can't Hurt Me.mp3 in Resources */,
+				9D1FF06825D72EC700E26DDF /* UberMoveTextRegular.otf in Resources */,
+				9D1FF06525D72EC700E26DDF /* UberMoveTextLight.otf in Resources */,
 				9D9BAC7325B8F80C00084507 /* Put God First.mp3 in Resources */,
 				9D9BAC1925B8C2D400084507 /* Rectangle.png in Resources */,
 				9D9BABF225B8C2D400084507 /* Remind Yourself Why.mp3 in Resources */,
@@ -719,6 +741,7 @@
 				4EA4AECF25B9E834009C2650 /* It's Grind Season.mp3 in Resources */,
 				4EBBB5FF25C0F365006D5B61 /* How Do You Make It?.mp3 in Resources */,
 				4EBBB5FE25C0F365006D5B61 /* You're Guilty.mp3 in Resources */,
+				9D1FF05F25D72EC700E26DDF /* UberMoveTextMedium.otf in Resources */,
 				4EBBB5EC25C0E5DA006D5B61 /* 4-00 AM.mp3 in Resources */,
 				9D9BAC2B25B8C2D400084507 /* You're Not A Hostage.mp3 in Resources */,
 				4EBBB60025C0F365006D5B61 /* 40% of Your Potential.mp3 in Resources */,
@@ -737,11 +760,11 @@
 				9D9BAC3125B8C2D400084507 /* You're The Main Character.mp3 in Resources */,
 				9D9BAC0125B8C2D400084507 /* Wolf Is Always Scratching.mp3 in Resources */,
 				4EBBB5FB25C0F365006D5B61 /* Why Do You Want to Workout?.mp3 in Resources */,
-				4E21DACE25B33DDE0025C8A3 /* GoogleService-Info.plist in Resources */,
 				4EBBB5E925C0E5DA006D5B61 /* Soft Morning.mp3 in Resources */,
 				4EBBB5FC25C0F365006D5B61 /* Take Back The Throne.mp3 in Resources */,
 				4EA4AED325B9E834009C2650 /* Greatness Defined.mp3 in Resources */,
 				9D9BAC7625B8F80C00084507 /* Good Morning.mp3 in Resources */,
+				9D1FF06225D72EC700E26DDF /* UberMoveTextBold.otf in Resources */,
 				9D8D248D25ABABF000B4E69D /* Assets.xcassets in Resources */,
 				9D9BAC1325B8C2D400084507 /* Learn To Be Okay Alone.mp3 in Resources */,
 				9D9BAC2225B8C2D400084507 /* Every Day Is A New Day.mp3 in Resources */,
@@ -763,6 +786,7 @@
 				9D9BAC0D25B8C2D400084507 /* Time To Wake Up.mp3 in Resources */,
 				4EBBB5EA25C0E5DA006D5B61 /* Get To Work.mp3 in Resources */,
 				9D8D248B25ABABEB00B4E69D /* Main.storyboard in Resources */,
+				9D95568E25D4AABD002B3E2E /* GoogleService-Info.plist in Resources */,
 				9D9BAC2825B8C2D400084507 /* tickle.mp3 in Resources */,
 				4EA4AEE325B9E834009C2650 /* Excuses Don't Count.mp3 in Resources */,
 				9D9BAC7925B8F80C00084507 /* Don't Hang Out With Losers.mp3 in Resources */,
@@ -799,9 +823,11 @@
 				9D9BABFC25B8C2D400084507 /* bell.mp3 in Resources */,
 				9D9BAC2F25B8C2D400084507 /* Nobody Believes In You.mp3 in Resources */,
 				9D9BAC7D25B8F80C00084507 /* Forgive Me, God.mp3 in Resources */,
+				9D1FF06625D72EC700E26DDF /* UberMoveTextLight.otf in Resources */,
 				9D9BAC6E25B8F80C00084507 /* Lord, Thank You For This Day.mp3 in Resources */,
 				9D9BAC1A25B8C2D400084507 /* Rectangle.png in Resources */,
 				9D9BABF325B8C2D400084507 /* Remind Yourself Why.mp3 in Resources */,
+				9D1FF06925D72EC700E26DDF /* UberMoveTextRegular.otf in Resources */,
 				9D9BAC1125B8C2D400084507 /* Doubt.mp3 in Resources */,
 				9D9BAC0525B8C2D400084507 /* newtrack2.mp3 in Resources */,
 				9D9BAC0825B8C2D400084507 /* You Are The One.mp3 in Resources */,
@@ -810,6 +836,8 @@
 				9D9BAC1425B8C2D400084507 /* Learn To Be Okay Alone.mp3 in Resources */,
 				9D9BAC3525B8C2D400084507 /* Rise & Grind.mp3 in Resources */,
 				9D9BAC2025B8C2D400084507 /* Tomorrow Is Not An Option.mp3 in Resources */,
+				9D1FF06025D72EC700E26DDF /* UberMoveTextMedium.otf in Resources */,
+				9D1FF06325D72EC700E26DDF /* UberMoveTextBold.otf in Resources */,
 				9D9BABFF25B8C2D400084507 /* Don't You Give Up.mp3 in Resources */,
 				9D9BABF625B8C2D400084507 /* Bitmap.png in Resources */,
 				9D9BAC0B25B8C2D400084507 /* There's Gonna Be Some Good.mp3 in Resources */,
@@ -838,9 +866,11 @@
 				9D9BABFD25B8C2D400084507 /* bell.mp3 in Resources */,
 				9D9BAC3025B8C2D400084507 /* Nobody Believes In You.mp3 in Resources */,
 				9D9BAC7E25B8F80C00084507 /* Forgive Me, God.mp3 in Resources */,
+				9D1FF06725D72EC700E26DDF /* UberMoveTextLight.otf in Resources */,
 				9D9BAC6F25B8F80C00084507 /* Lord, Thank You For This Day.mp3 in Resources */,
 				9D9BAC1B25B8C2D400084507 /* Rectangle.png in Resources */,
 				9D9BABF425B8C2D400084507 /* Remind Yourself Why.mp3 in Resources */,
+				9D1FF06A25D72EC700E26DDF /* UberMoveTextRegular.otf in Resources */,
 				9D9BAC1225B8C2D400084507 /* Doubt.mp3 in Resources */,
 				9D9BAC0625B8C2D400084507 /* newtrack2.mp3 in Resources */,
 				9D9BAC0925B8C2D400084507 /* You Are The One.mp3 in Resources */,
@@ -849,6 +879,8 @@
 				9D9BAC1525B8C2D400084507 /* Learn To Be Okay Alone.mp3 in Resources */,
 				9D9BAC3625B8C2D400084507 /* Rise & Grind.mp3 in Resources */,
 				9D9BAC2125B8C2D400084507 /* Tomorrow Is Not An Option.mp3 in Resources */,
+				9D1FF06125D72EC700E26DDF /* UberMoveTextMedium.otf in Resources */,
+				9D1FF06425D72EC700E26DDF /* UberMoveTextBold.otf in Resources */,
 				9D9BAC0025B8C2D400084507 /* Don't You Give Up.mp3 in Resources */,
 				9D9BABF725B8C2D400084507 /* Bitmap.png in Resources */,
 				9D9BAC0C25B8C2D400084507 /* There's Gonna Be Some Good.mp3 in Resources */,
@@ -1168,17 +1200,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF873A9C66FDFD5CFE9B3B9F /* Pods-Motivational Alarm Clock.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-13";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-18";
 				CODE_SIGN_ENTITLEMENTS = "Motivational Alarm Clock/Motivational Alarm Clock.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PZNJ7N6ACK;
+				DEVELOPMENT_TEAM = CLY849RK7R;
 				INFOPLIST_FILE = "Motivational Alarm Clock/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.7;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aatech.mac.Motivational-Alarm-Clock";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aatech.wake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1189,17 +1221,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCBC92D3F5F3916F1819E89C /* Pods-Motivational Alarm Clock.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-13";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-18";
 				CODE_SIGN_ENTITLEMENTS = "Motivational Alarm Clock/Motivational Alarm Clock.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PZNJ7N6ACK;
+				DEVELOPMENT_TEAM = CLY849RK7R;
 				INFOPLIST_FILE = "Motivational Alarm Clock/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.7;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aatech.mac.Motivational-Alarm-Clock";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aatech.wake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

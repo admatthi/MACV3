@@ -137,6 +137,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 //
 //            self.performSegue(withIdentifier: "HomeToPaywall", sender: self)
 //        }
+        
 
     }
  
