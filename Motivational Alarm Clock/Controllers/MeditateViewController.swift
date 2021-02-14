@@ -20,7 +20,7 @@ class MeditateViewController: UIViewController ,AVAudioPlayerDelegate{
     var selectedSound:Sounds?
 //    var soundsCategories = ["Motivation","Prayers", "Meditation", "Fitness", "Money" ]
     
-    var soundsCategories = ["Popular", "Anxiety", "Stress", "Work", "Self-Care", "Focus", "Relaxation"]
+    var soundsCategories = ["Popular", "Sleep", "Anxiety", "Beginners", "Stress", "Work", "Self-Care","With Soundscapes","Inner Peace","Focus","Emotions","Relationships","Less Guidance","Personal Growth","Kids","By Guest Instructors","Relaxation"]
 
     func selectsound(referrer : String) {
                                      AppEvents.logEvent(AppEvents.Name(rawValue: "selectsound"), parameters: ["referrer" : referrer])
@@ -229,7 +229,7 @@ extension MeditateViewController:UICollectionViewDataSource,UICollectionViewDele
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SoundPickCollectionViewCell", for: indexPath) as! SoundPickCollectionViewCell
             let sound = filteredSounds[indexPath.row]
             cell.playPauseButton.setImage(UIImage(named: "Bitmap"), for: .normal)
-            cell.coverImageView.image = UIImage(named: sound.image)
+            cell.coverImageView.image = UIImage(named: sound.image) ?? UIImage(named: "Nature of The Universe")
             
             if let selected = selectedSound {
                 if sound == selected{
