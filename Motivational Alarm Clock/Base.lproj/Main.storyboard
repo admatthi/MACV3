@@ -311,7 +311,7 @@ Cancel anytime.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdf-Mf-scw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="-248"/>
+            <point key="canvasLocation" x="893" y="-248"/>
         </scene>
         <!--Wake-->
         <scene sceneID="1pI-lT-iqs">
@@ -2059,11 +2059,11 @@ Cancel anytime.</string>
             </objects>
             <point key="canvasLocation" x="-1088" y="1264"/>
         </scene>
-        <!--Motivate-->
+        <!--Motivation-->
         <scene sceneID="gxx-PW-poH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="aP2-4e-lLS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Motivate" image="circle.circle" catalog="system" id="kHR-BE-fey"/>
+                    <tabBarItem key="tabBarItem" title="Motivation" image="circle.circle" catalog="system" id="kHR-BE-fey"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FLN-Bu-5jZ">
@@ -2271,11 +2271,11 @@ Cancel anytime.</string>
             </objects>
             <point key="canvasLocation" x="893" y="876"/>
         </scene>
-        <!--Pray-->
+        <!--Faith-->
         <scene sceneID="WKe-xU-okR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gYK-jl-XIC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pray" image="circle.lefthalf.fill" catalog="system" id="Ugh-ON-PEb"/>
+                    <tabBarItem key="tabBarItem" title="Faith" image="circle.lefthalf.fill" catalog="system" id="Ugh-ON-PEb"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mit-xw-uUL">

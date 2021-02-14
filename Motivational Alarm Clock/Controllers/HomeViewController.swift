@@ -330,12 +330,12 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             cell.itemSwitch.setOn(true, animated: false)
         } else {
 //            cell.mainView.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 0.8)
-            cell.timeLabel.alpha = 0.5
-            cell.titleLable.alpha = 0.5
+            cell.timeLabel.alpha = 0.8
+            cell.titleLable.alpha = 0.8
 //            cell.soundImageView.alpha = 0.5
-            cell.sound2.alpha = 0.5
-            cell.mainView.alpha = 0.5
-            cell.playPauseButton.alpha = 0.5
+            cell.sound2.alpha = 0.8
+            cell.mainView.alpha = 0.8
+            cell.playPauseButton.alpha = 0.8
             cell.itemSwitch.setOn(false, animated: false)
         }
         

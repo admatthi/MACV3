@@ -236,9 +236,9 @@ class HomeTableViewController: UITableViewController{
                     let sw = homeCell.itemSwitch
                     if alarmModel.alarms[index].repeatWeekdays.isEmpty {
                         sw?.setOn(false, animated: false)
-                        homeCell.backgroundColor = UIColor.black
-                        homeCell.textLabel?.alpha = 0.5
-                        homeCell.detailTextLabel?.alpha = 0.5
+//                        homeCell.backgroundColor = UIColor.black
+                        homeCell.textLabel?.alpha = 0.7
+                        homeCell.detailTextLabel?.alpha = 0.7
                     }
                 }
 
