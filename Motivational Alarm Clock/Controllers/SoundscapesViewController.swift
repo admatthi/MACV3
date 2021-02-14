@@ -11,6 +11,7 @@ import Foundation
 import AudioToolbox
 import AVFoundation
 import FBSDKCoreKit
+
 class SoundscapesViewController: UIViewController ,AVAudioPlayerDelegate{
     var segueInfo: SegueInfo!
     var alarmScheduler: AlarmSchedulerDelegate = Scheduler()
@@ -18,9 +19,10 @@ class SoundscapesViewController: UIViewController ,AVAudioPlayerDelegate{
     var date : Date?
     var filteredSounds:[Sounds] = []
     var selectedSound:Sounds?
+    
 //    var soundsCategories = ["Motivation","Prayers", "Meditation", "Fitness", "Money" ]
     
-    var soundsCategories = ["Popular", "Christain", "Jewish", "Muslim", "Sounds"]
+    var soundsCategories = ["Popular", "Animals", "Nature", "Home"]
 
     func selectsound(referrer : String) {
                                      AppEvents.logEvent(AppEvents.Name(rawValue: "selectsound"), parameters: ["referrer" : referrer])
