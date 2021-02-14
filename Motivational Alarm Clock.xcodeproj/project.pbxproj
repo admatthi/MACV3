@@ -23,29 +23,22 @@
 		4EA0A4E425B5021600D970A0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0A4E325B5021600D970A0 /* HomeViewController.swift */; };
 		4EA1824025D994F1009D1330 /* City Rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1820825D994BC009D1330 /* City Rain.mp3 */; };
 		4EA1824125D994F1009D1330 /* Babbling Brook.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1820925D994BE009D1330 /* Babbling Brook.mp3 */; };
-		4EA1824225D994F1009D1330 /* Crackling Fireplace.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1820D25D994C0009D1330 /* Crackling Fireplace.mp3 */; };
 		4EA1824325D994F1009D1330 /* Evening Crickets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1820E25D994C2009D1330 /* Evening Crickets.mp3 */; };
 		4EA1824425D994F1009D1330 /* City Streets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1820F25D994C3009D1330 /* City Streets.mp3 */; };
 		4EA1824525D994F1009D1330 /* Majestic Valley.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1821325D994C5009D1330 /* Majestic Valley.mp3 */; };
 		4EA1824625D994F1009D1330 /* Humpback Whale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1821425D994C7009D1330 /* Humpback Whale.mp3 */; };
-		4EA1824725D994F1009D1330 /* Washing Machine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1821525D994C8009D1330 /* Washing Machine.mp3 */; };
 		4EA1824825D994F1009D1330 /* White Noise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1821925D994CA009D1330 /* White Noise.mp3 */; };
-		4EA1824925D994F1009D1330 /* Coral Reef.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1821A25D994CC009D1330 /* Coral Reef.mp3 */; };
 		4EA1824A25D994F1009D1330 /* Waterfall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1821B25D994CD009D1330 /* Waterfall.mp3 */; };
 		4EA1824B25D994F1009D1330 /* Ocean Waves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1821C25D994CF009D1330 /* Ocean Waves.mp3 */; };
 		4EA1824C25D994F1009D1330 /* Calm Island.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1821D25D994D1009D1330 /* Calm Island.mp3 */; };
 		4EA1824D25D994F1009D1330 /* Heart Beat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1821E25D994D3009D1330 /* Heart Beat.mp3 */; };
-		4EA1824E25D994F1009D1330 /* Wind in Pines.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1821F25D994D4009D1330 /* Wind in Pines.mp3 */; };
 		4EA1824F25D994F1009D1330 /* Camp Fire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1822025D994D6009D1330 /* Camp Fire.mp3 */; };
 		4EA1825025D994F1009D1330 /* Rain On Window.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1822425D994D8009D1330 /* Rain On Window.mp3 */; };
 		4EA1825125D994F1009D1330 /* Pink Noise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1822525D994DA009D1330 /* Pink Noise.mp3 */; };
 		4EA1825225D994F1009D1330 /* Oscillating Fan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1822625D994DB009D1330 /* Oscillating Fan.mp3 */; };
-		4EA1825325D994F1009D1330 /* Heavy Rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1822725D994DD009D1330 /* Heavy Rain.mp3 */; };
 		4EA1825425D994F1009D1330 /* Peaceful Stream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1822825D994DF009D1330 /* Peaceful Stream.mp3 */; };
 		4EA1825525D994F1009D1330 /* Forest Ambience.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1822925D994E0009D1330 /* Forest Ambience.mp3 */; };
 		4EA1825625D994F1009D1330 /* Distant Ocean Surf.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1822D25D994E2009D1330 /* Distant Ocean Surf.mp3 */; };
-		4EA1825725D994F1009D1330 /* Jasper Lake.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1822E25D994E4009D1330 /* Jasper Lake.mp3 */; };
-		4EA1825825D994F1009D1330 /* Light Rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1822F25D994E5009D1330 /* Light Rain.mp3 */; };
 		4EA1825925D994F1009D1330 /* Train Ride.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1823325D994E7009D1330 /* Train Ride.mp3 */; };
 		4EA1825A25D994F1009D1330 /* Thunderstorm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1823425D994E9009D1330 /* Thunderstorm.mp3 */; };
 		4EA1825B25D994F1009D1330 /* Baby Shhh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1823525D994EA009D1330 /* Baby Shhh.mp3 */; };
@@ -128,6 +121,33 @@
 		4EA1831B25D99599009D1330 /* Calm Kids (Ages 5-6).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA182CD25D99595009D1330 /* Calm Kids (Ages 5-6).mp3 */; };
 		4EA1831C25D99599009D1330 /* Relaxed Open-hearted Presence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA182CE25D99597009D1330 /* Relaxed Open-hearted Presence.mp3 */; };
 		4EA1831D25D99599009D1330 /* Mindfulness with Mallika.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA182D225D99599009D1330 /* Mindfulness with Mallika.mp3 */; };
+		4EA1838025D9D086009D1330 /* Woman Laughing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1837F25D9D086009D1330 /* Woman Laughing.mp3 */; };
+		4EA1838825D9D0A6009D1330 /* Wind in Pines.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1838725D9D0A6009D1330 /* Wind in Pines.mp3 */; };
+		4EA1839025D9D0BD009D1330 /* Coral Reef.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1838F25D9D0BD009D1330 /* Coral Reef.mp3 */; };
+		4EA1839825D9D0CF009D1330 /* Jasper Lake.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1839725D9D0CF009D1330 /* Jasper Lake.mp3 */; };
+		4EA183A025D9D0E3009D1330 /* Heavy Rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1839F25D9D0E3009D1330 /* Heavy Rain.mp3 */; };
+		4EA183A825D9D0FA009D1330 /* Light Rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183A725D9D0FA009D1330 /* Light Rain.mp3 */; };
+		4EA183AD25D9D106009D1330 /* Cardinals.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183AC25D9D106009D1330 /* Cardinals.mp3 */; };
+		4EA183BA25D9D15A009D1330 /* Morning Crickets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183B925D9D159009D1330 /* Morning Crickets.mp3 */; };
+		4EA183BF25D9D166009D1330 /* Seagulls Calling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183BE25D9D166009D1330 /* Seagulls Calling.mp3 */; };
+		4EA183C425D9D170009D1330 /* Whale Mating.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183C325D9D170009D1330 /* Whale Mating.mp3 */; };
+		4EA183C925D9D188009D1330 /* Owl Hooting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183C825D9D188009D1330 /* Owl Hooting.mp3 */; };
+		4EA183CE25D9D193009D1330 /* Blue Jays.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183CD25D9D193009D1330 /* Blue Jays.mp3 */; };
+		4EA183D325D9D1A0009D1330 /* Finches.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183D225D9D1A0009D1330 /* Finches.mp3 */; };
+		4EA183D825D9D1AC009D1330 /* American Robin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183D725D9D1AC009D1330 /* American Robin.mp3 */; };
+		4EA183DD25D9D1BA009D1330 /* Black-capped Chickadee.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183DC25D9D1BA009D1330 /* Black-capped Chickadee.mp3 */; };
+		4EA183E225D9D1C6009D1330 /* Songbirds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183E125D9D1C6009D1330 /* Songbirds.mp3 */; };
+		4EA183E725D9D1D2009D1330 /* American Crow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183E625D9D1D2009D1330 /* American Crow.mp3 */; };
+		4EA183EF25D9D1E1009D1330 /* Crackling Fireplace.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183EE25D9D1E1009D1330 /* Crackling Fireplace.mp3 */; };
+		4EA183F425D9D1EB009D1330 /* Oscilatting Fan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183F325D9D1EB009D1330 /* Oscilatting Fan.mp3 */; };
+		4EA183FC25D9D1FA009D1330 /* Washing Machine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA183FB25D9D1FA009D1330 /* Washing Machine.mp3 */; };
+		4EA1840125D9D205009D1330 /* Tea Spoon Clinking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1840025D9D205009D1330 /* Tea Spoon Clinking.mp3 */; };
+		4EA1840625D9D20E009D1330 /* Kettle Boiling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1840525D9D20E009D1330 /* Kettle Boiling.mp3 */; };
+		4EA1840B25D9D219009D1330 /* Popping Popcorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1840A25D9D219009D1330 /* Popping Popcorn.mp3 */; };
+		4EA1841025D9D226009D1330 /* Steam Train Whistle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1840F25D9D226009D1330 /* Steam Train Whistle.mp3 */; };
+		4EA1841525D9D4B2009D1330 /* Costa Rican Jungle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1841425D9D4B2009D1330 /* Costa Rican Jungle.mp3 */; };
+		4EA1841B25D9D52E009D1330 /* California Beachside.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1841925D9D52E009D1330 /* California Beachside.mp3 */; };
+		4EA1841C25D9D52E009D1330 /* Central Park.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1841A25D9D52E009D1330 /* Central Park.mp3 */; };
 		4EA4AECD25B9E834009C2650 /* Perfect People.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEB525B9E82F009C2650 /* Perfect People.mp3 */; };
 		4EA4AECE25B9E834009C2650 /* Money Comes To Me.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEB625B9E830009C2650 /* Money Comes To Me.mp3 */; };
 		4EA4AECF25B9E834009C2650 /* It's Grind Season.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EA4AEB725B9E830009C2650 /* It's Grind Season.mp3 */; };
@@ -344,29 +364,22 @@
 		4EA0A4E325B5021600D970A0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4EA1820825D994BC009D1330 /* City Rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "City Rain.mp3"; sourceTree = "<group>"; };
 		4EA1820925D994BE009D1330 /* Babbling Brook.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Babbling Brook.mp3"; sourceTree = "<group>"; };
-		4EA1820D25D994C0009D1330 /* Crackling Fireplace.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Crackling Fireplace.mp3"; sourceTree = "<group>"; };
 		4EA1820E25D994C2009D1330 /* Evening Crickets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Evening Crickets.mp3"; sourceTree = "<group>"; };
 		4EA1820F25D994C3009D1330 /* City Streets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "City Streets.mp3"; sourceTree = "<group>"; };
 		4EA1821325D994C5009D1330 /* Majestic Valley.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Majestic Valley.mp3"; sourceTree = "<group>"; };
 		4EA1821425D994C7009D1330 /* Humpback Whale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Humpback Whale.mp3"; sourceTree = "<group>"; };
-		4EA1821525D994C8009D1330 /* Washing Machine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Washing Machine.mp3"; sourceTree = "<group>"; };
 		4EA1821925D994CA009D1330 /* White Noise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "White Noise.mp3"; sourceTree = "<group>"; };
-		4EA1821A25D994CC009D1330 /* Coral Reef.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Coral Reef.mp3"; sourceTree = "<group>"; };
 		4EA1821B25D994CD009D1330 /* Waterfall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Waterfall.mp3; sourceTree = "<group>"; };
 		4EA1821C25D994CF009D1330 /* Ocean Waves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ocean Waves.mp3"; sourceTree = "<group>"; };
 		4EA1821D25D994D1009D1330 /* Calm Island.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Calm Island.mp3"; sourceTree = "<group>"; };
 		4EA1821E25D994D3009D1330 /* Heart Beat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Heart Beat.mp3"; sourceTree = "<group>"; };
-		4EA1821F25D994D4009D1330 /* Wind in Pines.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Wind in Pines.mp3"; sourceTree = "<group>"; };
 		4EA1822025D994D6009D1330 /* Camp Fire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Camp Fire.mp3"; sourceTree = "<group>"; };
 		4EA1822425D994D8009D1330 /* Rain On Window.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rain On Window.mp3"; sourceTree = "<group>"; };
 		4EA1822525D994DA009D1330 /* Pink Noise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pink Noise.mp3"; sourceTree = "<group>"; };
 		4EA1822625D994DB009D1330 /* Oscillating Fan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Oscillating Fan.mp3"; sourceTree = "<group>"; };
-		4EA1822725D994DD009D1330 /* Heavy Rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Heavy Rain.mp3"; sourceTree = "<group>"; };
 		4EA1822825D994DF009D1330 /* Peaceful Stream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Peaceful Stream.mp3"; sourceTree = "<group>"; };
 		4EA1822925D994E0009D1330 /* Forest Ambience.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Forest Ambience.mp3"; sourceTree = "<group>"; };
 		4EA1822D25D994E2009D1330 /* Distant Ocean Surf.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Distant Ocean Surf.mp3"; sourceTree = "<group>"; };
-		4EA1822E25D994E4009D1330 /* Jasper Lake.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Jasper Lake.mp3"; sourceTree = "<group>"; };
-		4EA1822F25D994E5009D1330 /* Light Rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Light Rain.mp3"; sourceTree = "<group>"; };
 		4EA1823325D994E7009D1330 /* Train Ride.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Train Ride.mp3"; sourceTree = "<group>"; };
 		4EA1823425D994E9009D1330 /* Thunderstorm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Thunderstorm.mp3; sourceTree = "<group>"; };
 		4EA1823525D994EA009D1330 /* Baby Shhh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Baby Shhh.mp3"; sourceTree = "<group>"; };
@@ -449,6 +462,33 @@
 		4EA182CD25D99595009D1330 /* Calm Kids (Ages 5-6).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Calm Kids (Ages 5-6).mp3"; sourceTree = "<group>"; };
 		4EA182CE25D99597009D1330 /* Relaxed Open-hearted Presence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Relaxed Open-hearted Presence.mp3"; sourceTree = "<group>"; };
 		4EA182D225D99599009D1330 /* Mindfulness with Mallika.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mindfulness with Mallika.mp3"; sourceTree = "<group>"; };
+		4EA1837F25D9D086009D1330 /* Woman Laughing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Woman Laughing.mp3"; sourceTree = "<group>"; };
+		4EA1838725D9D0A6009D1330 /* Wind in Pines.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Wind in Pines.mp3"; path = "../../../Downloads/Wind in Pines.mp3"; sourceTree = "<group>"; };
+		4EA1838F25D9D0BD009D1330 /* Coral Reef.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Coral Reef.mp3"; path = "../../../Downloads/Coral Reef.mp3"; sourceTree = "<group>"; };
+		4EA1839725D9D0CF009D1330 /* Jasper Lake.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Jasper Lake.mp3"; path = "../../../Downloads/Jasper Lake.mp3"; sourceTree = "<group>"; };
+		4EA1839F25D9D0E3009D1330 /* Heavy Rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Heavy Rain.mp3"; path = "../../../Downloads/Heavy Rain.mp3"; sourceTree = "<group>"; };
+		4EA183A725D9D0FA009D1330 /* Light Rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Light Rain.mp3"; path = "../../../Downloads/Light Rain.mp3"; sourceTree = "<group>"; };
+		4EA183AC25D9D106009D1330 /* Cardinals.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cardinals.mp3; sourceTree = "<group>"; };
+		4EA183B925D9D159009D1330 /* Morning Crickets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Morning Crickets.mp3"; path = "../../../Downloads/Morning Crickets.mp3"; sourceTree = "<group>"; };
+		4EA183BE25D9D166009D1330 /* Seagulls Calling.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Seagulls Calling.mp3"; sourceTree = "<group>"; };
+		4EA183C325D9D170009D1330 /* Whale Mating.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Whale Mating.mp3"; sourceTree = "<group>"; };
+		4EA183C825D9D188009D1330 /* Owl Hooting.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Owl Hooting.mp3"; sourceTree = "<group>"; };
+		4EA183CD25D9D193009D1330 /* Blue Jays.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Blue Jays.mp3"; sourceTree = "<group>"; };
+		4EA183D225D9D1A0009D1330 /* Finches.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Finches.mp3; sourceTree = "<group>"; };
+		4EA183D725D9D1AC009D1330 /* American Robin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "American Robin.mp3"; sourceTree = "<group>"; };
+		4EA183DC25D9D1BA009D1330 /* Black-capped Chickadee.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Black-capped Chickadee.mp3"; sourceTree = "<group>"; };
+		4EA183E125D9D1C6009D1330 /* Songbirds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Songbirds.mp3; sourceTree = "<group>"; };
+		4EA183E625D9D1D2009D1330 /* American Crow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "American Crow.mp3"; sourceTree = "<group>"; };
+		4EA183EE25D9D1E1009D1330 /* Crackling Fireplace.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Crackling Fireplace.mp3"; path = "../../../Downloads/Crackling Fireplace.mp3"; sourceTree = "<group>"; };
+		4EA183F325D9D1EB009D1330 /* Oscilatting Fan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Oscilatting Fan.mp3"; sourceTree = "<group>"; };
+		4EA183FB25D9D1FA009D1330 /* Washing Machine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Washing Machine.mp3"; path = "../../../Downloads/Washing Machine.mp3"; sourceTree = "<group>"; };
+		4EA1840025D9D205009D1330 /* Tea Spoon Clinking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Tea Spoon Clinking.mp3"; sourceTree = "<group>"; };
+		4EA1840525D9D20E009D1330 /* Kettle Boiling.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Kettle Boiling.mp3"; sourceTree = "<group>"; };
+		4EA1840A25D9D219009D1330 /* Popping Popcorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Popping Popcorn.mp3"; sourceTree = "<group>"; };
+		4EA1840F25D9D226009D1330 /* Steam Train Whistle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Steam Train Whistle.mp3"; sourceTree = "<group>"; };
+		4EA1841425D9D4B2009D1330 /* Costa Rican Jungle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Costa Rican Jungle.mp3"; sourceTree = "<group>"; };
+		4EA1841925D9D52E009D1330 /* California Beachside.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "California Beachside.mp3"; sourceTree = "<group>"; };
+		4EA1841A25D9D52E009D1330 /* Central Park.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Central Park.mp3"; sourceTree = "<group>"; };
 		4EA4AEB525B9E82F009C2650 /* Perfect People.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Perfect People.mp3"; sourceTree = "<group>"; };
 		4EA4AEB625B9E830009C2650 /* Money Comes To Me.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Money Comes To Me.mp3"; sourceTree = "<group>"; };
 		4EA4AEB725B9E830009C2650 /* It's Grind Season.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "It's Grind Season.mp3"; sourceTree = "<group>"; };
@@ -597,23 +637,45 @@
 		4EA1820125D994AB009D1330 /* soundsScapes */ = {
 			isa = PBXGroup;
 			children = (
+				4EA1841925D9D52E009D1330 /* California Beachside.mp3 */,
+				4EA1841A25D9D52E009D1330 /* Central Park.mp3 */,
 				4EA1820925D994BE009D1330 /* Babbling Brook.mp3 */,
+				4EA1837F25D9D086009D1330 /* Woman Laughing.mp3 */,
 				4EA1823525D994EA009D1330 /* Baby Shhh.mp3 */,
+				4EA1838F25D9D0BD009D1330 /* Coral Reef.mp3 */,
+				4EA1841425D9D4B2009D1330 /* Costa Rican Jungle.mp3 */,
+				4EA1839F25D9D0E3009D1330 /* Heavy Rain.mp3 */,
+				4EA1839725D9D0CF009D1330 /* Jasper Lake.mp3 */,
+				4EA183A725D9D0FA009D1330 /* Light Rain.mp3 */,
+				4EA183AC25D9D106009D1330 /* Cardinals.mp3 */,
+				4EA183E125D9D1C6009D1330 /* Songbirds.mp3 */,
+				4EA183EE25D9D1E1009D1330 /* Crackling Fireplace.mp3 */,
+				4EA183E625D9D1D2009D1330 /* American Crow.mp3 */,
+				4EA1840F25D9D226009D1330 /* Steam Train Whistle.mp3 */,
+				4EA183FB25D9D1FA009D1330 /* Washing Machine.mp3 */,
+				4EA1840025D9D205009D1330 /* Tea Spoon Clinking.mp3 */,
+				4EA1840A25D9D219009D1330 /* Popping Popcorn.mp3 */,
+				4EA1840525D9D20E009D1330 /* Kettle Boiling.mp3 */,
+				4EA183F325D9D1EB009D1330 /* Oscilatting Fan.mp3 */,
+				4EA183B925D9D159009D1330 /* Morning Crickets.mp3 */,
+				4EA183C825D9D188009D1330 /* Owl Hooting.mp3 */,
+				4EA183BE25D9D166009D1330 /* Seagulls Calling.mp3 */,
+				4EA183CD25D9D193009D1330 /* Blue Jays.mp3 */,
+				4EA183D225D9D1A0009D1330 /* Finches.mp3 */,
+				4EA183DC25D9D1BA009D1330 /* Black-capped Chickadee.mp3 */,
+				4EA183D725D9D1AC009D1330 /* American Robin.mp3 */,
+				4EA1838725D9D0A6009D1330 /* Wind in Pines.mp3 */,
+				4EA183C325D9D170009D1330 /* Whale Mating.mp3 */,
 				4EA1821D25D994D1009D1330 /* Calm Island.mp3 */,
 				4EA1823625D994EC009D1330 /* Calming Aquascape.mp3 */,
 				4EA1822025D994D6009D1330 /* Camp Fire.mp3 */,
 				4EA1820825D994BC009D1330 /* City Rain.mp3 */,
 				4EA1820F25D994C3009D1330 /* City Streets.mp3 */,
-				4EA1821A25D994CC009D1330 /* Coral Reef.mp3 */,
-				4EA1820D25D994C0009D1330 /* Crackling Fireplace.mp3 */,
 				4EA1822D25D994E2009D1330 /* Distant Ocean Surf.mp3 */,
 				4EA1820E25D994C2009D1330 /* Evening Crickets.mp3 */,
 				4EA1822925D994E0009D1330 /* Forest Ambience.mp3 */,
 				4EA1821E25D994D3009D1330 /* Heart Beat.mp3 */,
-				4EA1822725D994DD009D1330 /* Heavy Rain.mp3 */,
 				4EA1821425D994C7009D1330 /* Humpback Whale.mp3 */,
-				4EA1822E25D994E4009D1330 /* Jasper Lake.mp3 */,
-				4EA1822F25D994E5009D1330 /* Light Rain.mp3 */,
 				4EA1821325D994C5009D1330 /* Majestic Valley.mp3 */,
 				4EA1821C25D994CF009D1330 /* Ocean Waves.mp3 */,
 				4EA1822625D994DB009D1330 /* Oscillating Fan.mp3 */,
@@ -624,11 +686,9 @@
 				4EA1822425D994D8009D1330 /* Rain On Window.mp3 */,
 				4EA1823425D994E9009D1330 /* Thunderstorm.mp3 */,
 				4EA1823325D994E7009D1330 /* Train Ride.mp3 */,
-				4EA1821525D994C8009D1330 /* Washing Machine.mp3 */,
 				4EA1821B25D994CD009D1330 /* Waterfall.mp3 */,
 				4EA1823A25D994ED009D1330 /* White Noise Ocean Surf.mp3 */,
 				4EA1821925D994CA009D1330 /* White Noise.mp3 */,
-				4EA1821F25D994D4009D1330 /* Wind in Pines.mp3 */,
 			);
 			path = soundsScapes;
 			sourceTree = "<group>";
@@ -1061,18 +1121,22 @@
 				9D9BABEF25B8C2D400084507 /* Every Man Has Two Lives.mp3 in Resources */,
 				4EA1824B25D994F1009D1330 /* Ocean Waves.mp3 in Resources */,
 				4EA1831C25D99599009D1330 /* Relaxed Open-hearted Presence.mp3 in Resources */,
+				4EA1839825D9D0CF009D1330 /* Jasper Lake.mp3 in Resources */,
 				9D9BAC0725B8C2D400084507 /* You Are The One.mp3 in Resources */,
+				4EA1838025D9D086009D1330 /* Woman Laughing.mp3 in Resources */,
 				4EA182FE25D99599009D1330 /* Deep Sleep Relax.mp3 in Resources */,
-				4EA1824725D994F1009D1330 /* Washing Machine.mp3 in Resources */,
 				4EA4AED225B9E834009C2650 /* Start Every Day Perfectly.mp3 in Resources */,
 				4EA4AEE425B9E834009C2650 /* I'm Not A Hostage.mp3 in Resources */,
+				4EA1841B25D9D52E009D1330 /* California Beachside.mp3 in Resources */,
 				4EA4AED625B9E834009C2650 /* I Am Worthy.mp3 in Resources */,
 				4EA1831725D99599009D1330 /* 7 Days of Managing Stress.mp3 in Resources */,
+				4EA183BF25D9D166009D1330 /* Seagulls Calling.mp3 in Resources */,
 				9D9BAC1625B8C2D400084507 /* Your Time Has Come.mp3 in Resources */,
 				4EBBB5E625C0E5DA006D5B61 /* Can't Hurt Me.mp3 in Resources */,
 				4EA1831125D99599009D1330 /* Emergency Calm.mp3 in Resources */,
 				9D1FF06825D72EC700E26DDF /* UberMoveTextRegular.otf in Resources */,
 				4EA1825125D994F1009D1330 /* Pink Noise.mp3 in Resources */,
+				4EA183DD25D9D1BA009D1330 /* Black-capped Chickadee.mp3 in Resources */,
 				4EA182DA25D99599009D1330 /* Emotions Series.mp3 in Resources */,
 				4EA1831425D99599009D1330 /* Thomas & Friends Learn to Meditate.mp3 in Resources */,
 				4EA182EE25D99599009D1330 /* 7 Days of Self-Esteem.mp3 in Resources */,
@@ -1089,12 +1153,10 @@
 				9D9BAC3425B8C2D400084507 /* Rise & Grind.mp3 in Resources */,
 				4EA4AEDD25B9E834009C2650 /* Just Do It, Girl.mp3 in Resources */,
 				9D9BAC8225B8F80C00084507 /* Dear, Lord.mp3 in Resources */,
-				4EA1825825D994F1009D1330 /* Light Rain.mp3 in Resources */,
 				4EBBB60225C0F365006D5B61 /* Be The Hero You Need.mp3 in Resources */,
 				4EA182F925D99599009D1330 /* 7 Days of Calm.mp3 in Resources */,
-				4EA1824925D994F1009D1330 /* Coral Reef.mp3 in Resources */,
-				4EA1825725D994F1009D1330 /* Jasper Lake.mp3 in Resources */,
 				4EA4AED425B9E834009C2650 /* Your Life Means Something.mp3 in Resources */,
+				4EA183A025D9D0E3009D1330 /* Heavy Rain.mp3 in Resources */,
 				4EA182E425D99599009D1330 /* Loving-Kindness.mp3 in Resources */,
 				9D9BABFB25B8C2D400084507 /* bell.mp3 in Resources */,
 				4EBBB60125C0F365006D5B61 /* Outwork Your Competition.mp3 in Resources */,
@@ -1121,10 +1183,13 @@
 				4EA182EC25D99599009D1330 /* Mindful Walking.mp3 in Resources */,
 				4EBBB5E425C0E5DA006D5B61 /* Rise & Shine.mp3 in Resources */,
 				4EA1825A25D994F1009D1330 /* Thunderstorm.mp3 in Resources */,
+				4EA1839025D9D0BD009D1330 /* Coral Reef.mp3 in Resources */,
 				4EA1830025D99599009D1330 /* Calm Kids (Ages 3-4).mp3 in Resources */,
 				4EA4AED825B9E834009C2650 /* I Welcome Joy Into My Life.mp3 in Resources */,
 				9D9BAC2525B8C2D400084507 /* It's Okay To Not Be Okay.mp3 in Resources */,
+				4EA183C425D9D170009D1330 /* Whale Mating.mp3 in Resources */,
 				4EBBB5EB25C0E5DA006D5B61 /* Master The Morning.mp3 in Resources */,
+				4EA1840125D9D205009D1330 /* Tea Spoon Clinking.mp3 in Resources */,
 				4EA182F825D99599009D1330 /* Mindful Eating Series.mp3 in Resources */,
 				4EA1824125D994F1009D1330 /* Babbling Brook.mp3 in Resources */,
 				4EA1824F25D994F1009D1330 /* Camp Fire.mp3 in Resources */,
@@ -1135,7 +1200,6 @@
 				4EBBB5FD25C0F365006D5B61 /* Fix Your Life.mp3 in Resources */,
 				4EA4AED725B9E834009C2650 /* The Lion.mp3 in Resources */,
 				4EBBB5FA25C0F365006D5B61 /* Work Your Ass Off.mp3 in Resources */,
-				4EA1824E25D994F1009D1330 /* Wind in Pines.mp3 in Resources */,
 				9D9BAC3125B8C2D400084507 /* You're The Main Character.mp3 in Resources */,
 				9D9BAC0125B8C2D400084507 /* Wolf Is Always Scratching.mp3 in Resources */,
 				4EA182F325D99599009D1330 /* Softly Back to Sleep.mp3 in Resources */,
@@ -1144,22 +1208,27 @@
 				4EA182F725D99599009D1330 /* Daily Calm Highlights.mp3 in Resources */,
 				4EA182D625D99599009D1330 /* Deep Concentration.mp3 in Resources */,
 				4EBBB5E925C0E5DA006D5B61 /* Soft Morning.mp3 in Resources */,
+				4EA183F425D9D1EB009D1330 /* Oscilatting Fan.mp3 in Resources */,
+				4EA183AD25D9D106009D1330 /* Cardinals.mp3 in Resources */,
 				4EA1830225D99599009D1330 /* Saying Yes to Life.mp3 in Resources */,
 				4EBBB5FC25C0F365006D5B61 /* Take Back The Throne.mp3 in Resources */,
 				4EA182F625D99599009D1330 /* Returning to Now.mp3 in Resources */,
 				4EA4AED325B9E834009C2650 /* Greatness Defined.mp3 in Resources */,
 				4EA1831525D99599009D1330 /* How to Meditate.mp3 in Resources */,
 				4EA1825025D994F1009D1330 /* Rain On Window.mp3 in Resources */,
+				4EA183EF25D9D1E1009D1330 /* Crackling Fireplace.mp3 in Resources */,
 				4EA182ED25D99599009D1330 /* Restful Sleep.mp3 in Resources */,
 				4EA182EF25D99599009D1330 /* A Heart Less Heavy.mp3 in Resources */,
 				4EA182DC25D99599009D1330 /* Letting Go into Sleep.mp3 in Resources */,
 				9D9BAC7625B8F80C00084507 /* Good Morning.mp3 in Resources */,
-				4EA1824225D994F1009D1330 /* Crackling Fireplace.mp3 in Resources */,
+				4EA1841C25D9D52E009D1330 /* Central Park.mp3 in Resources */,
 				4EA1831D25D99599009D1330 /* Mindfulness with Mallika.mp3 in Resources */,
 				4EA182F525D99599009D1330 /* Dating Courageously.mp3 in Resources */,
 				4EA182FD25D99599009D1330 /* Calming Anxiety.mp3 in Resources */,
+				4EA183E725D9D1D2009D1330 /* American Crow.mp3 in Resources */,
 				4EA182FB25D99599009D1330 /* Body Scan.mp3 in Resources */,
 				4EA182E025D99599009D1330 /* 7 Days of Happiness.mp3 in Resources */,
+				4EA1841025D9D226009D1330 /* Steam Train Whistle.mp3 in Resources */,
 				4EA1830F25D99599009D1330 /* Calm Kids (Ages 11-13).mp3 in Resources */,
 				4EA1831925D99599009D1330 /* Forgiveness.mp3 in Resources */,
 				9D1FF06225D72EC700E26DDF /* UberMoveTextBold.otf in Resources */,
@@ -1171,9 +1240,10 @@
 				9D9BAC1325B8C2D400084507 /* Learn To Be Okay Alone.mp3 in Resources */,
 				4EA1830325D99599009D1330 /* Sleep Rhythm- Kumbhaka.mp3 in Resources */,
 				4EA182DF25D99599009D1330 /* Deep Sleep Release.mp3 in Resources */,
+				4EA183FC25D9D1FA009D1330 /* Washing Machine.mp3 in Resources */,
+				4EA183BA25D9D15A009D1330 /* Morning Crickets.mp3 in Resources */,
 				9D9BAC2225B8C2D400084507 /* Every Day Is A New Day.mp3 in Resources */,
 				4EA1825925D994F1009D1330 /* Train Ride.mp3 in Resources */,
-				4EA1825325D994F1009D1330 /* Heavy Rain.mp3 in Resources */,
 				4EA4AECD25B9E834009C2650 /* Perfect People.mp3 in Resources */,
 				9D9BAC0A25B8C2D400084507 /* There's Gonna Be Some Good.mp3 in Resources */,
 				4EA4AECE25B9E834009C2650 /* Money Comes To Me.mp3 in Resources */,
@@ -1184,10 +1254,12 @@
 				9D9BAC0425B8C2D400084507 /* newtrack2.mp3 in Resources */,
 				4EA1824A25D994F1009D1330 /* Waterfall.mp3 in Resources */,
 				4EA4AEDB25B9E834009C2650 /* Today I Look For The Good.mp3 in Resources */,
+				4EA183D325D9D1A0009D1330 /* Finches.mp3 in Resources */,
 				4EA1830725D99599009D1330 /* Relationship with Others Series.mp3 in Resources */,
 				4EA1824D25D994F1009D1330 /* Heart Beat.mp3 in Resources */,
 				4EA1825225D994F1009D1330 /* Oscillating Fan.mp3 in Resources */,
 				4EA1825525D994F1009D1330 /* Forest Ambience.mp3 in Resources */,
+				4EA183C925D9D188009D1330 /* Owl Hooting.mp3 in Resources */,
 				4EA4AEE025B9E834009C2650 /* Turn Wounds Into Wisdom.mp3 in Resources */,
 				4EA1830D25D99599009D1330 /* 21 Days of Calm.mp3 in Resources */,
 				4EA182FF25D99599009D1330 /* Calm Kids (Ages 7-10).mp3 in Resources */,
@@ -1204,7 +1276,9 @@
 				4EA1825D25D994F1009D1330 /* White Noise Ocean Surf.mp3 in Resources */,
 				4EA182D925D99599009D1330 /* Stillwater - Apple TV+.mp3 in Resources */,
 				4EA1831325D99599009D1330 /* Staying on Track.mp3 in Resources */,
+				4EA183D825D9D1AC009D1330 /* American Robin.mp3 in Resources */,
 				4EA1824625D994F1009D1330 /* Humpback Whale.mp3 in Resources */,
+				4EA1838825D9D0A6009D1330 /* Wind in Pines.mp3 in Resources */,
 				4EA1824825D994F1009D1330 /* White Noise.mp3 in Resources */,
 				4EA182F425D99599009D1330 /* Relationship with Self Series.mp3 in Resources */,
 				4EA182FC25D99599009D1330 /* Mindfulness in Daily Life.mp3 in Resources */,
@@ -1212,13 +1286,16 @@
 				4EA1824325D994F1009D1330 /* Evening Crickets.mp3 in Resources */,
 				9D9BAC0D25B8C2D400084507 /* Time To Wake Up.mp3 in Resources */,
 				4EBBB5EA25C0E5DA006D5B61 /* Get To Work.mp3 in Resources */,
+				4EA183E225D9D1C6009D1330 /* Songbirds.mp3 in Resources */,
 				9D8D248B25ABABEB00B4E69D /* Main.storyboard in Resources */,
 				4EA1830425D99599009D1330 /* Soundscape Meditation- Costa Rican Jungle.mp3 in Resources */,
 				9D95568E25D4AABD002B3E2E /* GoogleService-Info.plist in Resources */,
+				4EA1841525D9D4B2009D1330 /* Costa Rican Jungle.mp3 in Resources */,
 				9D9BAC2825B8C2D400084507 /* tickle.mp3 in Resources */,
 				4EA4AEE325B9E834009C2650 /* Excuses Don't Count.mp3 in Resources */,
 				4EA1830925D99599009D1330 /* Winnie the Pooh Series.mp3 in Resources */,
 				9D9BAC7925B8F80C00084507 /* Don't Hang Out With Losers.mp3 in Resources */,
+				4EA183CE25D9D193009D1330 /* Blue Jays.mp3 in Resources */,
 				9D9BABF825B8C2D400084507 /* Adhan-makkah.caf in Resources */,
 				9D9BABF525B8C2D400084507 /* Bitmap.png in Resources */,
 				4EA182D725D99599009D1330 /* Soundscape Meditation- California Beachside.mp3 in Resources */,
@@ -1226,7 +1303,9 @@
 				4EA1824425D994F1009D1330 /* City Streets.mp3 in Resources */,
 				9D9BAC2E25B8C2D400084507 /* Nobody Believes In You.mp3 in Resources */,
 				4EA1831B25D99599009D1330 /* Calm Kids (Ages 5-6).mp3 in Resources */,
+				4EA1840B25D9D219009D1330 /* Popping Popcorn.mp3 in Resources */,
 				4EA182E325D99599009D1330 /* Commuting.mp3 in Resources */,
+				4EA1840625D9D20E009D1330 /* Kettle Boiling.mp3 in Resources */,
 				4EA4AEDA25B9E834009C2650 /* My Body.mp3 in Resources */,
 				4EA182DE25D99599009D1330 /* College Collection.mp3 in Resources */,
 				4EA4AED925B9E834009C2650 /* I Am Grateful for My Blessings.mp3 in Resources */,
@@ -1238,6 +1317,7 @@
 				4EA1824025D994F1009D1330 /* City Rain.mp3 in Resources */,
 				4EA182DD25D99599009D1330 /* Deep Rest.mp3 in Resources */,
 				4EA1830A25D99599009D1330 /* World Cup Penalty Series.mp3 in Resources */,
+				4EA183A825D9D0FA009D1330 /* Light Rain.mp3 in Resources */,
 				4EA182D325D99599009D1330 /* Train Your Mind.mp3 in Resources */,
 				4EA4AEDE25B9E834009C2650 /* You Can't Do Something.mp3 in Resources */,
 				4EA182E725D99599009D1330 /* 7 Days of Sleep.mp3 in Resources */,

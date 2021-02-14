@@ -231,7 +231,7 @@ extension SoundscapesViewController:UICollectionViewDataSource,UICollectionViewD
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SoundPickCollectionViewCell", for: indexPath) as! SoundPickCollectionViewCell
             let sound = filteredSounds[indexPath.row]
             cell.playPauseButton.setImage(UIImage(named: "Bitmap"), for: .normal)
-            cell.coverImageView.image = UIImage(named: sound.image)
+            cell.coverImageView.image = UIImage(named: sound.image) ?? UIImage(named: "Nature of The Universe")
             
             if let selected = selectedSound {
                 if sound == selected{
