@@ -10,6 +10,7 @@
 		4E1EDA1425C23F97003970FB /* Never Hit Snooze Again.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E1EDA1325C23F97003970FB /* Never Hit Snooze Again.mp3 */; };
 		4E245DE125ADE7D000C8E57B /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E245DE025ADE7D000C8E57B /* Scheduler.swift */; };
 		4E245DF425ADEABE00C8E57B /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E245DF325ADEABE00C8E57B /* MediaViewController.swift */; };
+		4E2E37C525DC65E1006022F6 /* CalmUnlockCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E37C425DC65E1006022F6 /* CalmUnlockCollectionViewCell.swift */; };
 		4E60EC5C25AF7AAF0049D4ED /* SelectSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */; };
 		4E60EC6125AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */; };
 		4E72C91325BCD9D400DF3CF2 /* AddNewAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C91225BCD9D400DF3CF2 /* AddNewAlarmViewController.swift */; };
@@ -351,6 +352,7 @@
 		4E21DAD225B33F560025C8A3 /* Motivational Alarm Clock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Motivational Alarm Clock.entitlements"; sourceTree = "<group>"; };
 		4E245DE025ADE7D000C8E57B /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
 		4E245DF325ADEABE00C8E57B /* MediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
+		4E2E37C425DC65E1006022F6 /* CalmUnlockCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmUnlockCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSoundViewController.swift; sourceTree = "<group>"; };
 		4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPickCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E72C91225BCD9D400DF3CF2 /* AddNewAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAlarmViewController.swift; sourceTree = "<group>"; };
@@ -781,6 +783,7 @@
 				4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */,
 				4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */,
 				4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */,
+				4E2E37C425DC65E1006022F6 /* CalmUnlockCollectionViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1522,6 +1525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EA0A4E425B5021600D970A0 /* HomeViewController.swift in Sources */,
+				4E2E37C525DC65E1006022F6 /* CalmUnlockCollectionViewCell.swift in Sources */,
 				4EE5F1FB25AD25F800B9C2EE /* HomeTableViewController.swift in Sources */,
 				4E9D854925BCBC2900ED4767 /* SelectSoundForTabBarItemVC.swift in Sources */,
 				4E77485025AD2D140041674E /* NotificationName+Extension.swift in Sources */,

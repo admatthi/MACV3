@@ -199,7 +199,7 @@ extension SoundscapesViewController:UICollectionViewDataSource,UICollectionViewD
         if collectionView == tagsCollectionView {
             return soundsCategories.count
         }else{
-            return filteredSounds.count
+            return (!didpurchase && filteredSounds.count > 1) ? filteredSounds.count + 1 : filteredSounds.count
         }
         
     }
@@ -228,8 +228,12 @@ extension SoundscapesViewController:UICollectionViewDataSource,UICollectionViewD
             }
             return cell
         }else{
+            if indexPath.row == 2 && !didpurchase{
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalmUnlockCollectionViewCell", for: indexPath) as! CalmUnlockCollectionViewCell
+                return cell
+            }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SoundPickCollectionViewCell", for: indexPath) as! SoundPickCollectionViewCell
-            let sound = filteredSounds[indexPath.row]
+                let sound = (indexPath.row == 0 || indexPath.row == 1 && !didpurchase) ? filteredSounds[indexPath.row] : filteredSounds[indexPath.row - 1]
             cell.playPauseButton.setImage(UIImage(named: "Bitmap"), for: .normal)
             cell.coverImageView.image = UIImage(named: sound.image) ?? UIImage(named: "Nature of The Universe")
             
@@ -268,6 +272,7 @@ extension SoundscapesViewController:UICollectionViewDataSource,UICollectionViewD
 
 
             return cell
+            }
         }
 
     }
@@ -296,21 +301,36 @@ extension SoundscapesViewController:UICollectionViewDataSource,UICollectionViewD
             tagsCollectionView.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
             self.tagsCollectionView.reloadData()
         }else{
-            
-            let generator = UIImpactFeedbackGenerator(style: .heavy)
-            generator.impactOccurred()
-            
-            let sound = filteredSounds[indexPath.row]
-            selectedSound = sound
-            logcategorycollected(referrer: sound.soundName)
+           
+            if indexPath.row == 2 {
+                collectionView.alpha = 1
+                
+                if didpurchase {
+        
+                } else {
+                    let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc : PaywallViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "PaywallViewViewController") as! PaywallViewViewController
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
+//                    self.performSegue(withIdentifier: "AlarmToPayWall", sender: self)
+                }
+            }else{
+                let generator = UIImpactFeedbackGenerator(style: .heavy)
+                generator.impactOccurred()
+                
+                let sound = (indexPath.row == 0 || indexPath.row == 1) ? filteredSounds[indexPath.row] : filteredSounds[indexPath.row - 1]
+                selectedSound = sound
+                logcategorycollected(referrer: sound.soundName)
 
-            segueInfo.mediaLabel = sound.soundName
-            segueInfo.mediaID = sound.soundName
-            segueInfo.category = sound.category
-            segueInfo.imageName = sound.image
-            segueInfo.label = sound.title
-            playSound(selectedSound!.soundName)
-            self.collectionView.reloadData()
+                segueInfo.mediaLabel = sound.soundName
+                segueInfo.mediaID = sound.soundName
+                segueInfo.category = sound.category
+                segueInfo.imageName = sound.image
+                segueInfo.label = sound.title
+                playSound(selectedSound!.soundName)
+                self.collectionView.reloadData()
+            }
+
         }
     }
 
@@ -326,10 +346,15 @@ extension SoundscapesViewController:UICollectionViewDataSource,UICollectionViewD
         if collectionView == tagsCollectionView {
             return CGSize(width: 90, height: 30)
         }else{
-            
+            if indexPath.row == 2 && !didpurchase{
+                let bounds = UIScreen.main.bounds
+                let width = bounds.width
+                return CGSize(width: width, height: 70)
+            }else{
             let bounds = UIScreen.main.bounds
             let width = bounds.width
             return CGSize(width: width/2, height: 250)
+            }
         }
 
     }

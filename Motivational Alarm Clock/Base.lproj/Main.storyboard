@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -790,7 +790,9 @@ Cancel anytime.</string>
                                                                             <constraint firstAttribute="height" constant="108" id="eia-hJ-gRE"/>
                                                                         </constraints>
                                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <state key="normal" image="Bitmap"/>
+                                                                        <state key="normal">
+                                                                            <imageReference key="image" image="Bitmap" symbolScale="large"/>
+                                                                        </state>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
@@ -1927,7 +1929,7 @@ Cancel anytime.</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SoundPickCollectionViewCell" id="2w5-zQ-DOC" customClass="SoundPickCollectionViewCell" customModule="Motivational_Alarm_Clock" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="224"/>
+                                        <rect key="frame" x="113.5" y="0.0" width="187" height="224"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FOF-FT-h5o">
                                             <rect key="frame" x="0.0" y="0.0" width="187" height="224"/>
@@ -2017,6 +2019,44 @@ Cancel anytime.</string>
                                             <outlet property="topMainView" destination="VCb-qC-vVI" id="CPR-AZ-XgV"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalmUnlockCollectionViewCell" id="pAH-w3-4WA" customClass="CalmUnlockCollectionViewCell" customModule="Motivational_Alarm_Clock" customModuleProvider="target">
+                                        <rect key="frame" x="57" y="224" width="300" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="49n-wC-In5">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNW-or-QUW">
+                                                    <rect key="frame" x="20" y="10" width="260" height="23"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock Calm Premium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cF0-fs-g76">
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="23"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                            <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="cF0-fs-g76" secondAttribute="bottom" id="R5c-dc-deJ"/>
+                                                        <constraint firstItem="cF0-fs-g76" firstAttribute="leading" secondItem="RNW-or-QUW" secondAttribute="leading" id="pQb-ft-EdG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cF0-fs-g76" secondAttribute="trailing" id="puP-q5-1cA"/>
+                                                        <constraint firstItem="cF0-fs-g76" firstAttribute="top" secondItem="RNW-or-QUW" secondAttribute="top" id="xwW-vU-2b7"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="RNW-or-QUW" secondAttribute="bottom" constant="10" id="CeY-gH-F0W"/>
+                                                <constraint firstAttribute="trailing" secondItem="RNW-or-QUW" secondAttribute="trailing" constant="20" id="Ioj-1v-ogr"/>
+                                                <constraint firstItem="RNW-or-QUW" firstAttribute="leading" secondItem="49n-wC-In5" secondAttribute="leading" constant="20" id="QTt-OG-Gki"/>
+                                                <constraint firstItem="RNW-or-QUW" firstAttribute="top" secondItem="49n-wC-In5" secondAttribute="top" constant="10" id="TLx-bM-Ov8"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="300" height="43"/>
+                                        <connections>
+                                            <outlet property="mainView" destination="RNW-or-QUW" id="78k-w3-q0b"/>
+                                            <outlet property="titleLabel" destination="cF0-fs-g76" id="bfS-qF-FCQ"/>
+                                        </connections>
+                                    </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
@@ -2057,7 +2097,7 @@ Cancel anytime.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkY-xN-OuS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1088" y="1264"/>
+            <point key="canvasLocation" x="-1088.4057971014493" y="1263.6160714285713"/>
         </scene>
         <!--Motivation-->
         <scene sceneID="gxx-PW-poH">
@@ -2431,6 +2471,43 @@ Cancel anytime.</string>
                                             <outlet property="topMainView" destination="Ju7-Cx-Ch3" id="AKS-FN-qeT"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalmUnlockCollectionViewCell" id="xmu-BY-ctp" customClass="CalmUnlockCollectionViewCell" customModule="Motivational_Alarm_Clock" customModuleProvider="target">
+                                        <rect key="frame" x="187" y="90.5" width="222" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XkH-BS-av5">
+                                            <rect key="frame" x="0.0" y="0.0" width="222" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1FZ-6r-cmQ">
+                                                    <rect key="frame" x="20" y="10" width="182" height="23"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock Calm Premium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QS5-aU-xRh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="182" height="23"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                            <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="QS5-aU-xRh" secondAttribute="trailing" id="2A2-da-auA"/>
+                                                        <constraint firstItem="QS5-aU-xRh" firstAttribute="top" secondItem="1FZ-6r-cmQ" secondAttribute="top" id="LiT-42-oeS"/>
+                                                        <constraint firstItem="QS5-aU-xRh" firstAttribute="leading" secondItem="1FZ-6r-cmQ" secondAttribute="leading" id="XWb-KQ-jsN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="QS5-aU-xRh" secondAttribute="bottom" id="d5V-Uw-aNE"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1FZ-6r-cmQ" firstAttribute="leading" secondItem="XkH-BS-av5" secondAttribute="leading" constant="20" id="CUg-ra-pYM"/>
+                                                <constraint firstAttribute="trailing" secondItem="1FZ-6r-cmQ" secondAttribute="trailing" constant="20" id="Lf9-2a-YbN"/>
+                                                <constraint firstItem="1FZ-6r-cmQ" firstAttribute="top" secondItem="XkH-BS-av5" secondAttribute="top" constant="10" id="fqf-TB-2bN"/>
+                                                <constraint firstAttribute="bottom" secondItem="1FZ-6r-cmQ" secondAttribute="bottom" constant="10" id="i7S-oz-a1d"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="mainView" destination="1FZ-6r-cmQ" id="yhc-7j-kap"/>
+                                            <outlet property="titleLabel" destination="QS5-aU-xRh" id="FBD-ew-L0O"/>
+                                        </connections>
+                                    </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-H9-H9s">
@@ -2694,7 +2771,7 @@ Cancel anytime.</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SoundPickCollectionViewCell" id="R7i-kD-pIf" customClass="SoundPickCollectionViewCell" customModule="Motivational_Alarm_Clock" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="224"/>
+                                        <rect key="frame" x="113.5" y="0.0" width="187" height="224"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GvX-DG-YqR">
                                             <rect key="frame" x="0.0" y="0.0" width="187" height="224"/>
@@ -2782,6 +2859,44 @@ Cancel anytime.</string>
                                             <outlet property="selectCheckMarkButton" destination="fEp-bc-U5T" id="a84-X6-VEC"/>
                                             <outlet property="titleLabel" destination="z4T-qi-xYB" id="2gt-rk-Ikd"/>
                                             <outlet property="topMainView" destination="PNK-cc-yCW" id="pFZ-od-sFN"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalmUnlockCollectionViewCell" id="paH-Ev-oO3" customClass="CalmUnlockCollectionViewCell" customModule="Motivational_Alarm_Clock" customModuleProvider="target">
+                                        <rect key="frame" x="57" y="224" width="300" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="es2-V1-fxR">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYW-uf-SIa">
+                                                    <rect key="frame" x="20" y="10" width="260" height="23"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock Calm Premium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sI-si-VyW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="23"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                            <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="1sI-si-VyW" firstAttribute="leading" secondItem="KYW-uf-SIa" secondAttribute="leading" id="4dc-dy-gcu"/>
+                                                        <constraint firstAttribute="bottom" secondItem="1sI-si-VyW" secondAttribute="bottom" id="Sas-hB-b9u"/>
+                                                        <constraint firstItem="1sI-si-VyW" firstAttribute="top" secondItem="KYW-uf-SIa" secondAttribute="top" id="ZXl-fa-IO1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1sI-si-VyW" secondAttribute="trailing" id="cKb-99-cXo"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KYW-uf-SIa" firstAttribute="leading" secondItem="es2-V1-fxR" secondAttribute="leading" constant="20" id="J07-Mm-3MW"/>
+                                                <constraint firstAttribute="bottom" secondItem="KYW-uf-SIa" secondAttribute="bottom" constant="10" id="QuQ-n6-DqR"/>
+                                                <constraint firstAttribute="trailing" secondItem="KYW-uf-SIa" secondAttribute="trailing" constant="20" id="lLf-YH-tUH"/>
+                                                <constraint firstItem="KYW-uf-SIa" firstAttribute="top" secondItem="es2-V1-fxR" secondAttribute="top" constant="10" id="n4J-uh-BJA"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="300" height="43"/>
+                                        <connections>
+                                            <outlet property="mainView" destination="KYW-uf-SIa" id="l86-25-f1s"/>
+                                            <outlet property="titleLabel" destination="1sI-si-VyW" id="bxg-Cw-ZHG"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
