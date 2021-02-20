@@ -199,7 +199,8 @@ extension SoundscapesViewController:UICollectionViewDataSource,UICollectionViewD
         if collectionView == tagsCollectionView {
             return soundsCategories.count
         }else{
-            return (!didpurchase && filteredSounds.count > 1) ? filteredSounds.count + 1 : filteredSounds.count
+//            return (!didpurchase && filteredSounds.count > 1) ? filteredSounds.count + 1 : filteredSounds.count
+            return filteredSounds.count
         }
         
     }
@@ -228,12 +229,13 @@ extension SoundscapesViewController:UICollectionViewDataSource,UICollectionViewD
             }
             return cell
         }else{
-            if indexPath.row == 2 && !didpurchase{
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalmUnlockCollectionViewCell", for: indexPath) as! CalmUnlockCollectionViewCell
-                return cell
-            }else{
+//            if indexPath.row == 2 && !didpurchase{
+//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalmUnlockCollectionViewCell", for: indexPath) as! CalmUnlockCollectionViewCell
+//                return cell
+//            }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SoundPickCollectionViewCell", for: indexPath) as! SoundPickCollectionViewCell
-                let sound = (indexPath.row == 0 || indexPath.row == 1 && !didpurchase) ? filteredSounds[indexPath.row] : filteredSounds[indexPath.row - 1]
+//                let sound = (indexPath.row == 0 || indexPath.row == 1 && !didpurchase) ? filteredSounds[indexPath.row] : filteredSounds[indexPath.row - 1]
+            let sound = filteredSounds[indexPath.row]
             cell.playPauseButton.setImage(UIImage(named: "Bitmap"), for: .normal)
             cell.coverImageView.image = UIImage(named: sound.image) ?? UIImage(named: "Nature of The Universe")
             
@@ -273,7 +275,7 @@ extension SoundscapesViewController:UICollectionViewDataSource,UICollectionViewD
 
             return cell
             }
-        }
+//        }
 
     }
     
@@ -302,23 +304,24 @@ extension SoundscapesViewController:UICollectionViewDataSource,UICollectionViewD
             self.tagsCollectionView.reloadData()
         }else{
            
-            if indexPath.row == 2 {
-                collectionView.alpha = 1
-                
-                if didpurchase {
-        
-                } else {
-                    let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc : PaywallViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "PaywallViewViewController") as! PaywallViewViewController
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true, completion: nil)
-//                    self.performSegue(withIdentifier: "AlarmToPayWall", sender: self)
-                }
-            }else{
+//            if indexPath.row == 2 {
+//                collectionView.alpha = 1
+//
+//                if didpurchase {
+//
+//                } else {
+//                    let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                    let vc : PaywallViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "PaywallViewViewController") as! PaywallViewViewController
+//                    vc.modalPresentationStyle = .fullScreen
+//                    self.present(vc, animated: true, completion: nil)
+////                    self.performSegue(withIdentifier: "AlarmToPayWall", sender: self)
+//                }
+//            }else{
                 let generator = UIImpactFeedbackGenerator(style: .heavy)
                 generator.impactOccurred()
                 
-                let sound = (indexPath.row == 0 || indexPath.row == 1) ? filteredSounds[indexPath.row] : filteredSounds[indexPath.row - 1]
+//                let sound = (indexPath.row == 0 || indexPath.row == 1) ? filteredSounds[indexPath.row] : filteredSounds[indexPath.row - 1]
+            let sound = filteredSounds[indexPath.row]
                 selectedSound = sound
                 logcategorycollected(referrer: sound.soundName)
 
@@ -331,7 +334,7 @@ extension SoundscapesViewController:UICollectionViewDataSource,UICollectionViewD
                 self.collectionView.reloadData()
             }
 
-        }
+//        }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -346,15 +349,15 @@ extension SoundscapesViewController:UICollectionViewDataSource,UICollectionViewD
         if collectionView == tagsCollectionView {
             return CGSize(width: 90, height: 30)
         }else{
-            if indexPath.row == 2 && !didpurchase{
-                let bounds = UIScreen.main.bounds
-                let width = bounds.width
-                return CGSize(width: width, height: 70)
-            }else{
+//            if indexPath.row == 2 && !didpurchase{
+//                let bounds = UIScreen.main.bounds
+//                let width = bounds.width
+//                return CGSize(width: width, height: 70)
+//            }else{
             let bounds = UIScreen.main.bounds
             let width = bounds.width
             return CGSize(width: width/2, height: 250)
-            }
+//            }
         }
 
     }
