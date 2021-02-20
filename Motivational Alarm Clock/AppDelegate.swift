@@ -398,14 +398,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Void) {
         var index: Int = -1
         var soundName: String = ""
+        var title:String = ""
         if let userInfo = notification.userInfo {
             soundName = userInfo["soundName"] as! String
+            soundName = userInfo["title"] as! String
             index = userInfo["index"] as! Int
         }
         self.alarmModel = Alarms()
         self.alarmModel.alarms[index].onSnooze = false
         if identifier == Id.snoozeIdentifier {
-            alarmScheduler.setNotificationForSnooze(snoozeMinute: 9, soundName: soundName, index: index)
+            alarmScheduler.setNotificationForSnooze(snoozeMinute: 9, soundName: soundName, title: title, index: index)
             self.alarmModel.alarms[index].onSnooze = true
         }
         completionHandler()

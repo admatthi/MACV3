@@ -156,7 +156,7 @@ class HomeTableViewController: UITableViewController{
             print("switch on")
             let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()
-            alarmScheduler.setNotificationWithDate(alarmModel.alarms[index].date, onWeekdaysForNotify: alarmModel.alarms[index].repeatWeekdays, snoozeEnabled: alarmModel.alarms[index].snoozeEnabled, onSnooze: false, soundName: alarmModel.alarms[index].mediaLabel, index: index)
+            alarmScheduler.setNotificationWithDate(alarmModel.alarms[index].date, onWeekdaysForNotify: alarmModel.alarms[index].repeatWeekdays, snoozeEnabled: alarmModel.alarms[index].snoozeEnabled, onSnooze: false, soundName: alarmModel.alarms[index].mediaLabel, title:alarmModel.alarms[index].label , index: index)
             tableView.reloadData()
         }
         else {

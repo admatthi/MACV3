@@ -116,15 +116,15 @@ class Scheduler : AlarmSchedulerDelegate
         return d
     }
     
-    internal func setNotificationWithDate(_ date: Date, onWeekdaysForNotify weekdays:[Int], snoozeEnabled:Bool,  onSnooze: Bool, soundName: String, index: Int) {
+    internal func setNotificationWithDate(_ date: Date, onWeekdaysForNotify weekdays:[Int], snoozeEnabled:Bool,  onSnooze: Bool, soundName: String,title: String,index: Int) {
         let AlarmNotification: UILocalNotification = UILocalNotification()
-        AlarmNotification.alertBody = "Good Morning 😊"
+        AlarmNotification.alertBody = title
         AlarmNotification.alertAction = "Open App"
         AlarmNotification.category = "myAlarmCategory"
         AlarmNotification.soundName = soundName + ".mp3"
         AlarmNotification.timeZone = TimeZone.current
         let repeating: Bool = !weekdays.isEmpty
-        AlarmNotification.userInfo = ["snooze" : snoozeEnabled, "index": index, "soundName": soundName, "repeating" : repeating]
+        AlarmNotification.userInfo = ["snooze" : snoozeEnabled, "index": index, "soundName": soundName, "repeating" : repeating,"title":title]
         //repeat weekly if repeat weekdays are selected
         //no repeat with snooze notification
         if !weekdays.isEmpty && !onSnooze{
@@ -148,11 +148,11 @@ class Scheduler : AlarmSchedulerDelegate
         
     }
     
-    func setNotificationForSnooze(snoozeMinute: Int, soundName: String, index: Int) {
+    func setNotificationForSnooze(snoozeMinute: Int, soundName: String,title: String ,index: Int) {
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         let now = Date()
         let snoozeTime = (calendar as NSCalendar).date(byAdding: NSCalendar.Unit.minute, value: snoozeMinute, to: now, options:.matchStrictly)!
-        setNotificationWithDate(snoozeTime, onWeekdaysForNotify: [Int](), snoozeEnabled: true, onSnooze:true, soundName: soundName, index: index)
+        setNotificationWithDate(snoozeTime, onWeekdaysForNotify: [Int](), snoozeEnabled: true, onSnooze:true, soundName: soundName,title: title, index: index)
     }
     
     func reSchedule() {
@@ -162,7 +162,7 @@ class Scheduler : AlarmSchedulerDelegate
         for i in 0..<alarmModel.count{
             let alarm = alarmModel.alarms[i]
             if alarm.enabled {
-                setNotificationWithDate(alarm.date as Date, onWeekdaysForNotify: alarm.repeatWeekdays, snoozeEnabled: alarm.snoozeEnabled, onSnooze: false, soundName: alarm.mediaLabel, index: i)
+                setNotificationWithDate(alarm.date as Date, onWeekdaysForNotify: alarm.repeatWeekdays, snoozeEnabled: alarm.snoozeEnabled, onSnooze: false, soundName: alarm.mediaLabel,title: alarm.label, index: i)
             }
         }
     }
