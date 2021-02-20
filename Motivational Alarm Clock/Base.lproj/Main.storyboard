@@ -667,7 +667,6 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                     <connections>
                         <segue destination="teq-pc-U4c" kind="relationship" relationship="viewControllers" id="yct-qc-j6n"/>
                         <segue destination="aP2-4e-lLS" kind="relationship" relationship="viewControllers" id="IK5-qw-ute"/>
-                        <segue destination="gYK-jl-XIC" kind="relationship" relationship="viewControllers" id="gIv-eb-9xp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yX7-iI-EG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2390,7 +2389,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jFF-H3-k7C">
-                                <rect key="frame" x="0.0" y="143" width="414" height="669"/>
+                                <rect key="frame" x="0.0" y="143" width="414" height="718"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="rFf-zI-M9M">
                                     <size key="itemSize" width="187" height="224"/>
