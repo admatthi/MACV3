@@ -349,6 +349,29 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         let index = sender.tag
         alarmModel.alarms[index].enabled = sender.isOn
         if sender.isOn {
+            let date = alarmModel.alarms[index].date
+            if (date.timeIntervalSinceNow.sign == .minus) {
+                // date is in past
+                let calendar = Calendar.current
+                let time=calendar.dateComponents([.hour,.minute,.second], from: alarmModel.alarms[index].date)
+                let newDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                alarmModel.alarms[index].date = newDate
+                if (newDate.timeIntervalSinceNow.sign == .minus) {
+                    let calendar = Calendar.current
+                    let time=calendar.dateComponents([.hour,.minute,.second], from: alarmModel.alarms[index].date)
+                    let againNewDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                    let today = againNewDate
+                    if  let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today){
+                        alarmModel.alarms[index].date = tomorrow
+                    }
+                   
+                }
+                
+            }else if (date.timeIntervalSinceNow.sign == .plus) {
+                // date is in future
+            }
+            
+
             print("switch on")
             alarmScheduler.setNotificationWithDate(alarmModel.alarms[index].date, onWeekdaysForNotify: alarmModel.alarms[index].repeatWeekdays, snoozeEnabled: alarmModel.alarms[index].snoozeEnabled, onSnooze: false, soundName: alarmModel.alarms[index].mediaLabel, index: index)
             tableView.reloadData()
