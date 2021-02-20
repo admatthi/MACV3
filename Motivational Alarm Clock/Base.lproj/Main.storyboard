@@ -2330,11 +2330,11 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
             </objects>
             <point key="canvasLocation" x="893" y="876"/>
         </scene>
-        <!--Sounds-->
+        <!--Soundscapes-->
         <scene sceneID="WKe-xU-okR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gYK-jl-XIC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sounds" image="circle.lefthalf.fill" catalog="system" id="Ugh-ON-PEb"/>
+                    <tabBarItem key="tabBarItem" title="Soundscapes" image="circle.lefthalf.fill" catalog="system" id="Ugh-ON-PEb"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mit-xw-uUL">
@@ -2409,7 +2409,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ju7-Cx-Ch3">
                                                     <rect key="frame" x="17" y="10" width="160" height="204"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rise &amp; Grind" translatesAutoresizingMaskIntoConstraints="NO" id="3zZ-ny-cO0">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rise &amp; Grind" translatesAutoresizingMaskIntoConstraints="NO" id="3zZ-ny-cO0">
                                                             <rect key="frame" x="1" y="0.0" width="159" height="204"/>
                                                         </imageView>
                                                         <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0N-XY-xrp">
@@ -3002,7 +3002,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aal-4H-WkB"/>
+        <segue reference="AMb-Jd-Qxo"/>
         <segue reference="YON-42-if4"/>
     </inferredMetricsTieBreakers>
     <resources>
