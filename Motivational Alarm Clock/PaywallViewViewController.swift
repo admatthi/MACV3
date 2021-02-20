@@ -17,7 +17,7 @@ import AVFoundation
 import Kingfisher
 import FirebaseDatabase
 
-
+var slimeybool = Bool()
 
 
 @objc protocol SwiftPaywallDelegate {
@@ -182,7 +182,50 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
                                      AppEvents.logEvent(AppEvents.Name(rawValue: "paywallview"), parameters: ["referrer" : referrer])
                                  }
 
+//    Try 3 days free, then $19.99/year.
+//    Cancel anytime.
     
+    func queryforpaywall() {
+        
+        ref?.child("Users").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            
+            
+            if let slimey = value?["Slimey"] as? String {
+                
+                slimeybool = true
+                //
+                
+              
+                self.tapcontinue.setTitle("Try for FREE", for: .normal)
+        
+                self.leadingtext.text = "Try 3 days free, then $19.99/year. Cancel anytime."
+                
+            } else {
+                //
+                slimeybool = false
+                
+        
+                self.tapcontinue.setTitle("CONTINUE", for: .normal)
+                
+                self.leadingtext.text = "$19.99/year"
+
+                
+      
+            }
+            
+            if let discountcode = value?["DiscountCode"] as? String {
+                
+                
+            } else {
+                
+                
+            }
+        })
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -205,6 +248,8 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
             
        
             }
+        
+        queryforpaywall()
             
         }
     

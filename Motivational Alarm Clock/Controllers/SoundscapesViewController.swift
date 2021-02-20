@@ -22,14 +22,14 @@ class SoundscapesViewController: UIViewController ,AVAudioPlayerDelegate{
     
 //    var soundsCategories = ["Motivation","Prayers", "Meditation", "Fitness", "Money" ]
     
-    var soundsCategories = ["Popular", "Animals", "Nature", "Home"]
+    var soundsCategories = ["All", "Animals", "Nature", "Home"]
 
     func selectsound(referrer : String) {
                                      AppEvents.logEvent(AppEvents.Name(rawValue: "selectsound"), parameters: ["referrer" : referrer])
                                  }
 
 //    var soundsCategories = ["Motivation","Faith","Self Help","Fitness", "Social", "Business", "Philosophy", "Spirituality" ]
-    var selectedCategory = "Popular"
+    var selectedCategory = "All"
     @IBOutlet weak var tagsCollectionView: UICollectionView!
     @IBOutlet weak var collectionView: UICollectionView!
     var mediaLabel: String!

@@ -8,14 +8,19 @@
 
 import UIKit
 
+var color1 = UIColor(red: 0.97, green: 0.52, blue: 0.18, alpha: 1.00)
+
+var color2 = UIColor(red: 0.99, green: 0.42, blue: 0.20, alpha: 1.00)
+
+
+
 class CalmUnlockCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mainView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         DispatchQueue.main.async {
-            let color1 = #colorLiteral(red: 0.5191865563, green: 0.6777381301, blue: 0.9185937047, alpha: 1)
-            let color2 = #colorLiteral(red: 0.6489231586, green: 0.4896077514, blue: 0.9127531052, alpha: 1)
+        
             self.titleLabel.text = "Unlock Wake Premium"
             self.mainView.addGradientBackground(firstColor: color1, secondColor: color2)
             self.mainView.layer.cornerRadius = 10
