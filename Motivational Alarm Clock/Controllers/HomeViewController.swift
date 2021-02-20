@@ -373,12 +373,15 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             
 
             print("switch on")
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
             alarmScheduler.setNotificationWithDate(alarmModel.alarms[index].date, onWeekdaysForNotify: alarmModel.alarms[index].repeatWeekdays, snoozeEnabled: alarmModel.alarms[index].snoozeEnabled, onSnooze: false, soundName: alarmModel.alarms[index].mediaLabel, index: index)
             tableView.reloadData()
         }
         else {
             print("switch off")
-            
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
             turnoff(referrer: referrer)
             alarmScheduler.reSchedule()
             tableView.reloadData()
@@ -442,7 +445,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             addEditController.navigationItem.title = "Add Alarm"
             addEditController.modalPresentationStyle = .fullScreen
             let defaultSound = allSounds[0]
-            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Good Morning", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
+            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: defaultSound.soundName, mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
         }
         else if segue.identifier == Id.editSegueIdentifier {
             addEditController.navigationItem.title = "Edit Alarm"
