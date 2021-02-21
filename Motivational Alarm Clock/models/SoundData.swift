@@ -128,11 +128,13 @@ var allSounds:[Sounds] = [Sounds(soundName: "Rise & Grind", title: "Rise & Grind
 
             //motivation
             // Dating
-            Sounds(soundName: "Take Risk", title: "Take Risk", image: "Take Risk", category: "Dating"),Sounds(soundName: "Control Your Emotiosn", title: "Control Your Emotiosn", image: "Control Your Emotiosn", category: "Dating"),Sounds(soundName: "Do Something Great", title: "Do Something Great", image: "Do Something Great", category: "Dating"),Sounds(soundName: "Have A Plan", title: "Have A Plan", image: "Have A Plan", category: "Dating"),Sounds(soundName: "Ignore Your Fears", title: "IgnoreFear Can Paralyze YouYour Fears", image: "Ignore Your Fears", category: "Dating"),Sounds(soundName: "Fear Can Paralyze You", title: "Fear Can Paralyze You", image: "Fear Can Paralyze You", category: "Dating"),Sounds(soundName: "Follow Your Passion", title: "Follow Your Passion", image: "Follow Your Passion", category: "Dating"),Sounds(soundName: "We're Here Once", title: "We're Here Once", image: "We're Here Once", category: "Dating"),Sounds(soundName: "I'm Not What I Think I Am", title: "I'm Not What I Think I Am", image: "I'm Not What I Think I Am", category: "Dating"),Sounds(soundName: "Tell Yourself The Truth", title: "Tell Yourself The Truth", image: "Tell Yourself The Truth", category: "Dating"),Sounds(soundName: "Fail Your Way There", title: "Fail Your Way There", image: "Fail Your Way There", category: "Dating"),Sounds(soundName: "Low Expectations", title: "Low Expectations", image: "Low Expectations", category: "Dating")
+            Sounds(soundName: "Take Risk", title: "Take Risk", image: "Take Risk", category: "Dating"),Sounds(soundName: "Control Your Emotiosn", title: "Control Your Emotiosn", image: "Control Your Emotiosn", category: "Dating"),Sounds(soundName: "Do Something Great", title: "Do Something Great", image: "Do Something Great", category: "Dating"),Sounds(soundName: "Have A Plan", title: "Have A Plan", image: "Have A Plan", category: "Dating"),Sounds(soundName: "Ignore Your Fears", title: "IgnoreFear Can Paralyze YouYour Fears", image: "Ignore Your Fears", category: "Dating"),Sounds(soundName: "Fear Can Paralyze You", title: "Fear Can Paralyze You", image: "Fear Can Paralyze You", category: "Dating"),Sounds(soundName: "Follow Your Passion", title: "Follow Your Passion", image: "Follow Your Passion", category: "Dating"),Sounds(soundName: "We're Here Once", title: "We're Here Once", image: "We're Here Once", category: "Dating"),Sounds(soundName: "I'm Not What I Think I Am", title: "I'm Not What I Think I Am", image: "I'm Not What I Think I Am", category: "Dating"),Sounds(soundName: "Tell Yourself The Truth", title: "Tell Yourself The Truth", image: "Tell Yourself The Truth", category: "Dating"),Sounds(soundName: "Fail Your Way There", title: "Fail Your Way There", image: "Fail Your Way There", category: "Dating"),Sounds(soundName: "Low Expectations", title: "Low Expectations", image: "Low Expectations", category: "Dating"),
 
-
-
-            
+            //motivation
+            // Sounds
+            Sounds(soundName: "Nightingale", title: "Nightingale", image: "Nightingale", category: "Sounds"),Sounds(soundName: "Sparrow", title: "Sparrow", image: "Sparrow", category: "Sounds"),Sounds(soundName: "Hyena", title: "Hyena", image: "Hyena", category: "Sounds"),Sounds(soundName: "Buffalo", title: "Buffalo", image: "Buffalo", category: "Sounds"),
+            Sounds(soundName: "Bear Roar", title: "Bear Roar", image: "Bear Roar", category: "Sounds"),Sounds(soundName: "Dolphin Call", title: "Dolphin Call", image: "Dolphin Call", category: "Sounds"),Sounds(soundName: "Cougar Growl", title: "Cougar Growl", image: "Cougar Growl", category: "Sounds"),Sounds(soundName: "Jaguar Roar", title: "Jaguar Roar", image: "Jaguar Roar", category: "Sounds"),Sounds(soundName: "Tiger Roar", title: "Tiger Roar", image: "Tiger Roar", category: "Sounds"),Sounds(soundName: "Lion Roar", title: "Lion Roar", image: "Lion Roar", category: "Sounds"),Sounds(soundName: "Peacock", title: "Peacock", image: "Peacock", category: "Sounds"),Sounds(soundName: "Cuckoo", title: "Cuckoo", image: "Cuckoo", category: "Sounds"),Sounds(soundName: "Parrot", title: "Parrot", image: "Parrot", category: "Sounds"),Sounds(soundName: "Raven", title: "Raven", image: "Raven", category: "Sounds"),
+            Sounds(soundName: "Hawk", title: "Hawk", image: "Hawk", category: "Sounds"),Sounds(soundName: "Eagle", title: "Eagle", image: "Eagle", category: "Sounds"),Sounds(soundName: "Falcon", title: "Falcon", image: "Falcon", category: "Sounds"),Sounds(soundName: "Rooster", title: "Rooster", image: "Rooster", category: "Sounds"),Sounds(soundName: "Leopard Roar", title: "Leopard Roar", image: "Leopard Roar", category: "Sounds"),Sounds(soundName: "Swamp", title: "Swamp", image: "Swamp", category: "Sounds"),Sounds(soundName: "Waterfall", title: "Waterfall", image: "Waterfall", category: "Sounds"),
 
 
 
@@ -143,7 +145,6 @@ var allSounds:[Sounds] = [Sounds(soundName: "Rise & Grind", title: "Rise & Grind
 
 
 //    ,Sounds(soundName: "", title: "", image: "", category: "")
-
 
 
 
