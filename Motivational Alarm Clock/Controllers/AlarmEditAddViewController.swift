@@ -31,13 +31,13 @@ var isFromSoundVc = false
     override func viewDidAppear(_ animated: Bool) {
         
         referrer = "EditAlarm"
-        if firstinstall {
-            tapback.alpha = 0
-            
-        } else {
-            
-            tapback.alpha = 1
-        }
+//        if firstinstall {
+//            tapback.alpha = 0
+//
+//        } else {
+//
+//            tapback.alpha = 1
+//        }
     }
     
     @IBOutlet weak var tapback: UIButton!
@@ -83,7 +83,12 @@ var isFromSoundVc = false
         self.navigationController?.navigationBar.isHidden = true
         tableView.reloadData()
         snoozeEnabled = segueInfo.snoozeEnabled
-        
+        let newUserCreatedAlarm = UserDefaults.standard.bool(forKey: "newUserWithOutCreatingAlarm")
+        if newUserCreatedAlarm  {
+            tapback.isHidden = false
+        } else {
+            tapback.isHidden = true
+        }
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         self.navigationController?.navigationBar.backgroundColor = .clear

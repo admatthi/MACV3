@@ -37,6 +37,7 @@ class SelectSoundForTabBarItemVC: UIViewController ,AVAudioPlayerDelegate{
     var audioPlayer: AVAudioPlayer?
     override func viewDidLoad() {
         allSounds.shuffle()
+        allSounds = allSounds.sorted { $0.popular ?? 0 > $1.popular ?? 0 }
         let defaultSound = allSounds[0]
     segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: defaultSound.title, mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
        let firstFilteredSounds = allSounds.filter({$0.category == selectedCategory})

@@ -405,6 +405,7 @@ struct Sounds:Equatable {
     var title:String
     var image:String
     var category:String
+    var popular:Int? = 0
     static func == (lhs: Sounds, rhs: Sounds) -> Bool {
             return lhs.category == rhs.category && lhs.title == rhs.title && lhs.image == rhs.image  && lhs.soundName == rhs.soundName
         }

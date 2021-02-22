@@ -146,6 +146,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         super.viewWillAppear(animated)
         self.selectedAlarm = nil
         allSounds.shuffle()
+        allSounds = allSounds.sorted { $0.popular ?? 0 < $1.popular ?? 0 }
         alarmModel = Alarms()
         self.tableView.reloadData()
 //        if alarmModel.alarms.count > 0 {
@@ -445,6 +446,10 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         if segue.identifier == Id.addSegueIdentifier {
             addEditController.navigationItem.title = "Add Alarm"
             addEditController.modalPresentationStyle = .fullScreen
+            
+            // pin default logic for sound
+//            allSounds = allSounds.sorted { $0.popular ?? 0 > $1.popular ?? 0 }
+
             let firstFilteredSounds = allSounds.filter({$0.category == selectedCategory})
             let defaultSound = firstFilteredSounds[0]
             addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: defaultSound.soundName, mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
