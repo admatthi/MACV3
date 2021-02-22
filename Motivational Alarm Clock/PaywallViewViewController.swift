@@ -208,7 +208,7 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
                 slimeybool = false
                 
         
-                self.tapcontinue.setTitle("CONTINUE", for: .normal)
+                self.tapcontinue.setTitle("$19.99/year", for: .normal)
                 
                 self.leadingtext.text = "$19.99/year"
 
