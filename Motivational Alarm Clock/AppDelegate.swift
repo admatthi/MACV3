@@ -52,10 +52,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUeRRXjCEWsd", appUserID: uid)
         
         let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc : UITabBarController = mainStoryboardIpad.instantiateViewController(withIdentifier: "mainTabbarController") as! UITabBarController
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = vc
-        self.window?.makeKeyAndVisible()
+        let newUserCreatedAlarm = UserDefaults.standard.bool(forKey: "newUserWithOutCreatingAlarm")
+        if newUserCreatedAlarm  {
+            print("Not first launch.")
+            let vc : UITabBarController = mainStoryboardIpad.instantiateViewController(withIdentifier: "mainTabbarController") as! UITabBarController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+        } else {
+            print("First launch, setting UserDefault.")
+            let vc : UINavigationController = mainStoryboardIpad.instantiateViewController(withIdentifier: "MotivationNavigationController") as! UINavigationController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+        }
+
         FirebaseApp.configure()
         ref = Database.database().reference()
         db = Firestore.firestore()

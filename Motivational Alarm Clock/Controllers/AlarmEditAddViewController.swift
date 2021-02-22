@@ -120,8 +120,7 @@ var isFromSoundVc = false
     @IBAction func saveEditAlarm(_ sender: AnyObject) {
         
         firstinstall = false
-        
-
+//         didpurchase = true
                 if didpurchase {
                     let interval = Date() - self.datePicker.date
                     print(interval.day)
@@ -156,6 +155,20 @@ var isFromSoundVc = false
                             viewController.selectedIndex = 0
                         }
                         
+                    }
+                    let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+                    let newUserCreatedAlarm = UserDefaults.standard.bool(forKey: "newUserWithOutCreatingAlarm")
+                    if newUserCreatedAlarm  {
+
+                    } else {
+                        UserDefaults.standard.setValue(true,forKey: "newUserWithOutCreatingAlarm")
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        print("Not first launch.")
+                        let vc : UITabBarController = mainStoryboardIpad.instantiateViewController(withIdentifier: "mainTabbarController") as! UITabBarController
+                        appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
+                        appDelegate.window?.rootViewController = vc
+                        appDelegate.window?.makeKeyAndVisible()
                     }
 //                    self.performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
                     NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)

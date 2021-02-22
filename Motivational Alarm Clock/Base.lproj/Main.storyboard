@@ -2120,7 +2120,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
         <!--Motivation-->
         <scene sceneID="gxx-PW-poH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="aP2-4e-lLS" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MotivationNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="aP2-4e-lLS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Motivation" image="circle.circle" catalog="system" id="kHR-BE-fey"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
