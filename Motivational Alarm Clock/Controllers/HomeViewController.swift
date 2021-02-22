@@ -21,11 +21,12 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     @IBOutlet weak var tableView: UITableView!
     var audioPlayer: AVAudioPlayer?
     var ifAlreadyPresented = false
-    
+    var soundsCategories = ["Popular", "All", "Inspiration", "Affirmations", "Self Help", "Career", "Dating", "Sounds"]
+    var selectedCategory = "Popular"
     override func viewDidAppear(_ animated: Bool) {
         
         referrer = "HomeAlarm"
-        
+        allSounds = allSounds.filter({$0.category == "Popular" || $0.category == "All" || $0.category == "Inspiration" || $0.category == "Affirmations" || $0.category == "Self Help" || $0.category == "Career" || $0.category == "Dating" || $0.category == "Sounds" } )
         if didpurchase {
             
             
@@ -444,7 +445,8 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         if segue.identifier == Id.addSegueIdentifier {
             addEditController.navigationItem.title = "Add Alarm"
             addEditController.modalPresentationStyle = .fullScreen
-            let defaultSound = allSounds[0]
+            let firstFilteredSounds = allSounds.filter({$0.category == selectedCategory})
+            let defaultSound = firstFilteredSounds[0]
             addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: defaultSound.soundName, mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
         }
         else if segue.identifier == Id.editSegueIdentifier {
