@@ -387,7 +387,6 @@ var isFromSoundVc = false
             segueInfo.mediaID = ""
             segueInfo.imageName = sound.image
             segueInfo.category = sound.category
-            segueInfo.label = sound.soundName
             
         }
         

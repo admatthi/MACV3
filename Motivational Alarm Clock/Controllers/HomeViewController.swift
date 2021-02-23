@@ -148,6 +148,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         allSounds.shuffle()
         allSounds = allSounds.sorted { $0.popular ?? 0 < $1.popular ?? 0 }
         alarmModel = Alarms()
+        addAlarmForNewUsers()
         self.tableView.reloadData()
 //        if alarmModel.alarms.count > 0 {
 //            editButton.isHidden = false
@@ -436,7 +437,49 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             alarmScheduler.reSchedule()
         }
     }
-    
+    func addAlarmForNewUsers()
+    {
+       let isInitialAlrmCreated = UserDefaults.standard.bool(forKey: "isInitialAlrmCreated")
+        if !isInitialAlrmCreated{
+            allSounds = allSounds.sorted { $0.popular ?? 0 < $1.popular ?? 0 }
+            let filteredSounds = allSounds.filter({$0.category == selectedCategory})
+            let firstSound = filteredSounds[0]
+            let secondSound = filteredSounds[1]
+            let firstDate = Calendar.current.date(bySettingHour: 8, minute: 30, second: 0, of: Date())!
+            let secondDate = Calendar.current.date(bySettingHour: 9, minute: 30, second: 0, of: Date())!
+            var tempAlarm = Alarm()
+            tempAlarm.date = firstDate
+            tempAlarm.label = "Good Morning"
+            tempAlarm.enabled = true
+            tempAlarm.mediaLabel = firstSound.soundName
+            tempAlarm.mediaID = firstSound.soundName
+            tempAlarm.snoozeEnabled = false
+            tempAlarm.imageName = firstSound.image
+            tempAlarm.category = firstSound.category
+            tempAlarm.repeatWeekdays = []
+            tempAlarm.uuid = UUID().uuidString
+            tempAlarm.onSnooze = false
+            tempAlarm.enabled = false
+            alarmModel.alarms.append(tempAlarm)
+            var tempAlarm2 = Alarm()
+            tempAlarm2.date = secondDate
+            tempAlarm2.label = "Good Morning"
+            tempAlarm2.enabled = true
+            tempAlarm2.mediaLabel = secondSound.soundName
+            tempAlarm2.mediaID = secondSound.soundName
+            tempAlarm2.snoozeEnabled = false
+            tempAlarm2.imageName = secondSound.image
+            tempAlarm2.category = secondSound.category
+            tempAlarm2.repeatWeekdays = []
+            tempAlarm2.uuid = UUID().uuidString
+            tempAlarm2.onSnooze = false
+            tempAlarm2.enabled = false
+            alarmModel.alarms.append(tempAlarm2)
+            alarmScheduler.reSchedule()
+            NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
+            UserDefaults.standard.setValue(true, forKey: "isInitialAlrmCreated")
+        }
+    }
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -452,7 +495,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 
             let firstFilteredSounds = allSounds.filter({$0.category == selectedCategory})
             let defaultSound = firstFilteredSounds[0]
-            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: defaultSound.soundName, mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
+            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
         }
         else if segue.identifier == Id.editSegueIdentifier {
             addEditController.navigationItem.title = "Edit Alarm"
