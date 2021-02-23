@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Wake Up.jpeg",
-      "idiom" : "universal"
+      "filename" : "Wake Up.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
