@@ -146,7 +146,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         super.viewWillAppear(animated)
         self.selectedAlarm = nil
         allSounds.shuffle()
-        allSounds = allSounds.sorted { $0.popular ?? 0 < $1.popular ?? 0 }
+        allSounds = allSounds.sorted { $0.popular ?? 0 > $1.popular ?? 0 }
         alarmModel = Alarms()
         addAlarmForNewUsers()
         self.tableView.reloadData()
@@ -441,15 +441,14 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     {
        let isInitialAlrmCreated = UserDefaults.standard.bool(forKey: "isInitialAlrmCreated")
         if !isInitialAlrmCreated{
-            allSounds = allSounds.sorted { $0.popular ?? 0 < $1.popular ?? 0 }
+            allSounds = allSounds.sorted { $0.popular ?? 0 > $1.popular ?? 0 }
             let filteredSounds = allSounds.filter({$0.category == selectedCategory})
             let firstSound = filteredSounds[0]
-            let secondSound = filteredSounds[1]
             let firstDate = Calendar.current.date(bySettingHour: 8, minute: 30, second: 0, of: Date())!
-            let secondDate = Calendar.current.date(bySettingHour: 9, minute: 30, second: 0, of: Date())!
+            let secondDate = Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!
             var tempAlarm = Alarm()
             tempAlarm.date = firstDate
-            tempAlarm.label = "Good Morning"
+            tempAlarm.label = "Alarm"
             tempAlarm.enabled = true
             tempAlarm.mediaLabel = firstSound.soundName
             tempAlarm.mediaID = firstSound.soundName
@@ -463,13 +462,13 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             alarmModel.alarms.append(tempAlarm)
             var tempAlarm2 = Alarm()
             tempAlarm2.date = secondDate
-            tempAlarm2.label = "Good Morning"
+            tempAlarm2.label = "Alarm"
             tempAlarm2.enabled = true
-            tempAlarm2.mediaLabel = secondSound.soundName
-            tempAlarm2.mediaID = secondSound.soundName
+            tempAlarm2.mediaLabel = firstSound.soundName
+            tempAlarm2.mediaID = firstSound.soundName
             tempAlarm2.snoozeEnabled = false
-            tempAlarm2.imageName = secondSound.image
-            tempAlarm2.category = secondSound.category
+            tempAlarm2.imageName = firstSound.image
+            tempAlarm2.category = firstSound.category
             tempAlarm2.repeatWeekdays = []
             tempAlarm2.uuid = UUID().uuidString
             tempAlarm2.onSnooze = false

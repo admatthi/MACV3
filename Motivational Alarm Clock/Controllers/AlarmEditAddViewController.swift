@@ -83,12 +83,12 @@ var isFromSoundVc = false
         self.navigationController?.navigationBar.isHidden = true
         tableView.reloadData()
         snoozeEnabled = segueInfo.snoozeEnabled
-        let newUserCreatedAlarm = UserDefaults.standard.bool(forKey: "newUserWithOutCreatingAlarm")
-        if newUserCreatedAlarm  {
-            tapback.isHidden = false
-        } else {
-            tapback.isHidden = true
-        }
+//        let newUserCreatedAlarm = UserDefaults.standard.bool(forKey: "newUserWithOutCreatingAlarm")
+//        if newUserCreatedAlarm  {
+//            tapback.isHidden = false
+//        } else {
+//            tapback.isHidden = true
+//        }
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         self.navigationController?.navigationBar.backgroundColor = .clear
@@ -358,7 +358,12 @@ var isFromSoundVc = false
 //            dist.mediaID = segueInfo.mediaID
             dist.segueInfo = segueInfo
             dist.date = datePicker.date
-            dist.selectedSound = Sounds(soundName: segueInfo.mediaLabel, title: segueInfo.imageName, image: segueInfo.imageName, category: segueInfo.category)
+            let sound = allSounds.filter({$0.soundName == segueInfo.mediaLabel && $0.image == segueInfo.imageName && $0.category == segueInfo.category && $0.popular == 1 })
+            var popular = 0
+            if sound.count > 0 {
+                popular = 1
+            }
+            dist.selectedSound = Sounds(soundName: segueInfo.mediaLabel, title: segueInfo.imageName, image: segueInfo.imageName, category: segueInfo.category,popular: popular)
         }
         else if segue.identifier == Id.labelSegueIdentifier {
             let dist = segue.destination as! TitleEditViewController

@@ -87,13 +87,13 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         
         referrer = "SelectSound"
 
-        if firstinstall {
-            tapback.alpha = 0
-            
-        } else {
-            
-            tapback.alpha = 1
-        }
+//        if firstinstall {
+//            tapback.alpha = 0
+//            
+//        } else {
+//            
+//            tapback.alpha = 1
+//        }
     }
     @IBAction func saveButtonAction(_ sender: Any) {
         

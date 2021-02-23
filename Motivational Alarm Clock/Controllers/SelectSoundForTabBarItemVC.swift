@@ -36,7 +36,6 @@ class SelectSoundForTabBarItemVC: UIViewController ,AVAudioPlayerDelegate{
     var soundtitle:String!
     var audioPlayer: AVAudioPlayer?
     override func viewDidLoad() {
-        allSounds.shuffle()
         allSounds = allSounds.sorted { $0.popular ?? 0 > $1.popular ?? 0 }
         let defaultSound = allSounds[0]
     segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
@@ -96,6 +95,7 @@ class SelectSoundForTabBarItemVC: UIViewController ,AVAudioPlayerDelegate{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+        allSounds = allSounds.sorted { $0.popular ?? 0 > $1.popular ?? 0 }
         tagSelection(tag: selectedCategory, isFirst: false)
     }
     override func viewWillDisappear(_ animated: Bool) {
