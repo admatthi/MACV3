@@ -209,7 +209,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func scheduleAppRefresh() {
          let request = BGAppRefreshTaskRequest(identifier: "com.aatech.wakeSchedule")
 
-         request.earliestBeginDate = Date(timeIntervalSinceNow: 60 * 60) // Refresh after 60 minutes.
+         request.earliestBeginDate = Date(timeIntervalSinceNow: 60 * 75) // Refresh after 60 minutes.
 
          do {
              try BGTaskScheduler.shared.submit(request)
