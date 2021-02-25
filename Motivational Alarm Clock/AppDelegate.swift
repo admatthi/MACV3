@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
         uid = UIDevice.current.identifierForVendor!.uuidString
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.aatech.wake", using: nil) { task in
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.aatech.wakeSchedule", using: nil) { task in
             self.scheduleTaskForAudioPlaying()
             task.setTaskCompleted(success: true)
             self.scheduleAppRefresh()
@@ -207,7 +207,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
          }
     }
     func scheduleAppRefresh() {
-         let request = BGAppRefreshTaskRequest(identifier: "com.aatech.wake")
+         let request = BGAppRefreshTaskRequest(identifier: "com.aatech.wakeSchedule")
 
          request.earliestBeginDate = Date(timeIntervalSinceNow: 60 * 60) // Refresh after 60 minutes.
 
