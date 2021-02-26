@@ -114,6 +114,8 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         alarmScheduler.checkNotification()
         tableView.allowsSelectionDuringEditing = true
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
+        let notificationCenter = NotificationCenter.default
+            notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         self.navigationController?.navigationBar.isHidden = true
         var error: NSError?
         do {
@@ -141,7 +143,12 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         
 
     }
- 
+    @objc func appMovedToBackground() {
+            // do whatever event you want
+        self.selectedAlarm = nil
+        self.tableView.reloadData()
+        stopSound()
+        }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.selectedAlarm = nil
@@ -158,6 +165,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         alarmScheduler.reSchedule()
         self.navigationController?.navigationBar.isHidden = true
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         stopSound()
