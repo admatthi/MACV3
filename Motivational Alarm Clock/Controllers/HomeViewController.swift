@@ -101,7 +101,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
                                      AppEvents.logEvent(AppEvents.Name(rawValue: "homeview"), parameters: ["referrer" : referrer])
                                  }
     override func viewDidLoad() {
-        
+        setupTodayorFutureDate()
         ref = Database.database().reference()
 
         homeview(referrer: referrer)
@@ -378,7 +378,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             print("switch on")
             let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()
-            alarmScheduler.setNotificationWithDate(alarmModel.alarms[index].date, onWeekdaysForNotify: alarmModel.alarms[index].repeatWeekdays, snoozeEnabled: alarmModel.alarms[index].snoozeEnabled, onSnooze: false, soundName: alarmModel.alarms[index].mediaLabel,title:alarmModel.alarms[index].label , index: index)
+            alarmScheduler.reSchedule()
             tableView.reloadData()
         }
         else {
@@ -390,7 +390,34 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             tableView.reloadData()
         }
     }
-    
+    func setupTodayorFutureDate(){
+        for (index,alarm) in alarmModel.alarms.enumerated(){
+            let date = alarmModel.alarms[index].date
+            if (date.timeIntervalSinceNow.sign == .minus) {
+                // date is in past
+                let calendar = Calendar.current
+                let time=calendar.dateComponents([.hour,.minute,.second], from: alarmModel.alarms[index].date)
+                let newDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                alarmModel.alarms[index].date = newDate
+                if (newDate.timeIntervalSinceNow.sign == .minus) {
+                    let calendar = Calendar.current
+                    let time=calendar.dateComponents([.hour,.minute,.second], from: alarmModel.alarms[index].date)
+                    let againNewDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                    let today = againNewDate
+                    if  let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today){
+                        alarmModel.alarms[index].date = tomorrow
+                    }
+                   
+                }
+                
+            }else if (date.timeIntervalSinceNow.sign == .plus) {
+                // date is in future
+            }
+            
+            
+        }
+        alarmScheduler.reSchedule()
+    }
     func turnoff(referrer : String) {
                                      AppEvents.logEvent(AppEvents.Name(rawValue: "turnoff"), parameters: ["referrer" : referrer])
                                  }
