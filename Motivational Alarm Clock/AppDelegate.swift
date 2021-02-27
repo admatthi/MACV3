@@ -154,7 +154,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
                 audioPlayer.stop()
             }
              let alarmmodel = Alarms()
-             var alarms = alarmmodel.alarms
+            var alarms = alarmmodel.alarms.filter({$0.enabled == true})
              alarms.sort(by: { $0.date < $1.date })
              
              if alarms.count > 0 {
@@ -549,7 +549,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         self.scheduleAppRefresh()
 
         let alarmmodel = Alarms()
-        var alarms = alarmmodel.alarms
+        var alarms = alarmmodel.alarms.filter({$0.enabled == true})
         alarms.sort(by: { $0.date < $1.date })
         
         if alarms.count > 0 {
