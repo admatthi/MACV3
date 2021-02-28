@@ -182,6 +182,9 @@
 		9D1FF06925D72EC700E26DDF /* UberMoveTextRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05E25D72EC700E26DDF /* UberMoveTextRegular.otf */; };
 		9D1FF06A25D72EC700E26DDF /* UberMoveTextRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1FF05E25D72EC700E26DDF /* UberMoveTextRegular.otf */; };
 		9D225C7425BDCFCB00232E01 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D225C7325BDCFCB00232E01 /* TabBarViewController.swift */; };
+		9D8C8B4225EAF6AB00E010E0 /* Ray Lewis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D8C8B4125EAF6AB00E010E0 /* Ray Lewis.mp3 */; };
+		9D8C8B4325EAF6AB00E010E0 /* Ray Lewis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D8C8B4125EAF6AB00E010E0 /* Ray Lewis.mp3 */; };
+		9D8C8B4425EAF6AB00E010E0 /* Ray Lewis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D8C8B4125EAF6AB00E010E0 /* Ray Lewis.mp3 */; };
 		9D8D248425ABABEB00B4E69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248325ABABEB00B4E69D /* AppDelegate.swift */; };
 		9D8D248825ABABEB00B4E69D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248725ABABEB00B4E69D /* ViewController.swift */; };
 		9D8D248B25ABABEB00B4E69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D248925ABABEB00B4E69D /* Main.storyboard */; };
@@ -483,6 +486,7 @@
 		9D1FF05D25D72EC600E26DDF /* UberMoveTextLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UberMoveTextLight.otf; sourceTree = "<group>"; };
 		9D1FF05E25D72EC700E26DDF /* UberMoveTextRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UberMoveTextRegular.otf; sourceTree = "<group>"; };
 		9D225C7325BDCFCB00232E01 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = "Motivational Alarm Clock/TabBarViewController.swift"; sourceTree = SOURCE_ROOT; };
+		9D8C8B4125EAF6AB00E010E0 /* Ray Lewis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ray Lewis.mp3"; sourceTree = "<group>"; };
 		9D8D248025ABABEB00B4E69D /* Motivational Alarm Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Motivational Alarm Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8D248325ABABEB00B4E69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D8D248725ABABEB00B4E69D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -732,6 +736,7 @@
 				4EBBB5F325C0F363006D5B61 /* Take Back The Throne.mp3 */,
 				4EBBB5F225C0F363006D5B61 /* Why Do You Want to Workout?.mp3 */,
 				4EBBB5F125C0F363006D5B61 /* Work Your Ass Off.mp3 */,
+				9D8C8B4125EAF6AB00E010E0 /* Ray Lewis.mp3 */,
 				4EBBB5F525C0F364006D5B61 /* You're Guilty.mp3 */,
 				4EA4AEC925B9E834009C2650 /* Get Your Money Up.mp3 */,
 				4EBBB5E325C0E5DA006D5B61 /* 4-00 AM.mp3 */,
@@ -1130,6 +1135,7 @@
 				4E6C2B6825E15A2000483274 /* Attention Doesn't Matter.mp3 in Resources */,
 				4EA4AED125B9E834009C2650 /* Good Morning You Baddie.mp3 in Resources */,
 				4EA4AEDF25B9E834009C2650 /* Awaken The Mind.mp3 in Resources */,
+				9D8C8B4225EAF6AB00E010E0 /* Ray Lewis.mp3 in Resources */,
 				9D9BAC7025B8F80C00084507 /* God Is Testing Your Faith.mp3 in Resources */,
 				4E6C2B6E25E15A2000483274 /* Look Where You Need To.mp3 in Resources */,
 				4EA4AEDC25B9E834009C2650 /* Wake Up!.mp3 in Resources */,
@@ -1215,6 +1221,7 @@
 				9D1FF06325D72EC700E26DDF /* UberMoveTextBold.otf in Resources */,
 				9D9BABFF25B8C2D400084507 /* Don't You Give Up.mp3 in Resources */,
 				9D9BABF625B8C2D400084507 /* Bitmap.png in Resources */,
+				9D8C8B4325EAF6AB00E010E0 /* Ray Lewis.mp3 in Resources */,
 				9D9BAC0B25B8C2D400084507 /* There's Gonna Be Some Good.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1258,6 +1265,7 @@
 				9D1FF06425D72EC700E26DDF /* UberMoveTextBold.otf in Resources */,
 				9D9BAC0025B8C2D400084507 /* Don't You Give Up.mp3 in Resources */,
 				9D9BABF725B8C2D400084507 /* Bitmap.png in Resources */,
+				9D8C8B4425EAF6AB00E010E0 /* Ray Lewis.mp3 in Resources */,
 				9D9BAC0C25B8C2D400084507 /* There's Gonna Be Some Good.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1585,7 +1593,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.5;
+				MARKETING_VERSION = 2.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aatech.wake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1606,7 +1614,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.5;
+				MARKETING_VERSION = 2.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aatech.wake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
