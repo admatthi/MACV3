@@ -55,6 +55,12 @@ class AddNewAlarmViewController: UIViewController {
         
         super.viewWillAppear(animated)
     }
+    
+    
+    func tapsave(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "tapsave"), parameters: ["referrer" : referrer])
+                                 }
+    
     override func viewDidAppear(_ animated: Bool) {
         
         referrer = "SelectTime"
@@ -74,7 +80,7 @@ class AddNewAlarmViewController: UIViewController {
         
         firstinstall = false
 
-
+        tapsave(referrer: referrer)
                 if didpurchase {
                     if let sound = selectedSound {
                         

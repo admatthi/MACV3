@@ -1805,7 +1805,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEH-7W-9AI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1594" y="876"/>
+            <point key="canvasLocation" x="1629" y="876"/>
         </scene>
         <!--Pick A Sound-->
         <scene sceneID="xSN-uf-bSA">
