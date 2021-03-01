@@ -125,6 +125,7 @@ var isFromSoundVc = false
     @IBAction func saveEditAlarm(_ sender: AnyObject) {
         
         firstinstall = false
+        tapsave(referrer: referrer)
 //         didpurchase = true
                 if didpurchase {
                     let interval = Date() - self.datePicker.date
@@ -329,7 +330,9 @@ var isFromSoundVc = false
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
 
-    
+    func tapsave(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "tapsave"), parameters: ["referrer" : referrer])
+                                 }
     func turnoff(referrer : String) {
                                      AppEvents.logEvent(AppEvents.Name(rawValue: "turnoff"), parameters: ["referrer" : referrer])
                                  }
