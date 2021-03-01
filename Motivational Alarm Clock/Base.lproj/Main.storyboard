@@ -805,13 +805,13 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                                                             <blurEffect style="light"/>
                                                         </visualEffectView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:30 am" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvi-AU-PBj">
-                                                            <rect key="frame" x="126" y="19" width="186.5" height="74"/>
+                                                            <rect key="frame" x="133" y="19" width="186.5" height="74"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="54"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Only Live Once You Only Live Once" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2S-PW-eYe">
-                                                            <rect key="frame" x="131" y="84" width="250" height="19.5"/>
+                                                            <rect key="frame" x="138" y="84" width="250" height="19.5"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -838,15 +838,15 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                                                     <constraints>
                                                         <constraint firstItem="NXT-M3-RyW" firstAttribute="centerY" secondItem="X8A-qN-Bey" secondAttribute="centerY" id="1KF-9s-iQJ"/>
                                                         <constraint firstItem="A84-bN-jA0" firstAttribute="centerY" secondItem="h0l-ju-jKO" secondAttribute="centerY" id="64T-Yi-UsY"/>
-                                                        <constraint firstItem="K2S-PW-eYe" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" constant="131" id="AHW-8c-2ts"/>
+                                                        <constraint firstItem="K2S-PW-eYe" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" constant="138" id="AHW-8c-2ts"/>
                                                         <constraint firstAttribute="trailing" secondItem="X8A-qN-Bey" secondAttribute="trailing" constant="281" id="ANJ-rp-fp5"/>
-                                                        <constraint firstItem="Mvi-AU-PBj" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" constant="126" id="AOh-Oh-KmN"/>
+                                                        <constraint firstItem="Mvi-AU-PBj" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" constant="133" id="AOh-Oh-KmN"/>
                                                         <constraint firstAttribute="bottom" secondItem="l3o-ym-Vm6" secondAttribute="bottom" id="AUb-Kg-vlL"/>
                                                         <constraint firstItem="Mvi-AU-PBj" firstAttribute="centerY" secondItem="A84-bN-jA0" secondAttribute="centerY" constant="-3" id="D8V-mE-Lsj"/>
                                                         <constraint firstItem="X8A-qN-Bey" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" id="Gdz-Ve-vg7"/>
                                                         <constraint firstItem="l3o-ym-Vm6" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" id="H1i-RP-8Jm"/>
                                                         <constraint firstAttribute="trailing" secondItem="A84-bN-jA0" secondAttribute="trailing" constant="8" id="OAe-g0-DAr"/>
-                                                        <constraint firstItem="Mvi-AU-PBj" firstAttribute="leading" secondItem="NXT-M3-RyW" secondAttribute="trailing" constant="10" id="XIg-oX-jUo"/>
+                                                        <constraint firstItem="Mvi-AU-PBj" firstAttribute="leading" secondItem="NXT-M3-RyW" secondAttribute="trailing" constant="17" id="XIg-oX-jUo"/>
                                                         <constraint firstItem="l3o-ym-Vm6" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" id="YXI-e7-Ms4"/>
                                                         <constraint firstItem="NXT-M3-RyW" firstAttribute="centerX" secondItem="X8A-qN-Bey" secondAttribute="centerX" constant="-2" id="afc-Zu-haC"/>
                                                         <constraint firstAttribute="trailing" secondItem="A84-bN-jA0" secondAttribute="trailing" constant="8" id="bIf-QZ-dYW"/>
