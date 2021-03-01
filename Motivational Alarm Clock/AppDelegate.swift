@@ -491,6 +491,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
                         ref = db.collection("profile").addDocument(data: [
                             "token": fcmToken,
                             "uid":uid,
+                            "created_at":Date()
                         ]) { err in
                             if let err = err {
                                 print("Error adding document: \(err)")
@@ -507,7 +508,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
                             }
                             else {
                                 document?.reference.updateData([
-                                    "token": fcmToken
+                                    "token": fcmToken,
+                                    "updated_at":Date()
                                     ])
                             }
                         }

@@ -479,8 +479,50 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             allSounds = allSounds.sorted { $0.popular ?? 0 > $1.popular ?? 0 }
             let filteredSounds = allSounds.filter({$0.category == selectedCategory})
             let firstSound = filteredSounds[0]
-            let firstDate = Calendar.current.date(bySettingHour: 8, minute: 30, second: 0, of: Date())!
-            let secondDate = Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!
+            let secondSound = filteredSounds[1]
+            var firstDate = Calendar.current.date(bySettingHour: 8, minute: 30, second: 0, of: Date())!
+            if (firstDate.timeIntervalSinceNow.sign == .minus) {
+                // date is in past
+                let calendar = Calendar.current
+                let time=calendar.dateComponents([.hour,.minute,.second], from: firstDate)
+                let newDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                firstDate = newDate
+                if (newDate.timeIntervalSinceNow.sign == .minus) {
+                    let calendar = Calendar.current
+                    let time=calendar.dateComponents([.hour,.minute,.second], from: firstDate)
+                    let againNewDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                    let today = againNewDate
+                    if  let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today){
+                        firstDate = tomorrow
+                    }
+
+                }
+
+            }else if (firstDate.timeIntervalSinceNow.sign == .plus) {
+                // date is in future
+            }
+            
+            var secondDate = Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!
+            if (secondDate.timeIntervalSinceNow.sign == .minus) {
+                // date is in past
+                let calendar = Calendar.current
+                let time=calendar.dateComponents([.hour,.minute,.second], from: secondDate)
+                let newDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                secondDate = newDate
+                if (newDate.timeIntervalSinceNow.sign == .minus) {
+                    let calendar = Calendar.current
+                    let time=calendar.dateComponents([.hour,.minute,.second], from: secondDate)
+                    let againNewDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                    let today = againNewDate
+                    if  let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today){
+                        secondDate = tomorrow
+                    }
+
+                }
+
+            }else if (firstDate.timeIntervalSinceNow.sign == .plus) {
+                // date is in future
+            }
             var tempAlarm = Alarm()
             tempAlarm.date = firstDate
             tempAlarm.label = "Alarm"
@@ -499,11 +541,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             tempAlarm2.date = secondDate
             tempAlarm2.label = "Alarm"
             tempAlarm2.enabled = true
-            tempAlarm2.mediaLabel = firstSound.soundName
-            tempAlarm2.mediaID = firstSound.soundName
+            tempAlarm2.mediaLabel = secondSound.soundName
+            tempAlarm2.mediaID = secondSound.soundName
             tempAlarm2.snoozeEnabled = false
-            tempAlarm2.imageName = firstSound.image
-            tempAlarm2.category = firstSound.category
+            tempAlarm2.imageName = secondSound.image
+            tempAlarm2.category = secondSound.category
             tempAlarm2.repeatWeekdays = []
             tempAlarm2.uuid = UUID().uuidString
             tempAlarm2.onSnooze = false

@@ -361,12 +361,8 @@ var isFromSoundVc = false
 //            dist.mediaID = segueInfo.mediaID
             dist.segueInfo = segueInfo
             dist.date = datePicker.date
-            let sound = allSounds.filter({$0.soundName == segueInfo.mediaLabel && $0.image == segueInfo.imageName && $0.category == segueInfo.category && $0.popular == 1 })
-            var popular = 0
-            if sound.count > 0 {
-                popular = 1
-            }
-            dist.selectedSound = Sounds(soundName: segueInfo.mediaLabel, title: segueInfo.imageName, image: segueInfo.imageName, category: segueInfo.category,popular: popular)
+            let sound = allSounds.filter({$0.soundName == segueInfo.mediaLabel && $0.image == segueInfo.imageName && $0.category == segueInfo.category  }).first
+            dist.selectedSound = Sounds(soundName: segueInfo.mediaLabel, title: segueInfo.imageName, image: segueInfo.imageName, category: segueInfo.category,popular: sound?.popular ?? 0)
         }
         else if segue.identifier == Id.labelSegueIdentifier {
             let dist = segue.destination as! TitleEditViewController
