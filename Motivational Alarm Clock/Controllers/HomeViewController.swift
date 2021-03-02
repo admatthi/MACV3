@@ -292,11 +292,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 //        cell.soundImageView.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         let alarm: Alarm = alarmModel.alarms[indexPath.row]
-        cell.soundImageView.image = UIImage(named: alarm.imageName)
+//        cell.soundImageView.image = UIImage(named: alarm.imageName)
         cell.sound2.image = UIImage(named: alarm.imageName)
         
-        cell.soundImageView.layer.cornerRadius = cell.soundImageView.frame.width/2
-        cell.soundImageView.clipsToBounds = true
+//        cell.soundImageView.layer.cornerRadius = cell.soundImageView.frame.width/2
+//        cell.soundImageView.clipsToBounds = true
 
 //        let amAttr: [NSAttributedString.Key : Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue) : UIFont.systemFont(ofSize: 20.0)]
 //        let str = NSMutableAttributedString(string: alarm.formattedTime, attributes: amAttr)
@@ -330,13 +330,18 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 //        sw.tag = indexPath.row
         cell.itemSwitch.tag = indexPath.row
         cell.itemSwitch.addTarget(self, action: #selector(self.switchTapped(_:)), for: UIControl.Event.valueChanged)
+        
+        cell.sound2.layer.cornerRadius = cell.sound2.frame.width/2
+        cell.sound2.clipsToBounds = true
+        
+        
         if alarm.enabled {
 //            cell.mainView.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 0.8)
             cell.timeLabel.alpha = 1.0
             cell.titleLable.alpha = 1.0
 //            cell.soundImageView.alpha = 0.5
             cell.sound2.alpha = 1.0
-            cell.mainView.alpha = 1.0
+//            cell.mainView.alpha = 1.0
             cell.playPauseButton.alpha = 1.0
             cell.itemSwitch.setOn(true, animated: false)
         } else {
@@ -345,7 +350,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             cell.titleLable.alpha = 0.8
 //            cell.soundImageView.alpha = 0.5
             cell.sound2.alpha = 0.8
-            cell.mainView.alpha = 0.8
+//            cell.mainView.alpha = 0.8
             cell.playPauseButton.alpha = 0.8
             cell.itemSwitch.setOn(false, animated: false)
         }
