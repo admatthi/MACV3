@@ -116,6 +116,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
         let notificationCenter = NotificationCenter.default
             notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
         self.navigationController?.navigationBar.isHidden = true
         var error: NSError?
         do {
@@ -148,6 +149,10 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         self.selectedAlarm = nil
         self.tableView.reloadData()
         stopSound()
+        }
+    @objc func appMovedToForeground() {
+            // do whatever event you want
+        setupTodayorFutureDate()
         }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -222,7 +227,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-            performSegue(withIdentifier: Id.editSegueIdentifier, sender: SegueInfo(curCellIndex: indexPath.row, isEditMode: true, label: alarmModel.alarms[indexPath.row].label, mediaLabel: alarmModel.alarms[indexPath.row].mediaLabel, mediaID: alarmModel.alarms[indexPath.row].mediaID, repeatWeekdays: alarmModel.alarms[indexPath.row].repeatWeekdays, enabled: alarmModel.alarms[indexPath.row].enabled, snoozeEnabled: alarmModel.alarms[indexPath.row].snoozeEnabled, imageName: alarmModel.alarms[indexPath.row].imageName, category: alarmModel.alarms[indexPath.row].category))
+        performSegue(withIdentifier: Id.editSegueIdentifier, sender: SegueInfo(curCellIndex: indexPath.row, isEditMode: true, label: alarmModel.alarms[indexPath.row].label, mediaLabel: alarmModel.alarms[indexPath.row].mediaLabel, mediaID: alarmModel.alarms[indexPath.row].mediaID, repeatWeekdays: alarmModel.alarms[indexPath.row].repeatWeekdays, enabled: alarmModel.alarms[indexPath.row].enabled, snoozeEnabled: alarmModel.alarms[indexPath.row].snoozeEnabled, imageName: alarmModel.alarms[indexPath.row].imageName, category: alarmModel.alarms[indexPath.row].category, repeatEnabled: alarmModel.alarms[indexPath.row].repeatEnabled))
     }
     @objc func playPauseAction(sender : UIButton){
 
@@ -407,21 +412,26 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         for (index,alarm) in alarmModel.alarms.enumerated(){
             let date = alarmModel.alarms[index].date
             if (date.timeIntervalSinceNow.sign == .minus) {
-                // date is in past
-                let calendar = Calendar.current
-                let time=calendar.dateComponents([.hour,.minute,.second], from: alarmModel.alarms[index].date)
-                let newDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
-                alarmModel.alarms[index].date = newDate
-                if (newDate.timeIntervalSinceNow.sign == .minus) {
+                if alarm.repeatEnabled {
+                    // date is in past
                     let calendar = Calendar.current
                     let time=calendar.dateComponents([.hour,.minute,.second], from: alarmModel.alarms[index].date)
-                    let againNewDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
-                    let today = againNewDate
-                    if  let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today){
-                        alarmModel.alarms[index].date = tomorrow
+                    let newDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                    alarmModel.alarms[index].date = newDate
+                    if (newDate.timeIntervalSinceNow.sign == .minus) {
+                        let calendar = Calendar.current
+                        let time=calendar.dateComponents([.hour,.minute,.second], from: alarmModel.alarms[index].date)
+                        let againNewDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                        let today = againNewDate
+                        if  let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today){
+                            alarmModel.alarms[index].date = tomorrow
+                        }
+                       
                     }
-                   
+                }else{
+                    alarmModel.alarms[index].enabled = false
                 }
+
                 
             }else if (date.timeIntervalSinceNow.sign == .plus) {
                 // date is in future
@@ -430,6 +440,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             
         }
         alarmScheduler.reSchedule()
+        self.tableView.reloadData()
     }
     func turnoff(referrer : String) {
                                      AppEvents.logEvent(AppEvents.Name(rawValue: "turnoff"), parameters: ["referrer" : referrer])
@@ -541,6 +552,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             tempAlarm.uuid = UUID().uuidString
             tempAlarm.onSnooze = false
             tempAlarm.enabled = false
+            tempAlarm.repeatEnabled = false
             alarmModel.alarms.append(tempAlarm)
             var tempAlarm2 = Alarm()
             tempAlarm2.date = secondDate
@@ -555,6 +567,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             tempAlarm2.uuid = UUID().uuidString
             tempAlarm2.onSnooze = false
             tempAlarm2.enabled = false
+            tempAlarm.repeatEnabled = false
             alarmModel.alarms.append(tempAlarm2)
             alarmScheduler.reSchedule()
             NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
@@ -576,7 +589,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 
             let firstFilteredSounds = allSounds.filter({$0.category == selectedCategory})
             let defaultSound = firstFilteredSounds[0]
-            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
+            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category, repeatEnabled: false)
         }
         else if segue.identifier == Id.editSegueIdentifier {
             addEditController.navigationItem.title = "Edit Alarm"

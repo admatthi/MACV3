@@ -21,9 +21,10 @@ struct Alarm: PropertyReflectable {
     var onSnooze: Bool = false
     var imageName: String = "nowandnever"
     var category:String = "Motivation"
+    var repeatEnabled:Bool = false
     init(){}
     
-    init(date:Date, enabled:Bool, snoozeEnabled:Bool, repeatWeekdays:[Int], uuid:String, mediaID:String, mediaLabel:String, label:String, onSnooze: Bool,imageName:String,category:String){
+    init(date:Date, enabled:Bool, snoozeEnabled:Bool, repeatWeekdays:[Int], uuid:String, mediaID:String, mediaLabel:String, label:String, onSnooze: Bool,imageName:String,category:String,isRepeat:Bool){
         self.date = date
         self.enabled = enabled
         self.snoozeEnabled = snoozeEnabled
@@ -35,6 +36,7 @@ struct Alarm: PropertyReflectable {
         self.onSnooze = onSnooze
         self.imageName = imageName
         self.category = category
+        self.repeatEnabled = isRepeat
         
     }
     
@@ -50,9 +52,10 @@ struct Alarm: PropertyReflectable {
         onSnooze = dict["onSnooze"] as! Bool
         imageName = dict["imageName"] as? String ?? ""
         category = dict["category"] as? String ?? ""
+        repeatEnabled = dict["repeatEnabled"] as? Bool ?? false
     }
     
-    static var propertyCount: Int = 11
+    static var propertyCount: Int = 12
 }
 
 extension Alarm {
@@ -89,7 +92,7 @@ class Alarms: Persistable {
     
     func unpersist() {
         for key in ud.dictionaryRepresentation().keys {
-            if key.description.contains("revenuecat"){
+            if key.description.contains("revenuecat") || key.description.contains("isInitialAlrmCreated") || key.description.contains("launchedBefore") || key.description.contains("newUserWithOutCreatingAlarm") {
                 
             }else{
                 UserDefaults.standard.removeObject(forKey: key.description)

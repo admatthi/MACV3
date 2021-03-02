@@ -20,7 +20,6 @@ import AVKit
 import AVFoundation
 import Kingfisher
 import FirebaseDatabase
-import SwiftySound
 
 var db : Firestore!
 var uid = String()
@@ -324,23 +323,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         
         //show an alert window
-        var isSnooze: Bool = false
-        var soundName: String = ""
-        var index: Int = -1
-        if let userInfo = notification.userInfo {
-            isSnooze = userInfo["snooze"] as! Bool
-            soundName = userInfo["soundName"] as! String
-            index = userInfo["index"] as! Int
-        }
-        self.alarmModel = Alarms()
-        self.alarmModel.alarms[index].onSnooze = false
-        //change UI
-        var mainVC = self.window?.visibleViewController as? HomeViewController
-        if mainVC == nil {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            mainVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
-        }
-        mainVC!.changeSwitchButtonState(index: index)
+//        var isSnooze: Bool = false
+//        var soundName: String = ""
+//        var index: Int = -1
+//        if let userInfo = notification.userInfo {
+//            isSnooze = userInfo["snooze"] as! Bool
+//            soundName = userInfo["soundName"] as! String
+//            index = userInfo["index"] as! Int
+//        }
+//        self.alarmModel = Alarms()
+//        self.alarmModel.alarms[index].onSnooze = false
+//        //change UI
+//        var mainVC = self.window?.visibleViewController as? HomeViewController
+//        if mainVC == nil {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            mainVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+//        }
+//        mainVC!.changeSwitchButtonState(index: index)
 //        playSound(soundName)
         //schedule notification for snooze
 //        if isSnooze {

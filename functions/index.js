@@ -36,8 +36,13 @@ exports.scheduledFunction = functions.pubsub.schedule('every 30 minutes').onRun(
             content_available: true,
             priority: "high"
         }
-        let response= admin.messaging().sendToDevice(token,payload,options)
-        console.log(response);
+        let response= admin.messaging().sendToDevice(token,payload,options).then(function(response){
+            console.log('Notification sent successfully:',response);
+            return console.log('Notification sent successfully:',response);
+        })
+            .catch(function(error){
+                console.log('Notification sent failed:',error);
+            });
     });
-    return null;
+    return
 });

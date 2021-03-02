@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftySound
 import Foundation
 import AudioToolbox
 import AVFoundation

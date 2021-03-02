@@ -21,6 +21,7 @@ var isFromSoundVc = false
     var alarmModel: Alarms = Alarms()
     var segueInfo: SegueInfo!
     var snoozeEnabled: Bool = false
+    var repeatEnabled: Bool = false
     var enabled: Bool!
     
     
@@ -82,7 +83,7 @@ var isFromSoundVc = false
         alarmModel=Alarms()
         self.navigationController?.navigationBar.isHidden = true
         tableView.reloadData()
-        snoozeEnabled = segueInfo.snoozeEnabled
+        repeatEnabled = segueInfo.repeatEnabled
 //        let newUserCreatedAlarm = UserDefaults.standard.bool(forKey: "newUserWithOutCreatingAlarm")
 //        if newUserCreatedAlarm  {
 //            tapback.isHidden = false
@@ -143,6 +144,7 @@ var isFromSoundVc = false
                     tempAlarm.mediaLabel = segueInfo.mediaLabel
                     tempAlarm.mediaID = segueInfo.mediaID
                     tempAlarm.snoozeEnabled = false
+                    tempAlarm.repeatEnabled = self.repeatEnabled
                     tempAlarm.imageName = segueInfo.imageName
                     tempAlarm.category = segueInfo.category
                     tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
@@ -203,7 +205,7 @@ var isFromSoundVc = false
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 2
+            return 3
         }
         else {
             return 1
@@ -257,20 +259,20 @@ var isFromSoundVc = false
 
                 cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
             }
-//            else if indexPath.row == 3 {
-//                cell!.textLabel?.textColor = .white
-//                cell!.detailTextLabel?.textColor = .gray
-//
-//                cell!.textLabel!.text = "Snooze"
-//                let sw = UISwitch(frame: CGRect())
-//                sw.addTarget(self, action: #selector(AlarmEditAddViewController.snoozeSwitchTapped(_:)), for: UIControl.Event.touchUpInside)
-//
-//                if snoozeEnabled {
-//                   sw.setOn(true, animated: false)
-//                }
-//
-//                cell!.accessoryView = sw
-//            }
+            else if indexPath.row == 2 {
+                cell!.textLabel?.textColor = .white
+                cell!.detailTextLabel?.textColor = .gray
+
+                cell!.textLabel!.text = "Repeat"
+                let sw = UISwitch(frame: CGRect())
+                sw.addTarget(self, action: #selector(AlarmEditAddViewController.repeatSwitchTapped(_:)), for: UIControl.Event.touchUpInside)
+
+                if repeatEnabled {
+                   sw.setOn(true, animated: false)
+                }
+
+                cell!.accessoryView = sw
+            }
         }
         else if indexPath.section == 1 {
             cell = UITableViewCell(
@@ -318,10 +320,11 @@ var isFromSoundVc = false
     @IBOutlet weak var mainview: UIVisualEffectView!
     
     
-    @IBAction func snoozeSwitchTapped (_ sender: UISwitch) {
+    @IBAction func repeatSwitchTapped (_ sender: UISwitch) {
         
         
-        snoozeEnabled = sender.isOn
+        repeatEnabled = sender.isOn
+        segueInfo.repeatEnabled = sender.isOn
     }
     
     

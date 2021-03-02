@@ -19,4 +19,5 @@ struct SegueInfo {
     var snoozeEnabled: Bool
     var imageName:String
     var category:String
+    var repeatEnabled:Bool
 }

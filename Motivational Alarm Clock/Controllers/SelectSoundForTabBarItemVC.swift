@@ -38,7 +38,7 @@ class SelectSoundForTabBarItemVC: UIViewController ,AVAudioPlayerDelegate{
     override func viewDidLoad() {
         allSounds = allSounds.sorted { $0.popular ?? 0 > $1.popular ?? 0 }
         let defaultSound = allSounds[0]
-    segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
+        segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category, repeatEnabled: false)
        let firstFilteredSounds = allSounds.filter({$0.category == selectedCategory})
         if firstFilteredSounds.count > 0  && !segueInfo.isEditMode{
             selectedSound = firstFilteredSounds[0]
@@ -370,7 +370,7 @@ extension SelectSoundForTabBarItemVC:UICollectionViewDataSource,UICollectionView
             addEditController.navigationItem.title = "Add Alarm"
             addEditController.modalPresentationStyle = .fullScreen
             let defaultSound = selectedSound!
-            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category)
+            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category, repeatEnabled: false)
         }
         else if segue.identifier == Id.editSegueIdentifier {
             addEditController.navigationItem.title = "Edit Alarm"
