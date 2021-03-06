@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 import MediaPlayer
 import FBSDKCoreKit
+import StoreKit
 
 class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
@@ -127,6 +128,9 @@ var isFromSoundVc = false
         
         firstinstall = false
         tapsave(referrer: referrer)
+        
+        SKStoreReviewController.requestReview()
+
 //         didpurchase = true
                 if didpurchase {
                     let interval = Date() - self.datePicker.date
