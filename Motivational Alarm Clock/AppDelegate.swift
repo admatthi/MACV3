@@ -615,8 +615,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         let AlarmNotification: UILocalNotification = UILocalNotification()
-        AlarmNotification.alertTitle = "Opps, you terminated Wake!"
-        AlarmNotification.alertBody = "Your Alarm may not ring, Please open Wake So that your upcomming alarm can ring with sound."
+        AlarmNotification.alertTitle = "Whoops! Your alarm won't sound"
+        AlarmNotification.alertBody = "You closed Wake, so your alarm won't sound. Tap the Wake icon to open it and keep in the background, so you can wake up successfully"
         AlarmNotification.fireDate = Date().addingTimeInterval(1)
         UIApplication.shared.scheduleLocalNotification(AlarmNotification)
     }

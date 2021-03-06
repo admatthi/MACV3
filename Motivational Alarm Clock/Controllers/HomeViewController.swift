@@ -552,7 +552,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             tempAlarm.uuid = UUID().uuidString
             tempAlarm.onSnooze = false
             tempAlarm.enabled = false
-            tempAlarm.repeatEnabled = false
+            tempAlarm.repeatEnabled = true
             alarmModel.alarms.append(tempAlarm)
             var tempAlarm2 = Alarm()
             tempAlarm2.date = secondDate
@@ -567,7 +567,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             tempAlarm2.uuid = UUID().uuidString
             tempAlarm2.onSnooze = false
             tempAlarm2.enabled = false
-            tempAlarm.repeatEnabled = false
+            tempAlarm.repeatEnabled = true
             alarmModel.alarms.append(tempAlarm2)
             alarmScheduler.reSchedule()
             NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
@@ -589,7 +589,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 
             let firstFilteredSounds = allSounds.filter({$0.category == selectedCategory})
             let defaultSound = firstFilteredSounds[0]
-            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category, repeatEnabled: false)
+            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category, repeatEnabled: true)
         }
         else if segue.identifier == Id.editSegueIdentifier {
             addEditController.navigationItem.title = "Edit Alarm"
