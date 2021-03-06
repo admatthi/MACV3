@@ -16,6 +16,7 @@ import AVKit
 import AVFoundation
 import Kingfisher
 import FirebaseDatabase
+import StoreKit
 
 var slimeybool = Bool()
 
@@ -153,6 +154,9 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
                                
                                MBProgressHUD.hide(for: self.view, animated: true)
                                 
+                                SKStoreReviewController.requestReview()
+
+                                
                                 self.dismiss(animated: true, completion: nil)
 
 
@@ -166,6 +170,9 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
                                MBProgressHUD.hide(for: self.view, animated: true)
 
                                  didpurchase = true
+                                
+                                SKStoreReviewController.requestReview()
+
                                
                                 self.dismiss(animated: true, completion: nil)
 

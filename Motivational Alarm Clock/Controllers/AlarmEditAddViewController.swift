@@ -129,7 +129,6 @@ var isFromSoundVc = false
         firstinstall = false
         tapsave(referrer: referrer)
         
-        SKStoreReviewController.requestReview()
 
 //         didpurchase = true
                 if didpurchase {
