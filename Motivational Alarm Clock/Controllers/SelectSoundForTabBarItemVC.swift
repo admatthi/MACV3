@@ -97,6 +97,9 @@ class SelectSoundForTabBarItemVC: UIViewController ,AVAudioPlayerDelegate{
         self.navigationController?.navigationBar.isHidden = true
         allSounds = allSounds.sorted { $0.popular ?? 0 > $1.popular ?? 0 }
         tagSelection(tag: selectedCategory, isFirst: false)
+        if selectedSound != nil{
+            playSound(selectedSound!.soundName)
+        }
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -108,7 +111,9 @@ class SelectSoundForTabBarItemVC: UIViewController ,AVAudioPlayerDelegate{
             if filteredSounds.count > 0 {
                 let sound = filteredSounds[0]
                 selectedSound = sound
-
+                if selectedSound != nil{
+                    playSound(selectedSound!.soundName)
+                }
                 segueInfo.mediaLabel = sound.soundName
                 segueInfo.mediaID = sound.soundName
                 segueInfo.category = sound.category
@@ -251,7 +256,7 @@ extension SelectSoundForTabBarItemVC:UICollectionViewDataSource,UICollectionView
                         // background
                     }
                     else if state == .active {
-                        playSound(sound.soundName)
+//                        playSound(sound.soundName)
                         // foreground
                     }
                 }else{
@@ -329,7 +334,9 @@ extension SelectSoundForTabBarItemVC:UICollectionViewDataSource,UICollectionView
                 segueInfo.category = sound.category
                 segueInfo.imageName = sound.image
                 segueInfo.label = sound.title
+                if selectedSound != nil{
                 playSound(selectedSound!.soundName)
+                }
                 self.collectionView.reloadData()
             }
 

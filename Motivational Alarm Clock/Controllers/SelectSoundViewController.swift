@@ -80,6 +80,9 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         collectionView.collectionViewLayout = layout
         
         tagSelection(tag: selectedCategory, isFirst: false)
+        if selectedSound != nil{
+            playSound(selectedSound!.soundName)
+        }
         
     }
     
@@ -193,7 +196,9 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
             if filteredSounds.count > 0 {
                 let sound = filteredSounds[0]
                 selectedSound = sound
-
+                if selectedSound != nil{
+                    playSound(selectedSound!.soundName)
+                }
                 segueInfo.mediaLabel = sound.soundName
                 segueInfo.mediaID = sound.soundName
                 segueInfo.category = sound.category
@@ -314,7 +319,7 @@ extension SelectSoundViewController:UICollectionViewDataSource,UICollectionViewD
                     cell.topMainView.layer.borderColor = UIColor.white.cgColor
                     cell.topMainView.layer.borderWidth = 5.0
                     cell.selectCheckMarkButton.isHidden = false
-                    playSound(sound.soundName)
+//                    playSound(sound.soundName)
                 }else{
                     cell.playPauseButton.isHidden = true
                     cell.selectCheckMarkButton.isHidden = true
