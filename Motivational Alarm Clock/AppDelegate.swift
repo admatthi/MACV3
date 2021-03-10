@@ -318,10 +318,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
             }
         }
     }
-    //receive local notification when app in foreground
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-        
+        // not triggred when we tap on "opps your killed wake app" notification only triggered for real alarm
+        if notification.userInfo?.count ?? 0 > 0 {
+            alarmsounded(referrer: referrer)
+        }
         //show an alert window
 //        var isSnooze: Bool = false
 //        var soundName: String = ""
