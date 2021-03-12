@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     var audioPlayer: AVAudioPlayer!
     let alarmScheduler: AlarmSchedulerDelegate = Scheduler()
     var alarmModel: Alarms = Alarms()
-
+    var selectedSound : Alarm?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
         uid = UIDevice.current.identifierForVendor!.uuidString
@@ -142,7 +142,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
 
         application.registerForRemoteNotifications()
         Messaging.messaging().delegate = self
+        setupForCallMethod()
         return true
+    }
+    func setupForCallMethod() {
+      NotificationCenter.default.addObserver(self,selector: #selector(playerInterruption),name: AVAudioSession.interruptionNotification,object: AVAudioSession.sharedInstance())
+    }
+    
+    @objc func playerInterruption(notification: NSNotification) {
+        guard let userInfo = notification.userInfo,
+            let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt,
+            let type = AVAudioSession.InterruptionType(rawValue: typeValue) else {
+                return
+        }
+        if type == .began {
+        }else if type == .ended {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                self.scheduleTaskForAudioPlaying()
+            }
+        }
     }
     func scheduleTaskForAudioPlaying(isFromNotification:Bool = false){
         
@@ -191,8 +209,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
              
              //negative number means loop infinity
              audioPlayer!.numberOfLoops = -1
+             audioPlayer!.isMeteringEnabled = true
              let currentAudioTime = audioPlayer!.deviceCurrentTime
-
+             selectedSound = greaterthencurretnTime[0]
              let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
                     if isFromNotification {
                         audioPlayer!.play(atTime: currentAudioTime + delayTime)
@@ -527,7 +546,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
          // Note: This callback is fired at each app startup and whenever a new token is generated.
     //AVAudioPlayerDelegate protocol
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        
+        print(flag)
     }
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
 
@@ -590,8 +609,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         
         //negative number means loop infinity
         audioPlayer!.numberOfLoops = -1
+        audioPlayer!.isMeteringEnabled = true
         let currentAudioTime = audioPlayer!.deviceCurrentTime
-
+        selectedSound = greaterthencurretnTime[0]
         let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
                 audioPlayer!.play(atTime: currentAudioTime + delayTime)
             }
