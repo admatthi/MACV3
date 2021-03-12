@@ -21,7 +21,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     @IBOutlet weak var tableView: UITableView!
     var audioPlayer: AVAudioPlayer?
     var ifAlreadyPresented = false
-    var soundsCategories = ["Popular", "All", "Inspiration", "Affirmations", "Self Help", "Career", "Dating", "Sounds"]
+    var soundsCategories = ["Popular", "All", "Inspiration", "Affirmations", "Self Help", "Career", "Sounds"]
     var selectedCategory = "Popular"
     override func viewDidAppear(_ animated: Bool) {
         

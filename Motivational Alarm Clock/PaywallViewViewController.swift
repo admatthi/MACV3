@@ -122,7 +122,7 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
                let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
 
                
-               guard let package = offering?.availablePackages[0] else {
+               guard let package = offering?.availablePackages[1] else {
                      print("No available package")
                    MBProgressHUD.hide(for: view, animated: true)
 
@@ -223,7 +223,7 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
               
                 self.tapcontinue.setTitle("Try for FREE", for: .normal)
         
-                self.leadingtext.text = "Try 3 days free, then $19.99/year. Cancel anytime."
+                self.leadingtext.text = "Try 3 days free, then $69.99/year. Cancel anytime."
                 
             } else {
                 //
