@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "The Great Dictator.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

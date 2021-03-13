@@ -141,7 +141,6 @@
 		4EBBB5E525C0E5DA006D5B61 /* Beat The Alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5D925C0E5D6006D5B61 /* Beat The Alarm.mp3 */; };
 		4EBBB5E725C0E5DA006D5B61 /* Get Out of Bed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5DB25C0E5D6006D5B61 /* Get Out of Bed.mp3 */; };
 		4EBBB5E925C0E5DA006D5B61 /* Soft Morning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5DD25C0E5D7006D5B61 /* Soft Morning.mp3 */; };
-		4EBBB5EA25C0E5DA006D5B61 /* Get To Work.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5E125C0E5D8006D5B61 /* Get To Work.mp3 */; };
 		4EBBB5EB25C0E5DA006D5B61 /* Master The Morning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5E225C0E5D8006D5B61 /* Master The Morning.mp3 */; };
 		4EBBB5EC25C0E5DA006D5B61 /* 4-00 AM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5E325C0E5DA006D5B61 /* 4-00 AM.mp3 */; };
 		4EBBB5FA25C0F365006D5B61 /* Work Your Ass Off.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5F125C0F363006D5B61 /* Work Your Ass Off.mp3 */; };
@@ -151,6 +150,19 @@
 		4EBBB60025C0F365006D5B61 /* 40% of Your Potential.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5F725C0F364006D5B61 /* 40% of Your Potential.mp3 */; };
 		4EBBB60225C0F365006D5B61 /* Be The Hero You Need.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBB5F925C0F365006D5B61 /* Be The Hero You Need.mp3 */; };
 		4EBD221325AF5A96008530A2 /* HomeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */; };
+		4ECE3DEF25FD63C2007BB1AC /* Work Like Hell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DE225FD63BF007BB1AC /* Work Like Hell.mp3 */; };
+		4ECE3DF025FD63C2007BB1AC /* The Man In The Arena.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DE325FD63C0007BB1AC /* The Man In The Arena.mp3 */; };
+		4ECE3DF125FD63C2007BB1AC /* Against All Odds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DE425FD63C0007BB1AC /* Against All Odds.mp3 */; };
+		4ECE3DF225FD63C2007BB1AC /* Go Through Hell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DE525FD63C0007BB1AC /* Go Through Hell.mp3 */; };
+		4ECE3DF325FD63C2007BB1AC /* Hungover AF.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DE625FD63C0007BB1AC /* Hungover AF.mp3 */; };
+		4ECE3DF425FD63C2007BB1AC /* My Journey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DE725FD63C1007BB1AC /* My Journey.mp3 */; };
+		4ECE3DF525FD63C2007BB1AC /* Get To Work.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DE825FD63C1007BB1AC /* Get To Work.mp3 */; };
+		4ECE3DF625FD63C2007BB1AC /* Why Do We Fall?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DE925FD63C1007BB1AC /* Why Do We Fall?.mp3 */; };
+		4ECE3DF725FD63C2007BB1AC /* How Hungry Are You?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DEA25FD63C1007BB1AC /* How Hungry Are You?.mp3 */; };
+		4ECE3DF825FD63C2007BB1AC /* Desire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DEB25FD63C1007BB1AC /* Desire.mp3 */; };
+		4ECE3DF925FD63C2007BB1AC /* Who Is The Real You?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DEC25FD63C2007BB1AC /* Who Is The Real You?.mp3 */; };
+		4ECE3DFA25FD63C2007BB1AC /* No Excuses.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DED25FD63C2007BB1AC /* No Excuses.mp3 */; };
+		4ECE3DFB25FD63C2007BB1AC /* The Great Dictator.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE3DEE25FD63C2007BB1AC /* The Great Dictator.mp3 */; };
 		4EE5F19225AD23D800B9C2EE /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F19125AD23D800B9C2EE /* AlarmModel.swift */; };
 		4EE5F19725AD23F700B9C2EE /* SegueInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F19625AD23F700B9C2EE /* SegueInfo.swift */; };
 		4EE5F1D225AD246100B9C2EE /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1D125AD246100B9C2EE /* Persistable.swift */; };
@@ -469,7 +481,6 @@
 		4EBBB5D925C0E5D6006D5B61 /* Beat The Alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beat The Alarm.mp3"; sourceTree = "<group>"; };
 		4EBBB5DB25C0E5D6006D5B61 /* Get Out of Bed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Get Out of Bed.mp3"; sourceTree = "<group>"; };
 		4EBBB5DD25C0E5D7006D5B61 /* Soft Morning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Soft Morning.mp3"; sourceTree = "<group>"; };
-		4EBBB5E125C0E5D8006D5B61 /* Get To Work.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Get To Work.mp3"; sourceTree = "<group>"; };
 		4EBBB5E225C0E5D8006D5B61 /* Master The Morning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Master The Morning.mp3"; sourceTree = "<group>"; };
 		4EBBB5E325C0E5DA006D5B61 /* 4-00 AM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "4-00 AM.mp3"; sourceTree = "<group>"; };
 		4EBBB5F125C0F363006D5B61 /* Work Your Ass Off.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Work Your Ass Off.mp3"; sourceTree = "<group>"; };
@@ -479,6 +490,19 @@
 		4EBBB5F725C0F364006D5B61 /* 40% of Your Potential.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "40% of Your Potential.mp3"; sourceTree = "<group>"; };
 		4EBBB5F925C0F365006D5B61 /* Be The Hero You Need.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Be The Hero You Need.mp3"; sourceTree = "<group>"; };
 		4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCell.swift; sourceTree = "<group>"; };
+		4ECE3DE225FD63BF007BB1AC /* Work Like Hell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Work Like Hell.mp3"; sourceTree = "<group>"; };
+		4ECE3DE325FD63C0007BB1AC /* The Man In The Arena.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Man In The Arena.mp3"; sourceTree = "<group>"; };
+		4ECE3DE425FD63C0007BB1AC /* Against All Odds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Against All Odds.mp3"; sourceTree = "<group>"; };
+		4ECE3DE525FD63C0007BB1AC /* Go Through Hell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Go Through Hell.mp3"; sourceTree = "<group>"; };
+		4ECE3DE625FD63C0007BB1AC /* Hungover AF.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Hungover AF.mp3"; sourceTree = "<group>"; };
+		4ECE3DE725FD63C1007BB1AC /* My Journey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "My Journey.mp3"; sourceTree = "<group>"; };
+		4ECE3DE825FD63C1007BB1AC /* Get To Work.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Get To Work.mp3"; sourceTree = "<group>"; };
+		4ECE3DE925FD63C1007BB1AC /* Why Do We Fall?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Why Do We Fall?.mp3"; sourceTree = "<group>"; };
+		4ECE3DEA25FD63C1007BB1AC /* How Hungry Are You?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "How Hungry Are You?.mp3"; sourceTree = "<group>"; };
+		4ECE3DEB25FD63C1007BB1AC /* Desire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Desire.mp3; sourceTree = "<group>"; };
+		4ECE3DEC25FD63C2007BB1AC /* Who Is The Real You?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Who Is The Real You?.mp3"; sourceTree = "<group>"; };
+		4ECE3DED25FD63C2007BB1AC /* No Excuses.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "No Excuses.mp3"; sourceTree = "<group>"; };
+		4ECE3DEE25FD63C2007BB1AC /* The Great Dictator.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Great Dictator.mp3"; sourceTree = "<group>"; };
 		4EE5F19125AD23D800B9C2EE /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
 		4EE5F19625AD23F700B9C2EE /* SegueInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueInfo.swift; sourceTree = "<group>"; };
 		4EE5F1D125AD246100B9C2EE /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
@@ -595,6 +619,19 @@
 			children = (
 				4E6C2B1F25E15A1E00483274 /* 72 Hour Rule.mp3 */,
 				4E6C2AFE25E15A1700483274 /* Affirmations Are Powerful.mp3 */,
+				4ECE3DE425FD63C0007BB1AC /* Against All Odds.mp3 */,
+				4ECE3DEB25FD63C1007BB1AC /* Desire.mp3 */,
+				4ECE3DE825FD63C1007BB1AC /* Get To Work.mp3 */,
+				4ECE3DE525FD63C0007BB1AC /* Go Through Hell.mp3 */,
+				4ECE3DEA25FD63C1007BB1AC /* How Hungry Are You?.mp3 */,
+				4ECE3DE625FD63C0007BB1AC /* Hungover AF.mp3 */,
+				4ECE3DE725FD63C1007BB1AC /* My Journey.mp3 */,
+				4ECE3DED25FD63C2007BB1AC /* No Excuses.mp3 */,
+				4ECE3DEE25FD63C2007BB1AC /* The Great Dictator.mp3 */,
+				4ECE3DE325FD63C0007BB1AC /* The Man In The Arena.mp3 */,
+				4ECE3DEC25FD63C2007BB1AC /* Who Is The Real You?.mp3 */,
+				4ECE3DE925FD63C1007BB1AC /* Why Do We Fall?.mp3 */,
+				4ECE3DE225FD63BF007BB1AC /* Work Like Hell.mp3 */,
 				4E6C2B2225E15A1E00483274 /* Attention Doesn't Matter.mp3 */,
 				4E6C2B0825E15A1900483274 /* Be Self Motivated.mp3 */,
 				4E6C2B2425E15A1F00483274 /* Change The Way You Think.mp3 */,
@@ -765,7 +802,6 @@
 				9DBC299F25EBEBC200D701CD /* Conor McGregor.mp3 */,
 				9DBC299E25EBEBC200D701CD /* Kevin Hart.mp3 */,
 				9DBC299D25EBEBC200D701CD /* The Rock.mp3 */,
-				4EBBB5E125C0E5D8006D5B61 /* Get To Work.mp3 */,
 				4EBBB5E225C0E5D8006D5B61 /* Master The Morning.mp3 */,
 				4E1EDA1325C23F97003970FB /* Never Hit Snooze Again.mp3 */,
 				9DCFAC4D25EC5CE3000AE24C /* CT Fletcher.mp3 */,
@@ -1037,6 +1073,7 @@
 				4E6C2B6325E15A2000483274 /* Take Risk.mp3 in Resources */,
 				4EBBB5E525C0E5DA006D5B61 /* Beat The Alarm.mp3 in Resources */,
 				9D9BABEF25B8C2D400084507 /* Every Man Has Two Lives.mp3 in Resources */,
+				4ECE3DF825FD63C2007BB1AC /* Desire.mp3 in Resources */,
 				9D9BAC0725B8C2D400084507 /* You Are The One.mp3 in Resources */,
 				4E6C2B4825E15A2000483274 /* Ignore Your Fears.mp3 in Resources */,
 				4EA4AED225B9E834009C2650 /* Start Every Day Perfectly.mp3 in Resources */,
@@ -1060,6 +1097,7 @@
 				4E6C2B3125E15A1F00483274 /* Everybody Wants to Eat.mp3 in Resources */,
 				9D9BAC3425B8C2D400084507 /* Rise & Grind.mp3 in Resources */,
 				4EA4AEDD25B9E834009C2650 /* Just Do It, Girl.mp3 in Resources */,
+				4ECE3DF725FD63C2007BB1AC /* How Hungry Are You?.mp3 in Resources */,
 				4E6C2B3D25E15A2000483274 /* Fear Is Not Real.mp3 in Resources */,
 				4E6C2B4725E15A2000483274 /* Fail Your Way There.mp3 in Resources */,
 				9D9BAC8225B8F80C00084507 /* Dear, Lord.mp3 in Resources */,
@@ -1088,6 +1126,7 @@
 				9D9BAC7F25B8F80C00084507 /* Good Morning, Lord.mp3 in Resources */,
 				9D9BAC1025B8C2D400084507 /* Doubt.mp3 in Resources */,
 				4EA4AEE125B9E834009C2650 /* Get Your Money Up.mp3 in Resources */,
+				4ECE3DF925FD63C2007BB1AC /* Who Is The Real You?.mp3 in Resources */,
 				4E59778425E1D80F00E2E9ED /* Peacock.mp3 in Resources */,
 				4E6C2B2C25E15A1F00483274 /* Dedicate Yourself.mp3 in Resources */,
 				4E59777E25E1D80F00E2E9ED /* Bear Roar.mp3 in Resources */,
@@ -1099,6 +1138,7 @@
 				9DBC29C725EC3C9A00D701CD /* Ray Lewis.mp3 in Resources */,
 				4E59777925E1D80F00E2E9ED /* Falcon.mp3 in Resources */,
 				4E59778125E1D80F00E2E9ED /* Parrot.mp3 in Resources */,
+				4ECE3DF625FD63C2007BB1AC /* Why Do We Fall?.mp3 in Resources */,
 				4EBBB5EB25C0E5DA006D5B61 /* Master The Morning.mp3 in Resources */,
 				4E6C2B3E25E15A2000483274 /* I Almost Quit.mp3 in Resources */,
 				4E1EDA1425C23F97003970FB /* Never Hit Snooze Again.mp3 in Resources */,
@@ -1116,7 +1156,9 @@
 				4EBBB5E925C0E5DA006D5B61 /* Soft Morning.mp3 in Resources */,
 				4E6C2B2F25E15A1F00483274 /* Don't Trust Your Fears.mp3 in Resources */,
 				4E59778625E1D80F00E2E9ED /* Sparrow.mp3 in Resources */,
+				4ECE3DF325FD63C2007BB1AC /* Hungover AF.mp3 in Resources */,
 				4E6C2B4025E15A2000483274 /* I'm Always The Best.mp3 in Resources */,
+				4ECE3DF525FD63C2007BB1AC /* Get To Work.mp3 in Resources */,
 				4EA4AED325B9E834009C2650 /* Greatness Defined.mp3 in Resources */,
 				4E6C2B3025E15A1F00483274 /* Live Your Dreams.mp3 in Resources */,
 				9D9BAC7625B8F80C00084507 /* Good Morning.mp3 in Resources */,
@@ -1131,6 +1173,7 @@
 				4E6C2B3325E15A1F00483274 /* Succeed or DIe Trying.mp3 in Resources */,
 				4E6C2B2A25E15A1F00483274 /* It's Possible.mp3 in Resources */,
 				4E6C2B2D25E15A1F00483274 /* Fear Can Paralyze You.mp3 in Resources */,
+				4ECE3DF025FD63C2007BB1AC /* The Man In The Arena.mp3 in Resources */,
 				9D1FF06225D72EC700E26DDF /* UberMoveTextBold.otf in Resources */,
 				4E6C2B4425E15A2000483274 /* Affirmations Are Powerful.mp3 in Resources */,
 				4E59778325E1D80F00E2E9ED /* Jaguar Roar.mp3 in Resources */,
@@ -1142,6 +1185,7 @@
 				9D9BAC2225B8C2D400084507 /* Every Day Is A New Day.mp3 in Resources */,
 				4E6C2B4625E15A2000483274 /* Low Expectations.mp3 in Resources */,
 				4EA4AECD25B9E834009C2650 /* Perfect People.mp3 in Resources */,
+				4ECE3DFB25FD63C2007BB1AC /* The Great Dictator.mp3 in Resources */,
 				4E6C2B4D25E15A2000483274 /* Define Yourself.mp3 in Resources */,
 				4E6C2B5C25E15A2000483274 /* We're Here Once.mp3 in Resources */,
 				9D9BAC0A25B8C2D400084507 /* There's Gonna Be Some Good.mp3 in Resources */,
@@ -1161,6 +1205,7 @@
 				4E6C2B6825E15A2000483274 /* Attention Doesn't Matter.mp3 in Resources */,
 				4EA4AED125B9E834009C2650 /* Good Morning You Baddie.mp3 in Resources */,
 				4EA4AEDF25B9E834009C2650 /* Awaken The Mind.mp3 in Resources */,
+				4ECE3DF425FD63C2007BB1AC /* My Journey.mp3 in Resources */,
 				9D9BAC7025B8F80C00084507 /* God Is Testing Your Faith.mp3 in Resources */,
 				4E6C2B6E25E15A2000483274 /* Look Where You Need To.mp3 in Resources */,
 				4EA4AEDC25B9E834009C2650 /* Wake Up!.mp3 in Resources */,
@@ -1169,7 +1214,6 @@
 				4E59777C25E1D80F00E2E9ED /* Swamp.mp3 in Resources */,
 				9D9BAC0D25B8C2D400084507 /* Time To Wake Up.mp3 in Resources */,
 				4E6C2B5425E15A2000483274 /* Do Your Best.mp3 in Resources */,
-				4EBBB5EA25C0E5DA006D5B61 /* Get To Work.mp3 in Resources */,
 				4E6C2B4F25E15A2000483274 /* Great Life Awaits You.mp3 in Resources */,
 				9D8D248B25ABABEB00B4E69D /* Main.storyboard in Resources */,
 				4E59778725E1D80F00E2E9ED /* Waterfall.mp3 in Resources */,
@@ -1177,8 +1221,10 @@
 				4E6C2B4E25E15A2000483274 /* Be Self Motivated.mp3 in Resources */,
 				4E6C2B2B25E15A1F00483274 /* Follow Your Passion.mp3 in Resources */,
 				4E59777A25E1D80F00E2E9ED /* Leopard Roar.mp3 in Resources */,
+				4ECE3DF125FD63C2007BB1AC /* Against All Odds.mp3 in Resources */,
 				4E6C2B4125E15A2000483274 /* Have A Purpose.mp3 in Resources */,
 				4E6C2B4225E15A2000483274 /* Good Things Happen.mp3 in Resources */,
+				4ECE3DEF25FD63C2007BB1AC /* Work Like Hell.mp3 in Resources */,
 				9D9BAC2825B8C2D400084507 /* tickle.mp3 in Resources */,
 				4E6C2B3F25E15A2000483274 /* Talk To Smart People.mp3 in Resources */,
 				4E6C2B4C25E15A2000483274 /* Keep High Standards.mp3 in Resources */,
@@ -1189,12 +1235,14 @@
 				9D9BABF825B8C2D400084507 /* Adhan-makkah.caf in Resources */,
 				4E6C2B5225E15A2000483274 /* Love What You Do.mp3 in Resources */,
 				9D9BABF525B8C2D400084507 /* Bitmap.png in Resources */,
+				4ECE3DF225FD63C2007BB1AC /* Go Through Hell.mp3 in Resources */,
 				4EA4AEE225B9E834009C2650 /* Be Water.mp3 in Resources */,
 				4E6C2B5625E15A2000483274 /* Do Something Great.mp3 in Resources */,
 				4E59778C25E1D80F00E2E9ED /* Hyena.mp3 in Resources */,
 				9DCFAC4E25EC5CE3000AE24C /* CT Fletcher.mp3 in Resources */,
 				9D9BAC2E25B8C2D400084507 /* Nobody Believes In You.mp3 in Resources */,
 				4E6C2B5125E15A2000483274 /* Grow From Mistakes.mp3 in Resources */,
+				4ECE3DFA25FD63C2007BB1AC /* No Excuses.mp3 in Resources */,
 				9DBC299125EBEA4D00D701CD /* David Goggins.mp3 in Resources */,
 				9DBC29A025EBEBC200D701CD /* The Rock.mp3 in Resources */,
 				4E6C2B3B25E15A2000483274 /* Do What You Love.mp3 in Resources */,

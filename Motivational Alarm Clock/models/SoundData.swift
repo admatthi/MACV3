@@ -140,8 +140,8 @@ var allSounds:[Sounds] = [Sounds(soundName: "Rise & Grind", title: "Rise & Grind
             Sounds(soundName: "Hawk", title: "Hawk", image: "Hawk", category: "Sounds"),Sounds(soundName: "Eagle", title: "Eagle", image: "Eagle", category: "Sounds"),Sounds(soundName: "Falcon", title: "Falcon", image: "Falcon", category: "Sounds"),Sounds(soundName: "Rooster", title: "Rooster", image: "Rooster", category: "Sounds"),Sounds(soundName: "Leopard Roar", title: "Leopard Roar", image: "Leopard Roar", category: "Sounds"),Sounds(soundName: "Swamp", title: "Swamp", image: "Swamp", category: "Sounds"),Sounds(soundName: "Waterfall", title: "Waterfall", image: "Waterfall", category: "Sounds"),
 
 
-
-
+// 13 march new data
+            Sounds(soundName: "The Man In The Arena", title: "The Man In The Arena", image: "The Man In The Arena", category: "Inspiration"),Sounds(soundName: "The Great Dictator", title: "The Great Dictator", image: "The Great Dictator", category: "Inspiration"),Sounds(soundName: "Who Is The Real You?", title: "Who Is The Real You?", image: "Who Is The Real You?", category: "Inspiration"),Sounds(soundName: "Against All Odds", title: "Against All Odds", image: "Against All Odds", category: "Inspiration"),Sounds(soundName: "Why Do We Fall?", title: "Why Do We Fall?", image: "Why Do We Fall?", category: "Inspiration"),Sounds(soundName: "Go Through Hell", title: "Go Through Hell", image: "Go Through Hell", category: "Inspiration"),Sounds(soundName: "Desire", title: "Desire", image: "Desire", category: "Inspiration"),Sounds(soundName: "No Excuses", title: "No Excuses", image: "No Excuses", category: "Inspiration"),Sounds(soundName: "Work Like Hell", title: "Work Like Hell", image: "Work Like Hell", category: "Inspiration"),Sounds(soundName: "My Journey", title: "My Journey", image: "My Journey", category: "Inspiration"),Sounds(soundName: "Hungover AF", title: "Hungover AF", image: "Hungover AF", category: "Popular"),Sounds(soundName: "How Hungry Are You?", title: "How Hungry Are You?", image: "How Hungry Are You?", category: "Career"),Sounds(soundName: "Get To Work", title: "Get To Work", image: "Get To Work", category: "Career"),
 
 
 ]

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "The Man In The Arena.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
