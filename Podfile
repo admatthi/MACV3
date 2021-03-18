@@ -6,6 +6,7 @@ target 'Motivational Alarm Clock' do
   use_frameworks!
 
   # Pods for Motivational Alarm Clock
+
 pod 'Firebase/Analytics'
 pod 'Kingfisher'
 pod 'Firebase/Database'
@@ -21,6 +22,8 @@ pod 'ReadabilityKit'
 pod 'DropDown'
 pod 'ActionSheetPicker-3.0'
 pod 'SwiftySound'
+
+
   target 'Motivational Alarm ClockTests' do
     inherit! :search_paths
     # Pods for testing
