@@ -136,7 +136,74 @@ var isFromSoundVc = false
         
 
 //         didpurchase = true
-                if didpurchase {
+        let index = segueInfo.curCellIndex
+        if alarmModel.alarms.count - 1 >= index{
+            if alarmModel.alarms[index].isDailyWake ||  segueInfo.isEditMode {
+                createalarm(referrer: referrer)
+                
+
+
+                let interval = Date() - self.datePicker.date
+                print(interval.day)
+                print(interval.month)
+                print(interval.hour)
+                let modifiedDate = Calendar.current.date(byAdding: .day, value: interval.day ?? 0, to: self.datePicker.date)!
+                print(modifiedDate)
+                let date = Scheduler.correctSecondComponent(date: modifiedDate)
+                let index = segueInfo.curCellIndex
+                var tempAlarm = Alarm()
+                tempAlarm.date = date
+                tempAlarm.label = segueInfo.label
+                tempAlarm.enabled = true
+                tempAlarm.mediaLabel = segueInfo.mediaLabel
+                tempAlarm.mediaID = segueInfo.mediaID
+                tempAlarm.snoozeEnabled = false
+                tempAlarm.repeatEnabled = self.repeatEnabled
+                tempAlarm.imageName = segueInfo.imageName
+                tempAlarm.category = segueInfo.category
+                tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
+                tempAlarm.uuid = UUID().uuidString
+                tempAlarm.onSnooze = false
+                if segueInfo.isEditMode {
+                    if alarmModel.alarms[index].isDailyWake{
+                        tempAlarm.isDailyWake = true
+                    }
+                    alarmModel.alarms[index] = tempAlarm
+
+                }
+                else {
+                    alarmModel.alarms.append(tempAlarm)
+                }
+                alarmScheduler.reSchedule()
+                self.dismiss(animated: true, completion: nil)
+                if self.isFromSoundVc{
+                    if let viewController = UIApplication.shared.windows.first!.rootViewController as? TabBarViewController {
+                        viewController.selectedIndex = 0
+                    }
+                    
+                }
+                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+                let newUserCreatedAlarm = UserDefaults.standard.bool(forKey: "newUserWithOutCreatingAlarm")
+                if newUserCreatedAlarm  {
+
+                } else {
+                    UserDefaults.standard.setValue(true,forKey: "newUserWithOutCreatingAlarm")
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    print("Not first launch.")
+                    let vc : UITabBarController = mainStoryboardIpad.instantiateViewController(withIdentifier: "mainTabbarController") as! UITabBarController
+                    appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
+                    appDelegate.window?.rootViewController = vc
+                    appDelegate.window?.makeKeyAndVisible()
+                }
+    //                    self.performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
+                NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
+
+
+            }
+        }
+
+        if didpurchase {
                     
                     createalarm(referrer: referrer)
                     
@@ -164,6 +231,9 @@ var isFromSoundVc = false
                     tempAlarm.uuid = UUID().uuidString
                     tempAlarm.onSnooze = false
                     if segueInfo.isEditMode {
+                        if alarmModel.alarms[index].isDailyWake{
+                            tempAlarm.isDailyWake = true
+                        }
                         alarmModel.alarms[index] = tempAlarm
                     }
                     else {
@@ -316,13 +386,40 @@ var isFromSoundVc = false
 //                cell?.setSelected(true, animated: false)
 //                cell?.setSelected(false, animated: false)
             case 0:
-                performSegue(withIdentifier: Id.labelSegueIdentifier, sender: self)
-                cell?.setSelected(true, animated: false)
-                cell?.setSelected(false, animated: false)
+                
+                if segueInfo.isEditMode {
+                    let index = segueInfo.curCellIndex
+                    if alarmModel.alarms[index].isDailyWake{
+                        
+                    }else{
+                        performSegue(withIdentifier: Id.labelSegueIdentifier, sender: self)
+                        cell?.setSelected(true, animated: false)
+                        cell?.setSelected(false, animated: false)
+                    }
+                }
+                else {
+                    performSegue(withIdentifier: Id.labelSegueIdentifier, sender: self)
+                    cell?.setSelected(true, animated: false)
+                    cell?.setSelected(false, animated: false)
+                }
+
             case 1:
-                performSegue(withIdentifier: Id.selectSoundSegueIdentifier, sender: self)
-                cell?.setSelected(true, animated: false)
-                cell?.setSelected(false, animated: false)
+                if segueInfo.isEditMode {
+                    let index = segueInfo.curCellIndex
+                    if alarmModel.alarms[index].isDailyWake{
+                        
+                    }else{
+                        performSegue(withIdentifier: Id.selectSoundSegueIdentifier, sender: self)
+                        cell?.setSelected(true, animated: false)
+                        cell?.setSelected(false, animated: false)
+                    }
+                }
+                else {
+                    performSegue(withIdentifier: Id.selectSoundSegueIdentifier, sender: self)
+                    cell?.setSelected(true, animated: false)
+                    cell?.setSelected(false, animated: false)
+                }
+
             default:
                 break
             }

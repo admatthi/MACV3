@@ -288,6 +288,13 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 
         
     }
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if alarmModel.alarms[indexPath.row].isDailyWake == true {
+            return .none
+        }else{
+            return .delete
+        }
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeItemTableViewCell") as! HomeItemTableViewCell
         //cell text
@@ -418,10 +425,28 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     }
     func setupTodayorFutureDate(){
         for (index,alarm) in alarmModel.alarms.enumerated(){
+//            if alarm.isDailyWake {
+//                var filteredSounds = allSounds.filter({$0.category == selectedCategory})
+//                filteredSounds.shuffle()
+//                let firstSound = filteredSounds[0]
+//                alarmModel.alarms[index].mediaLabel = firstSound.soundName
+//                alarmModel.alarms[index].mediaID = firstSound.soundName
+//                alarmModel.alarms[index].imageName = firstSound.image
+//                alarmModel.alarms[index].category = firstSound.category
+//            }
             let date = alarmModel.alarms[index].date
             if (date.timeIntervalSinceNow.sign == .minus) {
                 if alarm.repeatEnabled {
                     // date is in past
+                    if alarm.isDailyWake {
+                        var filteredSounds = allSounds.filter({$0.category == selectedCategory})
+                        filteredSounds.shuffle()
+                        let firstSound = filteredSounds[0]
+                        alarmModel.alarms[index].mediaLabel = firstSound.soundName
+                        alarmModel.alarms[index].mediaID = firstSound.soundName
+                        alarmModel.alarms[index].imageName = firstSound.image
+                        alarmModel.alarms[index].category = firstSound.category
+                    }
                     let calendar = Calendar.current
                     let time=calendar.dateComponents([.hour,.minute,.second], from: alarmModel.alarms[index].date)
                     let newDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
@@ -498,12 +523,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     }
     func addAlarmForNewUsers()
     {
-       let isInitialAlrmCreated = UserDefaults.standard.bool(forKey: "isInitialAlrmCreated")
-        if !isInitialAlrmCreated{
+       let isInitialAlrmCreatedForDaily = UserDefaults.standard.bool(forKey: "isInitialAlrmCreatedForDaily")
+        if !isInitialAlrmCreatedForDaily{
             allSounds = allSounds.sorted { $0.popular ?? 0 > $1.popular ?? 0 }
-            let filteredSounds = allSounds.filter({$0.category == selectedCategory})
+            let filteredSounds = allSounds.filter({$0.category == selectedCategory && $0.soundName == "CT Fletcher"})
             let firstSound = filteredSounds[0]
-            let secondSound = filteredSounds[1]
             var firstDate = Calendar.current.date(bySettingHour: 8, minute: 30, second: 0, of: Date())!
             if (firstDate.timeIntervalSinceNow.sign == .minus) {
                 // date is in past
@@ -549,7 +573,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             }
             var tempAlarm = Alarm()
             tempAlarm.date = firstDate
-            tempAlarm.label = "Alarm"
+            tempAlarm.label = "Daily Wake"
             tempAlarm.enabled = true
             tempAlarm.mediaLabel = firstSound.soundName
             tempAlarm.mediaID = firstSound.soundName
@@ -561,25 +585,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             tempAlarm.onSnooze = false
             tempAlarm.enabled = false
             tempAlarm.repeatEnabled = true
+            tempAlarm.isDailyWake = true
             alarmModel.alarms.append(tempAlarm)
-            var tempAlarm2 = Alarm()
-            tempAlarm2.date = secondDate
-            tempAlarm2.label = "Alarm"
-            tempAlarm2.enabled = true
-            tempAlarm2.mediaLabel = secondSound.soundName
-            tempAlarm2.mediaID = secondSound.soundName
-            tempAlarm2.snoozeEnabled = false
-            tempAlarm2.imageName = secondSound.image
-            tempAlarm2.category = secondSound.category
-            tempAlarm2.repeatWeekdays = []
-            tempAlarm2.uuid = UUID().uuidString
-            tempAlarm2.onSnooze = false
-            tempAlarm2.enabled = false
-            tempAlarm.repeatEnabled = true
-            alarmModel.alarms.append(tempAlarm2)
             alarmScheduler.reSchedule()
             NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
-            UserDefaults.standard.setValue(true, forKey: "isInitialAlrmCreated")
+            UserDefaults.standard.setValue(true, forKey: "isInitialAlrmCreatedForDaily")
         }
     }
     // In a storyboard-based application, you will often want to do a little preparation before navigation

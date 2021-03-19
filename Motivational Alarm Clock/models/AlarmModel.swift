@@ -22,9 +22,10 @@ struct Alarm: PropertyReflectable {
     var imageName: String = "nowandnever"
     var category:String = "Motivation"
     var repeatEnabled:Bool = false
+    var isDailyWake:Bool = false
     init(){}
     
-    init(date:Date, enabled:Bool, snoozeEnabled:Bool, repeatWeekdays:[Int], uuid:String, mediaID:String, mediaLabel:String, label:String, onSnooze: Bool,imageName:String,category:String,isRepeat:Bool){
+    init(date:Date, enabled:Bool, snoozeEnabled:Bool, repeatWeekdays:[Int], uuid:String, mediaID:String, mediaLabel:String, label:String, onSnooze: Bool,imageName:String,category:String,isRepeat:Bool,isDailyWake:Bool){
         self.date = date
         self.enabled = enabled
         self.snoozeEnabled = snoozeEnabled
@@ -37,6 +38,7 @@ struct Alarm: PropertyReflectable {
         self.imageName = imageName
         self.category = category
         self.repeatEnabled = isRepeat
+        self.isDailyWake = isDailyWake
         
     }
     
@@ -53,9 +55,10 @@ struct Alarm: PropertyReflectable {
         imageName = dict["imageName"] as? String ?? ""
         category = dict["category"] as? String ?? ""
         repeatEnabled = dict["repeatEnabled"] as? Bool ?? false
+        isDailyWake = dict["isDailyWake"] as? Bool ?? false
     }
     
-    static var propertyCount: Int = 12
+    static var propertyCount: Int = 13
 }
 
 extension Alarm {
@@ -92,7 +95,7 @@ class Alarms: Persistable {
     
     func unpersist() {
         for key in ud.dictionaryRepresentation().keys {
-            if key.description.contains("revenuecat") || key.description.contains("isInitialAlrmCreated") || key.description.contains("launchedBefore") || key.description.contains("newUserWithOutCreatingAlarm") {
+            if key.description.contains("revenuecat") || key.description.contains("isInitialAlrmCreated") || key.description.contains("launchedBefore") || key.description.contains("isInitialAlrmCreatedForDaily") || key.description.contains("newUserWithOutCreatingAlarm") {
                 
             }else{
                 UserDefaults.standard.removeObject(forKey: key.description)
