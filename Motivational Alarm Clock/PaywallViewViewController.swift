@@ -122,7 +122,7 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
                let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
 
                
-               guard let package = offering?.availablePackages[1] else {
+               guard let package = offering?.availablePackages[0] else {
                      print("No available package")
                    MBProgressHUD.hide(for: view, animated: true)
 
