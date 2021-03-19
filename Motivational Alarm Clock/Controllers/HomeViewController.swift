@@ -11,6 +11,9 @@ import Firebase
 import AudioToolbox
 import AVFoundation
 import FBSDKCoreKit
+import StoreKit
+
+var alarmname = String()
 
 class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate,AVAudioPlayerDelegate{
     var selectedAlarm:Alarm?
@@ -358,6 +361,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
 //            cell.mainView.alpha = 0.8
             cell.playPauseButton.alpha = 0.8
             cell.itemSwitch.setOn(false, animated: false)
+        }
+        
+        if indexPath.row > 1 {
+            
+            SKStoreReviewController.requestReview()
         }
         
         //delete empty seperator line

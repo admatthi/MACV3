@@ -124,7 +124,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
             completionHandler: {_, _ in })
             
             asknotifications(referrer: referrer)
-            
+//
         } else {
           let settings: UIUserNotificationSettings =
           UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)

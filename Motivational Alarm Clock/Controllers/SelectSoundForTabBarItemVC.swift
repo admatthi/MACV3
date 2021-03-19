@@ -284,11 +284,11 @@ extension SelectSoundForTabBarItemVC:UICollectionViewDataSource,UICollectionView
     }
     
     func tapsave(referrer : String) {
-                                     AppEvents.logEvent(AppEvents.Name(rawValue: "tapsave"), parameters: ["referrer" : referrer])
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "tapsave"), parameters: ["referrer" : referrer, "alarmname" : alarmname])
                                  }
     
     func logsoundselected(referrer : String) {
-                                     AppEvents.logEvent(AppEvents.Name(rawValue: "soundselected"), parameters: ["referrer" : referrer])
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "soundselected"), parameters: ["referrer" : referrer, "alarmname" : alarmname])
                                  }
     func logcategorycollected(referrer : String) {
                                      AppEvents.logEvent(AppEvents.Name(rawValue: "categorycollected"), parameters: ["referrer" : referrer])
@@ -331,6 +331,7 @@ extension SelectSoundForTabBarItemVC:UICollectionViewDataSource,UICollectionView
 
                 segueInfo.mediaLabel = sound.soundName
                 segueInfo.mediaID = sound.soundName
+                alarmname = sound.soundName
                 segueInfo.category = sound.category
                 segueInfo.imageName = sound.image
                 segueInfo.label = sound.title

@@ -154,7 +154,6 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
                                
                                MBProgressHUD.hide(for: self.view, animated: true)
                                 
-                                SKStoreReviewController.requestReview()
 
                                 
                                 self.dismiss(animated: true, completion: nil)
@@ -171,8 +170,6 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
 
                                  didpurchase = true
                                 
-                                SKStoreReviewController.requestReview()
-
                                
                                 self.dismiss(animated: true, completion: nil)
 
@@ -223,7 +220,7 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
               
                 self.tapcontinue.setTitle("Try for FREE", for: .normal)
         
-                self.leadingtext.text = "Try 3 days free, then $69.99/year. Cancel anytime."
+                self.leadingtext.text = "Try 3 days free, then $19.99/year. Cancel anytime."
                 
             } else {
                 //

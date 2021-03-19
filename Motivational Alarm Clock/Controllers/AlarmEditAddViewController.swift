@@ -12,6 +12,10 @@ import MediaPlayer
 import FBSDKCoreKit
 import StoreKit
 
+var grayl = UIColor(red: 0.10, green: 0.10, blue: 0.10, alpha: 1.00)
+
+
+
 class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
 var isFromSoundVc = false
@@ -124,6 +128,7 @@ var isFromSoundVc = false
         self.dismiss(animated: true, completion: nil)
     }
     
+
     @IBAction func saveEditAlarm(_ sender: AnyObject) {
         
         firstinstall = false
@@ -132,6 +137,11 @@ var isFromSoundVc = false
 
 //         didpurchase = true
                 if didpurchase {
+                    
+                    createalarm(referrer: referrer)
+                    
+
+
                     let interval = Date() - self.datePicker.date
                     print(interval.day)
                     print(interval.month)
@@ -223,8 +233,10 @@ var isFromSoundVc = false
         if(cell == nil) {
             cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: Id.settingIdentifier)
         }
-        cell!.backgroundColor = .clear
-        cell!.selectedBackgroundView?.backgroundColor = .clear
+        cell!.backgroundColor = grayl
+        cell!.selectedBackgroundView?.backgroundColor = grayl
+        
+        
         let image = UIImage(systemName: "chevron.right")
         let accessory  = UIImageView(frame:CGRect(x:0, y:0, width:(image?.size.width)!, height:(image?.size.height)!))
         accessory.image = image
@@ -282,9 +294,13 @@ var isFromSoundVc = false
                 style: UITableViewCell.CellStyle.default, reuseIdentifier: Id.settingIdentifier)
             cell!.selectedBackgroundView?.backgroundColor = .clear
                 cell!.backgroundColor = .clear
-            cell!.textLabel!.text = "Delete Alarm"
+
+                        cell!.textLabel!.text = "Delete Alarm"
+                        cell!.textLabel!.text = ""
+
             cell!.textLabel!.textAlignment = .center
             cell!.textLabel!.textColor = UIColor.red
+            cell?.isUserInteractionEnabled = false
         }
         
         return cell!
@@ -335,12 +351,16 @@ var isFromSoundVc = false
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
+    
+    func createalarm(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "createalarm"), parameters: ["referrer" : referrer, "alarmname" : alarmname])
+                                 }
 
     func tapsave(referrer : String) {
-                                     AppEvents.logEvent(AppEvents.Name(rawValue: "tapsave"), parameters: ["referrer" : referrer])
+        AppEvents.logEvent(AppEvents.Name(rawValue: "tapsave"), parameters: ["referrer" : referrer, "alarmname" : alarmname])
                                  }
     func turnoff(referrer : String) {
-                                     AppEvents.logEvent(AppEvents.Name(rawValue: "turnoff"), parameters: ["referrer" : referrer])
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "turnoff"), parameters: ["referrer" : referrer, "alarmname" : alarmname])
                                  }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
