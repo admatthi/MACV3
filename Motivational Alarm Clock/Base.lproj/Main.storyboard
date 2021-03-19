@@ -57,7 +57,7 @@
                                             <state key="normal" image="checkmark.circle.fill" catalog="system"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAp-Ch-9ds">
-                                            <rect key="frame" x="20" y="680" width="374" height="73"/>
+                                            <rect key="frame" x="20" y="631" width="374" height="73"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="73" id="Q99-lx-uQQ"/>
@@ -168,7 +168,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFX-He-8tg">
-                                            <rect key="frame" x="108.5" y="773" width="197" height="26"/>
+                                            <rect key="frame" x="108.5" y="724" width="197" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="26" id="E1p-eg-e3i"/>
                                                 <constraint firstAttribute="width" constant="197" id="TOf-x2-HT6"/>
@@ -279,7 +279,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                                 <blurEffect style="regular"/>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mep-Cr-E6T">
-                                <rect key="frame" x="20" y="804" width="374" height="48"/>
+                                <rect key="frame" x="20" y="755" width="374" height="48"/>
                                 <string key="text">Subscription Term: Wake subscription automatically renews unless auto-renew is turned off at least 24h before current periods ends. Payment is charged to your iTunes Account. Manage subscription and turn off the auto renewal in account Setting</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -325,110 +325,10 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.94401818510000002" green="0.63414740560000005" blue="0.2346394956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="KFD-Or-CFY" kind="relationship" relationship="rootViewController" id="7xj-Ua-cOf"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdf-Mf-scw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="893" y="-248"/>
-        </scene>
-        <!--Wake-->
-        <scene sceneID="1pI-lT-iqs">
-            <objects>
-                <tableViewController modalPresentationStyle="fullScreen" id="KFD-Or-CFY" customClass="HomeTableViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="5xo-yA-Ygg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="separatorColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeItemTableViewCell" rowHeight="120" id="TG6-co-e5G" customClass="HomeItemTableViewCell" customModule="Motivational_Alarm_Clock" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TG6-co-e5G" id="vyY-kF-dZA">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6B-2V-Xyo">
-                                            <rect key="frame" x="20" y="10" width="379" height="100"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 8" translatesAutoresizingMaskIntoConstraints="NO" id="hef-Zk-5gz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="KbJ-Ev-Vh6"/>
-                                                        <constraint firstAttribute="width" constant="90" id="uah-sX-I3G"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:30 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYI-LD-xYV">
-                                                    <rect key="frame" x="105" y="15" width="126" height="48"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="35"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Only Live Once" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gn-xh-Y6h">
-                                                    <rect key="frame" x="105" y="63" width="141" height="22"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kEk-mn-Zgs">
-                                                    <rect key="frame" x="310" y="34.5" width="51" height="31"/>
-                                                </switch>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="2Gn-xh-Y6h" firstAttribute="leading" secondItem="hef-Zk-5gz" secondAttribute="trailing" constant="15" id="6Vt-vx-7Fp"/>
-                                                <constraint firstItem="kEk-mn-Zgs" firstAttribute="centerY" secondItem="z6B-2V-Xyo" secondAttribute="centerY" id="DYu-c9-Bcm"/>
-                                                <constraint firstAttribute="trailing" secondItem="kEk-mn-Zgs" secondAttribute="trailing" constant="20" id="EiG-o8-yfo"/>
-                                                <constraint firstAttribute="bottom" secondItem="hef-Zk-5gz" secondAttribute="bottom" id="IaN-LP-LYc"/>
-                                                <constraint firstItem="uYI-LD-xYV" firstAttribute="leading" secondItem="hef-Zk-5gz" secondAttribute="trailing" constant="15" id="TJ8-qI-82D"/>
-                                                <constraint firstAttribute="bottom" secondItem="2Gn-xh-Y6h" secondAttribute="bottom" constant="15" id="eVu-Vc-Gnl"/>
-                                                <constraint firstItem="hef-Zk-5gz" firstAttribute="top" secondItem="z6B-2V-Xyo" secondAttribute="top" id="iUv-OZ-nOE"/>
-                                                <constraint firstItem="uYI-LD-xYV" firstAttribute="top" secondItem="z6B-2V-Xyo" secondAttribute="top" constant="15" id="sP4-U3-wRV"/>
-                                                <constraint firstItem="hef-Zk-5gz" firstAttribute="leading" secondItem="z6B-2V-Xyo" secondAttribute="leading" id="yJm-kg-MDr"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="z6B-2V-Xyo" secondAttribute="trailing" constant="15" id="7U7-pe-Cnq"/>
-                                        <constraint firstItem="z6B-2V-Xyo" firstAttribute="top" secondItem="vyY-kF-dZA" secondAttribute="top" constant="10" id="G67-FN-AI5"/>
-                                        <constraint firstItem="z6B-2V-Xyo" firstAttribute="leading" secondItem="vyY-kF-dZA" secondAttribute="leading" constant="20" id="Irf-mS-2zb"/>
-                                        <constraint firstAttribute="bottom" secondItem="z6B-2V-Xyo" secondAttribute="bottom" constant="10" id="nwD-wg-vzQ"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="itemSwitch" destination="kEk-mn-Zgs" id="xgn-pa-akL"/>
-                                    <outlet property="mainView" destination="z6B-2V-Xyo" id="Qim-3V-0mN"/>
-                                    <outlet property="soundImageView" destination="hef-Zk-5gz" id="NO1-wz-r0U"/>
-                                    <outlet property="timeLabel" destination="uYI-LD-xYV" id="ESl-xT-Woi"/>
-                                    <outlet property="titleLable" destination="2Gn-xh-Y6h" id="hdK-hZ-xHO"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="KFD-Or-CFY" id="bUy-6w-uuX"/>
-                            <outlet property="delegate" destination="KFD-Or-CFY" id="648-so-kLG"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Wake" id="IEQ-8L-eOf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="16i-PC-ACi">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="34z-Qh-osK" kind="presentation" identifier="addSegue" id="rfD-rW-QV9"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <segue destination="34z-Qh-osK" kind="presentation" identifier="editSegue" id="Xty-Sz-rq8"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PTz-NM-fcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1695.6521739130435" y="-248.4375"/>
         </scene>
         <!--Create Alarm-->
         <scene sceneID="5Wf-zb-HDG">
@@ -749,7 +649,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8p0-QK-EXB">
                                 <rect key="frame" x="0.0" y="102" width="414" height="745"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.15457674646790612" green="0.15359218120377935" blue="0.15556131173203291" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeItemTableViewCell" rowHeight="138" id="X0n-29-NcP" customClass="HomeItemTableViewCell" customModule="Motivational_Alarm_Clock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="138"/>
@@ -2954,7 +2854,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="746-Gr-Cw3"/>
-        <segue reference="YON-42-if4"/>
+        <segue reference="YLc-sc-HuK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Bitmap" width="100" height="100"/>

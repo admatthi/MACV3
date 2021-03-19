@@ -113,7 +113,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         self.navigationController?.navigationBar.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .none
+//        tableView.separatorStyle = .none
         alarmScheduler.checkNotification()
         tableView.allowsSelectionDuringEditing = true
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)

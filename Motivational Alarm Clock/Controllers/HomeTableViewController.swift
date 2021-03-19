@@ -26,7 +26,7 @@ class HomeTableViewController: UITableViewController{
         super.viewWillAppear(animated)
         alarmModel = Alarms()
         tableView.reloadData()
-        tableView.separatorStyle = .none
+//        tableView.separatorStyle = .none
         
         //dynamically append the edit button
         if alarmModel.count != 0 {
