@@ -69,7 +69,7 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
            }
            @IBAction func tapBack(_ sender: Any) {
                
-                   
+                   tapx(referrer: referrer)
             self.dismiss(animated: true, completion: {
                 let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
@@ -91,7 +91,9 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
 
                
            }
-       
+    func tapx(referrer : String) {
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "tapx"), parameters: ["referrer" : referrer])
+                                 }
          
            func logNotificationsSettingsTrue(referrer : String) {
                                             AppEvents.logEvent(AppEvents.Name(rawValue: "notifications enabled"), parameters: ["value" : "true"])
