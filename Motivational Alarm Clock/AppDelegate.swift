@@ -45,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         AppEvents.activateApp()
         UIApplication.shared.isIdleTimerDisabled = true
         referrer = "LaunchAppDelegate"
+        Settings.setAdvertiserTrackingEnabled(true)
 
         
         Purchases.debugLogsEnabled = true
