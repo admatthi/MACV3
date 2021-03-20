@@ -137,8 +137,8 @@ var isFromSoundVc = false
 
 //         didpurchase = true
         let index = segueInfo.curCellIndex
-        if alarmModel.alarms.count - 1 >= index{
-            if alarmModel.alarms[index].isDailyWake ||  segueInfo.isEditMode {
+        if segueInfo.isEditMode{
+            if alarmModel.alarms[index].isDailyWake {
                 createalarm(referrer: referrer)
                 
 
