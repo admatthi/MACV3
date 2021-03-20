@@ -171,7 +171,7 @@ class HomeTableViewController: UITableViewController{
     }
     
     func turnoff(referrer : String) {
-                                     AppEvents.logEvent(AppEvents.Name(rawValue: "turnoff"), parameters: ["referrer" : referrer])
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "turnoff"), parameters: ["referrer" : referrer, "soundname" : soundname])
                                  }
 
     // Override to support editing the table view.

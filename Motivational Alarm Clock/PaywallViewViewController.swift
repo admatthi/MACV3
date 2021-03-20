@@ -92,7 +92,7 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
                
            }
     func tapx(referrer : String) {
-                                     AppEvents.logEvent(AppEvents.Name(rawValue: "tapx"), parameters: ["referrer" : referrer])
+        AppEvents.logEvent(AppEvents.Name(rawValue: "tapx"), parameters: ["referrer" : referrer, "alarmname" : alarmname])
                                  }
          
            func logNotificationsSettingsTrue(referrer : String) {
@@ -109,11 +109,11 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
     
     
     func logTapSubscribeEvent(referrer : String) {
-                                     AppEvents.logEvent(AppEvents.Name(rawValue: "tapsubscribe"), parameters: ["referrer" : referrer])
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "tapsubscribe"), parameters: ["referrer" : referrer, "alarmname" : alarmname])
                                  }
     
     func logPurchaseSuccessEvent(referrer : String) {
-                                     AppEvents.logEvent(AppEvents.Name(rawValue: "purchasefollowthrough"), parameters: ["referrer" : referrer])
+                                     AppEvents.logEvent(AppEvents.Name(rawValue: "purchasefollowthrough"), parameters: ["referrer" : referrer, "alarmname" : alarmname])
                                  }
     
     

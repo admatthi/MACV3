@@ -12,6 +12,8 @@ import AudioToolbox
 import AVFoundation
 import FBSDKCoreKit
 
+var soundname = String()
+
 class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     var segueInfo: SegueInfo!
     var alarmScheduler: AlarmSchedulerDelegate = Scheduler()
@@ -23,7 +25,7 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     
     var soundsCategories = ["Popular", "All", "Inspiration", "Affirmations", "Self Help", "Career", "Sounds"]
     func selectsound(referrer : String) {
-                                     AppEvents.logEvent(AppEvents.Name(rawValue: "selectsound"), parameters: ["referrer" : referrer])
+        AppEvents.logEvent(AppEvents.Name(rawValue: "selectsound"), parameters: ["referrer" : referrer, "soundname" : soundname])
                                  }
 
 //    var soundsCategories = ["Motivation","Faith","Self Help","Fitness", "Social", "Business", "Philosophy", "Spirituality" ]
