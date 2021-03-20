@@ -30,10 +30,10 @@
             filePath = "Motivational Alarm Clock/PaywallViewViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
-            landmarkName = "PaywallViewViewController"
-            landmarkType = "3">
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "queryforpaywall()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,8 +46,8 @@
             filePath = "Motivational Alarm Clock/PaywallViewViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
             landmarkName = "queryforpaywall()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "Motivational Alarm Clock/PaywallViewViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
