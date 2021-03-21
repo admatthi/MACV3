@@ -25,7 +25,9 @@ var db : Firestore!
 var uid = String()
 var firstinstall = Bool()
 var audioGlobalPlayer: AVAudioPlayer!
+var selectedSound : Alarm?
 import BackgroundTasks
+var isGlobalPlaying = false
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, AlarmApplicationDelegate,UNUserNotificationCenterDelegate,MessagingDelegate{
     var soundId: SystemSoundID = 1
@@ -33,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     
     let alarmScheduler: AlarmSchedulerDelegate = Scheduler()
     var alarmModel: Alarms = Alarms()
-    var selectedSound : Alarm?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
         uid = UIDevice.current.identifierForVendor!.uuidString
@@ -166,7 +168,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func scheduleTaskForAudioPlaying(isFromNotification:Bool = false){
         
          let state = UIApplication.shared.applicationState
-         
+
+        if isGlobalPlaying {
+            isGlobalPlaying = false
+            if audioGlobalPlayer != nil{
+                audioGlobalPlayer!.play()
+            }
+            else{
+                scheduleTaskForAudioPlaying()
+            }
+        }else{
              let alarmmodel = Alarms()
             var alarms = alarmmodel.alarms.filter({$0.enabled == true})
              alarms.sort(by: { $0.date < $1.date })
@@ -205,11 +216,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
              }
              
              //negative number means loop infinity
-             audioGlobalPlayer!.numberOfLoops = -1
+//             audioGlobalPlayer!.numberOfLoops = -1
             audioGlobalPlayer.volume = 1.0
              audioGlobalPlayer!.isMeteringEnabled = true
              let currentAudioTime = audioGlobalPlayer!.deviceCurrentTime
              selectedSound = greaterthencurretnTime[0]
+             isGlobalPlaying = false
              let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
                     if isFromNotification {
                         audioGlobalPlayer!.play(atTime: currentAudioTime + delayTime)
@@ -220,6 +232,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
                  }
 
              }
+        }
     }
     func scheduleAppRefresh() {
          let request = BGAppRefreshTaskRequest(identifier: "com.aatech.wakeSchedule")
@@ -340,17 +353,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
            let userInfo = response.notification.request.content.userInfo
            // Print full message.
            print("tap on on forground app",userInfo)
-           completionHandler()
+        //
+        isGlobalPlaying = false
         if audioGlobalPlayer != nil {
             audioGlobalPlayer!.stop()
         }
+        if selectedSound != nil{
+            selectedSound = nil
+        }
         alarmsounded(referrer: referrer)
+        completionHandler()
        }
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         // not triggred when we tap on "opps your killed wake app" notification only triggered for real alarm
         if notification.userInfo?.count ?? 0 > 0 {
+            //
+            isGlobalPlaying = false
             if audioGlobalPlayer != nil {
                 audioGlobalPlayer!.stop()
+            }
+            if selectedSound != nil{
+                selectedSound = nil
             }
             alarmsounded(referrer: referrer)
         }
@@ -417,7 +440,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         }
         
         //negative number means loop infinity
-        audioGlobalPlayer!.numberOfLoops = -1
+//        audioGlobalPlayer!.numberOfLoops = -1
+        isGlobalPlaying = false
         audioGlobalPlayer!.isMeteringEnabled = true
         audioGlobalPlayer!.play()
         completionHandler([.alert,.sound])
@@ -590,6 +614,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     //AVAudioPlayerDelegate protocol
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print(flag)
+        if !isGlobalPlaying{
+            alarmsounded(referrer: referrer)
+        }
+        if audioGlobalPlayer != nil {
+            isGlobalPlaying = true
+            audioGlobalPlayer!.play()
+        }
     }
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
 
@@ -598,7 +629,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         Messaging.messaging().apnsToken = deviceToken
     }
     func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.scheduleTaskForAudioPlaying()
+        }
     }
    
     //UIApplicationDelegate protocol
@@ -651,11 +684,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         }
         
         //negative number means loop infinity
-        audioGlobalPlayer!.numberOfLoops = -1
+//        audioGlobalPlayer!.numberOfLoops = -1
         audioGlobalPlayer.volume = 1.0
         audioGlobalPlayer!.isMeteringEnabled = true
         let currentAudioTime = audioGlobalPlayer!.deviceCurrentTime
         selectedSound = greaterthencurretnTime[0]
+        isGlobalPlaying = false
         let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
                 audioGlobalPlayer!.play(atTime: currentAudioTime + delayTime)
             }
@@ -672,7 +706,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 //        audioPlayer?.play()
-        alarmScheduler.checkNotification()
+//        alarmScheduler.checkNotification()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
