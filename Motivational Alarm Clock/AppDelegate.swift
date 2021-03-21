@@ -116,7 +116,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
                                              AppEvents.logEvent(AppEvents.Name(rawValue: "approvenotifications"), parameters: ["referrer" : referrer])
                                          }
         
-        if UserDefaults.standard.bool(forKey: "isForOnboardingscreen"){
+        if UserDefaults.standard.bool(forKey: Id.isForOnboardingscreen){
             if #available(iOS 10.0, *) {
               // For iOS 10 display notification (sent via APNS)
               

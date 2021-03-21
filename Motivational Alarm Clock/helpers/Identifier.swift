@@ -27,4 +27,8 @@ struct Id {
     static let weekdaysUnwindIdentifier = "weekdaysUnwindSegue"
     
     static let selectSoundSegueIdentifier = "selectSoundSegue"
+    
+    
+    
+    static let isForOnboardingscreen = "isForOnboardingscreen"
 }

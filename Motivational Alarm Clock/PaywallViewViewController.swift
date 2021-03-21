@@ -60,7 +60,9 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
                        
                        didpurchase = true
                     
-                    self.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true, completion: {
+                        NotificationCenter.default.post(name: .didFinishPaywallScreen, object: self, userInfo: nil)
+                    })
                        
                
                    }
@@ -161,7 +163,9 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
                                 
 
                                 
-                                self.dismiss(animated: true, completion: nil)
+                                self.dismiss(animated: true, completion: {
+                                    NotificationCenter.default.post(name: .didFinishPaywallScreen, object: self, userInfo: nil)
+                                })
 
 
                                  
@@ -176,7 +180,9 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
                                  didpurchase = true
                                 
                                
-                                self.dismiss(animated: true, completion: nil)
+                                self.dismiss(animated: true, completion: {
+                                    NotificationCenter.default.post(name: .didFinishPaywallScreen, object: self, userInfo: nil)
+                                })
 
                             
                                  
@@ -278,7 +284,9 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
         }
     
     @IBAction func dismissButtonAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: {
+            NotificationCenter.default.post(name: .didFinishPaywallScreen, object: self, userInfo: nil)
+        })
     }
     
     private func showAlert(title: String?, message: String?, handler: ((UIAlertAction) -> Void)? = nil) {

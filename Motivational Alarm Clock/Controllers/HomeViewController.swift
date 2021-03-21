@@ -107,7 +107,9 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     override func viewDidLoad() {
         setupTodayorFutureDate()
         ref = Database.database().reference()
-
+        if !UserDefaults.standard.bool(forKey: Id.isForOnboardingscreen){
+            self.view.isHidden = true
+        }
         homeview(referrer: referrer)
         super.viewDidLoad()
         editButton.isHidden = true
@@ -137,7 +139,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             error = error1
             print("could not active session. err:\(error!.localizedDescription)")
         }
-        
+        if UserDefaults.standard.bool(forKey: Id.isForOnboardingscreen){
+            alarmModel = Alarms()
+            addAlarmForNewUsers()
+            self.tableView.reloadData()
+        }
         queryforinfo()
 
 //        if didpurchase {
@@ -213,8 +219,10 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     }
     @objc func onFinishPaywallScreen(_ notification: Notification)
     {
-        if !UserDefaults.standard.bool(forKey: "isForOnboardingscreen"){
-        UserDefaults.standard.setValue(true,forKey: "isForOnboardingscreen")
+       
+        if !UserDefaults.standard.bool(forKey: Id.isForOnboardingscreen){
+        UserDefaults.standard.setValue(true,forKey: Id.isForOnboardingscreen)
+        self.view.isHidden = true
         let defaultSound = allSounds.filter({$0.category == selectedCategory && $0.soundName == "Ray Lewis"})[0]
         let segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: true, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category, repeatEnabled: false)
             performSegue(withIdentifier: Id.addOnboardingSegueIdentifier, sender: segueInfo)
@@ -222,6 +230,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     }
     @objc func onFinishOnbaording(_ notification: Notification)
     {
+        self.view.isHidden = false
         alarmModel = Alarms()
         addAlarmForNewUsers()
         self.tableView.reloadData()
