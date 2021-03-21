@@ -311,7 +311,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         let alarm: Alarm = alarmModel.alarms[indexPath.row]
 //        cell.soundImageView.image = UIImage(named: alarm.imageName)
         cell.sound2.image = UIImage(named: alarm.imageName)
-        
+        if alarm.isDailyWake{
+            cell.dailywakeImage.image = #imageLiteral(resourceName: "Bitmap-1")
+        }else{
+            cell.dailywakeImage.image = nil
+        }
 //        cell.soundImageView.layer.cornerRadius = cell.soundImageView.frame.width/2
 //        cell.soundImageView.clipsToBounds = true
 

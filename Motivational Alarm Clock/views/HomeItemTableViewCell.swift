@@ -17,6 +17,7 @@ class HomeItemTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var itemSwitch: UISwitch!
     @IBOutlet weak var playPauseButton: UIButton!
+    @IBOutlet weak var dailywakeImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

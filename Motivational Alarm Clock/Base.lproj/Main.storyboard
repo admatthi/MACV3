@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -57,7 +57,7 @@
                                             <state key="normal" image="checkmark.circle.fill" catalog="system"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAp-Ch-9ds">
-                                            <rect key="frame" x="20" y="680" width="374" height="73"/>
+                                            <rect key="frame" x="20" y="631" width="374" height="73"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="73" id="Q99-lx-uQQ"/>
@@ -168,7 +168,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFX-He-8tg">
-                                            <rect key="frame" x="108.5" y="773" width="197" height="26"/>
+                                            <rect key="frame" x="108.5" y="724" width="197" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="26" id="E1p-eg-e3i"/>
                                                 <constraint firstAttribute="width" constant="197" id="TOf-x2-HT6"/>
@@ -279,7 +279,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                                 <blurEffect style="regular"/>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mep-Cr-E6T">
-                                <rect key="frame" x="20" y="804" width="374" height="48"/>
+                                <rect key="frame" x="20" y="755" width="374" height="48"/>
                                 <string key="text">Subscription Term: Wake subscription automatically renews unless auto-renew is turned off at least 24h before current periods ends. Payment is charged to your iTunes Account. Manage subscription and turn off the auto renewal in account Setting</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -698,6 +698,13 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                                                                 <imageReference key="image" image="Bitmap" symbolScale="large"/>
                                                             </state>
                                                         </button>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vi5-mg-Ktt">
+                                                            <rect key="frame" x="5" y="0.0" width="30" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="sAG-MO-Qrz"/>
+                                                                <constraint firstAttribute="width" constant="30" id="yKu-zH-GMI"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -711,9 +718,11 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                                                         <constraint firstItem="Mvi-AU-PBj" firstAttribute="leading" secondItem="NXT-M3-RyW" secondAttribute="trailing" constant="20" id="XIg-oX-jUo"/>
                                                         <constraint firstAttribute="trailing" secondItem="A84-bN-jA0" secondAttribute="trailing" constant="8" id="bIf-QZ-dYW"/>
                                                         <constraint firstAttribute="bottom" secondItem="NXT-M3-RyW" secondAttribute="bottom" constant="18" id="caA-82-wKX"/>
+                                                        <constraint firstItem="Vi5-mg-Ktt" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" id="hZv-ZP-qnf"/>
                                                         <constraint firstItem="NXT-M3-RyW" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" constant="3" id="kll-nc-mWr"/>
                                                         <constraint firstItem="K2S-PW-eYe" firstAttribute="top" secondItem="A84-bN-jA0" secondAttribute="bottom" constant="9.5" id="nkc-Aq-e85"/>
                                                         <constraint firstItem="NXT-M3-RyW" firstAttribute="top" secondItem="h0l-ju-jKO" secondAttribute="top" constant="18" id="qQ2-9r-ND6"/>
+                                                        <constraint firstItem="Vi5-mg-Ktt" firstAttribute="leading" secondItem="h0l-ju-jKO" secondAttribute="leading" constant="5" id="rqm-SE-foR"/>
                                                         <constraint firstAttribute="trailing" secondItem="A84-bN-jA0" secondAttribute="trailing" constant="8" id="zJU-NX-2Np"/>
                                                     </constraints>
                                                 </view>
@@ -729,6 +738,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="dailywakeImage" destination="Vi5-mg-Ktt" id="O0G-Xh-w7h"/>
                                             <outlet property="itemSwitch" destination="A84-bN-jA0" id="Xna-Xi-1YF"/>
                                             <outlet property="mainView" destination="h0l-ju-jKO" id="t1o-ZO-227"/>
                                             <outlet property="playPauseButton" destination="NXT-M3-RyW" id="RRb-El-h5o"/>
@@ -2854,7 +2864,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="746-Gr-Cw3"/>
-        <segue reference="hPJ-gF-2Rs"/>
+        <segue reference="YLc-sc-HuK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Bitmap" width="100" height="100"/>
