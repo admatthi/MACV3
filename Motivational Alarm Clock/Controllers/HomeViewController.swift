@@ -40,6 +40,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
                 ifAlreadyPresented = true
                 let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc : PaywallViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "PaywallViewViewController") as! PaywallViewViewController
+                
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
             }
@@ -548,7 +549,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             let secondSound = allSounds.filter({$0.category == selectedCategory && $0.soundName == "Ray Lewis"})[0]
             let thirdSound = allSounds.filter({$0.category == selectedCategory && $0.soundName == "Arnold Schwarznegger"})[0]
             let fourthSound = allSounds.filter({$0.category == selectedCategory && $0.soundName == "The Rock"})[0]
-            var firstDate = Date().addingTimeInterval(60)
+            var firstDate = Calendar.current.date(bySettingHour: 9, minute: 30, second: 0, of: Date())!
             if (firstDate.timeIntervalSinceNow.sign == .minus) {
                 // date is in past
                 let calendar = Calendar.current
