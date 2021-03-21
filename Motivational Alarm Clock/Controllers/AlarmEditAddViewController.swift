@@ -237,6 +237,8 @@ var isFromSoundVc = false
                         alarmModel.alarms[index] = tempAlarm
                     }
                     else {
+                        let alarmCount =  UserDefaults.standard.integer(forKey: "alarmCount")
+                        UserDefaults.standard.setValue(alarmCount+1, forKey: "alarmCount")
                         alarmModel.alarms.append(tempAlarm)
                     }
                     alarmScheduler.reSchedule()

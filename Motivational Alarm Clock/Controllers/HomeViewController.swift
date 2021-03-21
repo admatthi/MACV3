@@ -206,8 +206,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             self.navigationItem.leftBarButtonItem = nil
         }
         alarmScheduler.reSchedule()
-        if !UserDefaults.standard.bool(forKey: "isStorekiReviewed"){
-            UserDefaults.standard.setValue(true, forKey: "isStorekiReviewed")
+        if (UserDefaults.standard.integer(forKey: "alarmCount") == 2){
             SKStoreReviewController.requestReview()
         }
     }
