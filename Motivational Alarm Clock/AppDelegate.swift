@@ -24,13 +24,13 @@ import FirebaseDatabase
 var db : Firestore!
 var uid = String()
 var firstinstall = Bool()
-
+var audioGlobalPlayer: AVAudioPlayer!
 import BackgroundTasks
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, AlarmApplicationDelegate,UNUserNotificationCenterDelegate,MessagingDelegate{
     var soundId: SystemSoundID = 1
     var window: UIWindow?
-    var audioPlayer: AVAudioPlayer!
+    
     let alarmScheduler: AlarmSchedulerDelegate = Scheduler()
     var alarmModel: Alarms = Alarms()
     var selectedSound : Alarm?
@@ -167,10 +167,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         
          let state = UIApplication.shared.applicationState
          
-         if state == .background {
-            if audioPlayer != nil {
-                audioPlayer.stop()
-            }
              let alarmmodel = Alarms()
             var alarms = alarmmodel.alarms.filter({$0.enabled == true})
              alarms.sort(by: { $0.date < $1.date })
@@ -184,7 +180,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
              do {
                  try session.setCategory(
                      .playback,
-                     options: .duckOthers)
+                     options: .mixWithOthers)
              } catch let setCategoryError {
                  // handle error
              }
@@ -194,36 +190,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
              var error: NSError?
              
              do {
-                 audioPlayer = try AVAudioPlayer(contentsOf: url)
+                 audioGlobalPlayer = try AVAudioPlayer(contentsOf: url)
              } catch let error1 as NSError {
                  error = error1
-                 audioPlayer = nil
+                 audioGlobalPlayer = nil
              }
              
              if let err = error {
                  print("audioPlayer error \(err.localizedDescription)")
                  return
              } else {
-                 audioPlayer!.delegate = self
-                 audioPlayer!.prepareToPlay()
+                 audioGlobalPlayer!.delegate = self
+                 audioGlobalPlayer!.prepareToPlay()
              }
              
              //negative number means loop infinity
-             audioPlayer!.numberOfLoops = -1
-             audioPlayer!.isMeteringEnabled = true
-             let currentAudioTime = audioPlayer!.deviceCurrentTime
+             audioGlobalPlayer!.numberOfLoops = -1
+             audioGlobalPlayer!.isMeteringEnabled = true
+             let currentAudioTime = audioGlobalPlayer!.deviceCurrentTime
              selectedSound = greaterthencurretnTime[0]
              let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
                     if isFromNotification {
-                        audioPlayer!.play(atTime: currentAudioTime + delayTime)
+                        audioGlobalPlayer!.play(atTime: currentAudioTime + delayTime)
                     }else{
-                        audioPlayer!.play(atTime: currentAudioTime + delayTime)
+                        audioGlobalPlayer!.play(atTime: currentAudioTime + delayTime)
                     }
                      
                  }
 
              }
-         }
     }
     func scheduleAppRefresh() {
          let request = BGAppRefreshTaskRequest(identifier: "com.aatech.wakeSchedule")
@@ -338,10 +333,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
             }
         }
     }
-    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                   didReceive response: UNNotificationResponse,
+                                   withCompletionHandler completionHandler: @escaping () -> Void) {
+           let userInfo = response.notification.request.content.userInfo
+           // Print full message.
+           print("tap on on forground app",userInfo)
+           completionHandler()
+        if audioGlobalPlayer != nil {
+            audioGlobalPlayer!.stop()
+        }
+        alarmsounded(referrer: referrer)
+       }
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         // not triggred when we tap on "opps your killed wake app" notification only triggered for real alarm
         if notification.userInfo?.count ?? 0 > 0 {
+            if audioGlobalPlayer != nil {
+                audioGlobalPlayer!.stop()
+            }
             alarmsounded(referrer: referrer)
         }
         //show an alert window
@@ -380,6 +389,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
 //        storageController.addAction(stopOption)
 //        window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
     }
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                  willPresent notification: UNNotification,
+                                  withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+          let userInfo = notification.request.content.userInfo
+          print(userInfo) // the payload that is attached to the push notification
+          // you can customize the notification presentation options. Below code will show notification banner as well as play a sound. If you want to add a badge too, add .badge in the array.
+        var soundName = userInfo["soundName"] as? String ?? ""
+        let url = URL(fileURLWithPath: Bundle.main.path(forResource: soundName, ofType: "mp3")!)
+        
+        var error: NSError?
+        
+        do {
+            audioGlobalPlayer = try AVAudioPlayer(contentsOf: url)
+        } catch let error1 as NSError {
+            error = error1
+            audioGlobalPlayer = nil
+        }
+        
+        if let err = error {
+            print("audioPlayer error \(err.localizedDescription)")
+            return
+        } else {
+            audioGlobalPlayer!.delegate = self
+            audioGlobalPlayer!.prepareToPlay()
+        }
+        
+        //negative number means loop infinity
+        audioGlobalPlayer!.numberOfLoops = -1
+        audioGlobalPlayer!.isMeteringEnabled = true
+        audioGlobalPlayer!.play()
+        completionHandler([.alert,.sound])
+      }
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
         
     }
@@ -481,23 +522,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         var error: NSError?
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioGlobalPlayer = try AVAudioPlayer(contentsOf: url)
         } catch let error1 as NSError {
             error = error1
-            audioPlayer = nil
+            audioGlobalPlayer = nil
         }
         
         if let err = error {
             print("audioPlayer error \(err.localizedDescription)")
             return
         } else {
-            audioPlayer!.delegate = self
-            audioPlayer!.prepareToPlay()
+            audioGlobalPlayer!.delegate = self
+            audioGlobalPlayer!.prepareToPlay()
         }
         
         //negative number means loop infinity
-        audioPlayer!.numberOfLoops = 0
-        audioPlayer!.play()
+        audioGlobalPlayer!.numberOfLoops = 0
+        audioGlobalPlayer!.play()
     }
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
@@ -584,7 +625,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         do {
             try session.setCategory(
                 .playback,
-                options: .duckOthers)
+                options: .mixWithOthers)
         } catch let setCategoryError {
             // handle error
         }
@@ -594,27 +635,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         var error: NSError?
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioGlobalPlayer = try AVAudioPlayer(contentsOf: url)
         } catch let error1 as NSError {
             error = error1
-            audioPlayer = nil
+            audioGlobalPlayer = nil
         }
         
         if let err = error {
             print("audioPlayer error \(err.localizedDescription)")
             return
         } else {
-            audioPlayer!.delegate = self
-            audioPlayer!.prepareToPlay()
+            audioGlobalPlayer!.delegate = self
+            audioGlobalPlayer!.prepareToPlay()
         }
         
         //negative number means loop infinity
-        audioPlayer!.numberOfLoops = -1
-        audioPlayer!.isMeteringEnabled = true
-        let currentAudioTime = audioPlayer!.deviceCurrentTime
+        audioGlobalPlayer!.numberOfLoops = -1
+        audioGlobalPlayer!.isMeteringEnabled = true
+        let currentAudioTime = audioGlobalPlayer!.deviceCurrentTime
         selectedSound = greaterthencurretnTime[0]
         let delayTime: TimeInterval = greaterthencurretnTime[0].date.timeIntervalSinceNow // here as an example, we use 20 seconds delay
-                audioPlayer!.play(atTime: currentAudioTime + delayTime)
+                audioGlobalPlayer!.play(atTime: currentAudioTime + delayTime)
             }
 
         }
@@ -622,9 +663,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        if audioPlayer != nil {
-            audioPlayer!.stop()
-        }
         
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
@@ -649,27 +687,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
 
 }
 
-class BackgroundExecutable {
-    var identifier: UIBackgroundTaskIdentifier
-    let function: (() -> Void) -> Void
- 
-    init(function: @escaping (_ completion: () -> Void) -> Void) {
-        self.function = function
-        self.identifier = UIBackgroundTaskIdentifier.invalid
-    }
- 
-    func execute() {
-        let application = UIApplication.shared
-        identifier = application.beginBackgroundTask {
-            application.endBackgroundTask(self.identifier)
-        }
-        function(endBackgroundTask)
-    }
- 
-    func endBackgroundTask() {
-        UIApplication.shared.endBackgroundTask(identifier)
-    }
-}
+
 extension Date {
 
     static func -(recent: Date, previous: Date) -> (month: Int?, day: Int?, hour: Int?, minute: Int?, second: Int?) {

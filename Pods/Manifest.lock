@@ -223,11 +223,11 @@ PODS:
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
   - DropDown (2.3.13)
-  - FBSDKCoreKit (8.2.0):
-    - FBSDKCoreKit/Basics (= 8.2.0)
-    - FBSDKCoreKit/Core (= 8.2.0)
-  - FBSDKCoreKit/Basics (8.2.0)
-  - FBSDKCoreKit/Core (8.2.0):
+  - FBSDKCoreKit (9.1.0):
+    - FBSDKCoreKit/Basics (= 9.1.0)
+    - FBSDKCoreKit/Core (= 9.1.0)
+  - FBSDKCoreKit/Basics (9.1.0)
+  - FBSDKCoreKit/Core (9.1.0):
     - FBSDKCoreKit/Basics
   - Firebase/Analytics (7.1.0):
     - Firebase/Core
@@ -432,7 +432,7 @@ SPEC CHECKSUMS:
   AppsFlyerFramework: b26dca2329493c2ba3b3877d2f220af37a3108b6
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
-  FBSDKCoreKit: 4afd6ff53d8133a433dbcda44451c9498f8c6ce4
+  FBSDKCoreKit: a00fe2efd780c195a5e09201bf51c56106245b40
   Firebase: 78e8dd2e39d653de6270432ad84fe8b59f7bf4e8
   FirebaseAnalytics: 7f165a56dea86ddd5b8ce02af3bee982c683405c
   FirebaseCore: 20046127eef0fcb8fa25df7fc12f7b97d4e48611
@@ -461,6 +461,6 @@ SPEC CHECKSUMS:
   ReadabilityKit: 09e8b2ecb3d06f17f4c856e426c34f9016e86e6f
   SwiftySound: 9eb28bb14edb601b40027e44319e0ef8383f88bf
 
-PODFILE CHECKSUM: 4f80df5b8b6656a7624520140e2bd9e6ee18aa7e
+PODFILE CHECKSUM: d7bf528773de3ef73fab05039c61f40675bbb0a8
 
 COCOAPODS: 1.9.3
