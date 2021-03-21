@@ -333,7 +333,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
         <!--Create Alarm-->
         <scene sceneID="5Wf-zb-HDG">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="38A-Vr-ugb" customClass="AlarmEditAddViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlarmEditAddViewController" modalPresentationStyle="fullScreen" id="38A-Vr-ugb" customClass="AlarmEditAddViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1nd-gH-Yu4"/>
                         <viewControllerLayoutGuide type="bottom" id="rnM-Sa-yXG"/>
@@ -782,6 +782,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                         <outlet property="tableView" destination="8p0-QK-EXB" id="7gn-E4-bDQ"/>
                         <segue destination="34z-Qh-osK" kind="presentation" identifier="editSegue" id="XLH-e5-pll"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="HomeToPaywall" id="YLc-sc-HuK"/>
+                        <segue destination="34z-Qh-osK" kind="presentation" identifier="addOnboardingSegue" id="qDL-w4-fB4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUn-5I-MgF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2855,6 +2856,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
                     <connections>
                         <outlet property="collectionView" destination="bHu-PW-1vT" id="MPe-b8-26N"/>
                         <outlet property="tagsCollectionView" destination="txo-ud-fSw" id="Bim-iJ-gkc"/>
+                        <segue destination="34z-Qh-osK" kind="presentation" identifier="addOnboardingSegue" id="vOU-76-92b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KN-KX-fG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2863,7 +2865,7 @@ JDE5Ljk5EBAQL3llYXIgYWZ0ZXIgMyBkYXkgZnJlZSB0cmlhbA
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="746-Gr-Cw3"/>
+        <segue reference="qDL-w4-fB4"/>
         <segue reference="YLc-sc-HuK"/>
     </inferredMetricsTieBreakers>
     <resources>

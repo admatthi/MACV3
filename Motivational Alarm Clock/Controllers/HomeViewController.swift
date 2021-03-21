@@ -118,6 +118,8 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         alarmScheduler.checkNotification()
         tableView.allowsSelectionDuringEditing = true
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onFinishPaywallScreen(_:)), name: .didFinishPaywallScreen, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onFinishOnbaording(_:)), name: .didFinishOnbaordingScreen, object: nil)
         let notificationCenter = NotificationCenter.default
             notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
@@ -137,9 +139,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         }
         
         queryforinfo()
-        alarmModel = Alarms()
-        addAlarmForNewUsers()
-        self.tableView.reloadData()
+
 //        if didpurchase {
 //
 //
@@ -210,6 +210,21 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         if (UserDefaults.standard.integer(forKey: "alarmCount") == 2){
             SKStoreReviewController.requestReview()
         }
+    }
+    @objc func onFinishPaywallScreen(_ notification: Notification)
+    {
+        if !UserDefaults.standard.bool(forKey: "isForOnboardingscreen"){
+        UserDefaults.standard.setValue(true,forKey: "isForOnboardingscreen")
+        let defaultSound = allSounds.filter({$0.category == selectedCategory && $0.soundName == "Ray Lewis"})[0]
+        let segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: true, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category, repeatEnabled: false)
+            performSegue(withIdentifier: Id.addOnboardingSegueIdentifier, sender: segueInfo)
+        }
+    }
+    @objc func onFinishOnbaording(_ notification: Notification)
+    {
+        alarmModel = Alarms()
+        addAlarmForNewUsers()
+        self.tableView.reloadData()
     }
     
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -647,7 +662,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             tempAlarm.onSnooze = false
             tempAlarm.repeatEnabled = true
             tempAlarm.isDailyWake = true
-            tempAlarm.enabled = true
+            tempAlarm.enabled = false
             alarmModel.alarms.append(tempAlarm)
             var tempAlarm2 = Alarm()
             tempAlarm2.date = secondDate
@@ -714,9 +729,14 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             let firstFilteredSounds = allSounds.filter({$0.category == selectedCategory})
             let defaultSound = firstFilteredSounds[0]
             addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: defaultSound.soundName, mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: defaultSound.image, category: defaultSound.category, repeatEnabled: true)
+            
         }
         else if segue.identifier == Id.editSegueIdentifier {
             addEditController.navigationItem.title = "Edit Alarm"
+            addEditController.segueInfo = sender as? SegueInfo
+        }else if segue.identifier == Id.addOnboardingSegueIdentifier{
+            addEditController.navigationItem.title = "Onboarding Alarm"
+            addEditController.isfromOnboarding = true
             addEditController.segueInfo = sender as? SegueInfo
         }
     }

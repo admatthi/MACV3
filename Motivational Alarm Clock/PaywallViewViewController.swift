@@ -70,7 +70,10 @@ var purchases =         Purchases.configure(withAPIKey: "GwOgfMrQbjGSVMPqkiFSzUe
            @IBAction func tapBack(_ sender: Any) {
                
                    tapx(referrer: referrer)
+            
+           
             self.dismiss(animated: true, completion: {
+                NotificationCenter.default.post(name: .didFinishPaywallScreen, object: self, userInfo: nil)
                 let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
                 let newUserCreatedAlarm = UserDefaults.standard.bool(forKey: "newUserWithOutCreatingAlarm")

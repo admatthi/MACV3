@@ -253,6 +253,8 @@ extension Notification.Name {
     static let didReceiveData = Notification.Name("didReceiveData")
     static let didCompleteTask = Notification.Name("didCompleteTask")
     static let completedLengthyDownload = Notification.Name("completedLengthyDownload")
+    static let didFinishPaywallScreen  = Notification.Name("didFinishPaywallScreen")
+    static let didFinishOnbaordingScreen  = Notification.Name("didFinishOnbaordingScreen")
 }
 extension UIDatePicker {
 

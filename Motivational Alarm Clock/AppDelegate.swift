@@ -115,25 +115,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
             func approvenotifications(referrer : String) {
                                              AppEvents.logEvent(AppEvents.Name(rawValue: "approvenotifications"), parameters: ["referrer" : referrer])
                                          }
-
-
-        if #available(iOS 10.0, *) {
-          // For iOS 10 display notification (sent via APNS)
-          UNUserNotificationCenter.current().delegate = self
-
-            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound,]
-          UNUserNotificationCenter.current().requestAuthorization(
-            options: authOptions,
-            completionHandler: {_, _ in })
-            
-            asknotifications(referrer: referrer)
-//
-        } else {
-          let settings: UIUserNotificationSettings =
-          UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-          application.registerUserNotificationSettings(settings)
+        
+        if UserDefaults.standard.bool(forKey: "isForOnboardingscreen"){
+            if #available(iOS 10.0, *) {
+              // For iOS 10 display notification (sent via APNS)
+              
+                UNUserNotificationCenter.current().delegate = self
+                let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound,]
+              UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+                
+                asknotifications(referrer: referrer)
+    //
+            } else {
+              let settings: UIUserNotificationSettings =
+              UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+              application.registerUserNotificationSettings(settings)
+            }
+            application.registerForRemoteNotifications()
         }
-         
+
         let isRegisteredForRemoteNotifications = UIApplication.shared.isRegisteredForRemoteNotifications
         if isRegisteredForRemoteNotifications {
             
@@ -143,7 +145,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
              // Show alert user is not registered for notification
         }
 
-        application.registerForRemoteNotifications()
+        
         Messaging.messaging().delegate = self
         setupForCallMethod()
         return true

@@ -17,7 +17,7 @@ var grayl = UIColor(red: 0.10, green: 0.10, blue: 0.10, alpha: 1.00)
 
 
 class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    
+    var isfromOnboarding = false
 var isFromSoundVc = false
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var tableView: UITableView!
@@ -45,7 +45,26 @@ var isFromSoundVc = false
 //            tapback.alpha = 1
 //        }
     }
-    
+    func notificationpermissionRequest(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let app = UIApplication.shared
+        if #available(iOS 10.0, *) {
+          // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = appDelegate
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound,]
+          UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions,
+            completionHandler: {_, _ in })
+//
+        } else {
+            let settings: UIUserNotificationSettings =
+            UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            app.registerUserNotificationSettings(settings)
+        }
+        
+
+        app.registerForRemoteNotifications()
+    }
     @IBOutlet weak var tapback: UIButton!
     override func viewDidLoad() {
         
@@ -53,7 +72,22 @@ var isFromSoundVc = false
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         
-      
+        if isfromOnboarding{
+            let refreshAlert = UIAlertController(title: "You'll need to turn on push", message: "In order for us to send you an alarm, you'll need to turn on notifications", preferredStyle: UIAlertController.Style.alert)
+
+            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+                self.notificationpermissionRequest()
+                  print("Handle Ok logic here")
+            }))
+
+            refreshAlert.addAction(UIAlertAction(title: "Not now", style: .cancel, handler: { (action: UIAlertAction!) in
+                self.dismiss(animated: true, completion: nil)
+                  print("Handle Cancel Logic here")
+            }))
+
+            present(refreshAlert, animated: true, completion: nil)
+           
+        }
         tapsave.layer.borderWidth = 1.0
         tapsave.layer.borderColor = UIColor.white.cgColor
         tapsave.layer.cornerRadius = 10.0
@@ -75,6 +109,13 @@ var isFromSoundVc = false
         }
         else {
             
+            
+        }
+        if isfromOnboarding{
+            datePicker.date = Date().addingTimeInterval(60)
+            tapback.isHidden = true
+        }else{
+            tapback.isHidden = false
         }
 
     }
@@ -203,7 +244,7 @@ var isFromSoundVc = false
             }
         }
 
-        if didpurchase {
+        if didpurchase || isfromOnboarding {
                     
                     createalarm(referrer: referrer)
                     
@@ -265,7 +306,9 @@ var isFromSoundVc = false
                     }
 //                    self.performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
                     NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
-        
+            if isfromOnboarding{
+                NotificationCenter.default.post(name: .didFinishOnbaordingScreen, object: self, userInfo: nil)
+            }
         
                 } else {
                     let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

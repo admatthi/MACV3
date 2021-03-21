@@ -12,6 +12,7 @@ struct Id {
     static let stopIdentifier = "Alarm-ios-swift-stop"
     static let snoozeIdentifier = "Alarm-ios-swift-snooze"
     static let addSegueIdentifier = "addSegue"
+    static let addOnboardingSegueIdentifier = "addOnboardingSegue"
     static let editSegueIdentifier = "editSegue"
     static let saveSegueIdentifier = "saveEditSegue"
     static let soundSegueIdentifier = "soundSegue"
