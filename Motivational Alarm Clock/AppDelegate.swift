@@ -206,6 +206,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
              
              //negative number means loop infinity
              audioGlobalPlayer!.numberOfLoops = -1
+            audioGlobalPlayer.volume = 1.0
              audioGlobalPlayer!.isMeteringEnabled = true
              let currentAudioTime = audioGlobalPlayer!.deviceCurrentTime
              selectedSound = greaterthencurretnTime[0]
@@ -651,6 +652,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         
         //negative number means loop infinity
         audioGlobalPlayer!.numberOfLoops = -1
+        audioGlobalPlayer.volume = 1.0
         audioGlobalPlayer!.isMeteringEnabled = true
         let currentAudioTime = audioGlobalPlayer!.deviceCurrentTime
         selectedSound = greaterthencurretnTime[0]
