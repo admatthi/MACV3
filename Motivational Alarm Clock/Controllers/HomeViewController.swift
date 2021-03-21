@@ -136,7 +136,9 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         }
         
         queryforinfo()
-        
+        alarmModel = Alarms()
+        addAlarmForNewUsers()
+        self.tableView.reloadData()
 //        if didpurchase {
 //
 //
@@ -163,7 +165,6 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         allSounds.shuffle()
         allSounds = allSounds.sorted { $0.popular ?? 0 > $1.popular ?? 0 }
         alarmModel = Alarms()
-        addAlarmForNewUsers()
         self.tableView.reloadData()
 //        if alarmModel.alarms.count > 0 {
 //            editButton.isHidden = false
@@ -205,6 +206,10 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             self.navigationItem.leftBarButtonItem = nil
         }
         alarmScheduler.reSchedule()
+        if !UserDefaults.standard.bool(forKey: "isStorekiReviewed"){
+            UserDefaults.standard.setValue(true, forKey: "isStorekiReviewed")
+            SKStoreReviewController.requestReview()
+        }
     }
     
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -233,8 +238,12 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         performSegue(withIdentifier: Id.editSegueIdentifier, sender: SegueInfo(curCellIndex: indexPath.row, isEditMode: true, label: alarmModel.alarms[indexPath.row].label, mediaLabel: alarmModel.alarms[indexPath.row].mediaLabel, mediaID: alarmModel.alarms[indexPath.row].mediaID, repeatWeekdays: alarmModel.alarms[indexPath.row].repeatWeekdays, enabled: alarmModel.alarms[indexPath.row].enabled, snoozeEnabled: alarmModel.alarms[indexPath.row].snoozeEnabled, imageName: alarmModel.alarms[indexPath.row].imageName, category: alarmModel.alarms[indexPath.row].category, repeatEnabled: alarmModel.alarms[indexPath.row].repeatEnabled))
     }
     @objc func playPauseAction(sender : UIButton){
+        isGlobalPlaying = false
         if audioGlobalPlayer != nil {
             audioGlobalPlayer!.stop()
+        }
+        if selectedSound != nil{
+            selectedSound = nil
         }
         let alarm: Alarm = alarmModel.alarms[sender.tag]
         if selectedAlarm?.uuid == alarm.uuid {
@@ -376,10 +385,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             cell.itemSwitch.setOn(false, animated: false)
         }
         
-        if indexPath.row > 1 {
-            
-            SKStoreReviewController.requestReview()
-        }
+
         
         //delete empty seperator line
         
@@ -388,8 +394,12 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     }
     
     @IBAction func switchTapped(_ sender: UISwitch) {
+        isGlobalPlaying = false
         if audioGlobalPlayer != nil {
             audioGlobalPlayer!.stop()
+        }
+        if selectedSound != nil{
+            selectedSound = nil
         }
         let index = sender.tag
         alarmModel.alarms[index].enabled = sender.isOn
@@ -535,9 +545,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
        let isInitialAlrmCreatedForDaily = UserDefaults.standard.bool(forKey: "isInitialAlrmCreatedForDaily")
         if !isInitialAlrmCreatedForDaily{
             allSounds = allSounds.sorted { $0.popular ?? 0 > $1.popular ?? 0 }
-            let filteredSounds = allSounds.filter({$0.category == selectedCategory && $0.soundName == "CT Fletcher"})
-            let firstSound = filteredSounds[0]
-            var firstDate = Calendar.current.date(bySettingHour: 8, minute: 30, second: 0, of: Date())!
+            let firstSound = allSounds.filter({$0.category == selectedCategory && $0.soundName == "CT Fletcher"})[0]
+            let secondSound = allSounds.filter({$0.category == selectedCategory && $0.soundName == "Ray Lewis"})[0]
+            let thirdSound = allSounds.filter({$0.category == selectedCategory && $0.soundName == "Arnold Schwarznegger"})[0]
+            let fourthSound = allSounds.filter({$0.category == selectedCategory && $0.soundName == "The Rock"})[0]
+            var firstDate = Date().addingTimeInterval(60)
             if (firstDate.timeIntervalSinceNow.sign == .minus) {
                 // date is in past
                 let calendar = Calendar.current
@@ -559,7 +571,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
                 // date is in future
             }
             
-            var secondDate = Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!
+            var secondDate = Calendar.current.date(bySettingHour: 7, minute: 0, second: 0, of: Date())!
             if (secondDate.timeIntervalSinceNow.sign == .minus) {
                 // date is in past
                 let calendar = Calendar.current
@@ -580,10 +592,51 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             }else if (firstDate.timeIntervalSinceNow.sign == .plus) {
                 // date is in future
             }
+            var thirdDate = Calendar.current.date(bySettingHour: 7, minute: 30, second: 0, of: Date())!
+            if (thirdDate.timeIntervalSinceNow.sign == .minus) {
+                // date is in past
+                let calendar = Calendar.current
+                let time=calendar.dateComponents([.hour,.minute,.second], from: thirdDate)
+                let newDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                thirdDate = newDate
+                if (newDate.timeIntervalSinceNow.sign == .minus) {
+                    let calendar = Calendar.current
+                    let time=calendar.dateComponents([.hour,.minute,.second], from: thirdDate)
+                    let againNewDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                    let today = againNewDate
+                    if  let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today){
+                        thirdDate = tomorrow
+                    }
+
+                }
+
+            }else if (firstDate.timeIntervalSinceNow.sign == .plus) {
+                // date is in future
+            }
+            var fourthDate = Calendar.current.date(bySettingHour: 8, minute: 30, second: 0, of: Date())!
+            if (fourthDate.timeIntervalSinceNow.sign == .minus) {
+                // date is in past
+                let calendar = Calendar.current
+                let time=calendar.dateComponents([.hour,.minute,.second], from: fourthDate)
+                let newDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                fourthDate = newDate
+                if (newDate.timeIntervalSinceNow.sign == .minus) {
+                    let calendar = Calendar.current
+                    let time=calendar.dateComponents([.hour,.minute,.second], from: fourthDate)
+                    let againNewDate = Calendar.current.date(bySettingHour: time.hour!, minute: time.minute!, second: time.second!, of: Date())!
+                    let today = againNewDate
+                    if  let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today){
+                        fourthDate = tomorrow
+                    }
+
+                }
+
+            }else if (firstDate.timeIntervalSinceNow.sign == .plus) {
+                // date is in future
+            }
             var tempAlarm = Alarm()
             tempAlarm.date = firstDate
             tempAlarm.label = "Daily Wake"
-            tempAlarm.enabled = true
             tempAlarm.mediaLabel = firstSound.soundName
             tempAlarm.mediaID = firstSound.soundName
             tempAlarm.snoozeEnabled = false
@@ -592,12 +645,56 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
             tempAlarm.repeatWeekdays = []
             tempAlarm.uuid = UUID().uuidString
             tempAlarm.onSnooze = false
-            tempAlarm.enabled = false
             tempAlarm.repeatEnabled = true
             tempAlarm.isDailyWake = true
+            tempAlarm.enabled = true
             alarmModel.alarms.append(tempAlarm)
+            var tempAlarm2 = Alarm()
+            tempAlarm2.date = secondDate
+            tempAlarm2.label = "Alarm"
+            tempAlarm2.mediaLabel = secondSound.soundName
+            tempAlarm2.mediaID = secondSound.soundName
+            tempAlarm2.snoozeEnabled = false
+            tempAlarm2.imageName = secondSound.image
+            tempAlarm2.category = secondSound.category
+            tempAlarm2.repeatWeekdays = []
+            tempAlarm2.uuid = UUID().uuidString
+            tempAlarm2.onSnooze = false
+            tempAlarm2.enabled = false
+            tempAlarm2.repeatEnabled = false
+            tempAlarm2.isDailyWake = false
+            alarmModel.alarms.append(tempAlarm2)
+            var tempAlarm3 = Alarm()
+            tempAlarm3.date = thirdDate
+            tempAlarm3.label = "Alarm"
+            tempAlarm3.mediaLabel = thirdSound.soundName
+            tempAlarm3.mediaID = thirdSound.soundName
+            tempAlarm3.snoozeEnabled = false
+            tempAlarm3.imageName = thirdSound.image
+            tempAlarm3.category = thirdSound.category
+            tempAlarm3.repeatWeekdays = []
+            tempAlarm3.uuid = UUID().uuidString
+            tempAlarm3.onSnooze = false
+            tempAlarm3.enabled = false
+            tempAlarm3.repeatEnabled = false
+            tempAlarm3.isDailyWake = false
+            alarmModel.alarms.append(tempAlarm3)
+            var tempAlarm4 = Alarm()
+            tempAlarm4.date = fourthDate
+            tempAlarm4.label = "Alarm"
+            tempAlarm4.mediaLabel = fourthSound.soundName
+            tempAlarm4.mediaID = fourthSound.soundName
+            tempAlarm4.snoozeEnabled = false
+            tempAlarm4.imageName = fourthSound.image
+            tempAlarm4.category = fourthSound.category
+            tempAlarm4.repeatWeekdays = []
+            tempAlarm4.uuid = UUID().uuidString
+            tempAlarm4.onSnooze = false
+            tempAlarm4.enabled = false
+            tempAlarm4.repeatEnabled = false
+            tempAlarm4.isDailyWake = false
+            alarmModel.alarms.append(tempAlarm4)
             alarmScheduler.reSchedule()
-            NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
             UserDefaults.standard.setValue(true, forKey: "isInitialAlrmCreatedForDaily")
         }
     }
