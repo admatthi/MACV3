@@ -233,7 +233,9 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         performSegue(withIdentifier: Id.editSegueIdentifier, sender: SegueInfo(curCellIndex: indexPath.row, isEditMode: true, label: alarmModel.alarms[indexPath.row].label, mediaLabel: alarmModel.alarms[indexPath.row].mediaLabel, mediaID: alarmModel.alarms[indexPath.row].mediaID, repeatWeekdays: alarmModel.alarms[indexPath.row].repeatWeekdays, enabled: alarmModel.alarms[indexPath.row].enabled, snoozeEnabled: alarmModel.alarms[indexPath.row].snoozeEnabled, imageName: alarmModel.alarms[indexPath.row].imageName, category: alarmModel.alarms[indexPath.row].category, repeatEnabled: alarmModel.alarms[indexPath.row].repeatEnabled))
     }
     @objc func playPauseAction(sender : UIButton){
-
+        if audioGlobalPlayer != nil {
+            audioGlobalPlayer!.stop()
+        }
         let alarm: Alarm = alarmModel.alarms[sender.tag]
         if selectedAlarm?.uuid == alarm.uuid {
             stopSound()
@@ -382,6 +384,9 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     }
     
     @IBAction func switchTapped(_ sender: UISwitch) {
+        if audioGlobalPlayer != nil {
+            audioGlobalPlayer!.stop()
+        }
         let index = sender.tag
         alarmModel.alarms[index].enabled = sender.isOn
         if sender.isOn {
